@@ -1,0 +1,30 @@
+<!-- templates/exhibition/exhibition_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registered Exhibitors</title>
+  </head>
+  <body>
+    <h1>Registered Exhibitors</h1>
+
+    {% if exhibitions %}
+    <ul>
+      {% for exhibitor in exhibitions %}
+      <li>
+        <strong>{{ exhibitor.firstname }} {{ exhibitor.lastname }}</strong
+        ><br />
+        Email: {{ exhibitor.email }}<br />
+        Organization: {{ exhibitor.organization }}<br />
+        Industry: {{ exhibitor.industry_segment }}<br />
+        Primary Contact: {{ exhibitor.primary_contact }}<br />
+        What They Are Exhibiting: {{ exhibitor.what_are_you_exhibiting }}
+      </li>
+      <hr />
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No exhibitors registered yet.</p>
+    {% endif %}
+  </body>
+</html>

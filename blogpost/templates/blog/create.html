@@ -1,0 +1,52 @@
+<h1>Create a Blog Post</h1>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %} {% if error %}
+  <div style="color: red">{{ error }}</div>
+  {% endif %} {{ form.as_p }}
+
+  <label for="images">Upload Images (max 2):</label>
+  <input type="file" name="images" multiple />
+
+  <button type="submit">Submit</button>
+</form>
+
+<hr />
+
+<h1>Blog Posts</h1>
+
+{% for post in posts %}
+<div
+  style="
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  "
+>
+  <!-- Blog image (show first image if any) -->
+  <div style="width: 150px; margin-right: 15px">
+    {% if post.images.all %} {% with post.images.all.0 as img %}
+    <img
+      src="{{ img.image.url }}"
+      alt="Blog Image"
+      style="max-width: 100%; height: auto"
+    />
+    {% endwith %} {% else %}
+    <p>No image</p>
+    {% endif %}
+  </div>
+
+  <!-- Blog content -->
+  <div>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content|truncatewords:30 }}</p>
+
+    <!-- Edit and Delete buttons -->
+    <a href="{% url 'edit_post' post.id %}">Edit</a> |
+    <a href="{% url 'delete_post' post.id %}">Delete</a>
+  </div>
+</div>
+{% empty %}
+<p>No blog posts yet.</p>
+{% endfor %}

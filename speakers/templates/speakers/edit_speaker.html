@@ -1,0 +1,14 @@
+<h2>Edit Speaker</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %} {{ form.as_p }}
+  <label>Upload More Images:</label>
+  <input type="file" name="images" multiple />
+  <button type="submit">Save Changes</button>
+</form>
+
+<h3>Existing Images</h3>
+<ul>
+  {% for image in images %}
+  <li><img src="{{ image.image.url }}" width="150" /></li>
+  {% endfor %}
+</ul>

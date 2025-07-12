@@ -1,0 +1,28 @@
+<!-- templates/sponsorship_list.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registered Sponsors</title>
+  </head>
+  <body>
+    <h1>Sponsors List</h1>
+
+    {% if sponsors %}
+    <ul>
+      {% for sponsor in sponsors %}
+      <li>
+        <strong>{{ sponsor.firstname }} {{ sponsor.lastname }}</strong><br />
+        Email: {{ sponsor.email }}<br />
+        Contact: {{ sponsor.contact }}<br />
+        Package: {{ sponsor.get_package_display }}
+      </li>
+      <hr />
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No sponsors have registered yet.</p>
+    {% endif %}
+
+    <p><a href="{% url 'sponsorship_form' %}">Register New Sponsor</a></p>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<h2>Edit Blog Post</h2>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %} {% if error %}
+  <p style="color: red">{{ error }}</p>
+  {% endif %}
+
+  <!-- Pre-filled title and content -->
+  {{ form.as_p }}
+
+  <!-- Show existing images -->
+  {% if images %}
+  <p>Current Images:</p>
+  {% for image in images %}
+  <img src="{{ image.image.url }}" width="150" style="margin-right: 10px" />
+  {% endfor %} {% else %}
+  <p>No images uploaded yet.</p>
+  {% endif %}
+
+  <label>Upload New Images (optional, max 2):</label>
+  <input type="file" name="images" multiple /><br /><br />
+
+  <button type="submit">Save Changes</button>
+</form>
+
+<a href="{% url 'create_post' %}">← Back to Posts</a>

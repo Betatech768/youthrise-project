@@ -1,0 +1,13 @@
+<!-- templates/blog/delete_post.html -->
+<h1>Delete Blog Post</h1>
+
+<p>
+  Are you sure you want to delete the post titled
+  <strong>{{ post.title }}</strong>?
+</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Yes, delete</button>
+  <a href="{% url 'create_post' %}">Cancel</a>
+</form>
