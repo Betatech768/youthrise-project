@@ -1,0 +1,640 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" data-menu="leftalign">
+  <head>
+    <title>We Are People | Speakers_Details</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Revolution Slider CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/revslider/public/assets/css/settings.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Core Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/reset.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/wordpress.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/animation.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/ilightbox/ilightbox.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/jqueryui/custom.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Plugin Styles -->
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/mediaelement/mediaelementplayer-legacy.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/flexslider/flexslider.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/tooltipster.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/odometer-theme-minimal.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Theme Styles -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/menus/leftalignmenu.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/font-awesome.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/themify-icons.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grandconference_custom_css.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/kirki-styles.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grid.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Google Fonts (CDN - Don't use static) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Work+Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A300%2Cregular%2C500%2C600%2C700%2C900&amp;subset"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Poppins:600%2C700%2C400%2C500"
+      rel="stylesheet"
+      property="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Favicon and Icons -->
+    <link
+      rel="icon"
+      href="{% static 'upload/cropped-TG-Thumb-32x32.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/cropped-TG-Thumb-192x192.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/cropped-TG-Thumb-180x180.png' %}"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body
+    class="speaker-template-default single single-speaker postid-138 woocommerce-no-js"
+  >
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      style="background-color: #000000"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"
+          ><img
+            class=""
+            style="width: 250px; height: 50px"
+            src="{% static 'upload/Logo Icon.png' %}"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{% url 'home' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'about' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'sponsor' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Sponsorship</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'exhibitions' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Exhibition</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'blog' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'speakers' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Speakers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'gallery_list_main' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'registration' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'contact' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="page_caption" class="  ">
+      <div class="page_title_wrapper">
+        <div class="standard_wrapper">
+          <div class="speaker_thumbnail">
+            <img
+              src="{% static 'upload/pexels-photo-199943-500x500.jpg' %}"
+              alt=""
+            />
+          </div>
+
+          <div class="page_title_inner">
+            <div class="page_title_content">
+              <h1>Robin Johnson</h1>
+              <div class="page_tagline">VP Design Microsoft</div>
+            </div>
+          </div>
+
+          <br class="clear" />
+        </div>
+      </div>
+    </div>
+
+    <div id="page_content_wrapper">
+      <div class="inner">
+        <!-- Begin main content -->
+        <div class="inner_wrapper">
+          <div class="sidebar_content full_width">
+            <!-- Begin each post -->
+            <div
+              id="post-138"
+              class="post-138 speaker type-speaker status-publish has-post-thumbnail hentry"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <p class="p1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint omnis ullam nobis repellat adipisci delectus, atque
+                    sapiente, fugiat ratione assumenda ut sequi neque velit quos
+                    error cum veritatis minima? Minus possimus quibusdam
+                    suscipit. Sequi iste nemo adipisci quia inventore tempora
+                    consequuntur, ea vitae aliquam sit? Perferendis optio enim
+                    excepturi, dolore quibusdam ex blanditiis corporis ad
+                    voluptatum nulla illo, ipsa provident consectetur sunt odit
+                    esse quasi soluta! Itaque similique ipsa sapiente ea
+                    incidunt. Odit ipsa ex pariatur error omnis unde voluptatem,
+                    minus voluptatibus dolorem ratione nemo totam, veniam, at
+                    blanditiis nam? Quae similique quasi doloribus voluptate
+                    asperiores? Temporibus illum quaerat velit adipisci error
+                    labore esse obcaecati odit cum iure reiciendis, magni cumque
+                    minima officiis accusantium rerum, autem qui pariatur
+                    accusamus quae quod nobis molestiae voluptas? Repellendus
+                    labore ut modi quos eaque, ipsa hic quaerat in provident
+                  </p>
+                  <p class="p1">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis, alias eaque voluptatibus culpa facere
+                    temporibus provident laborum maiores aut repudiandae ad nemo
+                    dignissimos praesentium quod molestias qui, exercitationem
+                    expedita nulla cum! Nesciunt nisi blanditiis harum iure
+                    molestias odio. Accusamus exercitationem repellat
+                    repudiandae animi sequi. Placeat hic nemo minima harum nam
+                    id corrupti reiciendis dolores et earum ad aliquid quod
+                    debitis odit velit ut, amet similique necessitatibus dicta
+                    animi ullam accusantium laudantium atque vitae. Adipisci, at
+                    dolore et nobis impedit quae labore quis dignissimos vel
+                    explicabo? Cum iure autem soluta repellat suscipit et.
+                    Temporibus hic architecto corrupti eos, animi vitae alias.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End each post -->
+
+            <div class="speaker_session_wrapper themeborder">
+              <h4 class="title">All Sessions by&nbsp;Robin Johnson</h4>
+              <div id="138">
+                <ul class="scheduleday_wrapper themeborder one_half">
+                  <li class="scheduleday_title">
+                    <div class="scheduleday_title_icon">
+                      <span class="ti-calendar"></span>
+                    </div>
+                    <div class="scheduleday_title_content">
+                      <h4>Day 1</h4>
+                      <div class="scheduleday_desc">July 23, 2017</div>
+                    </div>
+                    <br class="clear" />
+                  </li>
+
+                  <li class="themeborder">
+                    <div
+                      class="session_content_wrapper expandable"
+                      data-expandid="excerpt_237"
+                    >
+                      <div class="session_content">
+                        <div class="session_start_time">14:30</div>
+
+                        <div class="session_title">
+                          <h6>VR is the new internet of experiences</h6>
+                        </div>
+                      </div>
+                      <br class="clear" />
+                    </div>
+
+                    <div
+                      id="excerpt_237"
+                      class="session_content_extend hide session_content_wrapper"
+                    >
+                      <div class="session_content">
+                        <div class="session_start_time">
+                          14:30 &nbsp;-&nbsp;16:00
+                        </div>
+                        <div class="session_excerpt">
+                          Meh synth Schlitz, tempor duis single-origin coffee ea
+                          next level ethnic fingerstache fanny pack nostrud.
+                          Photo booth anim 8-bit hella, PBR 3 wolf moon beard
+                          Helvetica. Salvia esse nihil, flexitarian Truffaut
+                          synth art party deep v chillwave.
+                        </div>
+                        <div class="session_title_list">
+                          <span class="ti-bookmark"></span>
+                          <div class="session_title_item">Engineering</div>
+                          <div class="session_title_item">Platform</div>
+                        </div>
+                        <div class="session_location themeborder">
+                          <div class="session_location_label skin_color">
+                            Where
+                          </div>
+
+                          <div class="session_location_content">
+                            Hall 1, Building A
+                          </div>
+                        </div>
+                      </div>
+                      <br class="clear" />
+                    </div>
+                  </li>
+                </ul>
+                <ul class="scheduleday_wrapper themeborder one_half">
+                  <li class="scheduleday_title">
+                    <div class="scheduleday_title_icon">
+                      <span class="ti-calendar"></span>
+                    </div>
+                    <div class="scheduleday_title_content">
+                      <h4>Day 3</h4>
+                      <div class="scheduleday_desc">July 25, 2017</div>
+                    </div>
+                    <br class="clear" />
+                  </li>
+
+                  <li class="themeborder">
+                    <div
+                      class="session_content_wrapper expandable"
+                      data-expandid="excerpt_253"
+                    >
+                      <div class="session_content">
+                        <div class="session_start_time">08:00</div>
+
+                        <div class="session_title">
+                          <h6>We love icons</h6>
+                        </div>
+                      </div>
+                      <br class="clear" />
+                    </div>
+
+                    <div
+                      id="excerpt_253"
+                      class="session_content_extend hide session_content_wrapper"
+                    >
+                      <div class="session_content">
+                        <div class="session_start_time">
+                          08:00 &nbsp;-&nbsp;09:00
+                        </div>
+                        <div class="session_excerpt">
+                          Meh synth Schlitz, tempor duis single-origin coffee ea
+                          next level ethnic fingerstache fanny pack nostrud.
+                          Photo booth anim 8-bit hella, PBR 3 wolf moon beard
+                          Helvetica. Salvia esse nihil, flexitarian Truffaut
+                          synth art party deep v chillwave.
+                        </div>
+                        <div class="session_title_list">
+                          <span class="ti-bookmark"></span>
+                          <div class="session_title_item">Engineering</div>
+                        </div>
+                        <div class="session_location themeborder">
+                          <div class="session_location_label skin_color">
+                            Where
+                          </div>
+
+                          <div class="session_location_content">
+                            Hall 1, Building A
+                          </div>
+                        </div>
+                      </div>
+                      <br class="clear" />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End main content -->
+      </div>
+
+      <br class="clear" />
+      <br />
+    </div>
+
+    <!-- footer -->
+    <div id="footer" class="ppb_wrapper">
+      <ul class="sidebar_widget three">
+        <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p>
+              <img
+                src="{% static 'upload/Logo Icon.png' %}"
+                width="158"
+                height="20"
+                alt=""
+              />
+            </p>
+            <p>{{ footer_description|default:"Abuja is a great place" }}</p>
+
+            <!-- Social Icons -->
+            <div style="margin-top: 20px">
+              <div class="social_wrapper shortcode dark">
+                <ul>
+                  <li class="facebook">
+                    <a target="_blank" title="Facebook" href="#"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li class="twitter">
+                    <a
+                      target="_blank"
+                      title="Twitter"
+                      href="https://twitter.com/#"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="youtube">
+                    <a target="_blank" title="Youtube" href="#"
+                      ><i class="fa fa-youtube"></i
+                    ></a>
+                  </li>
+                  <li class="google">
+                    <a target="_blank" title="Google+" href="#"
+                      ><i class="fa fa-google-plus"></i
+                    ></a>
+                  </li>
+                  <li class="instagram">
+                    <a
+                      target="_blank"
+                      title="Instagram"
+                      href="https://instagram.com/tedxvienna"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Newsletter -->
+        <li id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
+          <h2 class="widgettitle">Newsletter</h2>
+          <form
+            id="mc4wp-form-1"
+            class="mc4wp-form mc4wp-form-92"
+            method="post"
+          >
+            {% csrf_token %}
+            <div class="mc4wp-form-fields">
+              <p>
+                Don't miss a thing!
+                <br />Sign up to receive daily news
+              </p>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address"
+                required
+              />
+              <input type="submit" value="Sign up" />
+            </div>
+            <label style="display: none !important">
+              Leave this field empty if you're human:
+              <input
+                type="text"
+                name="honeypot"
+                value=""
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </label>
+            <div class="mc4wp-response">
+              {% if form.errors %}
+              <p class="error">{{ form.errors }}</p>
+              {% endif %} {% if message %}
+              <p class="success">{{ message }}</p>
+              {% endif %}
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <div id="side_menu_wrapper" class="overlay_background">
+      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate.min.js' %}"></script>
+    <script src="{% static 'js/plugins/ui/core.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.requestAnimationFrame.js' %}"></script>
+    <script src="{% static 'js/plugins/ilightbox.packed.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.easing.js' %}"></script>
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.isotope.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.masory.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.tooltipster.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.sticky-kit.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/custom.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_onepage.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.countdown.js' %}"></script>
+    <script src="{% static 'js/plugins/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'js/plugins/masonry.min.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_sidebar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax-video.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_clock.js' %}"></script>
+
+    <script>
+      /* <![CDATA[ */
+      var mc4wp_forms_config = [];
+      /* ]]> */
+    </script>
+  </body>
+
+  <!-- grandconference/robin-johnson.html  22 Nov 2019 03:52:40 GMT -->
+</html>

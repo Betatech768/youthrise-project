@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=200)
+    # slug = models.SlugField(unique=True)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     

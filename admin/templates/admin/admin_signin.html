@@ -1,0 +1,94 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard | Sigin</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/admincss.css' %}" />
+  </head>
+  <body>
+    <!-- Navbar start -->
+
+    <div>
+      <div class="contain">
+        <div class="col navvv">
+          <div class="logo">
+            <a href="#" class="Logo"
+              ><img
+                class="logoimg"
+                src="{% static 'upload/Logo Icon.png' %}"
+                alt=""
+            /></a>
+          </div>
+
+          <div class="col d-none d-sm-inline">
+            <h1 class="admiindashh">ADMIN DASHBOARD</h1>
+            {% if user.is_authenticated %}
+          </div>
+          <div class="login">
+            <a href="{% url 'logout' %}"
+              ><button class="butttn">Logout</button></a
+            >
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <!-- Navbar Ends -->
+      <main class="exhibition">
+        <!-- content stays here  -->
+
+        <div class="form-container">
+          <p class="titlel">WELCOME YOUTHRISE</p>
+          <form class="form" method="POST">
+            {% csrf_token %} {{ form.as_p }}
+
+            <button class="form-btn">Log in</button>
+          </form>
+        </div>
+      </main>
+      <footer class="fooot">
+        <h1 class="goodzic">Designed by Goodzic sounds</h1>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Wait for the DOM to load
+      document.addEventListener("DOMContentLoaded", function () {
+        // Style all input elements inside the form
+        const inputs = document.querySelectorAll(".form input");
+
+        inputs.forEach(function (input) {
+          input.style.padding = "7px";
+
+          input.style.border = "1px solid #ccc";
+          input.style.borderRadius = "8px";
+
+          input.style.fontSize = "16px";
+          input.style.boxSizing = "border-box";
+        });
+
+        // Style the submit button
+        const button = document.querySelector(".form-btn");
+        if (button) {
+          button.style.borderRadius = "8px";
+          button.style.cursor = "pointer";
+          button.style.fontWeight = "bold";
+          button.style.width = "100%";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,5 +1,0 @@
-<h2>Create Speaker</h2>
-<form method="POST" enctype="multipart/form-data">
-  {% csrf_token %} {{ speaker_form.as_p }} {{ image_form.as_p }}
-  <button type="submit">Save Speaker</button>
-</form>

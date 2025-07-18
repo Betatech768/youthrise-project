@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard | Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/admincss.css' %}" />
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <div class="page-container">
+      <div class="contain">
+        <div class="col navvv">
+          <div class="logo">
+            <a href="#" class="Logo"
+              ><img
+                class="logoimg"
+                src="{% static 'upload/Logo Icon.png' %}"
+                alt=""
+            /></a>
+          </div>
+
+          <div class="col d-none d-sm-inline">
+            <h1 class="admiindashh">ADMIN DASHBOARD</h1>
+          </div>
+          <div class="login">
+            <a href="{% url 'logout' %}"
+              ><button class="butttn">Logout</button></a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Navbar Ends -->
+    </div>
+    <!-- Navbar Ends -->
+
+    <!-- input area  -->
+    <main class="">
+      <div class="dividepage">
+        <div id="page_caption" class="page_content">
+          <div class="page_title_wrapper">
+            <div class="standard_wrapper">
+              <div class="page_title_inner">
+                <div class="page_title_content">
+                  <h1>Edit Blog Post</h1>
+                  <div class="page_tagline">Edit your blog post Below.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="move_middle">
+            <div class="form-containerss">
+              <form class="form" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  {% csrf_token %} {% if error %}
+                  <p style="color: red">{{ error }}</p>
+                  {% endif %} {{ form.as_p }}
+                </div>
+
+                <label style="color: black"
+                  >Upload New Images (optional, max 2):</label
+                >
+                <input
+                  type="file"
+                  id="imageInput"
+                  name="images"
+                  multiple
+                  accept="image/*"
+                  style="display: block"
+                />
+
+                <!-- Image preview container -->
+                <div
+                  id="previewContainer"
+                  style="display: flex; flex-wrap: wrap; margin-top: 10px"
+                ></div>
+
+                <br />
+                <button class="form-submit-btn" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="fooot">
+      <h1 class="goodzic">Designed by Goodzic sounds</h1>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const imageInput = document.getElementById("imageInput");
+      const previewContainer = document.getElementById("previewContainer");
+
+      let selectedImages = [];
+
+      imageInput.addEventListener("change", function () {
+        const files = Array.from(imageInput.files);
+        selectedImages = files.slice(0, 2); // Limit to 2 images
+
+        renderPreview();
+      });
+
+      function renderPreview() {
+        previewContainer.innerHTML = "";
+
+        selectedImages.forEach((file, index) => {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            const wrapper = document.createElement("div");
+            wrapper.style.position = "relative";
+            wrapper.style.marginRight = "10px";
+            wrapper.style.marginBottom = "10px";
+
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            img.style.width = "150px";
+            img.style.height = "auto";
+            img.style.borderRadius = "5px";
+
+            const removeBtn = document.createElement("span");
+            removeBtn.innerHTML = "&times;";
+            removeBtn.style.position = "absolute";
+            removeBtn.style.top = "0px";
+            removeBtn.style.right = "5px";
+            removeBtn.style.color = "white";
+            removeBtn.style.background = "red";
+            removeBtn.style.borderRadius = "50%";
+            removeBtn.style.padding = "2px 8px";
+            removeBtn.style.cursor = "pointer";
+            removeBtn.style.fontWeight = "bold";
+            removeBtn.onclick = function () {
+              selectedImages.splice(index, 1);
+              renderPreview();
+            };
+
+            wrapper.appendChild(img);
+            wrapper.appendChild(removeBtn);
+            previewContainer.appendChild(wrapper);
+          };
+
+          reader.readAsDataURL(file);
+        });
+      }
+    </script>
+  </body>
+</html>

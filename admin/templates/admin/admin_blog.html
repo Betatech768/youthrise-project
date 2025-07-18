@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard | Blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/admincss.css' %}" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="page-container">
+      <div class="contain">
+        <div class="col navvv">
+          <div class="logo">
+            <a href="#" class="Logo"
+              ><img
+                class="logoimg"
+                src="{% static 'upload/Logo Icon.png' %}"
+                alt=""
+            /></a>
+          </div>
+
+          <div class="col d-none d-sm-inline">
+            <h1 class="admiindashh">ADMIN DASHBOARD</h1>
+          </div>
+          <div class="login">
+            <a href="{% url 'logout' %}"
+              ><button class="butttn">Logout</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <div class="dividepage">
+        <!-- Blog Post Form Section -->
+        <div id="page_caption" class="page_content">
+          <div class="page_title_wrapper">
+            <div class="standard_wrapper">
+              <div class="page_title_inner">
+                <div class="page_title_content">
+                  <h1>Create Blog Post</h1>
+                  <div class="page_tagline">Create your blog post below.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="move_middle">
+            <div class="form-containerss">
+              <form class="form" method="post" enctype="multipart/form-data">
+                {% csrf_token %} {% if error %}
+                <div style="color: red">{{ error }}</div>
+                {% endif %}
+
+                <div class="form-group">{{ form.as_p }}</div>
+
+                <div class="form-group">
+                  <label for="images">Upload Images (max 2):</label>
+                  <input
+                    type="file"
+                    id="images"
+                    name="images"
+                    multiple
+                    accept="image/*"
+                    style="display: block"
+                  />
+                </div>
+                <div id="imagePreviewContainer" class="preview-container"></div>
+                <button class="form-submit-btn" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Posts List Section -->
+        <div class="containerformbloglist" style="margin-top: 40px">
+          {% for post in posts %}
+          <div
+            style="
+              display: flex;
+              margin-bottom: 20px;
+              border-bottom: 1px solid #ddd;
+              padding-bottom: 20px;
+            "
+          >
+            <!-- Blog Image -->
+            <div style="width: 150px; margin-right: 15px">
+              {% if post.images.all %} {% with post.images.all.0 as img %}
+              <img
+                src="{{ img.image.url }}"
+                alt="Blog Image"
+                style="max-width: 100%; height: auto"
+              />
+              {% endwith %} {% else %}
+              <p>No image</p>
+              {% endif %}
+            </div>
+
+            <!-- Blog Content -->
+            <div>
+              <h2>{{ post.title }}</h2>
+              <p>{{ post.content|truncatewords:30 }}</p>
+              <a href="{% url 'edit_post' post.id %}">Edit</a> |
+              <a href="{% url 'delete_post' post.id %}">Delete</a>
+            </div>
+          </div>
+          {% empty %}
+          <p>No blog posts yet.</p>
+          {% endfor %}
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="fooot">
+      <h1 class="goodzic">Designed by Goodzic Sounds</h1>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const input = document.getElementById("images");
+      const previewContainer = document.getElementById("imagePreviewContainer");
+      let selectedFiles = [];
+
+      input.addEventListener("change", () => {
+        const newFiles = Array.from(input.files);
+
+        // Combine previous and new files, then limit to 2
+        selectedFiles = [...selectedFiles, ...newFiles].slice(0, 2);
+
+        updatePreview();
+        updateInput();
+      });
+
+      function updatePreview() {
+        previewContainer.innerHTML = "";
+
+        selectedFiles.forEach((file, index) => {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("preview-image-wrapper");
+
+            const img = document.createElement("img");
+            img.src = e.target.result;
+
+            const btn = document.createElement("button");
+            btn.className = "remove-btn";
+            btn.innerHTML = "×";
+            btn.onclick = () => {
+              selectedFiles.splice(index, 1);
+              updatePreview();
+              updateInput();
+            };
+
+            wrapper.appendChild(img);
+            wrapper.appendChild(btn);
+            previewContainer.appendChild(wrapper);
+          };
+
+          reader.readAsDataURL(file);
+        });
+      }
+
+      // Reconstruct the FileList and assign it to the input
+      function updateInput() {
+        const dataTransfer = new DataTransfer();
+        selectedFiles.forEach((file) => dataTransfer.items.add(file));
+        input.files = dataTransfer.files;
+      }
+    </script>
+  </body>
+</html>

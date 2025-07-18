@@ -1,0 +1,1127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" data-menu="leftalign">
+  <head>
+    <title>We Are People | Blog_list</title>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/revslider/public/assets/css/settings.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/reset.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/wordpress.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/animation.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/ilightbox/ilightbox.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/jqueryui/custom.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/mediaelement/mediaelementplayer-legacy.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/flexslider/flexslider.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/tooltipster.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/odometer-theme-minimal.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/menus/leftalignmenu.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/font-awesome.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/themify-icons.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grandconference_custom_css.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/kirki-styles.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grid.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Google Fonts (leave as-is) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Work+Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A300%2Cregular%2C500%2C600%2C700%2C900&amp;subset"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Poppins:600%2C700%2C400%2C500"
+      rel="stylesheet"
+      property="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      href="{% static 'upload/cropped-TG-Thumb-32x32.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/cropped-TG-Thumb-192x192.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/cropped-TG-Thumb-180x180.png' %}"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body
+    class="page-template page-template-page_r page-template-page_r-php page page-id-118 page-child parent-pageid-95 woocommerce-no-js"
+  >
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      style="background-color: #000000"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"
+          ><img
+            class=""
+            style="width: 250px; height: 50px"
+            src="{% static 'upload/Logo Icon.png' %}"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{% url 'home' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'about' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'sponsor' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Sponsorship</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'exhibitions' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Exhibition</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'blog' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'speakers' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Speakers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'gallery_list_main' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'registration' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'contact' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="page_caption" class="blog_wrapper">
+      <div class="page_title_wrapper">
+        <div class="standard_wrapper">
+          <div class="page_title_inner">
+            <div class="page_title_content">
+              <h1>Blog</h1>
+              <div class="page_tagline">Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Begin content -->
+    <div id="page_content_wrapper" class="blog_wrapper">
+      <div class="inner">
+        <!-- Begin main content -->
+        <div class="inner_wrapper">
+          <div class="page_content_wrapper"></div>
+
+          <div class="sidebar_content">
+            <!-- Begin each blog post -->
+            <div
+              id="post-50"
+              class="post-50 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <div class="post_header">
+                    <div class="post_header_title">
+                      <h5>
+                        <a
+                          href="#"
+                          title="Boston’s new hub for robotics startups"
+                          >Boston’s new hub for robotics startups</a
+                        >
+                      </h5>
+                    </div>
+                    <div class="post_detail single_post">
+                      <span class="post_info_date">
+                        <a
+                          href="#"
+                          title="Boston’s new hub for robotics startups"
+                          >February 18, 2017</a
+                        >
+                      </span>
+                      <span class="post_info_comment">
+                        •
+                        <a href="#"> 0&nbsp;Comment </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="post_img static">
+                    <a href="#">
+                      <img
+                        width="960"
+                        height="636"
+                        src="{% static 'upload/29969985723_6c5d98cc97_o-960x636.jpg' %}"
+                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <br class="clear" />
+
+                  <p>
+                    Meh synth Schlitz, tempor duis single-origin coffee ea next
+                    level ethnic fingerstache fanny pack nostrud. Photo booth
+                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
+                    esse nihil, flexitarian Truffaut synth art party deep v
+                    chillwave. Seitan High Life [&hellip;]
+                  </p>
+                  <div class="post_button_wrapper">
+                    <a class="readmore" href="#"
+                      >Read More<span class="ti-angle-right"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br class="clear" />
+            <!-- End each blog post -->
+
+            <!-- Begin each blog post -->
+            <div
+              id="post-45"
+              class="post-45 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <div class="post_header">
+                    <div class="post_header_title">
+                      <h5>
+                        <a
+                          href="#"
+                          title="OxSight uses augmented reality to aid the visually impaired"
+                          >OxSight uses augmented reality to aid the visually
+                          impaired</a
+                        >
+                      </h5>
+                    </div>
+                    <div class="post_detail single_post">
+                      <span class="post_info_date">
+                        <a
+                          href="#"
+                          title="OxSight uses augmented reality to aid the visually impaired"
+                          >February 18, 2017</a
+                        >
+                      </span>
+                      <span class="post_info_comment">
+                        •
+                        <a href="#"> 0&nbsp;Comment </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="post_img static">
+                    <a href="#">
+                      <img
+                        width="960"
+                        height="636"
+                        src="{% static 'upload/16876680475_9e5c37b9d1_o-960x636.jpg' %}"
+                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <br class="clear" />
+
+                  <p>
+                    Meh synth Schlitz, tempor duis single-origin coffee ea next
+                    level ethnic fingerstache fanny pack nostrud. Photo booth
+                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
+                    esse nihil, flexitarian Truffaut synth art party deep v
+                    chillwave. Seitan High Life [&hellip;]
+                  </p>
+                  <div class="post_button_wrapper">
+                    <a class="readmore" href="#"
+                      >Read More<span class="ti-angle-right"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br class="clear" />
+            <!-- End each blog post -->
+
+            <!-- Begin each blog post -->
+            <div
+              id="post-42"
+              class="post-42 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <div class="post_header">
+                    <div class="post_header_title">
+                      <h5>
+                        <a
+                          href="#"
+                          title="Tokyo Institute of Technology taps for fastest AI computer"
+                          >Tokyo Institute of Technology taps for fastest AI
+                          computer</a
+                        >
+                      </h5>
+                    </div>
+                    <div class="post_detail single_post">
+                      <span class="post_info_date">
+                        <a
+                          href="#"
+                          title="Tokyo Institute of Technology taps for fastest AI computer"
+                          >February 18, 2017</a
+                        >
+                      </span>
+                      <span class="post_info_comment">
+                        •
+                        <a href="#"> 0&nbsp;Comment </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="post_img static">
+                    <a href="#">
+                      <img
+                        width="960"
+                        height="636"
+                        src="{% static 'upload/30539203531_5353af3b36_o-960x636.jpg' %}"
+                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <br class="clear" />
+
+                  <p>
+                    Meh synth Schlitz, tempor duis single-origin coffee ea next
+                    level ethnic fingerstache fanny pack nostrud. Photo booth
+                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
+                    esse nihil, flexitarian Truffaut synth art party deep v
+                    chillwave. Seitan High Life [&hellip;]
+                  </p>
+                  <div class="post_button_wrapper">
+                    <a class="readmore" href="#"
+                      >Read More<span class="ti-angle-right"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br class="clear" />
+            <!-- End each blog post -->
+
+            <!-- Begin each blog post -->
+            <div
+              id="post-39"
+              class="post-39 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <div class="post_header">
+                    <div class="post_header_title">
+                      <h5>
+                        <a
+                          href="#"
+                          title="Student job finder WayUp acquires competitor Looksharp"
+                          >Student job finder WayUp acquires competitor
+                          Looksharp</a
+                        >
+                      </h5>
+                    </div>
+                    <div class="post_detail single_post">
+                      <span class="post_info_date">
+                        <a
+                          href="#"
+                          title="Student job finder WayUp acquires competitor Looksharp"
+                          >February 18, 2017</a
+                        >
+                      </span>
+                      <span class="post_info_comment">
+                        •
+                        <a href="#"> 0&nbsp;Comment </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="post_img static">
+                    <a href="#">
+                      <img
+                        width="960"
+                        height="636"
+                        src="{% static 'upload/29996901984_9c1472be2b_o-960x636.jpg' %}"
+                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <br class="clear" />
+
+                  <p>
+                    Meh synth Schlitz, tempor duis single-origin coffee ea next
+                    level ethnic fingerstache fanny pack nostrud. Photo booth
+                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
+                    esse nihil, flexitarian Truffaut synth art party deep v
+                    chillwave. Seitan High Life [&hellip;]
+                  </p>
+                  <div class="post_button_wrapper">
+                    <a class="readmore" href="#"
+                      >Read More<span class="ti-angle-right"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br class="clear" />
+            <!-- End each blog post -->
+
+            <!-- Begin each blog post -->
+            <div
+              id="post-36"
+              class="post-36 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <div class="post_header">
+                    <div class="post_header_title">
+                      <h5>
+                        <a
+                          href="#"
+                          title="How Alphabet’s Project Loon balloons learned to loiter"
+                          >How Alphabet’s Project Loon balloons learned to
+                          loiter</a
+                        >
+                      </h5>
+                    </div>
+                    <div class="post_detail single_post">
+                      <span class="post_info_date">
+                        <a
+                          href="#"
+                          title="How Alphabet’s Project Loon balloons learned to loiter"
+                          >February 17, 2017</a
+                        >
+                      </span>
+                      <span class="post_info_comment">
+                        •
+                        <a href="#"> 0&nbsp;Comment </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="post_img static">
+                    <a href="#">
+                      <img
+                        width="960"
+                        height="636"
+                        src="{% static 'upload/30570832146_36d0a44551_o-960x636.jpg' %}"
+                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <br class="clear" />
+
+                  <p>
+                    Meh synth Schlitz, tempor duis single-origin coffee ea next
+                    level ethnic fingerstache fanny pack nostrud. Photo booth
+                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
+                    esse nihil, flexitarian Truffaut synth art party deep v
+                    chillwave. Seitan High Life [&hellip;]
+                  </p>
+                  <div class="post_button_wrapper">
+                    <a class="readmore" href="#"
+                      >Read More<span class="ti-angle-right"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br class="clear" />
+            <!-- End each blog post -->
+
+            <!-- Begin each blog post -->
+            <div
+              id="post-33"
+              class="post-33 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <div class="post_header">
+                    <div class="post_header_title">
+                      <h5>
+                        <a
+                          href="#"
+                          title="This baby monitor uses radar to detect infant breathing patterns"
+                          >This baby monitor uses radar to detect infant
+                          breathing patterns</a
+                        >
+                      </h5>
+                    </div>
+                    <div class="post_detail single_post">
+                      <span class="post_info_date">
+                        <a
+                          href="#"
+                          title="This baby monitor uses radar to detect infant breathing patterns"
+                          >February 17, 2017</a
+                        >
+                      </span>
+                      <span class="post_info_comment">
+                        •
+                        <a href="#"> 0&nbsp;Comment </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="post_img static">
+                    <a href="#">
+                      <img
+                        width="960"
+                        height="636"
+                        src="{% static 'upload/24493312813_39edb1e9db_o-960x636.jpg' %}"
+                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <br class="clear" />
+
+                  <p>
+                    Meh synth Schlitz, tempor duis single-origin coffee ea next
+                    level ethnic fingerstache fanny pack nostrud. Photo booth
+                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
+                    esse nihil, flexitarian Truffaut synth art party deep v
+                    chillwave. Seitan High Life [&hellip;]
+                  </p>
+                  <div class="post_button_wrapper">
+                    <a class="readmore" href="#"
+                      >Read More<span class="ti-angle-right"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br class="clear" />
+            <!-- End each blog post -->
+
+            <!-- Begin each blog post -->
+            <div
+              id="post-30"
+              class="post-30 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <div class="post_header">
+                    <div class="post_header_title">
+                      <h5>
+                        <a
+                          href="#"
+                          title="LG reveals even more details about the G6 ahead of launch"
+                          >LG reveals even more details about the G6 ahead of
+                          launch</a
+                        >
+                      </h5>
+                    </div>
+                    <div class="post_detail single_post">
+                      <span class="post_info_date">
+                        <a
+                          href="#"
+                          title="LG reveals even more details about the G6 ahead of launch"
+                          >February 17, 2017</a
+                        >
+                      </span>
+                      <span class="post_info_comment">
+                        •
+                        <a href="#"> 0&nbsp;Comment </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="post_img static">
+                    <a href="#">
+                      <img
+                        width="960"
+                        height="636"
+                        src="{% static 'upload/30504391022_367f5f7967_o-960x636.jpg' %}"
+                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <br class="clear" />
+
+                  <p>
+                    Meh synth Schlitz, tempor duis single-origin coffee ea next
+                    level ethnic fingerstache fanny pack nostrud. Photo booth
+                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
+                    esse nihil, flexitarian Truffaut synth art party deep v
+                    chillwave. Seitan High Life [&hellip;]
+                  </p>
+                  <div class="post_button_wrapper">
+                    <a class="readmore" href="#"
+                      >Read More<span class="ti-angle-right"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br class="clear" />
+            <!-- End each blog post -->
+
+            <!-- Begin each blog post -->
+            <div
+              id="post-27"
+              class="post-27 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <div class="post_header">
+                    <div class="post_header_title">
+                      <h5>
+                        <a
+                          href="#"
+                          title="Trucks will talk to each other using Peloton Technology"
+                          >Trucks will talk to each other using Peloton
+                          Technology</a
+                        >
+                      </h5>
+                    </div>
+                    <div class="post_detail single_post">
+                      <span class="post_info_date">
+                        <a
+                          href="#"
+                          title="Trucks will talk to each other using Peloton Technology"
+                          >February 17, 2017</a
+                        >
+                      </span>
+                      <span class="post_info_comment">
+                        •
+                        <a href="#"> 0&nbsp;Comment </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="post_img static">
+                    <a href="#">
+                      <img
+                        width="960"
+                        height="636"
+                        src="{% static 'upload/27972191326_08ce6cd430_o-960x636.jpg' %}"
+                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <br class="clear" />
+
+                  <p>
+                    Meh synth Schlitz, tempor duis single-origin coffee ea next
+                    level ethnic fingerstache fanny pack nostrud. Photo booth
+                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
+                    esse nihil, flexitarian Truffaut synth art party deep v
+                    chillwave. Seitan High Life [&hellip;]
+                  </p>
+                  <div class="post_button_wrapper">
+                    <a class="readmore" href="#"
+                      >Read More<span class="ti-angle-right"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br class="clear" />
+            <!-- End each blog post -->
+
+            <!-- Begin each blog post -->
+            <div
+              id="post-6"
+              class="post-6 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
+            >
+              <div class="post_wrapper">
+                <div class="post_content_wrapper">
+                  <div class="post_header">
+                    <div class="post_header_title">
+                      <h5>
+                        <a
+                          href="#"
+                          title="Helps entrepreneurs find freelance developers"
+                          >Helps entrepreneurs find freelance developers</a
+                        >
+                      </h5>
+                    </div>
+                    <div class="post_detail single_post">
+                      <span class="post_info_date">
+                        <a
+                          href="#"
+                          title="Helps entrepreneurs find freelance developers"
+                          >February 17, 2017</a
+                        >
+                      </span>
+                      <span class="post_info_comment">
+                        •
+                        <a href="#"> 0&nbsp;Comment </a>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="post_img static">
+                    <a href="#">
+                      <img
+                        width="960"
+                        height="636"
+                        src="{% static 'upload/ted_38605266-960x636.jpg' %}"
+                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+
+                  <br class="clear" />
+
+                  <p>
+                    Meh synth Schlitz, tempor duis single-origin coffee ea next
+                    level ethnic fingerstache fanny pack nostrud. Photo booth
+                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
+                    esse nihil, flexitarian Truffaut synth art party deep v
+                    chillwave. Seitan High Life [&hellip;]
+                  </p>
+                  <div class="post_button_wrapper">
+                    <a class="readmore" href="#"
+                      >Read More<span class="ti-angle-right"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br class="clear" />
+            <!-- End each blog post -->
+          </div>
+
+          <div class="sidebar_wrapper">
+            <div class="sidebar_top"></div>
+
+            <div class="sidebar">
+              <div class="content">
+                <ul class="sidebar_widget">
+                  <li
+                    id="grandconference_cat_posts-3"
+                    class="widget GrandConference_Cat_Posts"
+                  >
+                    <h2 class="widgettitle"><span>Technology</span></h2>
+                    <ul class="posts blog withthumb">
+                      <li>
+                        <div class="post_circle_thumb">
+                          <a href="#"
+                            ><img
+                              class="alignleft frame post_thumb"
+                              src="{% static 'upload/29969985723_6c5d98cc97_o-150x150.jpg' %}"
+                              alt=""
+                          /></a>
+                        </div>
+                        <a href="#">Boston’s new hub for robotics startups</a>
+                        <div class="post_attribute">February 18, 2017</div>
+                      </li>
+                      <li>
+                        <div class="post_circle_thumb">
+                          <a href="#"
+                            ><img
+                              class="alignleft frame post_thumb"
+                              src="{% static 'upload/16876680475_9e5c37b9d1_o-150x150.jpg' %}"
+                              alt=""
+                          /></a>
+                        </div>
+                        <a href="#"
+                          >OxSight uses augmented reality to aid the
+                          visually...</a
+                        >
+                        <div class="post_attribute">February 18, 2017</div>
+                      </li>
+                      <li>
+                        <div class="post_circle_thumb">
+                          <a href="#"
+                            ><img
+                              class="alignleft frame post_thumb"
+                              src="{% static 'upload/30539203531_5353af3b36_o-150x150.jpg' %}"
+                              alt=""
+                          /></a>
+                        </div>
+                        <a href="#"
+                          >Tokyo Institute of Technology taps for fastest AI
+                          computer</a
+                        >
+                        <div class="post_attribute">February 18, 2017</div>
+                      </li>
+                      <li>
+                        <div class="post_circle_thumb">
+                          <a href="#"
+                            ><img
+                              class="alignleft frame post_thumb"
+                              src="{% static 'upload/29996901984_9c1472be2b_o-150x150.jpg' %}"
+                              alt=""
+                          /></a>
+                        </div>
+                        <a href="#"
+                          >Student job finder WayUp acquires competitor
+                          Looksharp</a
+                        >
+                        <div class="post_attribute">February 18, 2017</div>
+                      </li>
+                      <li>
+                        <div class="post_circle_thumb">
+                          <a href="#"
+                            ><img
+                              class="alignleft frame post_thumb"
+                              src="{% static 'upload/30570832146_36d0a44551_o-150x150.jpg' %}"
+                              alt=""
+                          /></a>
+                        </div>
+                        <a href="#"
+                          >How Alphabet’s Project Loon balloons learned to
+                          loiter</a
+                        >
+                        <div class="post_attribute">February 17, 2017</div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <br class="clear" />
+
+            <div class="sidebar_bottom"></div>
+          </div>
+        </div>
+        <!-- End main content -->
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer" class="ppb_wrapper">
+      <ul class="sidebar_widget three">
+        <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p>
+              <img
+                src="{% static 'upload/Logo Icon.png' %}"
+                width="158"
+                height="20"
+                alt=""
+              />
+            </p>
+            <p>{{ footer_description|default:"Abuja is a great place" }}</p>
+
+            <!-- Social Icons -->
+            <div style="margin-top: 20px">
+              <div class="social_wrapper shortcode dark">
+                <ul>
+                  <li class="facebook">
+                    <a target="_blank" title="Facebook" href="#"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li class="twitter">
+                    <a
+                      target="_blank"
+                      title="Twitter"
+                      href="https://twitter.com/#"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="youtube">
+                    <a target="_blank" title="Youtube" href="#"
+                      ><i class="fa fa-youtube"></i
+                    ></a>
+                  </li>
+                  <li class="google">
+                    <a target="_blank" title="Google+" href="#"
+                      ><i class="fa fa-google-plus"></i
+                    ></a>
+                  </li>
+                  <li class="instagram">
+                    <a
+                      target="_blank"
+                      title="Instagram"
+                      href="https://instagram.com/tedxvienna"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Newsletter -->
+        <li id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
+          <h2 class="widgettitle">Newsletter</h2>
+          <form
+            id="mc4wp-form-1"
+            class="mc4wp-form mc4wp-form-92"
+            method="post"
+          >
+            {% csrf_token %}
+            <div class="mc4wp-form-fields">
+              <p>
+                Don't miss a thing!
+                <br />Sign up to receive daily news
+              </p>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address"
+                required
+              />
+              <input type="submit" value="Sign up" />
+            </div>
+            <label style="display: none !important">
+              Leave this field empty if you're human:
+              <input
+                type="text"
+                name="honeypot"
+                value=""
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </label>
+            <div class="mc4wp-response">
+              {% if form.errors %}
+              <p class="error">{{ form.errors }}</p>
+              {% endif %} {% if message %}
+              <p class="success">{{ message }}</p>
+              {% endif %}
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <div id="side_menu_wrapper" class="overlay_background">
+      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate.min.js' %}"></script>
+    <script src="{% static 'js/plugins/ui/core.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.requestAnimationFrame.js' %}"></script>
+    <script src="{% static 'js/plugins/ilightbox.packed.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.easing.js' %}"></script>
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.isotope.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.masory.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.tooltipster.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.sticky-kit.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/custom.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_onepage.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.countdown.js' %}"></script>
+    <script src="{% static 'js/plugins/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'js/plugins/masonry.min.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_sidebar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax-video.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_clock.js' %}"></script>
+    <script src="{% static 'js/plugins/ui/widget.min.js' %}"></script>
+    <script src="{% static 'js/plugins/ui/accordion.min.js' %}"></script>
+    <script src="{% static 'js/plugins/custom-accordion.js' %}"></script>
+  </body>
+</html>

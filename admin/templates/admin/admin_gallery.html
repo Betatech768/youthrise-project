@@ -1,0 +1,147 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard | Delete list</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/admincss.css' %}" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="contain">
+      <div class="col navvv">
+        <div class="logo">
+          <a href="#" class="Logo"
+            ><img
+              class="logoimg"
+              src="{% static 'upload/Logo Icon.png' %}"
+              alt=""
+          /></a>
+        </div>
+
+        <div class="col d-none d-sm-inline">
+          <h1 class="admiindashh">ADMIN DASHBOARD</h1>
+        </div>
+        <div class="login">
+          <a href="{% url 'logout' %}"
+            ><button class="butttn">Logout</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload Form -->
+    <div class="container mt-5">
+      <h2 class="text-center text-danger fw-bold mb-4">Upload New Image</h2>
+
+      <div class="form-containerss mx-auto">
+        <form class="form" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            {% csrf_token %} {{ form.as_p }}
+
+            <!-- <a href=""> <label for="id_image">Upload Images:</label></a>
+            <input
+              type="file"
+              name="image"
+              id="id_image"
+              style="display: block"
+            />
+            <div
+              id="imagePreviewContainer"
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 10px;
+              "
+            ></div> -->
+          </div>
+
+          <button class="form-submit-btn" name="upload" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="container mt-5">
+      <h2>Gallery</h2>
+      <div class="row mx-auto">
+        {% for image in images %}
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100">
+            {% if image.image %}
+            <img
+              src="{{ image.image.url }}"
+              class="card-img-top"
+              alt="Image {{ image.id }}"
+              style="height: 250px; object-fit: cover"
+            />
+            {% else %}
+            <div class="card-body text-center">
+              <p><em>No image file</em></p>
+            </div>
+            {% endif %}
+            <div class="card-body text-center">
+              <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="image_id" value="{{ image.id }}" />
+                <button
+                  type="submit"
+                  name="delete"
+                  class="btn btn-danger btn-sm"
+                >
+                  Delete
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+          <p>No images uploaded yet.</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fooot mt-5">
+      <h1 class="goodzic">Designed by Goodzic sounds</h1>
+    </footer>
+
+    <!-- Optional JS for dynamic enhancements -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const imageInput = document.getElementById("id_image");
+        if (imageInput) {
+          imageInput.style.display = "block";
+          imageInput.style.width = "100%";
+          imageInput.style.padding = "10px";
+          imageInput.style.border = "1px solid #000";
+          imageInput.style.borderRadius = "8px";
+          imageInput.style.backgroundColor = "#f8f9fa";
+          imageInput.style.color = "#495057";
+          imageInput.style.cursor = "pointer";
+        }
+      });
+    </script>
+  </body>
+</html>

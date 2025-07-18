@@ -1,0 +1,684 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en-US" data-menu="leftalign">
+  <head>
+    <title>We Are People | Speakers</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- Local Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/revslider/public/assets/css/settings.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/reset.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/wordpress.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/animation.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/ilightbox/ilightbox.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/jqueryui/custom.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/mediaelement/mediaelementplayer-legacy.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/flexslider/flexslider.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/tooltipster.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/odometer-theme-minimal.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/menus/leftalignmenu.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/font-awesome.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/themify-icons.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grandconference_custom_css.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/kirki-styles.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grid.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- External Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Work+Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A300%2Cregular%2C500%2C600%2C700%2C900&amp;subset"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Poppins:600%2C700%2C400%2C500"
+      rel="stylesheet"
+      property="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Favicon / Touch Icons -->
+    <link
+      rel="icon"
+      href="{% static 'upload/cropped-TG-Thumb-32x32.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/cropped-TG-Thumb-192x192.png' %}"
+      sizes="192x192"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/cropped-TG-Thumb-180x180.png' %}"
+    />
+  </head>
+
+  <body
+    class="home page-template-default page page-id-350 woocommerce-no-js ppb_enable"
+  >
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      style="background-color: #000000"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"
+          ><img
+            class=""
+            style="width: 250px; height: 50px"
+            src="{% static 'upload/Logo Icon.png' %}"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{% url 'home' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'about' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'sponsor' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Sponsorship</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'exhibitions' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Exhibition</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'blog' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'speakers' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Speakers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'gallery_list_main' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'registration' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'contact' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="page_caption"
+      class="hasbg parallax"
+      style="background-image: url('/static/upload/ted_38605266.jpg')"
+    >
+      <div class="page_title_wrapper">
+        <div class="standard_wrapper">
+          <div class="page_title_inner">
+            <div class="page_title_content">
+              <h1>Speakers</h1>
+              <div class="page_tagline">
+                This is sample of page tagline and you can set it up using page
+                option
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ppb_wrapper hasbg">
+      <div class="one" style="background-color: #ff2d54; color: #ffffff">
+        <div
+          class="one_half_bg parallax"
+          style="
+            background-image: url('/static/upload/30539203531_5353af3b36_o.jpg');
+            height: 550px;
+          "
+        ></div>
+        <div class="one_half_bg" style="padding: 85px">
+          <h2 class="ppb_title" style="color: #ffffff">
+            Lorem ipsum dolor sit amet consectetur.
+          </h2>
+          <div class="page_tagline" style="color: #ffffff">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ex
+            quibusdam repellendus!
+          </div>
+          <div class="ppb_header_content">
+            <p>
+              Meh synth Schlitz, tempor duis single-origin coffee ea next level
+              ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit
+              hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil,
+              flexitarian Truffaut synth art party deep v chillwave. Seitan High
+              Life reprehenderit consectetur cupidatat kogi. Et leggings fanny
+              pack, elit bespoke vinyl art party Pitchfork selfies master
+              cleanse
+            </p>
+          </div>
+        </div>
+        <br class="clear" />
+      </div>
+      <div
+        class="one withsmallpadding ppb_header"
+        style="text-align: center; padding: 60px 0 60px 0"
+      >
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner">
+              <div style="margin: auto; width: 60%">
+                <h2 class="ppb_title" style="text-align: center">
+                  Our Speaker
+                </h2>
+                <div class="page_tagline" style="text-align: center">
+                  This is sample of page tagline and you can set it up using
+                  page option
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ppb_speaker_grid one nopadding">
+        <div
+          class="page_content_wrapper page_main_content sidebar_content full_width fixed_column"
+        >
+          <div id="1573807481774681297" data-columns="5">
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-211050-500x500.jpg' %}"
+                  alt="John Doe"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>John Doe</h4>
+                  <div class="speaker_desc">Founder Envato</div>
+                </div>
+              </a>
+            </div>
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-25845-500x500.jpg' %}"
+                  alt="Joanna Smith"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>Joanna Smith</h4>
+                  <div class="speaker_desc">VP Design Apple</div>
+                </div>
+              </a>
+            </div>
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-175696-500x500.jpg' %}"
+                  alt="Luis Gallop"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>Luis Gallop</h4>
+                  <div class="speaker_desc">Head Engineering Dell</div>
+                </div>
+              </a>
+            </div>
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-295821-500x500.jpg' %}"
+                  alt="Katie Stricker"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>Katie Stricker</h4>
+                  <div class="speaker_desc">Co-founder Blackbox</div>
+                </div>
+              </a>
+            </div>
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-69212-500x500.jpg' %}"
+                  alt="Espen Brunberg"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>Espen Brunberg</h4>
+                  <div class="speaker_desc">Web Technologist</div>
+                </div>
+              </a>
+            </div>
+            <br class="clear" />
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-211048-500x500.jpg' %}"
+                  alt="Kevin Chase"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>Kevin Chase</h4>
+                  <div class="speaker_desc">Chairman Tesla</div>
+                </div>
+              </a>
+            </div>
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-285171-500x500.jpg' %}"
+                  alt="Piera Mcclure"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>Piera Mcclure</h4>
+                  <div class="speaker_desc">Creative Director Slack</div>
+                </div>
+              </a>
+            </div>
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-199943-500x500.jpg' %}"
+                  alt="Robin Johnson"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>Robin Johnson</h4>
+                  <div class="speaker_desc">VP Design Microsoft</div>
+                </div>
+              </a>
+            </div>
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-241734-500x500.jpg' %}"
+                  alt="Jeff Robins"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>Jeff Robins</h4>
+                  <div class="speaker_desc">Partner Startup</div>
+                </div>
+              </a>
+            </div>
+            <div class="element grid one_fifth_bg">
+              <a class="#"
+                ><img
+                  src="{% static 'upload/pexels-photo-289704-500x500.jpg' %}"
+                  alt="Danielle Ahn"
+                  class=""
+                />
+                <div class="speaker_info_wrapper">
+                  <h4>Danielle Ahn</h4>
+                  <div class="speaker_desc">Co-founder Zipcar</div>
+                </div>
+              </a>
+            </div>
+            <br class="clear" />
+          </div>
+        </div>
+      </div>
+      <div
+        class="one withsmallpadding ppb_header parallax withbg"
+        style="
+          background-image: url('/static/upload/27899245542_531ed54fc7_o.jpg');
+          background-position: center center;
+          text-align: center;
+          padding: 100px 0 100px 0;
+          color: #ffffff;
+        "
+      >
+        <div
+          class="overlay_background"
+          style="
+            background: #000000;
+            background: rgb(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.5);
+          "
+        ></div>
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner">
+              <div style="margin: auto; width: 65%">
+                <h2
+                  class="ppb_title"
+                  style="color: #ffffff; text-align: center"
+                >
+                  Register Now!
+                </h2>
+                <div
+                  class="page_tagline"
+                  style="color: #ffffff; text-align: center"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Consectetur delectus pariatur aperiam temporibus atque vel
+                  cupiditate ullam porro dolorem omnis.
+                </div>
+                <div class="ppb_header_content">
+                  <p><a class="button medium" href="#">Register</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer" class="ppb_wrapper">
+      <ul class="sidebar_widget three">
+        <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p>
+              <img
+                src="{% static 'upload/Logo Icon.png' %}"
+                width="158"
+                height="20"
+                alt=""
+              />
+            </p>
+            <p>{{ footer_description|default:"Abuja is a great place" }}</p>
+
+            <!-- Social Icons -->
+            <div style="margin-top: 20px">
+              <div class="social_wrapper shortcode dark">
+                <ul>
+                  <li class="facebook">
+                    <a target="_blank" title="Facebook" href="#"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li class="twitter">
+                    <a
+                      target="_blank"
+                      title="Twitter"
+                      href="https://twitter.com/#"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="youtube">
+                    <a target="_blank" title="Youtube" href="#"
+                      ><i class="fa fa-youtube"></i
+                    ></a>
+                  </li>
+                  <li class="google">
+                    <a target="_blank" title="Google+" href="#"
+                      ><i class="fa fa-google-plus"></i
+                    ></a>
+                  </li>
+                  <li class="instagram">
+                    <a
+                      target="_blank"
+                      title="Instagram"
+                      href="https://instagram.com/tedxvienna"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Newsletter -->
+        <li id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
+          <h2 class="widgettitle">Newsletter</h2>
+          <form
+            id="mc4wp-form-1"
+            class="mc4wp-form mc4wp-form-92"
+            method="post"
+          >
+            {% csrf_token %}
+            <div class="mc4wp-form-fields">
+              <p>
+                Don't miss a thing!
+                <br />Sign up to receive daily news
+              </p>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address"
+                required
+              />
+              <input type="submit" value="Sign up" />
+            </div>
+            <label style="display: none !important">
+              Leave this field empty if you're human:
+              <input
+                type="text"
+                name="honeypot"
+                value=""
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </label>
+            <div class="mc4wp-response">
+              {% if form.errors %}
+              <p class="error">{{ form.errors }}</p>
+              {% endif %} {% if message %}
+              <p class="success">{{ message }}</p>
+              {% endif %}
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <div id="side_menu_wrapper" class="overlay_background">
+      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'js/plugins/ui/core.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.requestAnimationFrame.js' %}"></script>
+    <script src="{% static 'js/plugins/ilightbox.packed.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.easing.js' %}"></script>
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.isotope.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.masory.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.tooltipster.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.sticky-kit.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+
+    <!-- Custom Scripts -->
+    <script src="{% static 'js/plugins/custom_plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/custom.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_onepage.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.countdown.js' %}"></script>
+    <script src="{% static 'js/plugins/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'js/plugins/masonry.min.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_sidebar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax-video.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_clock.js' %}"></script>
+    <script>
+      /* <![CDATA[ */
+      var mc4wp_forms_config = [];
+      /* ]]> */
+    </script>
+  </body>
+</html>

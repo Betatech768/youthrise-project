@@ -1,0 +1,972 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" data-menu="leftalign">
+  <head>
+    <title>We Are People | Registration</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/revslider/public/assets/css/settings.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/reset.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/wordpress.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/animation.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/ilightbox/ilightbox.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/jqueryui/custom.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/mediaelement/mediaelementplayer-legacy.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/flexslider/flexslider.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/tooltipster.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/odometer-theme-minimal.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/menus/leftalignmenu.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/font-awesome.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/themify-icons.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grandconference_custom_css.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/kirki-styles.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grid.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Work+Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A300%2Cregular%2C500%2C600%2C700%2C900&amp;subset"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Poppins:600%2C700%2C400%2C500"
+      rel="stylesheet"
+      property="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/cropped-TG-Thumb-32x32.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/cropped-TG-Thumb-192x192.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/cropped-TG-Thumb-180x180.png' %}"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="{% static 'upload/cropped-TG-Thumb-270x270.png' %}"
+    />
+  </head>
+
+  <body
+    class="home page-template-default page page-id-350 woocommerce-no-js ppb_enable"
+  >
+    <!-- We are people Hero Image  -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      style="background-color: #000000"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"
+          ><img
+            class=""
+            style="width: 250px; height: 50px"
+            src="{% static 'upload/Logo Icon.png' %}"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{% url 'home' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'about' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'sponsor' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Sponsorship</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'exhibitions' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Exhibition</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'blog' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'speakers' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Speakers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'gallery_list_main' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'registration' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'contact' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="ppb_wrapper">
+      <div class="one fullwidth">
+        <div
+          id="rev_slider_2_1_wrapper"
+          class="rev_slider_wrapper fullwidthbanner-container"
+          data-source="gallery"
+          style="
+            margin: 0px auto;
+            background: #000000;
+            padding: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+          "
+        >
+          <!-- START REVOLUTION SLIDER 5.4.5.1 fullwidth mode -->
+          <div
+            id="rev_slider_2_1"
+            class="rev_slider fullwidthabanner"
+            style="display: none"
+            data-version="5.4.5.1"
+          >
+            <ul>
+              <!-- SLIDE  -->
+              <li
+                data-index="rs-3"
+                data-transition="fade"
+                data-slotamount="default"
+                data-hideafterloop="0"
+                data-hideslideonmobile="off"
+                data-easein="default"
+                data-easeout="default"
+                data-masterspeed="300"
+                data-rotate="0"
+                data-saveperformance="off"
+                data-title="Slide"
+                data-param1=""
+                data-param2=""
+                data-param3=""
+                data-param4=""
+                data-param5=""
+                data-param6=""
+                data-param7=""
+                data-param8=""
+                data-param9=""
+                data-param10=""
+                data-description=""
+              >
+                <!-- MAIN IMAGE -->
+                <img
+                  src="{% static 'upload/26549211695_14ca70baa9_o.jpg' %}"
+                  alt=""
+                  title="26549211695_14ca70baa9_o"
+                  width="1440"
+                  height="960"
+                  data-bgposition="center center"
+                  data-bgfit="cover"
+                  data-bgrepeat="no-repeat"
+                  class="rev-slidebg"
+                  data-no-retina
+                />
+                <!-- LAYERS -->
+
+                <!-- LAYER NR. 1 -->
+                <div
+                  class="tp-caption tp-resizeme"
+                  id="slide-3-layer-1"
+                  data-x="center"
+                  data-hoffset=""
+                  data-y="center"
+                  data-voffset="-15"
+                  data-width="['auto']"
+                  data-height="['auto']"
+                  data-type="text"
+                  data-responsive_offset="on"
+                  data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['inherit','inherit','inherit','inherit']"
+                  data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]"
+                  data-paddingbottom="[0,0,0,0]"
+                  data-paddingleft="[0,0,0,0]"
+                  style="
+                    z-index: 5;
+                    white-space: nowrap;
+                    font-size: 70px;
+                    line-height: 22px;
+                    font-weight: 600;
+                    color: rgba(255, 255, 255, 1);
+                    font-family: Poppins;
+                    text-transform: uppercase;
+                  "
+                >
+                  Conference
+                </div>
+
+                <!-- LAYER NR. 2 -->
+                <div
+                  class="tp-caption tp-resizeme"
+                  id="slide-3-layer-2"
+                  data-x="center"
+                  data-hoffset=""
+                  data-y="center"
+                  data-voffset="-80"
+                  data-width="['auto']"
+                  data-height="['auto']"
+                  data-type="text"
+                  data-responsive_offset="on"
+                  data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['inherit','inherit','inherit','inherit']"
+                  data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]"
+                  data-paddingbottom="[0,0,0,0]"
+                  data-paddingleft="[0,0,0,0]"
+                  style="
+                    z-index: 6;
+                    white-space: nowrap;
+                    font-size: 70px;
+                    line-height: 22px;
+                    font-weight: 700;
+                    color: rgba(255, 255, 255, 1);
+                    font-family: Poppins;
+                    text-transform: uppercase;
+                  "
+                >
+                  We are People
+                </div>
+
+                <!-- LAYER NR. 3 -->
+                <div
+                  class="tp-caption tp-resizeme"
+                  id="slide-3-layer-3"
+                  data-x="center"
+                  data-hoffset="1"
+                  data-y="center"
+                  data-voffset="49"
+                  data-width="['auto']"
+                  data-height="['auto']"
+                  data-visibility="['on','on','on','off']"
+                  data-type="text"
+                  data-responsive_offset="on"
+                  data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['inherit','inherit','inherit','inherit']"
+                  data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]"
+                  data-paddingbottom="[0,0,0,0]"
+                  data-paddingleft="[0,0,0,0]"
+                  style="
+                    z-index: 7;
+                    white-space: nowrap;
+                    font-size: 18px;
+                    line-height: 22px;
+                    font-weight: 400;
+                    color: rgba(201, 201, 201, 1);
+                    font-family: Poppins;
+                  "
+                >
+                  23-26 July 2017 with over 10 sessions - Abuja
+                </div>
+              </li>
+            </ul>
+            <div
+              class="tp-bannertimer tp-bottom"
+              style="visibility: hidden !important"
+            ></div>
+          </div>
+        </div>
+        <!-- END REVOLUTION SLIDER -->
+      </div>
+      <!-- We are people Hero Image  -->
+      <div
+        class="one withsmallpadding ppb_contact_box"
+        style="text-align: center; margin-top: -300px"
+      >
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner">
+              <div
+                class="inner_box parallax"
+                style="
+                  width: 60%;
+                  margin: auto;
+                  background: #ffffff;
+                  border: 2px solid #000000;
+                  padding: 50px;
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                "
+                data-stellar-ratio="1.2"
+              >
+                <h2 class="ppb_title" style="color: #e20f0f">
+                  Register to attend
+                </h2>
+                <div class="page_tagline" style="">
+                  We are People Conference 2025
+                </div>
+                <div class="contact_form7_wrapper">
+                  <div
+                    role="form"
+                    class="wpcf7"
+                    id="wpcf7-f5-o1"
+                    lang="en-US"
+                    dir="ltr"
+                  >
+                    <div class="screen-reader-response"></div>
+                    <form
+                      class="quform"
+                      action=""
+                      method="post"
+                      enctype="multipart/form-data"
+                      onclick=""
+                    >
+                      {% csrf_token %}
+                      <div class="quform-elements">
+                        <div class="quform-element">
+                          <br />
+                          <span class="wpcf7-form-control-wrap your-name">
+                            {{ form.as_p }}
+                          </span>
+                        </div>
+
+                        <!-- Begin Submit button -->
+                        <div class="quform-submit">
+                          <div class="quform-submit-inner">
+                            <button type="submit" class="submit-button">
+                              <span>Send</span>
+                            </button>
+                          </div>
+                          <div class="quform-loading-wrap">
+                            <span class="quform-loading"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="one withsmallpadding ppb_header"
+        style="text-align: left; padding: 0px 0 0px 0; margin-top: 20px"
+      >
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="one withsmallpadding ppb_text"
+        style="text-align: left; padding: 10px 0 10px 0"
+      >
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner">
+              <div class="one_third">
+                <strong>WHERE</strong>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  <br />
+                  Abuja
+                </p>
+              </div>
+              <div class="one_third" style="">
+                <strong>WHEN</strong>
+                <p>
+                  Lorem, ipsum dolor. <br />
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+              </div>
+              <div class="one_third last" style="">
+                <a class="button" href="#">View Speakers</a>
+              </div>
+              <p>
+                <br class="clear" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- We are people Hero Image end -->
+
+    <!-- Below Image near footer  -->
+    <div
+      class="one withsmallpadding ppb_countdown_image parallax withbg"
+      style="
+        background-image: url(upload/ted_38605266.jpg);
+        background-position: center top;
+        text-align: center;
+        padding: 100px 0 100px 0;
+        color: #ffffff;
+      "
+    >
+      <div
+        class="overlay_background"
+        style="
+          background: #000000;
+          background: rgb(0, 0, 0, 0.5);
+          background: rgba(0, 0, 0, 0.5);
+        "
+      ></div>
+      <div class="standard_wrapper">
+        <div class="page_content_wrapper">
+          <div class="inner">
+            <div style="margin: auto; width: 100%">
+              <h2 class="ppb_title" style="color: #ffffff; text-align: center">
+                Lorem, ipsum.
+              </h2>
+              <div
+                class="page_tagline"
+                style="color: #ffffff; text-align: center"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </div>
+              <div class="ppb_header_content">
+                <div
+                  id="clock15737196041741984997"
+                  data-date="2026-04-09"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="ppb_wrapper">
+      <ul class="sidebar_widget three">
+        <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p>
+              <img
+                src="{% static 'upload/Logo Icon.png' %}"
+                width="158"
+                height="20"
+                alt=""
+              />
+            </p>
+            <p>{{ footer_description|default:"Abuja is a great place" }}</p>
+
+            <!-- Social Icons -->
+            <div style="margin-top: 20px">
+              <div class="social_wrapper shortcode dark">
+                <ul>
+                  <li class="facebook">
+                    <a target="_blank" title="Facebook" href="#"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li class="twitter">
+                    <a
+                      target="_blank"
+                      title="Twitter"
+                      href="https://twitter.com/#"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="youtube">
+                    <a target="_blank" title="Youtube" href="#"
+                      ><i class="fa fa-youtube"></i
+                    ></a>
+                  </li>
+                  <li class="google">
+                    <a target="_blank" title="Google+" href="#"
+                      ><i class="fa fa-google-plus"></i
+                    ></a>
+                  </li>
+                  <li class="instagram">
+                    <a
+                      target="_blank"
+                      title="Instagram"
+                      href="https://instagram.com/tedxvienna"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Newsletter -->
+        <li id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
+          <h2 class="widgettitle">Newsletter</h2>
+          <form
+            id="mc4wp-form-1"
+            class="mc4wp-form mc4wp-form-92"
+            method="post"
+          >
+            {% csrf_token %}
+            <div class="mc4wp-form-fields">
+              <p>
+                Don't miss a thing!
+                <br />Sign up to receive daily news
+              </p>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address"
+                required
+              />
+              <input type="submit" value="Sign up" />
+            </div>
+            <label style="display: none !important">
+              Leave this field empty if you're human:
+              <input
+                type="text"
+                name="honeypot"
+                value=""
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </label>
+            <div class="mc4wp-response">
+              {% if form.errors %}
+              <p class="error">{{ form.errors }}</p>
+              {% endif %} {% if message %}
+              <p class="success">{{ message }}</p>
+              {% endif %}
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <div id="side_menu_wrapper" class="overlay_background">
+      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate.min.js' %}"></script>
+
+    <script src="{% static 'js/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'js/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'js/plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'js/plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'js/plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script src="{% static 'js/plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'js/plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <script src="{% static 'js/plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'js/plugins/revslider/public/assets/js/extensions/revolution.extension.video.min.js' %}"></script>
+
+    <script src="{% static 'js/plugins/ui/core.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.requestAnimationFrame.js' %}"></script>
+    <script src="{% static 'js/plugins/ilightbox.packed.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.easing.js' %}"></script>
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.isotope.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.masory.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.tooltipster.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.sticky-kit.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/custom.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_onepage.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.countdown.js' %}"></script>
+    <script src="{% static 'js/plugins/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'js/plugins/masonry.min.js' %}"></script>
+    <script src="{% static 'js/plugins/tabs.min.js' %}"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCmVhK5ZjYRjzAe-e9ZKS1mA3NBPuViwQ"></script>
+
+    <script src="{% static 'js/plugins/jquery.simplegmaps.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax-video.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_clock.js' %}"></script>
+    <script src="{% static 'js/plugins/quform/js/plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/quform/js/scripts.js' %}"></script>
+
+    <script>
+      /* <![CDATA[ */
+      var mc4wp_forms_config = [];
+      /* ]]> */
+    </script>
+    <script>
+      jQuery(document).ready(function () {
+        jQuery("#map1566739327259493916").simplegmaps({
+          MapOptions: {
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            zoom: 8,
+            scrollwheel: false,
+          },
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      function setREVStartSize(e) {
+        try {
+          var i = jQuery(window).width(),
+            t = 9999,
+            r = 0,
+            n = 0,
+            l = 0,
+            f = 0,
+            s = 0,
+            h = 0;
+          if (
+            (e.responsiveLevels &&
+              (jQuery.each(e.responsiveLevels, function (e, f) {
+                f > i && ((t = r = f), (l = e)),
+                  i > f && f > r && ((r = f), (n = e));
+              }),
+              t > r && (l = n)),
+            (f = e.gridheight[l] || e.gridheight[0] || e.gridheight),
+            (s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth),
+            (h = i / s),
+            (h = h > 1 ? 1 : h),
+            (f = Math.round(h * f)),
+            "fullscreen" == e.sliderLayout)
+          ) {
+            var u = (e.c.width(), jQuery(window).height());
+            if (void 0 != e.fullScreenOffsetContainer) {
+              var c = e.fullScreenOffsetContainer.split(",");
+              if (c)
+                jQuery.each(c, function (e, i) {
+                  u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u;
+                }),
+                  e.fullScreenOffset.split("%").length > 1 &&
+                  void 0 != e.fullScreenOffset &&
+                  e.fullScreenOffset.length > 0
+                    ? (u -=
+                        (jQuery(window).height() *
+                          parseInt(e.fullScreenOffset, 0)) /
+                        100)
+                    : void 0 != e.fullScreenOffset &&
+                      e.fullScreenOffset.length > 0 &&
+                      (u -= parseInt(e.fullScreenOffset, 0));
+            }
+            f = u;
+          } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+          e.c.closest(".rev_slider_wrapper").css({
+            height: f,
+          });
+        } catch (d) {
+          console.log("Failure at Presize of Slider:" + d);
+        }
+      }
+    </script>
+    <script>
+      (function () {
+        function addEventListener(element, event, handler) {
+          if (element.addEventListener) {
+            element.addEventListener(event, handler, false);
+          } else if (element.attachEvent) {
+            element.attachEvent("on" + event, handler);
+          }
+        }
+
+        function maybePrefixUrlField() {
+          if (this.value.trim() !== "" && this.value.indexOf("http") !== 0) {
+            this.value = "http://" + this.value;
+          }
+        }
+
+        var urlFields = document.querySelectorAll(
+          '.mc4wp-form input[type="url"]'
+        );
+        if (urlFields && urlFields.length > 0) {
+          for (var j = 0; j < urlFields.length; j++) {
+            addEventListener(urlFields[j], "blur", maybePrefixUrlField);
+          }
+        } /* test if browser supports date fields */
+        var testInput = document.createElement("input");
+        testInput.setAttribute("type", "date");
+        if (testInput.type !== "date") {
+          /* add placeholder & pattern to all date fields */
+          var dateFields = document.querySelectorAll(
+            '.mc4wp-form input[type="date"]'
+          );
+          for (var i = 0; i < dateFields.length; i++) {
+            if (!dateFields[i].placeholder) {
+              dateFields[i].placeholder = "YYYY-MM-DD";
+            }
+            if (!dateFields[i].pattern) {
+              dateFields[i].pattern =
+                "[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])";
+            }
+          }
+        }
+      })();
+    </script>
+    <script type="text/javascript">
+      function revslider_showDoubleJqueryError(sliderID) {
+        var errorMessage =
+          "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+        errorMessage +=
+          "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+        errorMessage +=
+          "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+        errorMessage +=
+          "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+        errorMessage =
+          "<span style='font-size:16px;color:#BC0C06;'>" +
+          errorMessage +
+          "</span>";
+        jQuery(sliderID).show().html(errorMessage);
+      }
+    </script>
+    <script>
+      var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+      var htmlDivCss = "";
+      if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+      } else {
+        var htmlDiv = document.createElement("div");
+        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+        document
+          .getElementsByTagName("head")[0]
+          .appendChild(htmlDiv.childNodes[0]);
+      }
+    </script>
+    <script type="text/javascript">
+      setREVStartSize({
+        c: jQuery("#rev_slider_2_1"),
+        gridwidth: [1240],
+        gridheight: [800],
+        sliderLayout: "fullwidth",
+      });
+
+      var revapi2,
+        tpj = jQuery;
+
+      tpj(document).ready(function () {
+        if (tpj("#rev_slider_2_1").revolution == undefined) {
+          revslider_showDoubleJqueryError("#rev_slider_2_1");
+        } else {
+          revapi2 = tpj("#rev_slider_2_1")
+            .show()
+            .revolution({
+              sliderType: "standard",
+              jsFileLocation: "js/plugins/revslider/public/assets/js/",
+              sliderLayout: "fullwidth",
+              dottedOverlay: "none",
+              delay: 9000,
+              navigation: {
+                onHoverStop: "off",
+              },
+              visibilityLevels: [1240, 1024, 778, 480],
+              gridwidth: 1240,
+              gridheight: 800,
+              lazyType: "none",
+              shadow: 0,
+              spinner: "spinner3",
+              stopLoop: "off",
+              stopAfterLoops: -1,
+              stopAtSlide: -1,
+              shuffle: "off",
+              autoHeight: "off",
+              disableProgressBar: "on",
+              hideThumbsOnMobile: "off",
+              hideSliderAtLimit: 0,
+              hideCaptionAtLimit: 0,
+              hideAllCaptionAtLilmit: 0,
+              debugMode: false,
+              fallbacks: {
+                simplifyAll: "off",
+                nextSlideOnWindowFocus: "off",
+                disableFocusListener: false,
+              },
+            });
+        }
+      }); /*ready*/
+    </script>
+    <script>
+      var htmlDivCss =
+        "  #rev_slider_2_1_wrapper .tp-loader.spinner3 div { background-color: #ff2d55 !important; } ";
+      var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+      if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+      } else {
+        var htmlDiv = document.createElement("div");
+        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+        document
+          .getElementsByTagName("head")[0]
+          .appendChild(htmlDiv.childNodes[0]);
+      }
+    </script>
+  </body>
+</html>

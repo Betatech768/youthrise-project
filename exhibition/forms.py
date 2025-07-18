@@ -15,5 +15,5 @@ class ExhibitionForm(forms.ModelForm):
             'industry_segment',
             'organization_description',
             'primary_contact',
-            'what_are_you_exhibiting'
+            'what_exhibiting'
         ]

@@ -1,0 +1,558 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" data-menu="leftalign">
+  <!-- grandconference/contact-us.html  22 Nov 2019 03:57:02 GMT -->
+
+  <head>
+    <title>We Are People Conference | contact</title>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/revslider/public/assets/css/settings.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/reset.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/wordpress.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/animation.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/ilightbox/ilightbox.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/jqueryui/custom.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/mediaelement/mediaelementplayer-legacy.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/flexslider/flexslider.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/tooltipster.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- External Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'css/odometer-theme-minimal.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/menus/leftalignmenu.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/font-awesome.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/themify-icons.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grandconference_custom_css.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/kirki-styles.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grid.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Work+Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A300%2Cregular%2C500%2C600%2C700%2C900&amp;subset"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Poppins:600%2C700%2C400%2C500"
+      rel="stylesheet"
+      property="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Favicon Images -->
+    <link rel="icon" href="{% static 'upload/Logo Icon.png' %}" sizes="32x32" />
+    <link
+      rel="icon"
+      href="{% static 'upload/Logo Icon.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/Logo Icon.png' %}"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
+    />
+  </head>
+
+  <body
+    class="page-template-default page page-id-185 page-child parent-pageid-95 woocommerce-no-js ppb_enable"
+  >
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      style="background-color: #000000"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"
+          ><img
+            class=""
+            style="width: 250px; height: 50px"
+            src="{% static 'upload/Logo Icon.png' %}"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{% url 'home' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'about' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'sponsor' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Sponsorship</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'exhibitions' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Exhibition</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'blog' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'speakers' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Speakers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'gallery_list_main' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'registration' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'contact' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Delete the above  -->
+
+    <div id="page_caption" class="   ">
+      <div class="page_title_wrapper">
+        <div class="standard_wrapper">
+          <div class="page_title_inner">
+            <div class="page_title_content">
+              <h1>Contact Us</h1>
+              <div class="page_tagline">
+                This is sample of page tagline and you can set it up using page
+                option
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ppb_wrapper">
+      <div
+        class="one withsmallpadding ppb_contact_box"
+        style="text-align: center; margin-bottom: 100px"
+      >
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner">
+              <div
+                class="inner_box parallax"
+                style="
+                  width: 60%;
+                  margin: auto;
+                  background: #ffffff;
+                  border: 2px solid #ff2d54;
+                  padding: 50px;
+                "
+                data-stellar-ratio="1.2"
+              >
+                <h2 class="ppb_title" style="color: #000000">
+                  Get In Touch With Us
+                </h2>
+                <div class="page_tagline" style="">
+                  This is sample of page tagline and you can set it up using
+                  page option
+                </div>
+                <div class="contact_form7_wrapper">
+                  <div
+                    role="form"
+                    class="wpcf7"
+                    id="wpcf7-f5-o1"
+                    lang="en-US"
+                    dir="ltr"
+                  >
+                    <div class="screen-reader-response"></div>
+                    <form
+                      class="quform"
+                      action=""
+                      method="post"
+                      enctype="multipart/form-data"
+                      onclick=""
+                    >
+                      <div class="quform-elements">
+                        <div class="quform-element">
+                          <br />
+                          <span class="wpcf7-form-control-wrap your-name">
+                            <input
+                              id="name"
+                              type="text"
+                              name="name"
+                              size="40"
+                              class="input1"
+                              aria-required="true"
+                              aria-invalid="false"
+                              placeholder="Name*"
+                            />
+                          </span>
+                        </div>
+                        <div class="quform-element">
+                          <br />
+                          <span class="wpcf7-form-control-wrap your-email">
+                            <input
+                              id="email"
+                              type="text"
+                              name="email"
+                              size="40"
+                              class="input1"
+                              aria-required="true"
+                              aria-invalid="false"
+                              placeholder="Email*"
+                            />
+                          </span>
+                        </div>
+                        <div class="quform-element">
+                          <br />
+                          <span class="wpcf7-form-control-wrap your-message">
+                            <textarea
+                              id="message"
+                              name="message"
+                              cols="40"
+                              rows="10"
+                              class="input1"
+                              aria-invalid="false"
+                              placeholder="Message*"
+                            ></textarea>
+                          </span>
+                        </div>
+
+                        <!-- Begin Submit button -->
+                        <div class="quform-submit">
+                          <div class="quform-submit-inner">
+                            <button type="submit" class="submit-button">
+                              <span>Send</span>
+                            </button>
+                          </div>
+                          <div class="quform-loading-wrap">
+                            <span class="quform-loading"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="ppb_wrapper">
+      <ul class="sidebar_widget three">
+        <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p>
+              <img
+                src="{% static 'upload/Logo Icon.png' %}"
+                width="158"
+                height="20"
+                alt=""
+              />
+            </p>
+            <p>{{ footer_description|default:"Abuja is a great place" }}</p>
+
+            <!-- Social Icons -->
+            <div style="margin-top: 20px">
+              <div class="social_wrapper shortcode dark">
+                <ul>
+                  <li class="facebook">
+                    <a target="_blank" title="Facebook" href="#"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li class="twitter">
+                    <a
+                      target="_blank"
+                      title="Twitter"
+                      href="https://twitter.com/#"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="youtube">
+                    <a target="_blank" title="Youtube" href="#"
+                      ><i class="fa fa-youtube"></i
+                    ></a>
+                  </li>
+                  <li class="google">
+                    <a target="_blank" title="Google+" href="#"
+                      ><i class="fa fa-google-plus"></i
+                    ></a>
+                  </li>
+                  <li class="instagram">
+                    <a
+                      target="_blank"
+                      title="Instagram"
+                      href="https://instagram.com/tedxvienna"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Newsletter -->
+        <li id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
+          <h2 class="widgettitle">Newsletter</h2>
+          <form
+            id="mc4wp-form-1"
+            class="mc4wp-form mc4wp-form-92"
+            method="post"
+          >
+            {% csrf_token %}
+            <div class="mc4wp-form-fields">
+              <p>
+                Don't miss a thing!
+                <br />Sign up to receive daily news
+              </p>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address"
+                required
+              />
+              <input type="submit" value="Sign up" />
+            </div>
+            <label style="display: none !important">
+              Leave this field empty if you're human:
+              <input
+                type="text"
+                name="honeypot"
+                value=""
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </label>
+            <div class="mc4wp-response">
+              {% if form.errors %}
+              <p class="error">{{ form.errors }}</p>
+              {% endif %} {% if message %}
+              <p class="success">{{ message }}</p>
+              {% endif %}
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <div id="side_menu_wrapper" class="overlay_background">
+      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate.min.js' %}"></script>
+    <script src="{% static 'js/plugins/ui/core.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.requestAnimationFrame.js' %}"></script>
+    <script src="{% static 'js/plugins/ilightbox.packed.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.easing.js' %}"></script>
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.isotope.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.masory.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.tooltipster.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.sticky-kit.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/custom.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_onepage.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.countdown.js' %}"></script>
+    <script src="{% static 'js/plugins/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'js/plugins/masonry.min.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_sidebar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax-video.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_clock.js' %}"></script>
+    <script src="{% static 'js/plugins/quform/js/plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/quform/js/scripts.js' %}"></script>
+    <script>
+      /* <![CDATA[ */
+      var mc4wp_forms_config = [];
+      /* ]]> */
+    </script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  </body>
+</html>
