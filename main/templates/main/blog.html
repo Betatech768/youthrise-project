@@ -288,11 +288,8 @@
         <div class="standard_wrapper">
           <div class="page_title_inner">
             <div class="page_title_content">
-              <h1>Blog Title</h1>
-              <div class="page_tagline">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem.
-              </div>
+              <h1>{{blog.title}} </h1>
+            
             </div>
           </div>
         </div>
@@ -303,97 +300,42 @@
     <div id="page_content_wrapper" class="">
       <div class="inner">
         <!-- Begin main content -->
+         
         <div class="inner_wrapper">
+         
           <div class="sidebar_content">
-            <p class="p1">
-              <span class="s1"
-                >Meh synth Schlitz, tempor duis single-origin coffee ea next
-                level ethnic fingerstache fanny pack nostrud. Photo booth anim
-                8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil,
-                flexitarian Truffaut synth art party deep v chillwave. Seitan
-                High Life reprehenderit consectetur cupidatat kogi. Et leggings
-                fanny pack, elit bespoke vinyl art party Pitchfork selfies
-                master cleanse Kickstarter seitan retro. Drinking vinegar
-                stumptown yr pop-up artisan sunt. Deep v cliche lomo biodiesel
-                Neutra selfies. Shorts fixie consequat flexitarian four loko
-                tempor duis single-origin coffee. Banksy, elit small batch
-                freegan sed.</span
-              >
-            </p>
+            {% if blog.images.first %}
+            <img
+              class="wp-image-17 size-large"
+              src="{{ blog.images.first.image.url }}" alt="{{ blog.title }}"
+              width="1024"
+              height="683"
+            />
+            {% endif %}
+         
             <div
               id="attachment_17"
               style="width: 1034px"
               class="wp-caption alignnone"
             >
-              <img
-                class="wp-image-17 size-large"
-                src="{% static 'upload/27864671752_c4c7a22918_o-1024x683.jpg' %}"
-                width="1024"
-                height="683"
-              />
-              <p class="wp-caption-text">
-                The road to success and the road to failure are almost exactly
-                the same
+           
+              <p>
+                {{blog.content}}
               </p>
             </div>
-            <p class="p1">
-              <span class="s1"
-                >Exercitation photo booth stumptown tote bag Banksy, elit small
-                batch freegan sed. Craft beer elit seitan exercitation, photo
-                booth et 8-bit kale chips proident chillwave deep v laborum.
-                Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami
-                readymade swag. Selfies iPhone Kickstarter, drinking vinegar
-                jean vinegar stumptown yr pop-up artisan sunt. Craft beer elit
-                seitan exercitation, photo booth,</span
-              >
-            </p>
+            
             <div
               id="attachment_11"
               style="width: 1034px"
               class="wp-caption alignnone"
             >
-              <img
-                class="size-large wp-image-11"
-                src="{% static 'upload/28005098035_cdcb049a6c_o-1024x683.jpg' %}"
-                alt=""
-                width="1024"
-                height="683"
-              />
-              <p class="wp-caption-text">
-                Emotional discomfort, when accepted, rises, crests and falls in
-                a series of waves.
-              </p>
+            {% if blog.images.all|length > 1 %}
+            <img src="{{ blog.images.all.1.image.url }}" alt="  {{blog.title}}">
+          
+          {% endif %}
+           
             </div>
-            <blockquote>
-              <p>
-                Design is a funny word. Some people think design means how it
-                looks. But of course, if you dig deeper, it&#8217;s really how
-                it works.
-              </p>
-            </blockquote>
-            <p class="p1">
-              <span class="s1"
-                >Foam padding in the insoles leather finest quality staple flat
-                slip-on design pointed toe off-duty shoe. Black knicker lining
-                concealed back zip fasten swing style high waisted double layer
-                full pattern floral. Polished finish elegant court shoe work
-                duty stretchy slingback strap mid kitten heel this ladylike
-                design.</span
-              >
-            </p>
-            <p class="p1">
-              <span class="s1"
-                >See-through delicate embroidered organza blue lining luxury
-                acetate-mix stretch pleat detailing. Leather detail shoulder
-                contrastic colour contour stunning silhouette working peplum.
-                Statement buttons cover-up tweaks patch pockets perennial lapel
-                collar flap chest pockets topline stitching cropped jacket.
-                Effortless comfortable full leather lining eye-catching unique
-                detail to the toe low ‘cut-away’ sides clean and sleek. Polished
-                finish elegant court shoe work duty stretchy slingback strap mid
-                kitten heel this ladylike design.</span
-              >
-            </p>
+           
           </div>
 
           <div class="sidebar_wrapper">
@@ -404,80 +346,23 @@
                     id="grandconference_cat_posts-7"
                     class="widget GrandConference_Cat_Posts"
                   >
-                    <h2 class="widgettitle"><span>Drugs</span></h2>
+                    <h2 class="widgettitle"><span>Blogs</span></h2>
                     <ul class="posts blog withthumb">
+                      {% for blog in blogs %}
                       <li>
                         <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
+                          <a href="{% url 'bloglist' blog.id %}"
+                            >{% if blog.images.first %}
+                            <img
                               class="alignleft frame post_thumb"
-                              src="{% static 'upload/29969985723_6c5d98cc97_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
+                              src="{{ blog.images.first.image.url }}"
+                              alt="{{blog.title}}"
+                          />{% endif %}</a>
                         </div>
-                        <a href="#">Boston’s new hub for robotics startups</a>
-                        <div class="post_attribute">February 18, 2017</div>
+                        <a href="{% url 'bloglist' blog.id %}">{{blog.title}}</a>
+                        <div class="post_attribute">{{ blog.created_at|date:"F d, Y" }}</div>
                       </li>
-                      <li>
-                        <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
-                              class="alignleft frame post_thumb"
-                              src="{% static 'upload/16876680475_9e5c37b9d1_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
-                        </div>
-                        <a href="#"
-                          >OxSight uses augmented reality to aid the
-                          visually...</a
-                        >
-                        <div class="post_attribute">February 18, 2017</div>
-                      </li>
-                      <li>
-                        <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
-                              class="alignleft frame post_thumb"
-                              src="{% static 'upload/30539203531_5353af3b36_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
-                        </div>
-                        <a href="#"
-                          >Tokyo Institute of Technology taps for fastest AI
-                          computer</a
-                        >
-                        <div class="post_attribute">February 18, 2017</div>
-                      </li>
-                      <li>
-                        <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
-                              class="alignleft frame post_thumb"
-                              src="{% static 'upload/29996901984_9c1472be2b_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
-                        </div>
-                        <a href="#"
-                          >Student job finder WayUp acquires competitor
-                          Looksharp</a
-                        >
-                        <div class="post_attribute">February 18, 2017</div>
-                      </li>
-                      <li>
-                        <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
-                              class="alignleft frame post_thumb"
-                              src="{% static 'upload/30570832146_36d0a44551_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
-                        </div>
-                        <a href="#"
-                          >How Alphabet’s Project Loon balloons learned to
-                          loiter</a
-                        >
-                        <div class="post_attribute">February 17, 2017</div>
-                      </li>
+                     {% endfor %}
                     </ul>
                   </li>
                 </ul>

@@ -292,696 +292,104 @@
         </div>
       </div>
     </div>
-
-    <!-- Begin content -->
+   
     <div id="page_content_wrapper" class="blog_wrapper">
       <div class="inner">
+       
         <!-- Begin main content -->
         <div class="inner_wrapper">
           <div class="page_content_wrapper"></div>
-
+    
           <div class="sidebar_content">
             <!-- Begin each blog post -->
-            <div
-              id="post-50"
-              class="post-50 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
-            >
-              <div class="post_wrapper">
-                <div class="post_content_wrapper">
-                  <div class="post_header">
-                    <div class="post_header_title">
-                      <h5>
-                        <a
-                          href="#"
-                          title="Boston’s new hub for robotics startups"
-                          >Boston’s new hub for robotics startups</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="post_detail single_post">
-                      <span class="post_info_date">
-                        <a
-                          href="#"
-                          title="Boston’s new hub for robotics startups"
-                          >February 18, 2017</a
-                        >
-                      </span>
-                      <span class="post_info_comment">
-                        •
-                        <a href="#"> 0&nbsp;Comment </a>
-                      </span>
-                    </div>
+            {% for blog in blogs %}
+            <div id="post-{{ blog.id }}" class="post_wrapper">
+              <div class="post_content_wrapper">
+                <div class="post_header">
+                  <div class="post_header_title">
+                    <h5>
+                      <a href="{% url 'bloglist' blog.id %}" title="{{ blog.title }}">
+                        {{ blog.title }}
+                      </a>
+                    </h5>
                   </div>
-
-                  <div class="post_img static">
-                    <a href="#">
-                      <img
-                        width="960"
-                        height="636"
-                        src="{% static 'upload/29969985723_6c5d98cc97_o-960x636.jpg' %}"
-                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
-                        alt=""
-                      />
-                    </a>
+                  <div class="post_detail single_post">
+                    <span class="post_info_date">
+                      <a href="{% url 'bloglist' blog.id %}" title="{{ blog.title }}">
+                        {{ blog.created_at|date:"F d, Y" }}
+                      </a>
+                    </span>
+                    <span class="post_info_comment">• <a href="#">0 Comment</a></span>
                   </div>
-
-                  <br class="clear" />
-
-                  <p>
-                    Meh synth Schlitz, tempor duis single-origin coffee ea next
-                    level ethnic fingerstache fanny pack nostrud. Photo booth
-                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
-                    esse nihil, flexitarian Truffaut synth art party deep v
-                    chillwave. Seitan High Life [&hellip;]
-                  </p>
-                  <div class="post_button_wrapper">
-                    <a class="readmore" href="#"
-                      >Read More<span class="ti-angle-right"></span
-                    ></a>
-                  </div>
+                </div>
+    
+                <div class="post_img static">
+                  <a href="{% url 'bloglist' blog.id %}">
+                    {% if blog.images.first %}
+                      <img src="{{ blog.images.first.image.url }}" alt="{{ blog.title }}" />
+                    {% else %}
+                      <img src="{% static 'upload/default.jpg' %}" alt="No image" />
+                    {% endif %}
+                  </a>
+                </div>
+    
+                <br class="clear" />
+    
+                <p>
+                  {{ blog.content|truncatewords:30 }}
+                </p>
+    
+                <div class="post_button_wrapper">
+                  <a class="readmore" href="{% url 'bloglist' blog.id %}">
+                    Read More <span class="ti-angle-right"></span>
+                  </a>
                 </div>
               </div>
             </div>
             <br class="clear" />
-            <!-- End each blog post -->
-
-            <!-- Begin each blog post -->
-            <div
-              id="post-45"
-              class="post-45 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
-            >
-              <div class="post_wrapper">
-                <div class="post_content_wrapper">
-                  <div class="post_header">
-                    <div class="post_header_title">
-                      <h5>
-                        <a
-                          href="#"
-                          title="OxSight uses augmented reality to aid the visually impaired"
-                          >OxSight uses augmented reality to aid the visually
-                          impaired</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="post_detail single_post">
-                      <span class="post_info_date">
-                        <a
-                          href="#"
-                          title="OxSight uses augmented reality to aid the visually impaired"
-                          >February 18, 2017</a
-                        >
-                      </span>
-                      <span class="post_info_comment">
-                        •
-                        <a href="#"> 0&nbsp;Comment </a>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="post_img static">
-                    <a href="#">
-                      <img
-                        width="960"
-                        height="636"
-                        src="{% static 'upload/16876680475_9e5c37b9d1_o-960x636.jpg' %}"
-                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <br class="clear" />
-
-                  <p>
-                    Meh synth Schlitz, tempor duis single-origin coffee ea next
-                    level ethnic fingerstache fanny pack nostrud. Photo booth
-                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
-                    esse nihil, flexitarian Truffaut synth art party deep v
-                    chillwave. Seitan High Life [&hellip;]
-                  </p>
-                  <div class="post_button_wrapper">
-                    <a class="readmore" href="#"
-                      >Read More<span class="ti-angle-right"></span
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br class="clear" />
-            <!-- End each blog post -->
-
-            <!-- Begin each blog post -->
-            <div
-              id="post-42"
-              class="post-42 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
-            >
-              <div class="post_wrapper">
-                <div class="post_content_wrapper">
-                  <div class="post_header">
-                    <div class="post_header_title">
-                      <h5>
-                        <a
-                          href="#"
-                          title="Tokyo Institute of Technology taps for fastest AI computer"
-                          >Tokyo Institute of Technology taps for fastest AI
-                          computer</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="post_detail single_post">
-                      <span class="post_info_date">
-                        <a
-                          href="#"
-                          title="Tokyo Institute of Technology taps for fastest AI computer"
-                          >February 18, 2017</a
-                        >
-                      </span>
-                      <span class="post_info_comment">
-                        •
-                        <a href="#"> 0&nbsp;Comment </a>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="post_img static">
-                    <a href="#">
-                      <img
-                        width="960"
-                        height="636"
-                        src="{% static 'upload/30539203531_5353af3b36_o-960x636.jpg' %}"
-                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <br class="clear" />
-
-                  <p>
-                    Meh synth Schlitz, tempor duis single-origin coffee ea next
-                    level ethnic fingerstache fanny pack nostrud. Photo booth
-                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
-                    esse nihil, flexitarian Truffaut synth art party deep v
-                    chillwave. Seitan High Life [&hellip;]
-                  </p>
-                  <div class="post_button_wrapper">
-                    <a class="readmore" href="#"
-                      >Read More<span class="ti-angle-right"></span
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br class="clear" />
-            <!-- End each blog post -->
-
-            <!-- Begin each blog post -->
-            <div
-              id="post-39"
-              class="post-39 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
-            >
-              <div class="post_wrapper">
-                <div class="post_content_wrapper">
-                  <div class="post_header">
-                    <div class="post_header_title">
-                      <h5>
-                        <a
-                          href="#"
-                          title="Student job finder WayUp acquires competitor Looksharp"
-                          >Student job finder WayUp acquires competitor
-                          Looksharp</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="post_detail single_post">
-                      <span class="post_info_date">
-                        <a
-                          href="#"
-                          title="Student job finder WayUp acquires competitor Looksharp"
-                          >February 18, 2017</a
-                        >
-                      </span>
-                      <span class="post_info_comment">
-                        •
-                        <a href="#"> 0&nbsp;Comment </a>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="post_img static">
-                    <a href="#">
-                      <img
-                        width="960"
-                        height="636"
-                        src="{% static 'upload/29996901984_9c1472be2b_o-960x636.jpg' %}"
-                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <br class="clear" />
-
-                  <p>
-                    Meh synth Schlitz, tempor duis single-origin coffee ea next
-                    level ethnic fingerstache fanny pack nostrud. Photo booth
-                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
-                    esse nihil, flexitarian Truffaut synth art party deep v
-                    chillwave. Seitan High Life [&hellip;]
-                  </p>
-                  <div class="post_button_wrapper">
-                    <a class="readmore" href="#"
-                      >Read More<span class="ti-angle-right"></span
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br class="clear" />
-            <!-- End each blog post -->
-
-            <!-- Begin each blog post -->
-            <div
-              id="post-36"
-              class="post-36 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
-            >
-              <div class="post_wrapper">
-                <div class="post_content_wrapper">
-                  <div class="post_header">
-                    <div class="post_header_title">
-                      <h5>
-                        <a
-                          href="#"
-                          title="How Alphabet’s Project Loon balloons learned to loiter"
-                          >How Alphabet’s Project Loon balloons learned to
-                          loiter</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="post_detail single_post">
-                      <span class="post_info_date">
-                        <a
-                          href="#"
-                          title="How Alphabet’s Project Loon balloons learned to loiter"
-                          >February 17, 2017</a
-                        >
-                      </span>
-                      <span class="post_info_comment">
-                        •
-                        <a href="#"> 0&nbsp;Comment </a>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="post_img static">
-                    <a href="#">
-                      <img
-                        width="960"
-                        height="636"
-                        src="{% static 'upload/30570832146_36d0a44551_o-960x636.jpg' %}"
-                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <br class="clear" />
-
-                  <p>
-                    Meh synth Schlitz, tempor duis single-origin coffee ea next
-                    level ethnic fingerstache fanny pack nostrud. Photo booth
-                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
-                    esse nihil, flexitarian Truffaut synth art party deep v
-                    chillwave. Seitan High Life [&hellip;]
-                  </p>
-                  <div class="post_button_wrapper">
-                    <a class="readmore" href="#"
-                      >Read More<span class="ti-angle-right"></span
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br class="clear" />
-            <!-- End each blog post -->
-
-            <!-- Begin each blog post -->
-            <div
-              id="post-33"
-              class="post-33 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
-            >
-              <div class="post_wrapper">
-                <div class="post_content_wrapper">
-                  <div class="post_header">
-                    <div class="post_header_title">
-                      <h5>
-                        <a
-                          href="#"
-                          title="This baby monitor uses radar to detect infant breathing patterns"
-                          >This baby monitor uses radar to detect infant
-                          breathing patterns</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="post_detail single_post">
-                      <span class="post_info_date">
-                        <a
-                          href="#"
-                          title="This baby monitor uses radar to detect infant breathing patterns"
-                          >February 17, 2017</a
-                        >
-                      </span>
-                      <span class="post_info_comment">
-                        •
-                        <a href="#"> 0&nbsp;Comment </a>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="post_img static">
-                    <a href="#">
-                      <img
-                        width="960"
-                        height="636"
-                        src="{% static 'upload/24493312813_39edb1e9db_o-960x636.jpg' %}"
-                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <br class="clear" />
-
-                  <p>
-                    Meh synth Schlitz, tempor duis single-origin coffee ea next
-                    level ethnic fingerstache fanny pack nostrud. Photo booth
-                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
-                    esse nihil, flexitarian Truffaut synth art party deep v
-                    chillwave. Seitan High Life [&hellip;]
-                  </p>
-                  <div class="post_button_wrapper">
-                    <a class="readmore" href="#"
-                      >Read More<span class="ti-angle-right"></span
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br class="clear" />
-            <!-- End each blog post -->
-
-            <!-- Begin each blog post -->
-            <div
-              id="post-30"
-              class="post-30 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
-            >
-              <div class="post_wrapper">
-                <div class="post_content_wrapper">
-                  <div class="post_header">
-                    <div class="post_header_title">
-                      <h5>
-                        <a
-                          href="#"
-                          title="LG reveals even more details about the G6 ahead of launch"
-                          >LG reveals even more details about the G6 ahead of
-                          launch</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="post_detail single_post">
-                      <span class="post_info_date">
-                        <a
-                          href="#"
-                          title="LG reveals even more details about the G6 ahead of launch"
-                          >February 17, 2017</a
-                        >
-                      </span>
-                      <span class="post_info_comment">
-                        •
-                        <a href="#"> 0&nbsp;Comment </a>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="post_img static">
-                    <a href="#">
-                      <img
-                        width="960"
-                        height="636"
-                        src="{% static 'upload/30504391022_367f5f7967_o-960x636.jpg' %}"
-                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <br class="clear" />
-
-                  <p>
-                    Meh synth Schlitz, tempor duis single-origin coffee ea next
-                    level ethnic fingerstache fanny pack nostrud. Photo booth
-                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
-                    esse nihil, flexitarian Truffaut synth art party deep v
-                    chillwave. Seitan High Life [&hellip;]
-                  </p>
-                  <div class="post_button_wrapper">
-                    <a class="readmore" href="#"
-                      >Read More<span class="ti-angle-right"></span
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br class="clear" />
-            <!-- End each blog post -->
-
-            <!-- Begin each blog post -->
-            <div
-              id="post-27"
-              class="post-27 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
-            >
-              <div class="post_wrapper">
-                <div class="post_content_wrapper">
-                  <div class="post_header">
-                    <div class="post_header_title">
-                      <h5>
-                        <a
-                          href="#"
-                          title="Trucks will talk to each other using Peloton Technology"
-                          >Trucks will talk to each other using Peloton
-                          Technology</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="post_detail single_post">
-                      <span class="post_info_date">
-                        <a
-                          href="#"
-                          title="Trucks will talk to each other using Peloton Technology"
-                          >February 17, 2017</a
-                        >
-                      </span>
-                      <span class="post_info_comment">
-                        •
-                        <a href="#"> 0&nbsp;Comment </a>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="post_img static">
-                    <a href="#">
-                      <img
-                        width="960"
-                        height="636"
-                        src="{% static 'upload/27972191326_08ce6cd430_o-960x636.jpg' %}"
-                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <br class="clear" />
-
-                  <p>
-                    Meh synth Schlitz, tempor duis single-origin coffee ea next
-                    level ethnic fingerstache fanny pack nostrud. Photo booth
-                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
-                    esse nihil, flexitarian Truffaut synth art party deep v
-                    chillwave. Seitan High Life [&hellip;]
-                  </p>
-                  <div class="post_button_wrapper">
-                    <a class="readmore" href="#"
-                      >Read More<span class="ti-angle-right"></span
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br class="clear" />
-            <!-- End each blog post -->
-
-            <!-- Begin each blog post -->
-            <div
-              id="post-6"
-              class="post-6 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-entrepreneur tag-freelance tag-technology"
-            >
-              <div class="post_wrapper">
-                <div class="post_content_wrapper">
-                  <div class="post_header">
-                    <div class="post_header_title">
-                      <h5>
-                        <a
-                          href="#"
-                          title="Helps entrepreneurs find freelance developers"
-                          >Helps entrepreneurs find freelance developers</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="post_detail single_post">
-                      <span class="post_info_date">
-                        <a
-                          href="#"
-                          title="Helps entrepreneurs find freelance developers"
-                          >February 17, 2017</a
-                        >
-                      </span>
-                      <span class="post_info_comment">
-                        •
-                        <a href="#"> 0&nbsp;Comment </a>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="post_img static">
-                    <a href="#">
-                      <img
-                        width="960"
-                        height="636"
-                        src="{% static 'upload/ted_38605266-960x636.jpg' %}"
-                        class="attachment-grandconference-blog size-grandconference-blog wp-post-image"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <br class="clear" />
-
-                  <p>
-                    Meh synth Schlitz, tempor duis single-origin coffee ea next
-                    level ethnic fingerstache fanny pack nostrud. Photo booth
-                    anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia
-                    esse nihil, flexitarian Truffaut synth art party deep v
-                    chillwave. Seitan High Life [&hellip;]
-                  </p>
-                  <div class="post_button_wrapper">
-                    <a class="readmore" href="#"
-                      >Read More<span class="ti-angle-right"></span
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br class="clear" />
+            {% empty %}
+              <p>No blogs found.</p>
+            {% endfor %}
             <!-- End each blog post -->
           </div>
-
+    
+          <!-- Sidebar -->
           <div class="sidebar_wrapper">
             <div class="sidebar_top"></div>
-
             <div class="sidebar">
               <div class="content">
                 <ul class="sidebar_widget">
-                  <li
-                    id="grandconference_cat_posts-3"
-                    class="widget GrandConference_Cat_Posts"
-                  >
+                  <li class="widget GrandConference_Cat_Posts">
                     <h2 class="widgettitle"><span>Technology</span></h2>
                     <ul class="posts blog withthumb">
+                      {% for blog in blogs %}
                       <li>
                         <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
-                              class="alignleft frame post_thumb"
-                              src="{% static 'upload/29969985723_6c5d98cc97_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
+                          <a href="{% url 'bloglist' blog.id %}">
+                            {% if blog.images.first %}
+                              <img class="alignleft frame post_thumb" src="{{ blog.images.first.image.url }}" alt="{{ blog.title }}" />
+                            {% else %}
+                              <img class="alignleft frame post_thumb" src="{% static 'upload/default_thumb.jpg' %}" alt="No image" />
+                            {% endif %}
+                          </a>
                         </div>
-                        <a href="#">Boston’s new hub for robotics startups</a>
-                        <div class="post_attribute">February 18, 2017</div>
+                        <a href="{% url 'bloglist' blog.id %}">{{ blog.title }}</a>
+                        <div class="post_attribute">{{ blog.created_at|date:"F d, Y" }}</div>
                       </li>
-                      <li>
-                        <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
-                              class="alignleft frame post_thumb"
-                              src="{% static 'upload/16876680475_9e5c37b9d1_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
-                        </div>
-                        <a href="#"
-                          >OxSight uses augmented reality to aid the
-                          visually...</a
-                        >
-                        <div class="post_attribute">February 18, 2017</div>
-                      </li>
-                      <li>
-                        <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
-                              class="alignleft frame post_thumb"
-                              src="{% static 'upload/30539203531_5353af3b36_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
-                        </div>
-                        <a href="#"
-                          >Tokyo Institute of Technology taps for fastest AI
-                          computer</a
-                        >
-                        <div class="post_attribute">February 18, 2017</div>
-                      </li>
-                      <li>
-                        <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
-                              class="alignleft frame post_thumb"
-                              src="{% static 'upload/29996901984_9c1472be2b_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
-                        </div>
-                        <a href="#"
-                          >Student job finder WayUp acquires competitor
-                          Looksharp</a
-                        >
-                        <div class="post_attribute">February 18, 2017</div>
-                      </li>
-                      <li>
-                        <div class="post_circle_thumb">
-                          <a href="#"
-                            ><img
-                              class="alignleft frame post_thumb"
-                              src="{% static 'upload/30570832146_36d0a44551_o-150x150.jpg' %}"
-                              alt=""
-                          /></a>
-                        </div>
-                        <a href="#"
-                          >How Alphabet’s Project Loon balloons learned to
-                          loiter</a
-                        >
-                        <div class="post_attribute">February 17, 2017</div>
-                      </li>
+                      {% endfor %}
                     </ul>
                   </li>
                 </ul>
               </div>
             </div>
             <br class="clear" />
-
             <div class="sidebar_bottom"></div>
           </div>
         </div>
         <!-- End main content -->
       </div>
     </div>
+    
 
     <!-- footer -->
     <div id="footer" class="ppb_wrapper">

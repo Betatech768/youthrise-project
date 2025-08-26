@@ -52,7 +52,8 @@
                 {{ person.first_name }} {{ person.last_name }} <br />
                 {{ person.contact }} <br />
                 {{ person.address }} <br />
-                {{ person.email }}
+                {{ person.email }}<br />
+                {{ person.registration_category.name }} <br />
               </li>
               {% empty %}
               <li>No registrations yet.</li>

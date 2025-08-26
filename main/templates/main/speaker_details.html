@@ -287,16 +287,17 @@
       <div class="page_title_wrapper">
         <div class="standard_wrapper">
           <div class="speaker_thumbnail">
+             {% if speaker.images.all %}
             <img
-              src="{% static 'upload/pexels-photo-199943-500x500.jpg' %}"
+              src="{{ speaker.images.first.image.url }}"
               alt=""
-            />
+            />{% endif %}
           </div>
 
           <div class="page_title_inner">
             <div class="page_title_content">
-              <h1>Robin Johnson</h1>
-              <div class="page_tagline">VP Design Microsoft</div>
+              <h1>{{speaker.Speaker_name}}</h1>
+              <div class="page_tagline">{{spaeker.Speaker_position}}</div>
             </div>
           </div>
 
@@ -318,45 +319,15 @@
               <div class="post_wrapper">
                 <div class="post_content_wrapper">
                   <p class="p1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sint omnis ullam nobis repellat adipisci delectus, atque
-                    sapiente, fugiat ratione assumenda ut sequi neque velit quos
-                    error cum veritatis minima? Minus possimus quibusdam
-                    suscipit. Sequi iste nemo adipisci quia inventore tempora
-                    consequuntur, ea vitae aliquam sit? Perferendis optio enim
-                    excepturi, dolore quibusdam ex blanditiis corporis ad
-                    voluptatum nulla illo, ipsa provident consectetur sunt odit
-                    esse quasi soluta! Itaque similique ipsa sapiente ea
-                    incidunt. Odit ipsa ex pariatur error omnis unde voluptatem,
-                    minus voluptatibus dolorem ratione nemo totam, veniam, at
-                    blanditiis nam? Quae similique quasi doloribus voluptate
-                    asperiores? Temporibus illum quaerat velit adipisci error
-                    labore esse obcaecati odit cum iure reiciendis, magni cumque
-                    minima officiis accusantium rerum, autem qui pariatur
-                    accusamus quae quod nobis molestiae voluptas? Repellendus
-                    labore ut modi quos eaque, ipsa hic quaerat in provident
+                   {{speaker.Brief_description}}
                   </p>
-                  <p class="p1">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis, alias eaque voluptatibus culpa facere
-                    temporibus provident laborum maiores aut repudiandae ad nemo
-                    dignissimos praesentium quod molestias qui, exercitationem
-                    expedita nulla cum! Nesciunt nisi blanditiis harum iure
-                    molestias odio. Accusamus exercitationem repellat
-                    repudiandae animi sequi. Placeat hic nemo minima harum nam
-                    id corrupti reiciendis dolores et earum ad aliquid quod
-                    debitis odit velit ut, amet similique necessitatibus dicta
-                    animi ullam accusantium laudantium atque vitae. Adipisci, at
-                    dolore et nobis impedit quae labore quis dignissimos vel
-                    explicabo? Cum iure autem soluta repellat suscipit et.
-                    Temporibus hic architecto corrupti eos, animi vitae alias.
-                  </p>
+                  
                 </div>
               </div>
             </div>
             <!-- End each post -->
-
-            <div class="speaker_session_wrapper themeborder">
+<!-- schedule if needed -->
+            <!-- <div class="speaker_session_wrapper themeborder">
               <h4 class="title">All Sessions by&nbsp;Robin Johnson</h4>
               <div id="138">
                 <ul class="scheduleday_wrapper themeborder one_half">
@@ -481,7 +452,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- End main content -->

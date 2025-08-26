@@ -45,9 +45,12 @@ def logout_view(request):
     return redirect('login')
 
 # Create your views here.
-@login_required
+
 def admin(request):
-    return render(request, 'admin/admin.html')
+    if request.user.is_authenticated:
+        return render(request, 'admin/admin.html')
+    else:
+        return redirect('login')
 
 @login_required
 def admin_gallery(request):
