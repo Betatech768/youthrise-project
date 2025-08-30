@@ -156,7 +156,7 @@
   >
     <nav
       class="navbar navbar-expand-lg sticky-top"
-      style="background-color: #000000"
+      style="background-color: #091e1b"
       data-bs-theme="dark"
     >
       <div class="container-fluid">
@@ -209,6 +209,16 @@
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
                 >Sponsorship</a
+              >
+            </li>
+             <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'programme' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Get Programme</a
               >
             </li>
             <li class="nav-item">
@@ -271,6 +281,16 @@
                 >Contact</a
               >
             </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'FAQs' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >FAQs</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -285,10 +305,7 @@
           <div class="page_title_inner">
             <div class="page_title_content">
               <h1>Speakers</h1>
-              <div class="page_tagline">
-                This is sample of page tagline and you can set it up using page
-                option
-              </div>
+             
             </div>
           </div>
         </div>
@@ -296,7 +313,7 @@
     </div>
 
     <div class="ppb_wrapper hasbg">
-      <div class="one" style="background-color: #ff2d54; color: #ffffff">
+      <div class="one" style="background-color: #93b144; color: #ffffff">
         <div
           class="one_half_bg parallax"
           style="
@@ -308,7 +325,7 @@
           <h2 class="ppb_title" style="color: #ffffff">
             Lorem ipsum dolor sit amet consectetur.
           </h2>
-          <div class="page_tagline" style="color: #ffffff">
+          <div class="page_tagline" style="color: #091e1b">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ex
             quibusdam repellendus!
           </div>
@@ -327,26 +344,24 @@
         <br class="clear" />
       </div>
       <div
+
         class="one withsmallpadding ppb_header"
-        style="text-align: center; padding: 60px 0 60px 0"
+        style="text-align: center; padding: 60px 0 60px 0; background-color: #091e1b;"
       >
-        <div class="standard_wrapper">
+        <div  class="standard_wrapper">
           <div class="page_content_wrapper">
             <div class="inner">
               <div style="margin: auto; width: 60%">
-                <h2 class="ppb_title" style="text-align: center">
-                  Our Speaker
+                <h2 class="ppb_title" style="text-align: center; color: #93b144">
+                  Our Speakers
                 </h2>
-                <div class="page_tagline" style="text-align: center">
-                  This is sample of page tagline and you can set it up using
-                  page option
-                </div>
+               
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="ppb_speaker_grid one nopadding">
+      <div style="background-color: #091e1b;" class="ppb_speaker_grid one nopadding">
         <div
           class="page_content_wrapper page_main_content sidebar_content full_width fixed_column"
         >
@@ -362,7 +377,7 @@
                   class=""
                 />{% endif %}
                 <div class="speaker_info_wrapper">
-                  <h4>{{speaker.Speaker_name}}</h4>
+                  <h4 style="color: #93b144;">{{speaker.Speaker_name}}</h4>
                   <div class="speaker_desc">{{spaeker.Speaker_position}}</div>
                 </div>
               </a>
@@ -409,7 +424,7 @@
                   cupiditate ullam porro dolorem omnis.
                 </div>
                 <div class="ppb_header_content">
-                  <p><a class="button medium" href="#">Register</a></p>
+                  <p><a style="background-color: #93b144; border: none;" class="button medium" href="#">Register</a></p>
                 </div>
               </div>
             </div>
@@ -419,7 +434,7 @@
     </div>
 
     <!-- footer -->
-    <div id="footer" class="ppb_wrapper">
+<div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
       <ul class="sidebar_widget three">
         <li id="text-2" class="widget widget_text">
           <div class="textwidget">
@@ -473,47 +488,33 @@
             </div>
           </div>
         </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
+             <br>
+              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
+              PHONE NUMBER: +2349045646031 <br>
+              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
+              KAURA DISTRICT FCT. ABUJA
+            </p>
+                     
+          </div>
+        </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p style="font-size: large; font-weight: bold;">
+              NEWSLETTER SIGNUP
+            </p>
+            <p>Register to get our Newsletter </p>
 
-        <!-- Newsletter -->
-        <li id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
-          <h2 class="widgettitle">Newsletter</h2>
-          <form
-            id="mc4wp-form-1"
-            class="mc4wp-form mc4wp-form-92"
-            method="post"
-          >
-            {% csrf_token %}
-            <div class="mc4wp-form-fields">
-              <p>
-                Don't miss a thing!
-                <br />Sign up to receive daily news
-              </p>
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email address"
-                required
-              />
-              <input type="submit" value="Sign up" />
-            </div>
-            <label style="display: none !important">
-              Leave this field empty if you're human:
-              <input
-                type="text"
-                name="honeypot"
-                value=""
-                tabindex="-1"
-                autocomplete="off"
-              />
-            </label>
-            <div class="mc4wp-response">
-              {% if form.errors %}
-              <p class="error">{{ form.errors }}</p>
-              {% endif %} {% if message %}
-              <p class="success">{{ message }}</p>
-              {% endif %}
-            </div>
-          </form>
+            <form
+              class="mc4wp-form mc4wp-form-1234"
+              method="post"
+              data-id="1234"
+              data-name="Newsletter Form">
+            <input style="background-color: #123f38; border: none;" type="email"></form>
+            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button>
+          </div>
         </li>
       </ul>
     </div>

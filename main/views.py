@@ -2,11 +2,16 @@ from django.shortcuts import render, get_object_or_404, redirect
 from galleries.models import Gallery, Image
 from blogpost.models import BlogPost, BlogImage
 from sponsorship.forms import SponsorsForm
-from sponsorship.models import Sponsors
+from sponsorship.models import Sponsors, SponsorshipPackage
 from exhibition.forms import ExhibitionForm 
 from registration_app.forms import RegistrationForm
 from Images.models import GalleryImage
 from speakers.models import Speakers, SpeakerImage
+from django.http import JsonResponse
+from admin.models import Document
+from .models import Sponsor
+from registration_app.models import RegistrationCategory
+
 def about(request):
     return render(request, 'main/about.html')
 
@@ -28,10 +33,12 @@ def blog(request, blog_id):
 
 def index(request):
     speakers = Speakers.objects.prefetch_related('images').all()
-    print("speakers found:", speakers) 
+    sponsors = Sponsor.objects.all() 
     gallery_items = Gallery.objects.prefetch_related('images').all()
     context = {'items': gallery_items,
-               'speakers': speakers,}
+               'speakers': speakers,
+               'sponsors': sponsors
+               }
     return render(request, 'main/index.html', context)
 
 
@@ -41,7 +48,26 @@ def bloglist(request):
     return render(request, 'main/bloglist.html', {"blogs": blogs})
 
 def sponsor(request):
-    return render(request, 'main/sponsor.html')
+    packages = SponsorshipPackage.objects.all()
+    if request.method == 'POST':
+        form = SponsorsForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+              # If Quform AJAX
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                return JsonResponse({
+                    "type": "success",
+                    "message": "Registration successful! Thank you for Becoming a Sponsor."
+                })
+
+            # Normal POST (non-AJAX)
+            return redirect('sponsor')
+           
+    else:
+        form = SponsorsForm()
+    return render(request, 'main/sponsor.html',   {'form': form,
+        'packages': packages})
 
 def exhibition(request):
     if request.method == 'POST':
@@ -58,16 +84,40 @@ def exhibition(request):
 def contact (request):
     return render (request, 'main/contact.html')
 
-def registration (request):
+def registration(request):
+    categories = RegistrationCategory.objects.all() 
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
+
         if form.is_valid():
             form.save()
+
+            # If Quform AJAX
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                return JsonResponse({
+                    "type": "success",
+                    "message": "Registration successful! Thank you."
+                })
+
+            # Normal POST (non-AJAX)
             return redirect('registration')
+
+        else:
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                element_errors = {}
+                for field, errors in form.errors.items():
+                    element_errors[field] = {"errors": list(errors)}
+
+                return JsonResponse({
+                    "type": "error",
+                    "error": ["Validation failed. Please check the form."],
+                    "elementErrors": element_errors
+                })
+
     else:
         form = RegistrationForm()
-    return render(request, 'main/registration.html', {'form': form})
-    
+
+    return render(request, 'main/registration.html', {'form': form, 'categories': categories})
 
 def speakers (request):
     speakers = Speakers.objects.prefetch_related('images').all()
@@ -99,3 +149,13 @@ def gallery_list(request):
 def speaker_details(request, speaker_id):
     speaker = get_object_or_404(Speakers, id=speaker_id)
     return render(request, 'main/speaker_details.html', {'speaker': speaker})
+
+
+
+def programme(request):
+    documents = Document.objects.all().order_by('-uploaded_at')
+    return render(request, 'main/programs.html', {'documents': documents})
+
+
+def FAQs(request):
+    return render(request, 'main/faqs.html')

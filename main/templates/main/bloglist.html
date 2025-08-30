@@ -159,9 +159,9 @@
   <body
     class="page-template page-template-page_r page-template-page_r-php page page-id-118 page-child parent-pageid-95 woocommerce-no-js"
   >
-    <nav
+  <nav
       class="navbar navbar-expand-lg sticky-top"
-      style="background-color: #000000"
+      style="background-color: #091e1b"
       data-bs-theme="dark"
     >
       <div class="container-fluid">
@@ -214,6 +214,16 @@
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
                 >Sponsorship</a
+              >
+            </li>
+             <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'programme' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Get Programme</a
               >
             </li>
             <li class="nav-item">
@@ -276,17 +286,27 @@
                 >Contact</a
               >
             </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'FAQs' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >FAQs</a
+              >
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div id="page_caption" class="blog_wrapper">
+    <div style="background-color: aliceblue;" id="page_caption" class="blog_wrapper">
       <div class="page_title_wrapper">
         <div class="standard_wrapper">
           <div class="page_title_inner">
             <div class="page_title_content">
-              <h1>Blog</h1>
-              <div class="page_tagline">Lorem ipsum dolor sit amet.</div>
+              <h1 style="color: #091e1b;">Blogs</h1>
+              
             </div>
           </div>
         </div>
@@ -360,7 +380,7 @@
               <div class="content">
                 <ul class="sidebar_widget">
                   <li class="widget GrandConference_Cat_Posts">
-                    <h2 class="widgettitle"><span>Technology</span></h2>
+                    <h2 class="widgettitle"><span>News and Stories</span></h2>
                     <ul class="posts blog withthumb">
                       {% for blog in blogs %}
                       <li>
@@ -392,7 +412,7 @@
     
 
     <!-- footer -->
-    <div id="footer" class="ppb_wrapper">
+   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
       <ul class="sidebar_widget three">
         <li id="text-2" class="widget widget_text">
           <div class="textwidget">
@@ -446,47 +466,33 @@
             </div>
           </div>
         </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
+             <br>
+              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
+              PHONE NUMBER: +2349045646031 <br>
+              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
+              KAURA DISTRICT FCT. ABUJA
+            </p>
+                     
+          </div>
+        </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p style="font-size: large; font-weight: bold;">
+              NEWSLETTER SIGNUP
+            </p>
+            <p>Register to get our Newsletter </p>
 
-        <!-- Newsletter -->
-        <li id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
-          <h2 class="widgettitle">Newsletter</h2>
-          <form
-            id="mc4wp-form-1"
-            class="mc4wp-form mc4wp-form-92"
-            method="post"
-          >
-            {% csrf_token %}
-            <div class="mc4wp-form-fields">
-              <p>
-                Don't miss a thing!
-                <br />Sign up to receive daily news
-              </p>
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email address"
-                required
-              />
-              <input type="submit" value="Sign up" />
-            </div>
-            <label style="display: none !important">
-              Leave this field empty if you're human:
-              <input
-                type="text"
-                name="honeypot"
-                value=""
-                tabindex="-1"
-                autocomplete="off"
-              />
-            </label>
-            <div class="mc4wp-response">
-              {% if form.errors %}
-              <p class="error">{{ form.errors }}</p>
-              {% endif %} {% if message %}
-              <p class="success">{{ message }}</p>
-              {% endif %}
-            </div>
-          </form>
+            <form
+              class="mc4wp-form mc4wp-form-1234"
+              method="post"
+              data-id="1234"
+              data-name="Newsletter Form">
+            <input style="background-color: #123f38; border: none;" type="email"></form>
+            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button>
+          </div>
         </li>
       </ul>
     </div>

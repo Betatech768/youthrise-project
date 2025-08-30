@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en-US" data-menu="leftalign">
+<html  lang="en-US" data-menu="leftalign">
   <head>
     <title>We Are People | Registration</title>
     <meta charset="UTF-8" />
@@ -153,12 +153,12 @@
   </head>
 
   <body
-    class="home page-template-default page page-id-350 woocommerce-no-js ppb_enable"
+   style="background-color: #93b144;" class="home page-template-default page page-id-350 woocommerce-no-js ppb_enable"
   >
     <!-- We are people Hero Image  -->
     <nav
       class="navbar navbar-expand-lg sticky-top"
-      style="background-color: #000000"
+      style="background-color: #091e1b"
       data-bs-theme="dark"
     >
       <div class="container-fluid">
@@ -211,6 +211,16 @@
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
                 >Sponsorship</a
+              >
+            </li>
+             <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'programme' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Get Programme</a
               >
             </li>
             <li class="nav-item">
@@ -271,6 +281,16 @@
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
                 >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'FAQs' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >FAQs</a
               >
             </li>
           </ul>
@@ -444,7 +464,7 @@
         </div>
         <!-- END REVOLUTION SLIDER -->
       </div>
-      <!-- We are people Hero Image  -->
+      <!-- Register  -->
       <div
         class="one withsmallpadding ppb_contact_box"
         style="text-align: center; margin-top: -300px"
@@ -465,11 +485,11 @@
                 "
                 data-stellar-ratio="1.2"
               >
-                <h2 class="ppb_title" style="color: #e20f0f">
+                <h2 class="ppb_title" style="color: #091e1b">
                   Register to attend
                 </h2>
                 <div class="page_tagline" style="">
-                  We are People Conference 2025
+                  We are People Conference 
                 </div>
                 <div class="contact_form7_wrapper">
                   <div
@@ -479,13 +499,13 @@
                     lang="en-US"
                     dir="ltr"
                   >
-                    <div class="screen-reader-response"></div>
+                  <div class="screen-reader-response"></div>
                     <form
                       class="quform"
-                      action=""
                       method="post"
                       enctype="multipart/form-data"
-                      onclick=""
+                      
+                      
                     >
                       {% csrf_token %}
                       <div class="quform-elements">
@@ -499,16 +519,20 @@
                         <!-- Begin Submit button -->
                         <div class="quform-submit">
                           <div class="quform-submit-inner">
-                            <button type="submit" class="submit-button">
+                            <button style="background-color: #091e1b;" type="submit" class="submit-button">
                               <span>Send</span>
                             </button>
                           </div>
+                                <p id="category-description" 
+   style="font-style: italic; max-width: 600px; width: 100%;  color: gray; margin: 50px auto; text-align: center;">
+</p>
                           <div class="quform-loading-wrap">
                             <span class="quform-loading"></span>
                           </div>
                         </div>
                       </div>
                     </form>
+                    
                   </div>
                 </div>
               </div>
@@ -516,6 +540,10 @@
           </div>
         </div>
       </div>
+
+
+
+
       <div
         class="one withsmallpadding ppb_header"
         style="text-align: left; padding: 0px 0 0px 0; margin-top: 20px"
@@ -526,86 +554,11 @@
           </div>
         </div>
       </div>
-      <div
-        class="one withsmallpadding ppb_text"
-        style="text-align: left; padding: 10px 0 10px 0"
-      >
-        <div class="standard_wrapper">
-          <div class="page_content_wrapper">
-            <div class="inner">
-              <div class="one_third">
-                <strong>WHERE</strong>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  <br />
-                  Abuja
-                </p>
-              </div>
-              <div class="one_third" style="">
-                <strong>WHEN</strong>
-                <p>
-                  Lorem, ipsum dolor. <br />
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </div>
-              <div class="one_third last" style="">
-                <a class="button" href="#">View Speakers</a>
-              </div>
-              <p>
-                <br class="clear" />
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
-    <!-- We are people Hero Image end -->
-
-    <!-- Below Image near footer  -->
-    <div
-      class="one withsmallpadding ppb_countdown_image parallax withbg"
-      style="
-        background-image: url(upload/ted_38605266.jpg);
-        background-position: center top;
-        text-align: center;
-        padding: 100px 0 100px 0;
-        color: #ffffff;
-      "
-    >
-      <div
-        class="overlay_background"
-        style="
-          background: #000000;
-          background: rgb(0, 0, 0, 0.5);
-          background: rgba(0, 0, 0, 0.5);
-        "
-      ></div>
-      <div class="standard_wrapper">
-        <div class="page_content_wrapper">
-          <div class="inner">
-            <div style="margin: auto; width: 100%">
-              <h2 class="ppb_title" style="color: #ffffff; text-align: center">
-                Lorem, ipsum.
-              </h2>
-              <div
-                class="page_tagline"
-                style="color: #ffffff; text-align: center"
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </div>
-              <div class="ppb_header_content">
-                <div
-                  id="clock15737196041741984997"
-                  data-date="2026-04-09"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="footer" class="ppb_wrapper">
+   
+  
+<div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
       <ul class="sidebar_widget three">
         <li id="text-2" class="widget widget_text">
           <div class="textwidget">
@@ -659,47 +612,33 @@
             </div>
           </div>
         </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
+             <br>
+              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
+              PHONE NUMBER: +2349045646031 <br>
+              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
+              KAURA DISTRICT FCT. ABUJA
+            </p>
+                     
+          </div>
+        </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p style="font-size: large; font-weight: bold;">
+              NEWSLETTER SIGNUP
+            </p>
+            <p>Register to get our Newsletter </p>
 
-        <!-- Newsletter -->
-        <li id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
-          <h2 class="widgettitle">Newsletter</h2>
-          <form
-            id="mc4wp-form-1"
-            class="mc4wp-form mc4wp-form-92"
-            method="post"
-          >
-            {% csrf_token %}
-            <div class="mc4wp-form-fields">
-              <p>
-                Don't miss a thing!
-                <br />Sign up to receive daily news
-              </p>
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email address"
-                required
-              />
-              <input type="submit" value="Sign up" />
-            </div>
-            <label style="display: none !important">
-              Leave this field empty if you're human:
-              <input
-                type="text"
-                name="honeypot"
-                value=""
-                tabindex="-1"
-                autocomplete="off"
-              />
-            </label>
-            <div class="mc4wp-response">
-              {% if form.errors %}
-              <p class="error">{{ form.errors }}</p>
-              {% endif %} {% if message %}
-              <p class="success">{{ message }}</p>
-              {% endif %}
-            </div>
-          </form>
+            <form
+              class="mc4wp-form mc4wp-form-1234"
+              method="post"
+              data-id="1234"
+              data-name="Newsletter Form">
+            <input style="background-color: #123f38; border: none;" type="email"></form>
+            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button>
+          </div>
         </li>
       </ul>
     </div>
@@ -707,6 +646,85 @@
     <div id="side_menu_wrapper" class="overlay_background">
       <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
     </div>
+
+    <script>
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+const csrftoken = getCookie('csrftoken');
+
+$.ajaxSetup({
+    headers: { "X-CSRFToken": csrftoken }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".quform");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // ✅ Stop page reload
+
+        const formData = new FormData(form);
+
+        fetch(form.action || window.location.href, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"  // So Django knows it's AJAX
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.type === "success") {
+                alert(data.message || "Form submitted successfully!");
+
+                // ✅ Clear form inputs
+                form.reset();
+            } else {
+                alert("Error: " + (data.error ? data.error.join(", ") : "Something went wrong."));
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An Ajax error occurred.");
+        });
+    });
+});
+</script>
+
+<script>
+    // Grab the select and description display
+    const selectField = document.getElementById("id_registration_category");
+    const descField = document.getElementById("category-description");
+
+    // Store descriptions in JS (Django sends data to template)
+    const descriptions = {
+        {% for cat in categories %}
+            "{{ cat.id }}": "{{ cat.description|escapejs }}",
+        {% endfor %}
+    };
+
+    // Event listener: when user changes category
+    selectField.addEventListener("change", function() {
+        const selected = this.value;
+        descField.textContent = descriptions[selected] || "";
+    });
+</script>
+
+
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -757,10 +775,7 @@
     <script src="{% static 'js/plugins/jarallax-video.js' %}"></script>
     <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
     <script src="{% static 'js/plugins/custom_clock.js' %}"></script>
-    <script src="{% static 'js/plugins/quform/js/plugins.js' %}"></script>
-    <script src="{% static 'js/plugins/quform/js/scripts.js' %}"></script>
-
-    <script>
+     <script>
       /* <![CDATA[ */
       var mc4wp_forms_config = [];
       /* ]]> */

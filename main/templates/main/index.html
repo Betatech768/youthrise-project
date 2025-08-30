@@ -1,6 +1,6 @@
 ﻿{% load static %}
 <!DOCTYPE html>
-<html lang="en-US" data-menu="leftalign">
+<html style="background-color: #091e1b    ;" lang="en-US" data-menu="leftalign">
   <head>
     <title>We Are People | faqs</title>
 
@@ -148,7 +148,87 @@
       rel="apple-touch-icon-precomposed"
       href="{% static 'upload/cropped-TG-Thumb-180x180.png' %}"
     />
+<style>
+.sponsor-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 
+  padding: 20px 0;
+}
+
+.sponsor-track {
+  display: flex;
+  width: calc(200%); /* duplicated logos for seamless loop */
+  animation: scroll-left 20s linear infinite;
+}
+
+.sponsor-slide {
+  flex: 0 0 auto;
+  padding: 0 30px;
+}
+
+.sponsor-slide img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.2);
+  mix-blend-mode: darken;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-slide img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 📱 Small screens */
+@media (max-width: 768px) {
+  .sponsor-slide {
+    padding: 0 15px;
+  }
+
+  .sponsor-slide img {
+    height: 80px;
+  }
+
+  .sponsor-track {
+    animation: scroll-left 30s linear infinite; /* slower on small screens */
+  }
+}
+
+/* 🖥 Large screens */
+@media (min-width: 1200px) {
+  .sponsor-slide img {
+    height: 100px;
+   
+  }
+
+  .sponsor-track {
+    animation: scroll-left 15s linear infinite; /* faster on big screens */
+  }
+}</style>
+<style>
+#clock1573568515278500141 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-family: "Courier New", monospace;
+}
+
+#clock1573568515278500141 div {
+  background: #93b144;
+
+}
+</style>
     <meta
       name="msapplication-TileImage"
       content="../../../themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
@@ -156,12 +236,12 @@
   </head>
   <body
     class="page-template page-template-page_r page-template-page_r-php page page-id-118 page-child parent-pageid-95 woocommerce-no-js"
-    style="background: #e2fbed"
+    style="background: #091e1b"
   >
     <!-- Input Bootstrap NavBar here -->
     <nav
       class="navbar navbar-expand-lg sticky-top"
-      style="background-color: #000000"
+      style="background-color: #091e1b"
       data-bs-theme="dark"
     >
       <div class="container-fluid">
@@ -214,6 +294,16 @@
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
                 >Sponsorship</a
+              >
+            </li>
+             <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'programme' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Get Programme</a
               >
             </li>
             <li class="nav-item">
@@ -274,6 +364,16 @@
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
                 >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'FAQs' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >FAQs</a
               >
             </li>
           </ul>
@@ -370,7 +470,8 @@
                     font-size: 70px;
                     line-height: 22px;
                     font-weight: 600;
-                    color: rgba(255, 45, 85, 1);
+                    color: #93b144;
+                    border: none;
                     font-family: Poppins;
                     text-transform: uppercase;
                   "
@@ -411,48 +512,54 @@
                 </div>
 
                 <!-- LAYER NR. 3 -->
-                <a
-                  class="tp-caption rev-btn rev-withicon"
-                  href="#"
-                  target="_self"
-                  id="slide-1-layer-5"
-                  data-x="center"
-                  data-hoffset=""
-                  data-y="center"
-                  data-voffset="140"
-                  data-width="['auto']"
-                  data-height="['auto']"
-                  data-type="button"
-                  data-actions=""
-                  data-responsive_offset="on"
-                  data-responsive="off"
-                  data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(255,45,85,1);bc:rgba(30,198,182,1);bs:solid;bw:0 0 0 0;"}]'
-                  data-textalign="['inherit','inherit','inherit','inherit']"
-                  data-paddingtop="[12,12,12,12]"
-                  data-paddingright="[35,35,35,35]"
-                  data-paddingbottom="[12,12,12,12]"
-                  data-paddingleft="[35,35,35,35]"
-                  style="
-                    z-index: 8;
-                    white-space: nowrap;
-                    font-size: 17px;
-                    line-height: 17px;
-                    font-weight: 500;
-                    color: rgba(255, 255, 255, 1);
-                    font-family: Poppins;
-                    background-color: rgb(254, 26, 1);
-                    border-color: rgba(255, 74, 82, 1);
-                    border-radius: 30px 30px 30px 30px;
-                    outline: none;
-                    box-shadow: none;
-                    box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-                    -webkit-box-sizing: border-box;
-                    cursor: pointer;
-                    text-decoration: none;
-                  "
-                  >Register
-                </a>
+             <a 
+  class="tp-caption rev-btn rev-withicon"
+  href="#"
+  target="_self"
+  id="slide-1-layer-5"
+  data-x="center"
+  data-hoffset=""
+  data-y="center"
+  data-voffset="140"
+  data-width="['auto']"
+  data-height="['auto']"
+  data-type="button"
+  data-actions=""
+  data-responsive_offset="on"
+  data-responsive="off"
+  data-frames='[
+    {"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},
+    {"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},
+    {"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:#091e1b;bc:transparent;bs:none;bw:0;"}
+  ]'
+  data-textalign="['inherit','inherit','inherit','inherit']"
+  data-paddingtop="[12,12,12,12]"
+  data-paddingright="[35,35,35,35]"
+  data-paddingbottom="[12,12,12,12]"
+  data-paddingleft="[35,35,35,35]"
+  style="
+    z-index: 8;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    font-family: Poppins;
+    background-color: #93b144;
+    border: none;
+    border-radius: 30px 30px 30px 30px;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+  "
+>
+  Register
+</a>
+
               </li>
             </ul>
             <div
@@ -471,7 +578,7 @@
           padding-bottom: 40px !important;
           text-align: left;
           padding: 70px 0 70px 0;
-          background-color: #000000;
+          background-color: #091e1b;
           color: #ffffff;
         "
       >
@@ -480,61 +587,19 @@
             <div class="inner">
               <div style="margin: auto; width: 70%">
                 <h2 class="ppb_title" style="color: #ffffff; text-align: left">
-                  About The Event
+                  ABOUT THE CONFERENCE
                 </h2>
                 <div class="ppb_header_content">
                   <p>
-                    Nihilne te nocturnum praesidium Palati, nihil urbis
-                    vigiliae. Non equidem invideo, miror magis posuere velit
-                    aliquet. Qui ipsorum lingua Celtae, nostra Galli
-                    appellantur. Prima luce, cum quibus mons aliud consensu ab
-                    eo. Petierunt uti sibi concilium totius Galliae in diem
-                    certam indicere. Nisl cras vitae wisi odio amet.
-                  </p>
+                   We Are People Conference is a national youth-focused event hosted by YouthRISE Nigeria, celebrating the role of young Nigerians in nation-building while tackling the barriers that limit their full participation.
+The conference convenes young leaders, policymakers, civil society, development partners, and the private sector to highlight youth excellence, promote unity, and drive inclusive national development.
+The We Are People Conference is more than just a conference, it's a movement, a platform to uplift and empower every young Nigerians, embracing diversity, resilience, and collaboration to unlock the full potential of Nigerians youth.
+                  <div class="post_button_wrapper">
+                  <a class="readmore" style="color: white;" href="{% url 'about' %}">
+                    Read More <span class="ti-angle-right"></span>
+                  </a>
+                </div> </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Venue Section -->
-      <div
-        class="one withsmallpadding ppb_text"
-        style="
-          padding-top: 0px !important;
-          text-align: left;
-          padding: 40px 0 40px 0;
-          background-color: #000000;
-          color: #ffffff !important;
-        "
-      >
-        <div class="standard_wrapper">
-          <div class="page_content_wrapper">
-            <div class="inner">
-              <div style="margin: auto; width: 70%">
-                <div class="one_third" style="">
-                  <p>
-                    <strong>WHERE</strong>
-                    <br />
-                    Fort Mason Center <br />
-                    San Fancisco, CA
-                  </p>
-                </div>
-                <div class="one_third" style="">
-                  <p>
-                    <strong>WHEN</strong>
-                    <br />
-                    Sunday to Wednesday <br />
-                    July 23 to 26, 2017
-                  </p>
-                </div>
-                <div class="one_third last" style="">
-                  <a class="button" href="#">View Speakers</a>
-                </div>
-                <p>
-                  <br class="clear" />
-                </p>
               </div>
             </div>
           </div>
@@ -542,7 +607,7 @@
       </div>
 
       <!-- Short Description of Events  -->
-      <div class="one">
+      <div style="background-color: #93b144;" class="one">
         <div
           class="one_half_bg parallax"
           style="
@@ -550,8 +615,9 @@
             height: 550px;
           "
         ></div>
-        <div class="one_half_bg" style="padding: 85px">
-          <h2 class="ppb_title" style="color: #ff2d54">
+        
+        <div  class="one_half_bg" style="padding: 85px">
+          <h2 class="ppb_title" style="color: #091e1b  ">
             The New Era of Tech Companies
           </h2>
           <div class="page_tagline" style="">
@@ -572,9 +638,9 @@
         </div>
         <br class="clear" />
       </div>
-      <div class="one">
+      <div style="background-color: #93b144;" class="one">
         <div class="one_half_bg textright" style="padding: 85px">
-          <h2 class="ppb_title" style="color: #ff2d54">
+          <h2 class="ppb_title" style="color: #091e1b ">
             We have top executive &amp; start up here
           </h2>
           <div class="page_tagline" style="">
@@ -596,7 +662,7 @@
         <div
           class="one_half_bg parallax"
           style="
-            background-image: url(' static/upload/29994728733_d2ebe09397_o.jpg');
+            background-image: url('static/upload/29994728733_d2ebe09397_o.jpg');
             height: 550px;
           "
         ></div>
@@ -628,19 +694,13 @@
               <div style="margin: auto; width: 100%">
                 <h2
                   class="ppb_title"
-                  style="color: #ffffff; text-align: center"
+                  style="color: #93b144; text-align: center"
                 >
-                  Hurry Up!
+                  COUTNDOWN
                 </h2>
-                <div
-                  class="page_tagline"
-                  style="color: #ffffff; text-align: center"
-                >
-                  Last year our tickets sold fast so don’t miss. Conference will
-                  start in
-                </div>
+                
                 <div class="ppb_header_content">
-                  <div
+                  <div 
                     id="clock1573568515278500141"
                     data-date="2025-09-19"
                   ></div>
@@ -659,19 +719,17 @@
           padding: 0px 0 0px 0;
           margin-top: 20px;
           margin-bottom: 60px;
+          background-color: #091e1b;
         "
       >
         <div class="standard_wrapper">
           <div class="page_content_wrapper">
             <div class="inner">
               <div style="margin: auto; width: 100%">
-                <h2 class="ppb_title" style="text-align: center">
+                <h2 class="ppb_title" style="text-align: center; color: #93b144;">
                   Our Speakers
                 </h2>
-                <div class="page_tagline" style="text-align: center">
-                  This is sample of page tagline and you can set it up using
-                  page option
-                </div>
+                
               </div>
             </div>
           </div>
@@ -679,7 +737,7 @@
       </div>
 
       <!-- Speakers Grid  -->
-      <div class="ppb_speaker_grid one nopadding">
+      <div style="background-color: #091e1b; margin: 0;" class="ppb_speaker_grid one nopadding">
         <div
           class="page_content_wrapper page_main_content sidebar_content full_width fixed_column"
         >
@@ -694,8 +752,8 @@
                   class=""
                 />{% endif %}
                 <div class="speaker_info_wrapper">
-                  <h4>{{speaker.Speaker_name}}</h4>
-                  <div class="speaker_desc">{{spaeker.Speaker_position}}</div>
+                  <h4 style="color: #93b144;">{{speaker.Speaker_name}}</h4>
+                  <div class="speaker_desc">{{speaker.Speaker_position}}</div>
                 </div>
               </a>
             </div>
@@ -706,6 +764,52 @@
         </div>
       </div>
     </div>
+    <!-- sponsors section -->
+     <div>
+        <div
+        class="one withsmallpadding ppb_header"
+        style="
+          text-align: center;
+          padding: 0px 0 0px 0;
+          margin-top: 20px;
+          margin-bottom: 60px;
+          background-color: #091e1b;
+        "
+      >
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner">
+              <div style="margin: auto; width: 100%">
+                <h2 class="ppb_title" style="text-align: center; color: #93b144;">
+                  Our Sponsors
+                </h2>
+                
+              </div>
+            </div>
+          
+          </div>
+          
+</div>
+          </div>
+        </div>
+        <div style="background-color: #93b144;" class="sponsor-slider">
+          <div class="sponsor-track">
+    {% for sponsor in sponsors %}
+      <div class="sponsor-slide">
+        <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }}">
+      </div>
+    {% endfor %}
+    <!-- Duplicate logos for seamless infinite scroll -->
+    {% for sponsor in sponsors %}
+      <div class="sponsor-slide">
+        <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }}">
+      </div>
+    {% endfor %}
+        </div>
+      </div>
+
+      <!-- Sponsor End -->
+
 
     <!-- Get tickets  -->
     <div
@@ -737,7 +841,7 @@
                 nulla alias vitae.
               </div>
               <div class="ppb_header_content">
-                <p><a class="button medium" href="#">Register</a></p>
+                <p><a style="background-color: #93b144; border: none;" class="button medium" href="#">Register</a></p>
               </div>
             </div>
           </div>
@@ -746,7 +850,7 @@
     </div>
 
     <!-- footer -->
-    <div id="footer" class="ppb_wrapper">
+    <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
       <ul class="sidebar_widget three">
         <li id="text-2" class="widget widget_text">
           <div class="textwidget">
@@ -798,6 +902,34 @@
                 </ul>
               </div>
             </div>
+          </div>
+        </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
+             <br>
+              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
+              PHONE NUMBER: +2349045646031 <br>
+              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
+              KAURA DISTRICT FCT. ABUJA
+            </p>
+                     
+          </div>
+        </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p style="font-size: large; font-weight: bold;">
+              NEWSLETTER SIGNUP
+            </p>
+            <p>Register to get our Newsletter </p>
+
+            <form
+              class="mc4wp-form mc4wp-form-1234"
+              method="post"
+              data-id="1234"
+              data-name="Newsletter Form">
+            <input style="background-color: #123f38; border: none;" type="email"></form>
+            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button>
           </div>
         </li>
       </ul>

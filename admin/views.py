@@ -4,7 +4,7 @@ from blogpost.models import BlogImage, BlogPost
 from django.http import JsonResponse
 from speakers.models import Speakers, SpeakerImage
 from speakers.forms import SpeakerForm, SpeakerImageForm
-from sponsorship.forms import SponsorsForm
+from sponsorship.forms import SponsorshipPackageForm
 from sponsorship.models import Sponsors
 from exhibition.models import Exhibition
 from registration_app.models import Registration
@@ -13,12 +13,21 @@ from galleries.models import Image, Gallery
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, login, authenticate
-from .forms import LoginForm
+from .forms import LoginForm, SponsorForm
 from galleries.forms import ImageForm, GalleryForm
 from django.contrib import messages
 from django.views.decorators.http import require_POST
 from Images.forms import ImageUploadForm
 from Images.models import GalleryImage
+from .models import Document
+from .forms import DocumentForm
+import os
+from django.http import FileResponse
+from main.models import Sponsor
+from sponsorship.models import SponsorshipPackage
+
+
+
 def user_login(request):
     if request.user.is_authenticated:
         return redirect('admin_page')  # Already logged in
@@ -248,3 +257,69 @@ def gallery_view(request):
         'form': form,
         'images': images
     })
+
+def upload_document(request):
+    if request.method == 'POST':
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('document_list')
+    else:
+        form = DocumentForm()
+    
+    documents = Document.objects.all().order_by('-uploaded_at')
+    return render(request, 'admin/upload_document.html', {
+        'form': form,
+        'documents': documents
+    })
+
+def delete_document(request, pk):
+    doc = get_object_or_404(Document, pk=pk)
+    if request.method == "POST":
+        doc.delete()
+        return redirect('document_list')
+    return render(request, 'admin/delete_programme.html', {'doc': doc})
+
+
+def sponsors_manage(request):
+    """Upload and list sponsors"""
+    if request.method == "POST":
+        form = SponsorForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("sponsorsimage_list")
+    else:
+        form = SponsorForm()
+
+    sponsors = Sponsor.objects.all()
+    return render(request, "admin/sponsors_list.html", {"form": form, "sponsors": sponsors})
+
+@require_POST
+def delete_sponsor(request, pk):
+    """Delete sponsor via AJAX"""
+    sponsor = get_object_or_404(Sponsor, pk=pk)
+    sponsor.delete()
+    return JsonResponse({"success": True})
+
+
+
+# Update sponsorship package (for admin/staff)
+def update_package(request):
+    # package = get_object_or_404(SponsorshipPackage, pk=pk)
+    if request.method == 'POST':
+        form = SponsorshipPackageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('package_list')
+    else:
+        form = SponsorshipPackageForm()
+
+    sponsors = SponsorshipPackage.objects.all()
+    return render(request, 'admin/update_package.html', {'form': form, 'sponsors': sponsors})
+
+@require_POST
+def delete_sponsor_package(request, pk):
+    """Delete sponsor via AJAX"""
+    sponsor = get_object_or_404(SponsorshipPackage, pk=pk)
+    sponsor.delete()
+    return JsonResponse({"success": True})

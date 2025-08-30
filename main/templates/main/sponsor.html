@@ -156,12 +156,12 @@
   </head>
 
   <body
-    class="speaker-template-default single single-speaker postid-138 woocommerce-no-js"
+   style="background-color: #93b144;" class="speaker-template-default single single-speaker postid-138 woocommerce-no-js"
   >
     <!-- Input Bootstrap NavBar here -->
-    <nav
+      <nav
       class="navbar navbar-expand-lg sticky-top"
-      style="background-color: #000000"
+      style="background-color: #091e1b"
       data-bs-theme="dark"
     >
       <div class="container-fluid">
@@ -214,6 +214,16 @@
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
                 >Sponsorship</a
+              >
+            </li>
+             <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'programme' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >Get Programme</a
               >
             </li>
             <li class="nav-item">
@@ -276,6 +286,16 @@
                 >Contact</a
               >
             </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'FAQs' %}"
+                style="color: white; transition: 0.3s"
+                onmouseover="this.style.color='#ffcc00'"
+                onmouseout="this.style.color='white'"
+                >FAQs</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -291,179 +311,77 @@
           <div class="page_title_inner">
             <div class="page_title_content">
               <h1>Become a Sponsor</h1>
-              <div class="page_tagline">
-                This is sample of page tagline and you can set it up using page
-                option
-              </div>
+             
             </div>
           </div>
         </div>
       </div>
+      
     </div>
-
-    <div class="ppb_wrapper hasbg">
+<div class="ppb_wrapper">
       <div
-        class="one ppb_ticket withsmallpadding"
-        style="padding: 60px 0 60px 0"
+        class="one withsmallpadding ppb_contact_box"
+        style="text-align: center; margin-bottom: 100px"
       >
         <div class="standard_wrapper">
           <div class="page_content_wrapper">
             <div class="inner">
-              <div class="ticket_content_wrapper normal">
-                <div class="ticket one_third_bg" style="">
-                  <div class="ticket_wrapper_border">
-                    <ul class="ticket_wrapper">
-                      <li class="title_row" style="color: #ff2d54">
-                        <h3 style="color: #ff2d54">1-Day Conference Pass</h3>
-                        <div class="ticket_desc">Lorem ipsum dolor sit.</div>
-                      </li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="price_row bordercolor">
-                        <strong>$</strong><em class="exact_price">395</em
-                        ><em class="time"></em>
-                      </li>
-                      <li class="button_row">
-                        <button
-                          data-product="208"
-                          data-processing="Please wait..."
-                          data-url="#"
-                          class="ticket_add_to_cart button"
-                          style="
-                            background: #4990e2;
-                            border-color: #4990e2;
-                            color: #fff;
-                          "
-                        >
-                          Sponsor
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div
-                  class="ticket one_third_bg featured"
-                  style="border-color: #ff2d54"
-                >
-                  <div
-                    class="ticket_wrapper_recommend"
-                    style="background: #ff2d54; border-color: #ff2d54"
-                  >
-                    Recommended
-                  </div>
-                  <div class="ticket_wrapper_border">
-                    <ul class="ticket_wrapper">
-                      <li class="title_row featured" style="color: #ff2d54">
-                        <h3 style="color: #ff2d54">Full Conference Pass</h3>
-                        <div class="ticket_desc">Lorem ipsum dolor sit.</div>
-                      </li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="price_row bordercolor">
-                        <strong>$</strong><em class="exact_price">495</em
-                        ><em class="time"></em>
-                      </li>
-                      <li class="button_row featured">
-                        <button
-                          data-product="210"
-                          data-processing="Please wait..."
-                          data-url="#"
-                          class="ticket_add_to_cart button"
-                          style="
-                            background: #4990e2;
-                            border-color: #4990e2;
-                            color: #fff;
-                          "
-                        >
-                          Sponsor
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="ticket one_third_bg last" style="">
-                  <div class="ticket_wrapper_border">
-                    <ul class="ticket_wrapper">
-                      <li class="title_row" style="color: #ff2d54">
-                        <h3 style="color: #ff2d54">Startup Pass</h3>
-                        <div class="ticket_desc">Lorem ipsum dolor sit.</div>
-                      </li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="bordercolor">Lorem ipsum dolor sit.</li>
-                      <li class="price_row bordercolor">
-                        <strong>$</strong><em class="exact_price">595</em
-                        ><em class="time"></em>
-                      </li>
-                      <li class="button_row">
-                        <a
-                          href="#"
-                          class="button"
-                          style="
-                            background: #4990e2;
-                            border-color: #4990e2;
-                            color: #fff;
-                          "
-                          >Sponsor</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="one withsmallpadding ppb_countdown_image parallax withbg"
-        style="
-          background-image: url('/static/upload/27899245542_531ed54fc7_o.jpg');
-          background-position: center center;
-          text-align: center;
-          padding: 100px 0 100px 0;
-          color: #ffffff;
-          margin-top: 10px;
-        "
-      >
-        <div
-          class="overlay_background"
-          style="
-            background: #000000;
-            background: rgb(0, 0, 0, 0.5);
-            background: rgba(0, 0, 0, 0.5);
-          "
-        ></div>
-        <div class="standard_wrapper">
-          <div class="page_content_wrapper">
-            <div class="inner">
-              <div style="margin: auto; width: 100%">
-                <h2
-                  class="ppb_title"
-                  style="color: #ffffff; text-align: center"
-                >
-                  Hurry Up!
+              <div
+                class="inner_box parallax"
+                style="
+                  width: 60%;
+                  margin: auto;
+                  background: #ffffff;
+                  border: 2px solid #091e1b;
+                  padding: 50px;
+                "
+                data-stellar-ratio="1.2"
+              >
+                <h2 class="ppb_title" style="color: #000000">
+                  BECOME A SPONSOR
                 </h2>
-                <div
-                  class="page_tagline"
-                  style="color: #ffffff; text-align: center"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
-                  animi id minima!
+               
+                <div class="contact_form7_wrapper">
+                  <div
+                    role="form"
+                    class="wpcf7"
+                    id="wpcf7-f5-o1"
+                    lang="en-US"
+                    dir="ltr"
+                  >
+                    <div class="screen-reader-response"></div>
+                    <form
+                      class="quform"
+                      action=""
+                      method="post"
+                      enctype="multipart/form-data"
+                      onclick=""
+                    >
+                      <div class="quform-elements">
+                       {% csrf_token %}
+                       
+  {{form.as_p}}
+    
+  </select>
+
+  <!-- Where price will show -->
+  <p id="package-price" style="font-weight: bold; color: green; margin-top:10px;"></p>
+
+
+                        <!-- Begin Submit button -->
+                        <div class="quform-submit">
+                          <div class="quform-submit-inner">
+                            <button style="background-color: #091e1b;" type="submit" class="submit-button">
+                              <span>Send</span>
+                            </button>
+                          </div>
+                          <div class="quform-loading-wrap">
+                            <span class="quform-loading"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -471,9 +389,8 @@
         </div>
       </div>
     </div>
-
     <!-- footer -->
-    <div id="footer" class="ppb_wrapper">
+  <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
       <ul class="sidebar_widget three">
         <li id="text-2" class="widget widget_text">
           <div class="textwidget">
@@ -527,47 +444,33 @@
             </div>
           </div>
         </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
+             <br>
+              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
+              PHONE NUMBER: +2349045646031 <br>
+              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
+              KAURA DISTRICT FCT. ABUJA
+            </p>
+                     
+          </div>
+        </li>
+         <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p style="font-size: large; font-weight: bold;">
+              NEWSLETTER SIGNUP
+            </p>
+            <p>Register to get our Newsletter </p>
 
-        <!-- Newsletter -->
-        <li id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
-          <h2 class="widgettitle">Newsletter</h2>
-          <form
-            id="mc4wp-form-1"
-            class="mc4wp-form mc4wp-form-92"
-            method="post"
-          >
-            {% csrf_token %}
-            <div class="mc4wp-form-fields">
-              <p>
-                Don't miss a thing!
-                <br />Sign up to receive daily news
-              </p>
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email address"
-                required
-              />
-              <input type="submit" value="Sign up" />
-            </div>
-            <label style="display: none !important">
-              Leave this field empty if you're human:
-              <input
-                type="text"
-                name="honeypot"
-                value=""
-                tabindex="-1"
-                autocomplete="off"
-              />
-            </label>
-            <div class="mc4wp-response">
-              {% if form.errors %}
-              <p class="error">{{ form.errors }}</p>
-              {% endif %} {% if message %}
-              <p class="success">{{ message }}</p>
-              {% endif %}
-            </div>
-          </form>
+            <form
+              class="mc4wp-form mc4wp-form-1234"
+              method="post"
+              data-id="1234"
+              data-name="Newsletter Form">
+            <input style="background-color: #123f38; border: none;" type="email"></form>
+            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button>
+          </div>
         </li>
       </ul>
     </div>
@@ -575,6 +478,20 @@
     <div id="side_menu_wrapper" class="overlay_background">
       <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
     </div>
+    <script>
+  const select = document.getElementById("id_package");
+  const priceDisplay = document.getElementById("package-price");
+
+  select.addEventListener("change", function() {
+    const selectedOption = this.options[this.selectedIndex];
+    const price = selectedOption.getAttribute("data-price");
+    if (price) {
+      priceDisplay.textContent = "Price: ₦" + price;
+    } else {
+      priceDisplay.textContent = "";
+    }
+  });
+</script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

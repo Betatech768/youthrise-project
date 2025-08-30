@@ -44,7 +44,7 @@
 
     <!-- input area  -->
     <main class="exhibition">
-      <div class="dividepage">
+      <div>
         <div id="page_caption" class="page_content">
           <div class="page_title_wrapper">
             <div class="standard_wrapper">
@@ -55,10 +55,11 @@
                 </div>
               </div>
             </div>
+            
           </div>
           <div class="move_middle">
             <div class="form-containerss">
-              <form method="post" enctype="multipart/form-data" class="form">
+             <form method="post" enctype="multipart/form-data" class="form"> 
                 <div class="form-group">
                   {% csrf_token %} {{ speaker_form.as_p }}
                   <a href=""> {{ image_form.as_p }}</a>
@@ -72,9 +73,16 @@
                 <a href=""><button class="form-submit-btn" type="submit">Submit</button>
               </form>
             </div>
+            
           </div>
+         
         </div>
-        <div>
+
+     
+         
+        </div>
+
+       <div style="margin-top: 20px">
           {% for speaker in speakers %}
           <div class="containerformbloglist">
             <div class="bloglist">
@@ -89,7 +97,7 @@
               {% endfor %}
 
               <div class="blog-content">
-                <h1>{{ speaker.Speaker_name }}</h1>
+                <h1 style="text-decoration: none;"> {{ speaker.Speaker_name }}</h1>
 
                 <div class="blog-actions">
                   <a href="{% url 'edit_speaker' speaker.id %}"

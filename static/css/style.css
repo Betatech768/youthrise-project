@@ -5331,7 +5331,7 @@ ul.flickr li {
   width: 32px;
   height: 32px;
   border-radius: 250px;
-  background: #ff4a52;
+  background: #93b144;
   top: 50%;
   margin-top: -17px;
   text-indent: initial;
@@ -8634,6 +8634,9 @@ body.woocommerce-order-received .woocommerce {
   width: 0;
   height: 0;
 }
+
+
+
 
 .ri-grid ul li a {
   display: block;

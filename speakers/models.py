@@ -1,8 +1,11 @@
 from django.db import models
 
+
 class Speakers(models.Model):
     Speaker_name = models.CharField (max_length=50)
     Speaker_position = models.CharField(max_length=100)
+    Speakin_Day = models.CharField(max_length=100, null= True)
+    Speaking_time = models.TimeField(null= True)
     Brief_description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     

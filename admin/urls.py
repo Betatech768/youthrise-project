@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     # The line `# path('', views.admin, name='admin_page'),` is a commented-out line of code in a
@@ -21,7 +23,11 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),
     path('login/', views.user_login, name='login'),
     path('gallery/', views.gallery_view, name='gallery'),
-    
-
-]
+    path('documents/', views.upload_document, name='document_list'),
+    path('programme/delete/<int:pk>/', views.delete_document, name='delete_document'),
+    path("sponsors-image/", views.sponsors_manage, name="sponsorsimage_list"),
+    path("sponsors-image/delete/<int:pk>/", views.delete_sponsor, name="delete_sponsor"),
+    path("update-package-list/delete/<int:pk>/", views.delete_sponsor_package, name="delete_sponsor_package"),
+    path('update-package-list/', views.update_package, name='package_list'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     
