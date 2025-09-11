@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
   <head>
-    <title>We Are People | faqs</title>
+    <title>We Are People | About </title>
 
     <meta charset="UTF-8" />
     <meta
@@ -134,21 +134,139 @@
       media="all"
     />
 
-    <link
+     <link
       rel="icon"
-      href="{% static 'upload/cropped-TG-Thumb-32x32.png' %}"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="32x32"
     />
     <link
       rel="icon"
-      href="{% static 'upload/cropped-TG-Thumb-192x192.png' %}"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="192x192"
     />
     <link
       rel="apple-touch-icon-precomposed"
-      href="{% static 'upload/cropped-TG-Thumb-180x180.png' %}"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
     />
 
+    <style>
+      /* Center footer content on mobile */
+@media (max-width: 768px) {
+  #footer .sidebar_widget.three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center horizontally */
+    text-align: center;   /* Center text */
+    gap: 20px;            /* Space between blocks */
+  }
+
+  #footer .sidebar_widget.three li {
+    width: 100%;          /* Full width on mobile */
+    max-width: 400px;     /* Optional: keeps it tidy */
+  }
+
+  #footer img {
+    margin: 0 auto;       /* Center logo */
+    display: block;
+  }
+
+  #footer .social_wrapper ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+  }
+
+  #footer button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+    </style>
+<style>
+.sponsor-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  padding: 20px 0;
+}
+
+.sponsor-track {
+  display: flex;
+  width: calc(200%); /* duplicated logos for seamless loop */
+  animation: scroll-left 20s linear infinite;
+}
+
+.sponsor-slide {
+  flex: 0 0 auto;
+  padding: 0 30px;
+}
+
+.sponsor-slide img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.2);
+  mix-blend-mode: darken;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-slide img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 📱 Small screens */
+@media (max-width: 768px) {
+  .sponsor-slide {
+    padding: 0 15px;
+  }
+
+  .sponsor-slide img {
+    height: 80px;
+  }
+
+  .sponsor-track {
+    animation: scroll-left 30s linear infinite; /* slower on small screens */
+  }
+}
+
+/* 🖥 Large screens */
+@media (min-width: 1200px) {
+  .sponsor-slide img {
+    height: 100px;
+   
+  }
+
+  .sponsor-track {
+    animation: scroll-left 15s linear infinite; /* faster on big screens */
+  }
+}</style>
+<style>
+#clock1573568515278500141 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-family: "Courier New", monospace;
+}
+
+#clock1573568515278500141 div {
+  background: #93b144;
+
+}
+</style>
     <meta
       name="msapplication-TileImage"
       content="../../../themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
@@ -306,7 +424,7 @@
         <div
           class="one withbg"
           style="
-            background-image: url('/static/upload/ted_38605266.jpg');
+            background-image: url('/static/upload/wep9.jpg');
             background-size: cover;
             background-position: center center;
             height: 600px;
@@ -383,7 +501,7 @@ Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorshi
                 class="page_tagline"
                 style="color: #ffffff; text-align: center"
               >
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                
               </div>
             </div>
           </div>
@@ -404,67 +522,47 @@ Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorshi
           <div class="inner">
             <div class="one_half" style="">
               <img
-                style="border-radius: 5px"
-                src="{% static 'upload/29969985723_6c5d98cc97_o-768x512.jpg' %}"
+                style="border-radius: 5px; width: 768px; height: 512px; object-fit: cover;"
+                src="{% static 'upload/wep8.jpg' %}"
                 alt=""
               />
               <br />
-              Lorem ipsum dolor sit amet consectetur.
+              How young Nigerians play a pivotal role in shaping the future of the nation, and understand the ethics and responsibilities of active citizenship.
             </div>
             <div class="one_half last" style="">
               <img
-                style="border-radius: 5px"
-                src="{% static 'upload/16876680475_9e5c37b9d1_o-768x512.jpg' %}"
+                style="border-radius: 5px; width: 768px; height: 512px; object-fit: cover;"
+                src="{% static 'upload/wep2.jpg' %}"
                 alt=""
               />
               <br />
-              Lorem ipsum dolor sit amet consectetur.
+             Strategies for impactful leadership, entrepreneurial growth, and how to harness innovation for personal and national development.
             </div>
             <p>
               <br class="clear" />
             </p>
             <div class="one_half" style="">
               <img
-                style="border-radius: 5px"
-                src="{% static 'upload/28005098035_cdcb049a6c_o-768x512.jpg' %}"
+                style="border-radius: 5px; width: 768px; height: 512px; object-fit: cover;"
+                src="{% static 'upload/wep3.jpg' %}"
                 alt=""
               />
               <br />
-              Lorem ipsum dolor sit amet consectetur.
+              Sessions covering critical issues such as political participation, education reform, digital transformation, and socio-economic development.
             </div>
             <div class="one_half last" style="">
               <img
-                style="border-radius: 5px"
-                src="{% static 'upload/28001657475_caa78a2b21_o-768x513.jpg' %}"
+              style="border-radius: 5px; width: 768px; height: 512px; object-fit: cover;"  
+                src="{% static 'upload/wep4.jpg' %}"
                 alt=""
               />
               <br />
-              Lorem ipsum dolor sit amet consectetur.
+              Youth-led exhibitions that showcase creativity, resilience, and innovative solutions from young Nigerians across diverse fields.
             </div>
             <p>
               <br class="clear" />
             </p>
-            <div class="one_half" style="">
-              <img
-                style="border-radius: 5px"
-                src="{% static 'upload/30539203531_5353af3b36_o-768x512.jpg' %}"
-                alt=""
-              />
-              <br />
-              Lorem ipsum dolor sit amet consectetur.
-            </div>
-            <div class="one_half last" style="">
-              <img
-                style="border-radius: 5px"
-                src="{% static 'upload/30613719785_7529ffd745_o-768x512.jpg' %}"
-                alt=""
-              />
-              <br />
-              Lorem ipsum dolor sit amet consectetur.
-            </div>
-            <p>
-              <br class="clear" />
-            </p>
+          
           </div>
         </div>
       </div>
@@ -475,58 +573,19 @@ Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorshi
     </div>
 
     <!-- footer -->
-  <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
+   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
       <ul class="sidebar_widget three">
         <li id="text-2" class="widget widget_text">
           <div class="textwidget">
             <p>
               <img
                 src="{% static 'upload/Logo Icon.png' %}"
-                width="158"
+                width="165"
                 height="20"
                 alt=""
               />
             </p>
-            <p>{{ footer_description|default:"Abuja is a great place" }}</p>
-
-            <!-- Social Icons -->
-            <div style="margin-top: 20px">
-              <div class="social_wrapper shortcode dark">
-                <ul>
-                  <li class="facebook">
-                    <a target="_blank" title="Facebook" href="#"
-                      ><i class="fa fa-facebook"></i
-                    ></a>
-                  </li>
-                  <li class="twitter">
-                    <a
-                      target="_blank"
-                      title="Twitter"
-                      href="https://twitter.com/#"
-                      ><i class="fa fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li class="youtube">
-                    <a target="_blank" title="Youtube" href="#"
-                      ><i class="fa fa-youtube"></i
-                    ></a>
-                  </li>
-                  <li class="google">
-                    <a target="_blank" title="Google+" href="#"
-                      ><i class="fa fa-google-plus"></i
-                    ></a>
-                  </li>
-                  <li class="instagram">
-                    <a
-                      target="_blank"
-                      title="Instagram"
-                      href="https://instagram.com/tedxvienna"
-                      ><i class="fa fa-instagram"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            
           </div>
         </li>
          <li id="text-2" class="widget widget_text">
@@ -549,12 +608,16 @@ Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorshi
             <p>Register to get our Newsletter </p>
 
             <form
+            id="newsletter-form"
               class="mc4wp-form mc4wp-form-1234"
               method="post"
               data-id="1234"
-              data-name="Newsletter Form">
-            <input style="background-color: #123f38; border: none;" type="email"></form>
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button>
+              data-name="Newsletter Form"
+              action="{% url 'newsletter_signup' %}">
+              {% csrf_token %}
+            <input id="clear" type="email" name="email" required style="background-color: #123f38; border: none; color: wheat;">
+            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
+            <div id="newsletter-message"></div>
           </div>
         </li>
       </ul>
@@ -563,6 +626,37 @@ Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorshi
     <div id="side_menu_wrapper" class="overlay_background">
       <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
     </div>
+
+
+
+
+<script>
+document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let formData = new FormData(this);
+
+  fetch(this.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      "X-Requested-With": "XMLHttpRequest"
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    let msg = document.getElementById("newsletter-message");
+    if (data.type === "success") {
+      msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
+    } else {
+      msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
+    }
+  });
+  document.getElementById("clear").value = "";
+});
+</script>
+
+
     <script>
       window.addEventListener("scroll", function () {
         const navbar = document.querySelector(".navbar");

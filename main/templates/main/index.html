@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html style="background-color: #091e1b    ;" lang="en-US" data-menu="leftalign">
   <head>
-    <title>We Are People | faqs</title>
+    <title>We Are People</title>
 
     <meta charset="UTF-8" />
     <meta
@@ -136,18 +136,56 @@
 
     <link
       rel="icon"
-      href="{% static 'upload/cropped-TG-Thumb-32x32.png' %}"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="32x32"
     />
     <link
       rel="icon"
-      href="{% static 'upload/cropped-TG-Thumb-192x192.png' %}"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="192x192"
     />
     <link
       rel="apple-touch-icon-precomposed"
-      href="{% static 'upload/cropped-TG-Thumb-180x180.png' %}"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
     />
+
+    <style>
+      /* Center footer content on mobile */
+@media (max-width: 768px) {
+  #footer .sidebar_widget.three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center horizontally */
+    text-align: center;   /* Center text */
+    gap: 20px;            /* Space between blocks */
+  }
+
+  #footer .sidebar_widget.three li {
+    width: 100%;          /* Full width on mobile */
+    max-width: 400px;     /* Optional: keeps it tidy */
+  }
+
+  #footer img {
+    margin: 0 auto;       /* Center logo */
+    display: block;
+  }
+
+  #footer .social_wrapper ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+  }
+
+  #footer button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+    </style>
 <style>
 .sponsor-slider {
   overflow: hidden;
@@ -159,7 +197,7 @@
 
 .sponsor-track {
   display: flex;
-  width: calc(200%); /* duplicated logos for seamless loop */
+  width: calc(300%); /* duplicated logos for seamless loop */
   animation: scroll-left 20s linear infinite;
 }
 
@@ -433,7 +471,8 @@
               >
                 <!-- MAIN IMAGE -->
                 <img
-                  src="{% static 'upload/27972070586_73eb8ef975_o.jpg' %}"
+
+                  src="{% static 'upload/wep13.jpg' %}"
                   alt=""
                   title="27972070586_73eb8ef975_o"
                   width="1440"
@@ -469,11 +508,13 @@
                     white-space: nowrap;
                     font-size: 70px;
                     line-height: 22px;
-                    font-weight: 600;
-                    color: #93b144;
+                    font-weight: 800;
+                    color: #eaf3ff ;
                     border: none;
                     font-family: Poppins;
                     text-transform: uppercase;
+                    letter-spacing: 1ch;
+                    margin-top: 40px;
                   "
                 >
                   Conference
@@ -502,8 +543,8 @@
                     white-space: nowrap;
                     font-size: 70px;
                     line-height: 22px;
-                    font-weight: 700;
-                    color: rgba(255, 255, 255, 1);
+                    font-weight: 1000;
+                    color: #ffffff ;
                     font-family: Poppins;
                     text-transform: uppercase;
                   "
@@ -514,7 +555,7 @@
                 <!-- LAYER NR. 3 -->
              <a 
   class="tp-caption rev-btn rev-withicon"
-  href="#"
+  href="{% url 'registration' %}"
   target="_self"
   id="slide-1-layer-5"
   data-x="center"
@@ -611,28 +652,21 @@ The We Are People Conference is more than just a conference, it's a movement, a 
         <div
           class="one_half_bg parallax"
           style="
-            background-image: url('/static/upload/29969985723_6c5d98cc97_o.jpg');
+            background-image: url('/static/upload/wep8.jpg');
             height: 550px;
           "
         ></div>
         
         <div  class="one_half_bg" style="padding: 85px">
           <h2 class="ppb_title" style="color: #091e1b  ">
-            The New Era of Tech Companies
+            Uniting Voices, Igniting Change
           </h2>
           <div class="page_tagline" style="">
-            Drawing thousands of the world's technology leaders together to
-            learn and do business,
+          A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.
           </div>
           <div class="ppb_header_content">
             <p>
-              Meh synth Schlitz, tempor duis single-origin coffee ea next level
-              ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit
-              hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil,
-              flexitarian Truffaut synth art party deep v chillwave. Seitan High
-              Life reprehenderit consectetur cupidatat kogi. Et leggings fanny
-              pack, elit bespoke vinyl art party Pitchfork selfies master
-              cleanse
+             The We Are People Conference is more than a gathering — it’s a movement of vibrant youth voices, dynamic conversations, and powerful collaborations. From thought-provoking keynotes to hands-on skill-building sessions, the conference creates space for innovation, unity, and action. With a diverse mix of perspectives across governance, entrepreneurship, digital transformation, and social development, participants will leave equipped, inspired, and connected to drive real impact in their communities and beyond.
             </p>
           </div>
         </div>
@@ -641,28 +675,21 @@ The We Are People Conference is more than just a conference, it's a movement, a 
       <div style="background-color: #93b144;" class="one">
         <div class="one_half_bg textright" style="padding: 85px">
           <h2 class="ppb_title" style="color: #091e1b ">
-            We have top executive &amp; start up here
+            Celebrating the Power of Youth in Nation-Building
           </h2>
           <div class="page_tagline" style="">
-            Drawing thousands of the world&#039;s technology leaders together to
-            learn and do business,
+           Uniting young Nigerians with leaders and innovators to inspire action, spark collaboration, and shape a stronger future
           </div>
           <div class="ppb_header_content">
             <p>
-              Meh synth Schlitz, tempor duis single-origin coffee ea next level
-              ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit
-              hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil,
-              flexitarian Truffaut synth art party deep v chillwave. Seitan High
-              Life reprehenderit consectetur cupidatat kogi. Et leggings fanny
-              pack, elit bespoke vinyl art party Pitchfork selfies master
-              cleanse
+           The We Are People Conference is a vibrant platform that recognizes the creativity, resilience, and leadership of young Nigerians. It goes beyond dialogue, creating opportunities for collaboration, mentorship, and innovation that break down barriers to youth participation. By bringing together diverse stakeholders — from government and civil society to private sector leaders and young changemakers — the conference fosters unity and drives collective solutions that will shape a more inclusive and prosperous Nigeria.
             </p>
           </div>
         </div>
         <div
           class="one_half_bg parallax"
           style="
-            background-image: url('static/upload/29994728733_d2ebe09397_o.jpg');
+            background-image: url('static/upload/wep3.jpg');
             height: 550px;
           "
         ></div>
@@ -671,7 +698,7 @@ The We Are People Conference is more than just a conference, it's a movement, a 
       <div
         class="one withsmallpadding ppb_countdown_image parallax withbg"
         style="
-          background-image: url('static/upload/27899245542_531ed54fc7_o.jpg');
+          background-image: url('static/upload/wep6.jpg');
           background-position: center top;
           text-align: center;
           padding: 100px 0 100px 0;
@@ -694,9 +721,9 @@ The We Are People Conference is more than just a conference, it's a movement, a 
               <div style="margin: auto; width: 100%">
                 <h2
                   class="ppb_title"
-                  style="color: #93b144; text-align: center"
+                  style="color: #93b144; text-align: center; font-weight: 800; letter-spacing: 0.5ch; font-size: 35px;"
                 >
-                  COUTNDOWN
+                  COUNTDOWN
                 </h2>
                 
                 <div class="ppb_header_content">
@@ -814,8 +841,8 @@ The We Are People Conference is more than just a conference, it's a movement, a 
     <!-- Get tickets  -->
     <div
       class="one withsmallpadding ppb_header_youtube withbg parallax"
-      data-jarallax-video="https://www.youtube.com/watch?v=OhnZrejDVYo"
-      style="text-align: center; padding: 100px 0 100px 0; color: #ffffff"
+      style="background-image: url('/static/upload/regbg.png'); 
+      text-align: center; padding: 100px 0 100px 0; color: #ffffff"
     >
       <div
         class="overlay_background"
@@ -829,19 +856,12 @@ The We Are People Conference is more than just a conference, it's a movement, a 
         <div class="page_content_wrapper">
           <div class="inner">
             <div style="margin: auto; width: 65%">
-              <h2 class="ppb_title" style="text-align: center">
-                Get Ticket Now!
+              <h2 style="color: #93b144; display: grid; justify-content: center;" class="ppb_title" style="text-align: center">
+                REGISTER NOW!
               </h2>
-              <div
-                class="page_tagline"
-                style="color: #ffffff; text-align: center"
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident quam nobis, autem et doloribus vel repellendus minima
-                nulla alias vitae.
-              </div>
+              
               <div class="ppb_header_content">
-                <p><a style="background-color: #93b144; border: none;" class="button medium" href="#">Register</a></p>
+                <p><a style="background-color: #93b144; border: none;" class="button medium" href="{% url 'registration' %}">Register</a></p>
               </div>
             </div>
           </div>
@@ -857,51 +877,12 @@ The We Are People Conference is more than just a conference, it's a movement, a 
             <p>
               <img
                 src="{% static 'upload/Logo Icon.png' %}"
-                width="158"
+                width="165"
                 height="20"
                 alt=""
               />
             </p>
-            <p>{{ footer_description|default:"Abuja is a great place" }}</p>
-
-            <!-- Social Icons -->
-            <div style="margin-top: 20px">
-              <div class="social_wrapper shortcode dark">
-                <ul>
-                  <li class="facebook">
-                    <a target="_blank" title="Facebook" href="#"
-                      ><i class="fa fa-facebook"></i
-                    ></a>
-                  </li>
-                  <li class="twitter">
-                    <a
-                      target="_blank"
-                      title="Twitter"
-                      href="https://twitter.com/#"
-                      ><i class="fa fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li class="youtube">
-                    <a target="_blank" title="Youtube" href="#"
-                      ><i class="fa fa-youtube"></i
-                    ></a>
-                  </li>
-                  <li class="google">
-                    <a target="_blank" title="Google+" href="#"
-                      ><i class="fa fa-google-plus"></i
-                    ></a>
-                  </li>
-                  <li class="instagram">
-                    <a
-                      target="_blank"
-                      title="Instagram"
-                      href="https://instagram.com/tedxvienna"
-                      ><i class="fa fa-instagram"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            
           </div>
         </li>
          <li id="text-2" class="widget widget_text">
@@ -924,12 +905,16 @@ The We Are People Conference is more than just a conference, it's a movement, a 
             <p>Register to get our Newsletter </p>
 
             <form
+            id="newsletter-form"
               class="mc4wp-form mc4wp-form-1234"
               method="post"
               data-id="1234"
-              data-name="Newsletter Form">
-            <input style="background-color: #123f38; border: none;" type="email"></form>
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button>
+              data-name="Newsletter Form"
+              action="{% url 'newsletter_signup' %}">
+              {% csrf_token %}
+            <input id="clear" type="email" name="email" required style="background-color: #123f38; border: none; color: wheat;">
+            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
+            <div id="newsletter-message"></div>
           </div>
         </li>
       </ul>
@@ -938,6 +923,37 @@ The We Are People Conference is more than just a conference, it's a movement, a 
     <div id="side_menu_wrapper" class="overlay_background">
       <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
     </div>
+
+
+
+
+<script>
+document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let formData = new FormData(this);
+
+  fetch(this.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      "X-Requested-With": "XMLHttpRequest"
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    let msg = document.getElementById("newsletter-message");
+    if (data.type === "success") {
+      msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
+    } else {
+      msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
+    }
+  });
+  document.getElementById("clear").value = "";
+});
+</script>
+
+
     <script>
       window.addEventListener("scroll", function () {
         const navbar = document.querySelector(".navbar");

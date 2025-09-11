@@ -17,4 +17,6 @@ urlpatterns = [
     path('speaker/<int:speaker_id>/', views.speaker_details, name='speaker_details'),
     path('programme/', views.programme, name='programme'),
     path('FAQs/', views.FAQs, name='FAQs'),
+    path("newsletter/", views.newsletter_signup, name="newsletter_signup"),
+    path("contact/", views.contact_us, name="contact"),
 ]

@@ -13,7 +13,20 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+    />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600;800&display=swap"
@@ -30,7 +43,7 @@
       <div class="contain">
         <div class="col navvv">
           <div class="logo">
-            <a href="#" class="Logo"
+            <a href="{% url 'admin_page' %}" class="Logo"
               ><img
                 class="logoimg"
                 src="{% static 'upload/Logo Icon.png' %}"
@@ -67,7 +80,7 @@
           </div>
 
           <div class="move_middle">
-            <div class="form-containerss">
+            <div style="width: 50%" class="form-containerss">
               <form class="form" method="post" enctype="multipart/form-data">
                 {% csrf_token %} {% if error %}
                 <div style="color: red">{{ error }}</div>
@@ -119,10 +132,23 @@
 
             <!-- Blog Content -->
             <div>
-              <h2>{{ post.title }}</h2>
-              <p>{{ post.content|truncatewords:30 }}</p>
-              <a href="{% url 'edit_post' post.id %}">Edit</a> |
-              <a href="{% url 'delete_post' post.id %}">Delete</a>
+              <h2 style="font-family: 'Poppins', sans-serif; font-size: 20px">
+                {{ post.title }}
+              </h2>
+              <p style="font-family: 'Open Sans', sans-serif">
+                {{ post.Keynote|truncatewords:30 }}
+              </p>
+              <a
+                style="font-family: 'Poppins', sans-serif"
+                href="{% url 'edit_post' post.id %}"
+                >Edit</a
+              >
+              |
+              <a
+                style="font-family: 'Poppins', sans-serif"
+                href="{% url 'delete_post' post.id %}"
+                >Delete</a
+              >
             </div>
           </div>
           {% empty %}
@@ -134,7 +160,9 @@
 
     <!-- Footer -->
     <footer class="fooot">
-      <h1 class="goodzic">Designed by Goodzic Sounds</h1>
+      <a href="{% url 'admin_page' %}"
+        ><h1 style="font-size: 10px" class="goodzic">Home</h1></a
+      >
     </footer>
 
     <!-- Scripts -->

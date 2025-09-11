@@ -9,6 +9,7 @@ class Exhibition(models.Model):
     organization_description = models.TextField()
     primary_contact = models.CharField(max_length=15)
     what_exhibiting = models.CharField(max_length=50)
+    created_at = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return self.organization

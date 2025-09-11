@@ -16,8 +16,8 @@ class Sponsors(models.Model):
     lastname = models.CharField(max_length=50)
     email = models.EmailField(max_length=100)
     contact = models.CharField(max_length=50)
-
     package = models.ForeignKey(SponsorshipPackage, on_delete=models.CASCADE)
+    created_at = models.DateField(auto_now_add=True)
 
     def __str__(self):
       return f"{self.firstname} {self.lastname} → {self.package}"

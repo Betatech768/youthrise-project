@@ -29,5 +29,13 @@ urlpatterns = [
     path("sponsors-image/delete/<int:pk>/", views.delete_sponsor, name="delete_sponsor"),
     path("update-package-list/delete/<int:pk>/", views.delete_sponsor_package, name="delete_sponsor_package"),
     path('update-package-list/', views.update_package, name='package_list'),
+    path("export-registrations/", views.export_registrations_excel, name="export_registrations"),
+    path("contact-messages/", views.contact_messages, name="contact_messages"),
+    path("newsletter-registrations/", views.newsletter_registrations, name="newsletter_registration"),
+    path("export-newsletters/", views.export_newsletters_excel, name="export_newsletters"),
+    path("export-exhibitions/", views.export_exhibitions_excel, name="export_exhibitions"),
+    path("export-sponsors/", views.export_sponsors_excel, name="export_sponsors"),
+    path("streaming/", views.streaming, name="streaming"),
+    path("streaming/delete-streaming/<int:pk>/", views.delete_stream, name="delete-streaming"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Admin | Programme </title>
+    <title>Admin Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,43 +13,57 @@
     />
 
     <link rel="stylesheet" href="{% static 'css/admincss.css' %}" />
-<style>
-.sponsors-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-.sponsor-card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-  width: 150px;
-  position: relative;
-}
-.sponsor-card img {
-  max-width: 100%;
-  height: 80px;
-  object-fit: contain;
-}
-.delete-btn {
-  background: red;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-</style>
-</head>
+    <style>
+      .sponsors-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .sponsor-card {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+        width: 150px;
+        position: relative;
+      }
+      .sponsor-card img {
+        max-width: 100%;
+        height: 80px;
+        object-fit: contain;
+      }
+      .delete-btn {
+        background: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <link
+    rel="icon"
+    href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+    sizes="32x32"
+  />
+  <link
+    rel="icon"
+    href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+    sizes="192x192"
+  />
+  <link
+    rel="apple-touch-icon-precomposed"
+    href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+  />
   <body>
     <!-- Navbar start -->
-    <div style="margin-bottom: 100px;">
+    <div style="margin-bottom: 100px">
       <div class="contain">
         <div class="contain">
           <div class="col navvv">
             <div class="logo">
-              <a href="#" class="Logo"
+              <a href="{% url 'admin_page' %}" class="Logo"
                 ><img
                   class="logoimg"
                   src="{% static 'upload/Logo Icon.png' %}"
@@ -71,137 +85,146 @@
       <!-- Navbar Ends -->
     </div>
     <!-- Navbar Ends -->
-<div class="container">
-  <h3 class="move_middle">UPLOAD SPONSORS LOGO</h3>
+    <div class="container">
+      <h3 class="move_middle">UPLOAD SPONSORS LOGO</h3>
 
       <div class="move_middle">
-            <div class="form-containerss">
-              <form method="post" enctype="multipart/form-data" class="form">
-                <div class="form-group">
-                  {% csrf_token %} {{ form.as_p }}
-                  
-                </div>
+        <div class="form-containerss">
+          <form method="post" enctype="multipart/form-data" class="form">
+            <div class="form-group">{% csrf_token %} {{ form.as_p }}</div>
 
-                <button  class="form-submit-btn" type="submit">Submit</button>
-              </form>
-            </div>
-          </div>
-  <hr />
+            <button class="form-submit-btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <hr />
 
-  <h4  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="section-title"> SPONSORS LOGO</h4>
-<div style="margin-bottom: 20px;" class="sponsors-grid">
-  {% for sponsor in sponsors %}
-    <div class="sponsor-card" id="sponsor-{{ sponsor.id }}">
-      <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }}">
-      <p>{{ sponsor.name }}</p>
-      <button class="delete-btn" data-id="{{ sponsor.id }}">Delete</button>
+      <h4
+        style="
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+            sans-serif;
+        "
+        class="section-title"
+      >
+        SPONSORS LOGO
+      </h4>
+      <div style="margin-bottom: 20px" class="sponsors-grid">
+        {% for sponsor in sponsors %}
+        <div class="sponsor-card" id="sponsor-{{ sponsor.id }}">
+          <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }}" />
+          <p>{{ sponsor.name }}</p>
+          <button class="delete-btn" data-id="{{ sponsor.id }}">Delete</button>
+        </div>
+        {% empty %}
+        <p>No sponsors uploaded yet.</p>
+        {% endfor %}
+      </div>
     </div>
-  {% empty %}
-    <p>No sponsors uploaded yet.</p>
-  {% endfor %}
-</div>
-</div>
     <footer class="fooot">
-      <h1 class="goodzic">Designed by Goodzic sounds</h1>
+      <a href="{% url 'admin_page' %}"
+        ><h1 style="font-size: 10px" class="goodzic">Home</h1></a
+      >
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-   <script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Grab form elements
-  const form = document.querySelector(".form");
-  const inputs = form.querySelectorAll("input[type='text'], input[type='file']");
-  const labels = form.querySelectorAll("label");
-  const submitBtn = form.querySelector(".form-submit-btn");
-  const pdf = document.getElementById("id_logo");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Grab form elements
+        const form = document.querySelector(".form");
+        const inputs = form.querySelectorAll(
+          "input[type='text'], input[type='file']"
+        );
+        const labels = form.querySelectorAll("label");
+        const submitBtn = form.querySelector(".form-submit-btn");
+        const pdf = document.getElementById("id_logo");
 
+        //   style the pdf section
+        pdf.style.display = "block";
+        pdf.style.margin = "10px 0";
 
-//   style the pdf section
-pdf.style.display = "block";
-pdf.style.margin = "10px 0";
+        // Style the form container
+        form.style.maxWidth = "500px";
+        form.style.margin = "30px auto";
+        form.style.padding = "20px";
+        form.style.border = "1px solid #ddd";
+        form.style.borderRadius = "12px";
+        form.style.boxShadow = "0 4px 12px rgba(0,0,0,0.1)";
+        form.style.background = "#fdfdfd";
+        form.style.fontFamily = "Arial, sans-serif";
 
-  // Style the form container
-  form.style.maxWidth = "500px";
-  form.style.margin = "30px auto";
-  form.style.padding = "20px";
-  form.style.border = "1px solid #ddd";
-  form.style.borderRadius = "12px";
-  form.style.boxShadow = "0 4px 12px rgba(0,0,0,0.1)";
-  form.style.background = "#fdfdfd";
-  form.style.fontFamily = "Arial, sans-serif";
+        // Style labels
+        labels.forEach((label) => {
+          label.style.display = "block";
+          label.style.marginBottom = "6px";
+          label.style.fontWeight = "bold";
+          label.style.color = "#333";
+        });
 
-  // Style labels
-  labels.forEach(label => {
-    label.style.display = "block";
-    label.style.marginBottom = "6px";
-    label.style.fontWeight = "bold";
-    label.style.color = "#333";
-  });
+        // Style inputs
+        inputs.forEach((input) => {
+          input.style.width = "100%";
+          input.style.padding = "10px";
+          input.style.marginBottom = "16px";
+          input.style.border = "1px solid #ccc";
+          input.style.borderRadius = "6px";
+          input.style.fontSize = "14px";
+          input.style.transition = "border 0.3s ease, box-shadow 0.3s ease";
 
-  // Style inputs
-  inputs.forEach(input => {
-    input.style.width = "100%";
-    input.style.padding = "10px";
-    input.style.marginBottom = "16px";
-    input.style.border = "1px solid #ccc";
-    input.style.borderRadius = "6px";
-    input.style.fontSize = "14px";
-    input.style.transition = "border 0.3s ease, box-shadow 0.3s ease";
+          // Hover & focus effects
+          input.addEventListener("focus", () => {
+            input.style.border = "1px solid #007bff";
+            input.style.boxShadow = "0 0 6px rgba(0,123,255,0.4)";
+          });
+          input.addEventListener("blur", () => {
+            input.style.border = "1px solid #ccc";
+            input.style.boxShadow = "none";
+          });
+        });
 
-    // Hover & focus effects
-    input.addEventListener("focus", () => {
-      input.style.border = "1px solid #007bff";
-      input.style.boxShadow = "0 0 6px rgba(0,123,255,0.4)";
-    });
-    input.addEventListener("blur", () => {
-      input.style.border = "1px solid #ccc";
-      input.style.boxShadow = "none";
-    });
-  });
+        // Style submit button
+        submitBtn.style.background = "#000";
+        submitBtn.style.color = "#fff";
+        submitBtn.style.padding = "12px 20px";
+        submitBtn.style.border = "none";
+        submitBtn.style.borderRadius = "8px";
+        submitBtn.style.cursor = "pointer";
+        submitBtn.style.fontSize = "16px";
+        submitBtn.style.fontWeight = "bold";
+        submitBtn.style.width = "100%";
+        submitBtn.style.transition =
+          "background 0.3s ease, transform 0.2s ease";
 
-  // Style submit button
-  submitBtn.style.background = "#000";
-  submitBtn.style.color = "#fff";
-  submitBtn.style.padding = "12px 20px";
-  submitBtn.style.border = "none";
-  submitBtn.style.borderRadius = "8px";
-  submitBtn.style.cursor = "pointer";
-  submitBtn.style.fontSize = "16px";
-  submitBtn.style.fontWeight = "bold";
-  submitBtn.style.width = "100%";
-  submitBtn.style.transition = "background 0.3s ease, transform 0.2s ease";
-
-  submitBtn.addEventListener("mouseover", () => {
-    submitBtn.style.background = "#000";
-    submitBtn.style.transform = "scale(1.02)";
-  });
-  submitBtn.addEventListener("mouseout", () => {
-    submitBtn.style.background = "#000";
-    submitBtn.style.transform = "scale(1)";
-  });
-});
-</script>
-<script>
-document.querySelectorAll(".delete-btn").forEach(button => {
-  button.addEventListener("click", function() {
-    const sponsorId = this.dataset.id;
-    fetch(`delete/${sponsorId}/`, {
-      method: "POST",
-      headers: {
-        "X-CSRFToken": "{{ csrf_token }}",
-      },
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        document.getElementById(`sponsor-${sponsorId}`).remove();
-      }
-    });
-  });
-});
-</script>
+        submitBtn.addEventListener("mouseover", () => {
+          submitBtn.style.background = "#000";
+          submitBtn.style.transform = "scale(1.02)";
+        });
+        submitBtn.addEventListener("mouseout", () => {
+          submitBtn.style.background = "#000";
+          submitBtn.style.transform = "scale(1)";
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".delete-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const sponsorId = this.dataset.id;
+          fetch(`delete/${sponsorId}/`, {
+            method: "POST",
+            headers: {
+              "X-CSRFToken": "{{ csrf_token }}",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                document.getElementById(`sponsor-${sponsorId}`).remove();
+              }
+            });
+        });
+      });
+    </script>
   </body>
 </html>

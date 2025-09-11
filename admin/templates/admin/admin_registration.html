@@ -11,7 +11,20 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+    />
     <link rel="stylesheet" href="{% static 'css/admincss.css' %}" />
   </head>
   <body>
@@ -20,7 +33,7 @@
       <div class="contain">
         <div class="col navvv">
           <div class="logo">
-            <a href="#" class="Logo"
+            <a href="{% url 'admin_page' %}" class="Logo"
               ><img
                 class="logoimg"
                 src="{% static 'upload/Logo Icon.png' %}"
@@ -46,15 +59,20 @@
         <!-- showcase bar -->
         <div class="carddd">
           <div class="bgd">
-            <ul style="margin-top: 10px">
-              {% for person in registrations %}
-              <li>
-                {{ person.first_name }} {{ person.last_name }} <br />
-                {{ person.contact }} <br />
-                {{ person.address }} <br />
-                {{ person.email }}<br />
-                {{ person.registration_category.name }} <br />
-              </li>
+            <ul>
+              {% for registration in registrations %}
+              <ul
+                style="
+                  margin-top: 10px;
+                  margin-bottom: 10px;
+                  padding-bottom: 10px;
+                  border-bottom: 1px solid black;
+                "
+              >
+                {% for name, value in registration.get_fields %}
+                <li style="list-style: none">{{ name }}: {{ value }}</li>
+                {% endfor %}
+              </ul>
               {% empty %}
               <li>No registrations yet.</li>
               {% endfor %}
@@ -64,12 +82,14 @@
         </div>
         <!-- showcase bar -->
 
-        <a href="#">
+        <a href="{% url 'export_registrations' %}">
           <button class="downloadxls">Download Excel file</button>
         </a>
       </main>
       <footer class="fooot">
-        <h1 class="goodzic">Designed by Goodzic sounds</h1>
+        <a href="{% url 'admin_page' %}"
+          ><h1 style="font-size: 10px" class="goodzic">Home</h1></a
+        >
       </footer>
     </div>
     <script

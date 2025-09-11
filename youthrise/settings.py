@@ -29,6 +29,15 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
+
+# Expire session when browser is closed
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True  
+
+# Or set lifetime in seconds (e.g., 1 hour)
+SESSION_COOKIE_AGE = 3600  
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -49,6 +58,9 @@ INSTALLED_APPS = [
     'admin',
     'Images',
    'django.contrib.humanize',
+   'Newsletter',
+   'Contact_Us',
+
     ]
 
 MIDDLEWARE = [

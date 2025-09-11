@@ -11,7 +11,20 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+    />
     <link rel="stylesheet" href="{% static 'css/admincss.css' %}" />
   </head>
   <body>
@@ -21,7 +34,7 @@
       <div class="contain">
         <div class="col navvv">
           <div class="logo">
-            <a href="#" class="Logo"
+            <a href="{% url 'admin_page' %}" class="Logo"
               ><img
                 class="logoimg"
                 src="{% static 'upload/Logo Icon.png' %}"
@@ -45,17 +58,43 @@
       <main class="exhibition">
         <!-- content stays here  -->
 
-        <div class="form-container">
+        <div style="height: 450px" class="form-container">
           <p class="titlel">WELCOME YOUTHRISE</p>
-          <form class="form" method="POST">
-            {% csrf_token %} {{ form.as_p }}
+          <form style="margin-top: 50px" class="form" method="POST">
+            {% csrf_token %}
+            <div style="display: flex; flex-direction: column; gap: 5px">
+              <label for="username">USERNAME:</label>
+              <input
+                placeholder="enter username"
+                type="text"
+                id="username"
+                name="username"
+                required
+              />
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px">
+              <label for="password">PASSWORD:</label>
+              <input
+                placeholder="enter password"
+                type="password"
+                id="password"
+                name="password"
+                required
+              />
+            </div>
 
-            <button class="form-btn">Log in</button>
+            <button style="margin-top: 50px" class="form-btn">Log in</button>
+
+            {% if messages %} {% for message in messages %}
+            <p style="color: red">{{ message }}</p>
+            {% endfor %} {% endif %}
           </form>
         </div>
       </main>
       <footer class="fooot">
-        <h1 class="goodzic">Designed by Goodzic sounds</h1>
+        <a href="{% url 'admin_page' %}"
+          ><h1 style="font-size: 10px" class="goodzic">Home</h1></a
+        >
       </footer>
     </div>
     <script

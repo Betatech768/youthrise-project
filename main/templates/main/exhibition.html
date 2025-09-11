@@ -10,13 +10,13 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta name="format-detection" content="telephone=no" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-
     <link
       rel="stylesheet"
       href="{% static 'js/plugins/revslider/public/assets/css/settings.css' %}"
@@ -120,7 +120,6 @@
       media="all"
     />
 
-    <!-- External fonts - keep URLs as is -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Work+Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A300%2Cregular%2C500%2C600%2C700%2C900&amp;subset"
@@ -135,7 +134,6 @@
       media="all"
     />
 
-    <!-- Favicons -->
     <link
       rel="icon"
       href="{% static 'upload/cropped-TG-Thumb-32x32.png' %}"
@@ -150,12 +148,130 @@
       rel="apple-touch-icon-precomposed"
       href="{% static 'upload/cropped-TG-Thumb-180x180.png' %}"
     />
+
+    <style>
+      /* Center footer content on mobile */
+@media (max-width: 768px) {
+  #footer .sidebar_widget.three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center horizontally */
+    text-align: center;   /* Center text */
+    gap: 20px;            /* Space between blocks */
+  }
+
+  #footer .sidebar_widget.three li {
+    width: 100%;          /* Full width on mobile */
+    max-width: 400px;     /* Optional: keeps it tidy */
+  }
+
+  #footer img {
+    margin: 0 auto;       /* Center logo */
+    display: block;
+  }
+
+  #footer .social_wrapper ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+  }
+
+  #footer button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+    </style>
+<style>
+.sponsor-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  padding: 20px 0;
+}
+
+.sponsor-track {
+  display: flex;
+  width: calc(200%); /* duplicated logos for seamless loop */
+  animation: scroll-left 20s linear infinite;
+}
+
+.sponsor-slide {
+  flex: 0 0 auto;
+  padding: 0 30px;
+}
+
+.sponsor-slide img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.2);
+  mix-blend-mode: darken;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-slide img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 📱 Small screens */
+@media (max-width: 768px) {
+  .sponsor-slide {
+    padding: 0 15px;
+  }
+
+  .sponsor-slide img {
+    height: 80px;
+  }
+
+  .sponsor-track {
+    animation: scroll-left 30s linear infinite; /* slower on small screens */
+  }
+}
+
+/* 🖥 Large screens */
+@media (min-width: 1200px) {
+  .sponsor-slide img {
+    height: 100px;
+   
+  }
+
+  .sponsor-track {
+    animation: scroll-left 15s linear infinite; /* faster on big screens */
+  }
+}</style>
+<style>
+#clock1573568515278500141 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-family: "Courier New", monospace;
+}
+
+#clock1573568515278500141 div {
+  background: #93b144;
+
+}
+</style>
     <meta
       name="msapplication-TileImage"
-      content="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
+      content="../../../themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
     />
   </head>
-
   <body
   style="background-color: #93b144;" class="page-template page-template-page_r page-template-page_r-php page page-id-118 page-child parent-pageid-95 woocommerce-no-js"
   >
@@ -304,7 +420,7 @@
     <div
       id="page_caption"
       class="hasbg parallax"
-      style="background-image: url('/static/upload/ted_38605266.jpg')"
+      style="background-image: url('/static/upload/wep71.jpg')"
       ;
     >
       <div class="page_title_wrapper">
@@ -319,80 +435,7 @@
       </div>
     </div>
 
-    <div class="ppb_wrapper hasbg">
-      <div
-        class="one withsmallpadding ppb_text"
-        style="
-          text-align: left;
-          padding: 0px 0 0px 0;
-          margin-top: 40px;
-          margin-bottom: 40px;
-        "
-      >
-        <div class="standard_wrapper">
-          <div class="page_content_wrapper">
-            <div class="inner">
-              <h5 class="space">Lorem ipsum dolor sit amet.</h5>
-              <p></p>
-              <div
-                class="teaser_wrapper one_third center"
-                style="background-color: #ff2d55; color: #fff; padding: 15px"
-              >
-                <img
-                  src="{% static 'upload/30504391022_367f5f7967_o-700x466.jpg' %}"
-                  alt=""
-                />
-                <div class="teaser_content_wrapper">
-                  <h5 style="color: #fff">Lorem, ipsum.</h5>
-                  <div class="teaser_content">
-                    Aser velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in anim
-                    id est laborum.
-                    <br />
-                  </div>
-                </div>
-              </div>
-              <div
-                class="teaser_wrapper one_third center"
-                style="background-color: #222222; color: #fff; padding: 15px"
-              >
-                <img
-                  src="{% static 'upload/29969985723_6c5d98cc97_o-700x466.jpg' %}"
-                  alt=""
-                />
-                <div class="teaser_content_wrapper">
-                  <h5 style="color: #fff">Lorem, ipsum.</h5>
-                  <div class="teaser_content">
-                    Aser velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in anim
-                    id est laborum.
-                    <br />
-                  </div>
-                </div>
-              </div>
-              <div
-                class="teaser_wrapper one_third last center"
-                style="background-color: #f0f0f0; padding: 15px"
-              >
-                <img
-                  src="{% static 'upload/16876680475_9e5c37b9d1_o-700x466.jpg' %}"
-                  alt=""
-                />
-                <div class="teaser_content_wrapper">
-                  <h5 style="">Lorem, ipsum.</h5>
-                  <div class="teaser_content">
-                    Aser velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in anim
-                    id est laborum.
-                    <br />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  
 
     <!-- form for exhibition -->
     <div
@@ -476,58 +519,19 @@ What you get: <br>
     <!-- form for exhibition -->
 
     <!-- footer -->
- <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
+   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
       <ul class="sidebar_widget three">
         <li id="text-2" class="widget widget_text">
           <div class="textwidget">
             <p>
               <img
                 src="{% static 'upload/Logo Icon.png' %}"
-                width="158"
+                width="165"
                 height="20"
                 alt=""
               />
             </p>
-            <p>{{ footer_description|default:"Abuja is a great place" }}</p>
-
-            <!-- Social Icons -->
-            <div style="margin-top: 20px">
-              <div class="social_wrapper shortcode dark">
-                <ul>
-                  <li class="facebook">
-                    <a target="_blank" title="Facebook" href="#"
-                      ><i class="fa fa-facebook"></i
-                    ></a>
-                  </li>
-                  <li class="twitter">
-                    <a
-                      target="_blank"
-                      title="Twitter"
-                      href="https://twitter.com/#"
-                      ><i class="fa fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li class="youtube">
-                    <a target="_blank" title="Youtube" href="#"
-                      ><i class="fa fa-youtube"></i
-                    ></a>
-                  </li>
-                  <li class="google">
-                    <a target="_blank" title="Google+" href="#"
-                      ><i class="fa fa-google-plus"></i
-                    ></a>
-                  </li>
-                  <li class="instagram">
-                    <a
-                      target="_blank"
-                      title="Instagram"
-                      href="https://instagram.com/tedxvienna"
-                      ><i class="fa fa-instagram"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            
           </div>
         </li>
          <li id="text-2" class="widget widget_text">
@@ -550,12 +554,16 @@ What you get: <br>
             <p>Register to get our Newsletter </p>
 
             <form
+            id="newsletter-form"
               class="mc4wp-form mc4wp-form-1234"
               method="post"
               data-id="1234"
-              data-name="Newsletter Form">
-            <input style="background-color: #123f38; border: none;" type="email"></form>
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button>
+              data-name="Newsletter Form"
+              action="{% url 'newsletter_signup' %}">
+              {% csrf_token %}
+            <input id="clear" type="email" name="email" required style="background-color: #123f38; border: none; color: wheat;">
+            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
+            <div id="newsletter-message"></div>
           </div>
         </li>
       </ul>
@@ -564,6 +572,37 @@ What you get: <br>
     <div id="side_menu_wrapper" class="overlay_background">
       <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
     </div>
+
+
+
+
+<script>
+document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let formData = new FormData(this);
+
+  fetch(this.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      "X-Requested-With": "XMLHttpRequest"
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    let msg = document.getElementById("newsletter-message");
+    if (data.type === "success") {
+      msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
+    } else {
+      msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
+    }
+  });
+  document.getElementById("clear").value = "";
+});
+</script>
+
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

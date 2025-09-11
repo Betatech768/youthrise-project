@@ -4,8 +4,11 @@ from django.core.exceptions import ValidationError
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=200)
-    # quotes = models.CharField(max_length=200,blank=True)
-    content = models.TextField()
+    paragraph_1 = models.TextField(blank=True, null=True)
+    paragraph_2 = models.TextField(blank=True, null=True)    
+    paragraph_3 = models.TextField(blank=True, null=True)
+    paragraph_4 = models.TextField(blank=True, null=True) 
+    Keynote = models.TextField(max_length=500, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
 

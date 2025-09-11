@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from blogpost.forms import BlogPostForm
 from blogpost.models import BlogImage, BlogPost
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from speakers.models import Speakers, SpeakerImage
 from speakers.forms import SpeakerForm, SpeakerImageForm
 from sponsorship.forms import SponsorshipPackageForm
@@ -25,7 +25,11 @@ import os
 from django.http import FileResponse
 from main.models import Sponsor
 from sponsorship.models import SponsorshipPackage
-
+import openpyxl
+from Newsletter.models import Newsletter
+from Contact_Us.models import ContactUs as ContactMessage
+from main.models import stream
+from main.forms import StreamForm
 
 
 def user_login(request):
@@ -43,7 +47,7 @@ def user_login(request):
 
             if user:
                 login(request, user)
-                messages.success(request, 'Login successful.')
+              
                 return redirect('admin_page')
             else:
                 messages.error(request, 'Invalid username or password.')
@@ -194,19 +198,7 @@ def delete_blog_post(request, post_id):
     if request.method == 'POST':
         post.delete()  # This will also delete images if `on_delete=models.CASCADE` is used
         return redirect('blog_post')
-
     return render(request, 'admin/admin_delete_blog.html', {'post': post})
-
-
-
-    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-        query = request.GET.get('term', '')
-        posts = BlogPost.objects.filter(title__icontains=query)[:10]
-        results = [post.title for post in posts]
-        return JsonResponse(results, safe=False)
-    
-    # Always return a fallback response if not AJAX
-    return JsonResponse({'error': 'Invalid request'}, status=400)
 
 def sponsors_list_view(request):
     sponsors = Sponsors.objects.all().order_by('-id')
@@ -322,4 +314,167 @@ def delete_sponsor_package(request, pk):
     """Delete sponsor via AJAX"""
     sponsor = get_object_or_404(SponsorshipPackage, pk=pk)
     sponsor.delete()
+    return JsonResponse({"success": True})
+
+
+
+def export_registrations_excel(request):
+    # Create workbook and worksheet
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Registrations"
+
+    # Get model fields
+    fields = [field.verbose_name for field in Registration._meta.fields if field.name != "id"]
+
+    # Write header row
+    ws.append(fields)
+
+    # Write data rows
+    for reg in Registration.objects.all():
+        row = []
+        for field in Registration._meta.fields:
+            if field.name == "id":
+                continue
+            value = getattr(reg, field.name)
+
+            # Handle ForeignKey
+            if field.many_to_one and value is not None:
+                value = str(value)
+
+            row.append(value)
+        ws.append(row)
+
+    # Response as Excel file
+    response = HttpResponse(
+        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    )
+    response["Content-Disposition"] = 'attachment; filename="registrations.xlsx"'
+    wb.save(response)
+
+    return response
+
+
+def contact_messages(request):
+    contact = ContactMessage.objects.all().order_by('-created_at')
+    return render(request, 'admin/contact_messages.html', {'contact': contact})
+
+def newsletter_registrations(request):
+    newsletter = Newsletter.objects.all().order_by('-created_at')
+    return render(request, 'admin/newsletter_registrations.html', {'newsletter': newsletter})
+
+
+
+
+
+def export_newsletters_excel(request):
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Newsletter"
+
+    # Headers
+    ws.append(["Email", "Created At"])
+
+    # Data
+    for obj in Newsletter.objects.all():
+        ws.append([obj.email, obj.created_at.strftime("%Y-%m-%d %H:%M:%S")])
+
+    # Response
+    response = HttpResponse(
+        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    response["Content-Disposition"] = "attachment; filename=newsletters.xlsx"
+    wb.save(response)
+    return response
+
+
+
+
+def export_exhibitions_excel(request):
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Exhibitions"
+
+    # Headers
+    ws.append([
+        "First Name", "Last Name", "Email", "Organization", 
+        "Industry Segment", "Organization Description", 
+        "Primary Contact", "What Exhibiting", "Registration Date"
+    ])
+
+    # Data
+    for obj in Exhibition.objects.all():
+        ws.append([
+            obj.firstname,
+            obj.lastname,
+            obj.email,
+            obj.organization,
+            obj.industry_segment,
+            obj.organization_description,
+            obj.primary_contact,
+            obj.what_exhibiting,
+            obj.created_at
+        ])
+
+    # Response
+    response = HttpResponse(
+        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    response["Content-Disposition"] = "attachment; filename=exhibitions.xlsx"
+    wb.save(response)
+    return response
+
+
+
+def export_sponsors_excel(request):
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Sponsors"
+
+    # Headers
+    ws.append([
+        "First Name", "Last Name", "Email", "Contact", "Package", "Registration Date" 
+    ])
+
+    # Data
+    for obj in Sponsors.objects.all():
+        ws.append([
+            obj.firstname,
+            obj.lastname,
+            obj.email,
+            obj.contact,
+            str(obj.package),  # package name
+            obj.created_at,
+        ])
+
+    # Response
+    response = HttpResponse(
+        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    response["Content-Disposition"] = "attachment; filename=sponsors.xlsx"
+    wb.save(response)
+    return response
+
+
+def streaming(request):
+    streamId  = stream.objects.all()
+    if request.method == "POST":
+        form = StreamForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('streaming')
+    else:
+        form = StreamForm()
+        
+    context = {'streamId': streamId,
+               'form': form}
+    return render(request, 'admin/stream.html', context)
+
+
+
+@require_POST
+def delete_stream(request, pk):
+    """Delete stream via AJAX"""
+    streaming = get_object_or_404(stream, pk=pk)
+    streaming.delete()
     return JsonResponse({"success": True})

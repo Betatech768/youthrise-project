@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Admin Dashboard | Delete list</title>
+    <title>Admin Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,6 +15,20 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+    />
 
     <link rel="stylesheet" href="{% static 'css/admincss.css' %}" />
   </head>
@@ -24,7 +38,7 @@
       <div class="contain">
         <div class="col navvv">
           <div class="logo">
-            <a href="#" class="Logo"
+            <a href="{% url 'admin_page' %}" class="Logo"
               ><img
                 class="logoimg"
                 src="{% static 'upload/Logo Icon.png' %}"
@@ -68,7 +82,9 @@
         </div>
       </main>
       <footer class="fooot">
-        <h1 class="goodzic">Designed by Goodzic sounds</h1>
+        <a href="{% url 'admin_page' %}"
+          ><h1 style="font-size: 10px" class="goodzic">Home</h1></a
+        >
       </footer>
     </div>
     <script

@@ -11,7 +11,9 @@ from django.http import JsonResponse
 from admin.models import Document
 from .models import Sponsor
 from registration_app.models import RegistrationCategory
-
+from Newsletter.forms import NewsletterForm
+from Contact_Us.forms import ContactUsForm
+from . models import stream
 def about(request):
     return render(request, 'main/about.html')
 
@@ -153,9 +155,86 @@ def speaker_details(request, speaker_id):
 
 
 def programme(request):
+    streamId = stream.objects.all()
+    # If Url Exist load the iframe else don't load it
+    if streamId:
+        video = streamId[0].streaming_url
+        print(streamId[0].streaming_url)
+    else:
+        video = None
+
     documents = Document.objects.all().order_by('-uploaded_at')
-    return render(request, 'main/programs.html', {'documents': documents})
+    context = {
+        "video": video,
+        'documents': documents,
+        "streamId": streamId                   # None if no stream
+    }
+    
+    return render(request, 'main/programs.html', context)
 
 
 def FAQs(request):
     return render(request, 'main/faqs.html')
+
+
+def newsletter_signup(request):
+    if request.method == "POST":
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            print("Newsletter registration successful")
+            return JsonResponse({
+                "type": "success",
+                "message": "Newsletter registration successful"
+            })
+           
+        else:
+            return JsonResponse({
+                "type": "error",
+                "errors": form.errors
+            })
+    return JsonResponse({
+        "type": "error",
+        "message": "Invalid request"
+    }, status=400)
+    
+    
+    
+# main/views.py
+
+
+def contact_us(request):
+    if request.method == "POST":
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+            print("Contact form submission successful")
+
+            # If AJAX request
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                return JsonResponse({
+                    "type": "success",
+                    "message": "Message sent successfully! Thank you."
+                })
+
+            # Normal POST (non-AJAX)
+            return redirect('contact')
+
+        else:
+            # Handle AJAX validation errors
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                element_errors = {}
+                for field, errors in form.errors.items():
+                    element_errors[field] = {"errors": list(errors)}
+
+                return JsonResponse({
+                    "type": "error",
+                    "error": ["Validation failed. Please check the form."],
+                    "elementErrors": element_errors
+                })
+
+    else:
+        form = ContactUsForm()
+
+    return render(request, 'main/contact.html', {'form': form})

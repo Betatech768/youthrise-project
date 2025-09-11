@@ -18,3 +18,9 @@ def sponsorship_form_view(request):
 def sponsors_list_view(request):
     sponsors = Sponsors.objects.all().order_by('-id')
     return render(request, 'admin/adminsponsor.html', {'sponsors': sponsors})
+
+
+
+
+
+
