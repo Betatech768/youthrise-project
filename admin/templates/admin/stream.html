@@ -89,7 +89,12 @@
 
       <div class="move_middle">
         <div class="form-containerss">
-          <form method="post" enctype="multipart/form-data" class="form">
+          <form
+            action="{% url 'streaming' %}"
+            method="POST"
+            enctype="multipart/form-data"
+            class="form"
+          >
             <div class="form-group">{% csrf_token %} {{ form.as_p }}</div>
 
             <button class="form-submit-btn" type="submit">Submit</button>

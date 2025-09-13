@@ -159,7 +159,7 @@
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
     />
 
-    <style>
+   <style>
       /* Center footer content on mobile */
 @media (max-width: 768px) {
   #footer .sidebar_widget.three {
@@ -196,88 +196,6 @@
 }
 
     </style>
-<style>
-.sponsor-slider {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-
-  padding: 20px 0;
-}
-
-.sponsor-track {
-  display: flex;
-  width: calc(200%); /* duplicated logos for seamless loop */
-  animation: scroll-left 20s linear infinite;
-}
-
-.sponsor-slide {
-  flex: 0 0 auto;
-  padding: 0 30px;
-}
-
-.sponsor-slide img {
-  height: 120px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(1.1) contrast(1.2);
-  mix-blend-mode: darken;
-  transition: transform 0.3s ease;
-}
-
-.sponsor-slide img:hover {
-  transform: scale(1.1);
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* 📱 Small screens */
-@media (max-width: 768px) {
-  .sponsor-slide {
-    padding: 0 15px;
-  }
-
-  .sponsor-slide img {
-    height: 80px;
-  }
-
-  .sponsor-track {
-    animation: scroll-left 30s linear infinite; /* slower on small screens */
-  }
-}
-
-/* 🖥 Large screens */
-@media (min-width: 1200px) {
-  .sponsor-slide img {
-    height: 100px;
-   
-  }
-
-  .sponsor-track {
-    animation: scroll-left 15s linear infinite; /* faster on big screens */
-  }
-}</style>
-<style>
-#clock1573568515278500141 {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  font-family: "Courier New", monospace;
-}
-
-#clock1573568515278500141 div {
-  background: #93b144;
-
-}
-</style>
-    
   </head>
   <body
     class="home page-template-default page page-id-350 woocommerce-no-js ppb_enable"
@@ -336,7 +254,7 @@
                 style="color: white; transition: 0.3s"
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
-                >Sponsorship</a
+                >Become a Sponsor</a
               >
             </li>
              <li class="nav-item">
@@ -356,7 +274,7 @@
                 style="color: white; transition: 0.3s"
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
-                >Exhibition</a
+                >Become an Exhibitor</a
               >
             </li>
             <li class="nav-item">
@@ -406,7 +324,7 @@
                 style="color: white; transition: 0.3s"
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
-                >Contact</a
+                >Contact  Us</a
               >
             </li>
             <li class="nav-item">
@@ -497,7 +415,7 @@
                 />{% endif %}
                 <div class="speaker_info_wrapper">
                   <h4 style="color: #93b144;">{{speaker.Speaker_name}}</h4>
-                  <div class="speaker_desc">{{spaeker.Speaker_position}}</div>
+                  <div class="speaker_desc">{{speaker.Speaker_position}}</div>
                 </div>
               </a>
             </div>{% endfor %}

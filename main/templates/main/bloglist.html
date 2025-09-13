@@ -159,7 +159,62 @@
   <meta property="og:url" content="{% static 'upload/wep2.jpg' %}">
   <meta property="og:type" content="website">
 
-    <style>
+
+    <meta
+      name="msapplication-TileImage"
+      content="../../../themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
+    />
+<style>
+   .highlighted {
+    background-color: #83cf36; /* orange */
+    color: white;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+   /* From Uiverse.io by alexruix */ 
+.group {
+ display: flex;
+ line-height: 28px;
+ align-items: center;
+ position: relative;
+ max-width: 190px;
+}
+
+.input {
+ width: 100%;
+ height: 40px;
+ line-height: 28px;
+ padding: 0 1rem;
+ padding-left: 2.5rem;
+ border: 2px solid transparent;
+ border-radius: 8px;
+ outline: none;
+ background-color: #f3f3f4;
+ color: #0d0c22;
+ transition: .3s ease;
+}
+
+.input::placeholder {
+ color: #9e9ea7;
+}
+
+.input:focus, input:hover {
+ outline: none;
+ border-color: rgba(234,76,137,0.4);
+ background-color: #fff;
+ box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+ position: absolute;
+ left: 1rem;
+ fill: #9e9ea7;
+ width: 1rem;
+ height: 1rem;
+}
+</style>
+   <style>
       /* Center footer content on mobile */
 @media (max-width: 768px) {
   #footer .sidebar_widget.three {
@@ -196,91 +251,6 @@
 }
 
     </style>
-<style>
-.sponsor-slider {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-
-  padding: 20px 0;
-}
-
-.sponsor-track {
-  display: flex;
-  width: calc(200%); /* duplicated logos for seamless loop */
-  animation: scroll-left 20s linear infinite;
-}
-
-.sponsor-slide {
-  flex: 0 0 auto;
-  padding: 0 30px;
-}
-
-.sponsor-slide img {
-  height: 120px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(1.1) contrast(1.2);
-  mix-blend-mode: darken;
-  transition: transform 0.3s ease;
-}
-
-.sponsor-slide img:hover {
-  transform: scale(1.1);
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* 📱 Small screens */
-@media (max-width: 768px) {
-  .sponsor-slide {
-    padding: 0 15px;
-  }
-
-  .sponsor-slide img {
-    height: 80px;
-  }
-
-  .sponsor-track {
-    animation: scroll-left 30s linear infinite; /* slower on small screens */
-  }
-}
-
-/* 🖥 Large screens */
-@media (min-width: 1200px) {
-  .sponsor-slide img {
-    height: 100px;
-   
-  }
-
-  .sponsor-track {
-    animation: scroll-left 15s linear infinite; /* faster on big screens */
-  }
-}</style>
-<style>
-#clock1573568515278500141 {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  font-family: "Courier New", monospace;
-}
-
-#clock1573568515278500141 div {
-  background: #93b144;
-
-}
-</style>
-    <meta
-      name="msapplication-TileImage"
-      content="../../../themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
-    />
   </head>
   <body
     class="page-template page-template-page_r page-template-page_r-php page page-id-118 page-child parent-pageid-95 woocommerce-no-js"
@@ -339,7 +309,7 @@
                 style="color: white; transition: 0.3s"
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
-                >Sponsorship</a
+                >Become a Sponsor</a
               >
             </li>
              <li class="nav-item">
@@ -359,7 +329,7 @@
                 style="color: white; transition: 0.3s"
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
-                >Exhibition</a
+                >Become an Exhibitor</a
               >
             </li>
             <li class="nav-item">
@@ -409,7 +379,7 @@
                 style="color: white; transition: 0.3s"
                 onmouseover="this.style.color='#ffcc00'"
                 onmouseout="this.style.color='white'"
-                >Contact</a
+                >Contact Us</a
               >
             </li>
             <li class="nav-item">
@@ -448,6 +418,7 @@
     
           <div class="sidebar_content">
             <!-- Begin each blog post -->
+            {% load highlight %}
             {% for blog in blogs %}
             <div id="post-{{ blog.id }}" class="post_wrapper">
               <div class="post_content_wrapper">
@@ -455,7 +426,7 @@
                   <div class="post_header_title">
                     <h5>
                       <a href="{% url 'bloglist' blog.id %}" title="{{ blog.title }}">
-                        {{ blog.title }}
+                        {{ blog.title|highlight:query|safe}}
                       </a>
                     </h5>
                   </div>
@@ -482,7 +453,7 @@
                 <br class="clear" />
     
                 <p>
-                  {{ blog.Keynote|truncatewords:30 }}
+                  {{ blog.Keynote|truncatewords:30|highlight:query|safe }}
                 </p>
     
                 <div class="post_button_wrapper">
@@ -508,6 +479,15 @@
                   <li class="widget GrandConference_Cat_Posts">
                     <h2 class="widgettitle"><span>News and Stories</span></h2>
                     <ul class="posts blog withthumb">
+                          <!-- From Uiverse.io by alexruix -->
+                              <form action="" method="GET">
+                                <div style="margin-bottom: 20px; padding-bottom: 10px;" class="group">
+                                  <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                                  <input placeholder="Search" type="search" class="input" name="q">
+                                </div>
+                              </form>
+
+                      
                       {% for blog in blogs %}
                       <li>
                         <div class="post_circle_thumb">
@@ -538,7 +518,7 @@
     
 
     <!-- footer -->
-   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
+   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px;">
       <ul class="sidebar_widget three">
         <li id="text-2" class="widget widget_text">
           <div class="textwidget">

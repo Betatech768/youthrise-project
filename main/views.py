@@ -14,6 +14,8 @@ from registration_app.models import RegistrationCategory
 from Newsletter.forms import NewsletterForm
 from Contact_Us.forms import ContactUsForm
 from . models import stream
+from django.views.decorators.http import require_POST
+from django.db.models import Q
 def about(request):
     return render(request, 'main/about.html')
 
@@ -45,9 +47,18 @@ def index(request):
 
 
 def bloglist(request):
-    blogs = BlogPost.objects.all().order_by('-created_at')
+    blogs = BlogPost.objects.all()
+    query = ""
+    if 'q' in request.GET:
+        query = request.GET['q']
+        blogs = BlogPost.objects.filter(
+            Q(title__icontains=query) | Q(paragraph_1__icontains=query) | Q(paragraph_2__icontains=query) | Q(paragraph_3__icontains=query) | Q(paragraph_4__icontains=query) | Q(Keynote__icontains=query)
+        ).order_by('-created_at')
+        print(f"Search query: {query}")  # debug
+    else:
+        blogs = BlogPost.objects.all().order_by('-created_at')
     print("Blogs found:", blogs)  # debug
-    return render(request, 'main/bloglist.html', {"blogs": blogs})
+    return render(request, 'main/bloglist.html', {"blogs": blogs, 'query': query})
 
 def sponsor(request):
     packages = SponsorshipPackage.objects.all()
@@ -202,26 +213,22 @@ def FAQs(request):
     return render(request, 'main/faqs.html')
 
 
+
+
+@require_POST
 def newsletter_signup(request):
-    if request.method == "POST":
-        form = NewsletterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            print("Newsletter registration successful")
-            return JsonResponse({
-                "type": "success",
-                "message": "Newsletter registration successful"
-            })
-           
-        else:
-            return JsonResponse({
-                "type": "error",
-                "errors": form.errors
-            })
+    form = NewsletterForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return JsonResponse({
+            "type": "success",
+            "message": "Newsletter registration successful"
+        })
     return JsonResponse({
         "type": "error",
-        "message": "Invalid request"
+        "errors": form.errors
     }, status=400)
+
     
     
     
