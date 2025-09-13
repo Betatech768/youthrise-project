@@ -10,7 +10,15 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta name="format-detection" content="telephone=no" />
+<meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
+  <!-- Recommended additional Open Graph tags -->
+  <meta property="og:title" content="We Are People Conference">
+  <meta property="og:description" content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.">
+  <meta property="og:url" content="{% static 'upload/wep2.jpg' %}">
+  <meta property="og:type" content="website">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -413,7 +421,7 @@
         </div>
       </div>
     </nav>
-    <div   id="page_caption" class="  ">
+    <div style="background-color: rgb(217, 235, 251);"  id="page_caption" class="  ">
       <div class="page_title_wrapper">
         <div class="standard_wrapper">
           <div class="speaker_thumbnail">
@@ -427,7 +435,7 @@
           <div class="page_title_inner">
             <div class="page_title_content">
               <h1 style="color: #091e1b;">{{speaker.Speaker_name}}</h1>
-              <div class="page_tagline">{{spaeker.Speaker_position}}</div>
+              <div class="page_tagline">{{speaker.Speaker_position}}</div>
             </div>
           </div>
 

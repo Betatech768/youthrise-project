@@ -139,6 +139,16 @@
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="32x32"
     />
+
+    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Recommended additional Open Graph tags -->
+  <meta property="og:title" content="We Are People Conference">
+  <meta property="og:description" content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.">
+  <meta property="og:url" content="{% static 'upload/wep2.jpg' %}">
+  <meta property="og:type" content="website">
     <link
       rel="icon"
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
@@ -622,14 +632,17 @@
                       class="quform"
                       method="post"
                       enctype="multipart/form-data"
-                      
+                      id="sponsorForm"
                       
                     >
+                    <!-- For messages -->
+
                       {% csrf_token %}
                       <div class="quform-elements">
                         <div class="quform-element">
                           <br />
                           <span class="wpcf7-form-control-wrap your-name">
+                            
                             {{ form.as_p }}
                           </span>
                         </div>
@@ -1015,6 +1028,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             if (data.type === "success") {
                 alert(data.message || "Form submitted successfully!");
+                
 
                 // ✅ Clear form inputs
                 form.reset();

@@ -12,7 +12,6 @@ urlpatterns = [
     path('contact-us/', views.contact, name= 'contact'),
     path('registration/', views.registration, name= 'registration'),
     path('speakers/', views.speakers, name= 'speakers'),
-    path('become-a-sponsors/', views.sponsorship_form_view, name='sponsorship_form'),
     path('gallery/', views.gallery_list, name='gallery_list_main'),
     path('speaker/<int:speaker_id>/', views.speaker_details, name='speaker_details'),
     path('programme/', views.programme, name='programme'),

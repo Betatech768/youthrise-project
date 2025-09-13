@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+from decouple import config
+import dj_database_url
 from pathlib import Path
 import os
 
@@ -80,7 +81,7 @@ XS_SHARING_ALLOWED_METHODS = ['POST','GET','OPTIONS', 'PUT', 'DELETE']
 
 ROOT_URLCONF = 'youthrise.urls'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = config("MEDIA_URL", default="/media/")
 MEDIA_ROOT = BASE_DIR / 'media'
 
 TEMPLATES = [
@@ -116,10 +117,11 @@ WSGI_APPLICATION = 'youthrise.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
-    }
+    'default': dj_database_url.parse(
+        config("DATABASE_URL"),
+        conn_max_age=600,  # keep connection alive
+        ssl_require=False
+    )
 }
 
 
@@ -157,7 +159,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = config("STATIC_URL", default="/static/")
 
 
 STATICFILES_DIRS = [

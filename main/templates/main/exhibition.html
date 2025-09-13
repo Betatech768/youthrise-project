@@ -9,6 +9,16 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
+
+    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Recommended additional Open Graph tags -->
+  <meta property="og:title" content="We Are People Conference">
+  <meta property="og:description" content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.">
+  <meta property="og:url" content="{% static 'upload/wep2.jpg' %}">
+  <meta property="og:type" content="website">
     <meta name="format-detection" content="telephone=no" />
 
     <link
@@ -134,19 +144,19 @@
       media="all"
     />
 
-    <link
+  <link
       rel="icon"
-      href="{% static 'upload/cropped-TG-Thumb-32x32.png' %}"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="32x32"
     />
     <link
       rel="icon"
-      href="{% static 'upload/cropped-TG-Thumb-192x192.png' %}"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="192x192"
     />
     <link
       rel="apple-touch-icon-precomposed"
-      href="{% static 'upload/cropped-TG-Thumb-180x180.png' %}"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
     />
 
     <style>
@@ -475,7 +485,10 @@
                     method="post"
                     enctype="multipart/form-data"
                     onclick=""
+                    id="sponsorForm"
                   >
+                  <!-- For messages -->
+<div id="sponsorMessage"></div>
                     {% csrf_token %}
                     <div class="quform-elements">
                       <div class="quform-element">
@@ -573,6 +586,44 @@ What you get: <br>
       <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
     </div>
 
+
+
+    <script>
+document.getElementById("sponsorForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop normal form submit
+
+    const form = e.target;
+    const url = form.action;
+    const formData = new FormData(form);
+
+    fetch(url, {
+        method: "POST",
+        body: formData,
+        headers: {
+            "X-Requested-With": "XMLHttpRequest" // tell Django this is AJAX
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const msgDiv = document.getElementById("sponsorMessage");
+
+        if (data.type === "success") {
+            msgDiv.innerHTML = `<p style="color:green;">${data.message}</p>`;
+            form.reset(); // clear the form
+        } else if (data.type === "error") {
+            msgDiv.innerHTML = `<p style="color:red;">${data.error}</p>`;
+            
+            // show field-specific errors
+            if (data.elementErrors) {
+                for (const [field, info] of Object.entries(data.elementErrors)) {
+                    alert(`${field}: ${info.errors.join(", ")}`);
+                }
+            }
+        }
+    })
+    .catch(err => console.error("Error:", err));
+});
+</script>
 
 
 

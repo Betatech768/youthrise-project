@@ -65,6 +65,17 @@ def sponsor(request):
 
             # Normal POST (non-AJAX)
             return redirect('sponsor')
+        else:
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                element_errors = {}
+                for field, errors in form.errors.items():
+                    element_errors[field] = {"errors": list(errors)}
+
+                return JsonResponse({
+                    "type": "error",
+                    "error": ["Validation failed. Please check the form."],
+                    "elementErrors": element_errors
+                })
            
     else:
         form = SponsorsForm()
@@ -74,13 +85,36 @@ def sponsor(request):
 def exhibition(request):
     if request.method == 'POST':
         form = ExhibitionForm(request.POST)
+
         if form.is_valid():
             form.save()
-            return redirect('exhibitions')  # or your desired success URL
+
+            # If AJAX request
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                return JsonResponse({
+                    "type": "success",
+                    "message": "Thank you for registering to become an exhibitor! Your registration has been submitted successfully."
+                })
+
+            # Normal POST
+            return redirect('exhibitions')
+
+        else:
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                element_errors = {}
+                for field, errors in form.errors.items():
+                    element_errors[field] = {"errors": list(errors)}
+
+                return JsonResponse({
+                    "type": "error",
+                    "error": ["Validation failed. Please check the form."],
+                    "elementErrors": element_errors
+                })
+
     else:
         form = ExhibitionForm()
-    return render(request, 'main/exhibition.html', {'form': form})
 
+    return render(request, 'main/exhibition.html', {'form': form})
 
 
 def contact (request):
@@ -131,16 +165,7 @@ def speakers (request):
 def gallery (request):
     return render (request, 'main/gallery.html')
 
-def sponsorship_form_view(request):
-    if request.method == 'POST':
-        form = SponsorsForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('sponsors_list')
-    else:
-        form = SponsorsForm()
-    
-    return render(request, 'main/sponsor.html', {'form': form})
+
 def gallery_list(request):
     images = GalleryImage.objects.exclude(image='')  # Only images with files
     return render(request, 'main/gallery.html', {

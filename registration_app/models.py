@@ -29,7 +29,7 @@ class Registration(models.Model):
     last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
     contact = models.BigIntegerField(blank=True)
-    organization = models.CharField(max_length=200)
+    organization = models.CharField(max_length=200, blank=True)
     job_title = models.CharField(max_length=100)
 
     # Sector choices
@@ -53,7 +53,7 @@ class Registration(models.Model):
         ("Others", "Others"),
         
     ]
-    leadership_position = models.CharField(max_length=10, choices=LEADER_CHOICES)
+    leadership_position = models.CharField(max_length=10,blank=True, choices=LEADER_CHOICES)
     specify_other = models.CharField(max_length=100, blank=True)
 
     # Participation source
@@ -82,10 +82,10 @@ class Registration(models.Model):
         ("virtual", "Virtual/Online"),
         ("hybrid", "Hybrid (some sessions in-person, some virtual)"),
     ]
-    participation_type = models.CharField(max_length=20, choices=PARTICIPATION_TYPE_CHOICES)
+    participation_type = models.CharField(max_length=20, blank=True, choices=PARTICIPATION_TYPE_CHOICES)
 
     # Address
-    address = models.CharField(max_length=200)
+    address = models.CharField(max_length=200, blank=True)
 
     # Nigerian States
     NIGERIAN_STATES = [

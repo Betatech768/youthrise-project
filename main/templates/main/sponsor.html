@@ -133,7 +133,15 @@
       type="text/css"
       media="all"
     />
+<meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
+  <!-- Recommended additional Open Graph tags -->
+  <meta property="og:title" content="We Are People Conference">
+  <meta property="og:description" content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.">
+  <meta property="og:url" content="{% static 'upload/wep2.jpg' %}">
+  <meta property="og:type" content="website">
     <link
       rel="icon"
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
@@ -456,8 +464,11 @@
                       method="post"
                       enctype="multipart/form-data"
                       onclick=""
+                      id="sponsorForm"
                     >
                       <div class="quform-elements">
+                        <!-- For messages -->
+<div id="sponsorMessage"></div>
                        {% csrf_token %}
                        
   {{form.as_p}}
@@ -544,6 +555,50 @@
       <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
     </div>
 
+
+
+
+
+
+
+
+    <script>
+document.getElementById("sponsorForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop normal form submit
+
+    const form = e.target;
+    const url = form.action;
+    const formData = new FormData(form);
+
+    fetch(url, {
+        method: "POST",
+        body: formData,
+        headers: {
+            "X-Requested-With": "XMLHttpRequest" // tell Django this is AJAX
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const msgDiv = document.getElementById("sponsorMessage");
+
+        if (data.type === "success") {
+            alert(data.message || "Registration successful! Thank you for Becoming a Sponsor.");
+            msgDiv.innerHTML = `<p style="color:green;">${data.message}</p>`;
+            form.reset(); // clear the form
+        } else if (data.type === "error") {
+            msgDiv.innerHTML = `<p style="color:red;">${data.error}</p>`;
+            
+            // show field-specific errors
+            if (data.elementErrors) {
+                for (const [field, info] of Object.entries(data.elementErrors)) {
+                    alert(`${field}: ${info.errors.join(", ")}`);
+                }
+            }
+        }
+    })
+    .catch(err => console.error("Error:", err));
+});
+</script>
 
 
 
