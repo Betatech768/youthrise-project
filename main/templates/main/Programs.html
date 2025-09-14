@@ -327,12 +327,12 @@
       <div >
            <!-- Actions -->
       <div style="margin-top:10px; display: grid; justify-content: center;">
-        <a href="{{ doc.pdf.url }}" download class="btn-download">⬇ Download PDF</a>
+        <a href="{{ doc.pdf.url }}" download class="btn-download" style="background-color: #123f38;padding: 10px; border-radius: 10px; color: wheat;"> Download Programme</a>
         
       </div>
     </div>
   {% empty %}
-    <p style="margin: 10px;" >Programme coming soon.</p>
+    <p style="margin: 10px;" >Programme will be available soon.</p>
   {% endfor %}
   </div>
 
@@ -347,7 +347,7 @@
       </div>
         {% else %}
       <div class="no-stream">
-      🚫 No live stream available right now. Please check back later.
+       No live stream available right now. Please check back later.
       </div>
         {% endif %}
       
