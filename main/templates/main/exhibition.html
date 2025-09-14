@@ -10,15 +10,18 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
 
-    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-  <!-- Recommended additional Open Graph tags -->
-  <meta property="og:title" content="We Are People Conference">
-  <meta property="og:description" content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.">
-  <meta property="og:url" content="{% static 'upload/wep2.jpg' %}">
-  <meta property="og:type" content="website">
+    <!-- Recommended additional Open Graph tags -->
+    <meta property="og:title" content="We Are People Conference" />
+    <meta
+      property="og:description"
+      content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future."
+    />
+    <meta property="og:url" content="{% static 'upload/wep2.jpg' %}" />
+    <meta property="og:type" content="website" />
     <meta name="format-detection" content="telephone=no" />
 
     <link
@@ -144,7 +147,7 @@
       media="all"
     />
 
-  <link
+    <link
       rel="icon"
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="32x32"
@@ -163,193 +166,57 @@
       name="msapplication-TileImage"
       content="../../../themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
     />
-  </head>
-     <style>
+    <style>
       /* Center footer content on mobile */
-@media (max-width: 768px) {
-  #footer .sidebar_widget.three {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Center horizontally */
-    text-align: center;   /* Center text */
-    gap: 20px;            /* Space between blocks */
-  }
+      @media (max-width: 768px) {
+        #footer .sidebar_widget.three {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center horizontally */
+          text-align: center; /* Center text */
+          gap: 20px; /* Space between blocks */
+        }
 
-  #footer .sidebar_widget.three li {
-    width: 100%;          /* Full width on mobile */
-    max-width: 400px;     /* Optional: keeps it tidy */
-  }
+        #footer .sidebar_widget.three li {
+          width: 100%; /* Full width on mobile */
+          max-width: 400px; /* Optional: keeps it tidy */
+        }
 
-  #footer img {
-    margin: 0 auto;       /* Center logo */
-    display: block;
-  }
+        #footer img {
+          margin: 0 auto; /* Center logo */
+          display: block;
+        }
 
-  #footer .social_wrapper ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-  }
+        #footer .social_wrapper ul {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          padding: 0;
+          list-style: none;
+        }
 
-  #footer button {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
+        #footer button {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      }
     </style>
+  </head>
   <body
-  style="background-color: #93b144;" class="page-template page-template-page_r page-template-page_r-php page page-id-118 page-child parent-pageid-95 woocommerce-no-js"
+    style="background-color: #93b144"
+    class="page-template page-template-page_r page-template-page_r-php page page-id-118 page-child parent-pageid-95 woocommerce-no-js"
   >
     <!-- Input Bootstrap NavBar here -->
-      <nav
-      class="navbar navbar-expand-lg sticky-top"
-      style="background-color: #091e1b"
-      data-bs-theme="dark"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}"
-          ><img
-            class=""
-            style="width: 250px; height: 50px"
-            src="{% static 'upload/Logo Icon.png' %}"
-            alt=""
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                aria-current="page"
-                href="{% url 'home' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'about' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >About</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'sponsor' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >Become a Sponsor</a
-              >
-            </li>
-             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'programme' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >Get Programme</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'exhibitions' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >Become an Exhibitor</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'blog' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'speakers' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >Speakers</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'gallery_list_main' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >Gallery</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'registration' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >Register</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'contact' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >Contact Us</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="{% url 'FAQs' %}"
-                style="color: white; transition: 0.3s"
-                onmouseover="this.style.color='#ffcc00'"
-                onmouseout="this.style.color='white'"
-                >FAQs</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include 'main/nav.html' %}
+
     <div
       id="page_caption"
       class="hasbg parallax"
-      style="background-image: url('/static/upload/wep71.jpg')"
+      style="
+        background-image: url('/static/upload/wep71.jpg');
+        background-color: #93b144;
+      "
       ;
     >
       <div class="page_title_wrapper">
@@ -357,15 +224,11 @@
           <div class="page_title_inner">
             <div class="page_title_content">
               <h1 style="padding-left: 10px">Exhibition form</h1>
-             
             </div>
           </div>
         </div>
       </div>
     </div>
-
-  
-
     <!-- form for exhibition -->
     <div
       class="one withsmallpadding ppb_contact_box"
@@ -388,7 +251,7 @@
               <h2 class="ppb_title" style="color: #000000">
                 Want to be part of our Exhibitors?
               </h2>
-           
+
               <div class="contact_form7_wrapper">
                 <div
                   role="form"
@@ -406,8 +269,8 @@
                     onclick=""
                     id="sponsorForm"
                   >
-                  <!-- For messages -->
-<div id="sponsorMessage"></div>
+                    <!-- For messages -->
+                    <div id="sponsorMessage"></div>
                     {% csrf_token %}
                     <div class="quform-elements">
                       <div class="quform-element">
@@ -420,21 +283,44 @@
                       <!-- Begin Submit button -->
                       <div class="quform-submit">
                         <div class="quform-submit-inner">
-                          <button style="background-color: #091e1b;" type="submit" class="submit-button">
+                          <button
+                            style="background-color: #091e1b"
+                            type="submit"
+                            class="submit-button"
+                          >
                             <span>Send</span>
                           </button>
                         </div>
-                        <p id="category-description" 
-   style="font-style: italic; max-width: 600px; width: 100%;  color: gray; margin: 50px auto; text-align: center;">
-This is for organizations, initiatives, businesses, or individuals that want to showcase their work, products, services, or campaigns during the conference. NGOs, Startups or youth-led businesses, Advocacy campaigns, Government or donor programs, and innovators. <br>
-What you get: <br>
--Exhibition space (physical booth). <br>
--Visibility in the conference program and website. <br>
--Opportunity to engage directly with attendees. <br>
--Branding and promotion during the event. <br>
-<p style = "font-weight: bold; color: red;"> Note: Exhibitor slots may be limited and may require approval or sponsorship.</p>
+                        <p
+                          id="category-description"
+                          style="
+                            font-style: italic;
+                            max-width: 600px;
+                            width: 100%;
+                            color: gray;
+                            margin: 50px auto;
+                            text-align: center;
+                          "
+                        >
+                          This is for organizations, initiatives, businesses, or
+                          individuals that want to showcase their work,
+                          products, services, or campaigns during the
+                          conference. NGOs, Startups or youth-led businesses,
+                          Advocacy campaigns, Government or donor programs, and
+                          innovators. <br />
+                          What you get: <br />
+                          -Exhibition space (physical booth). <br />
+                          -Visibility in the conference program and website.
+                          <br />
+                          -Opportunity to engage directly with attendees. <br />
+                          -Branding and promotion during the event. <br />
+                        </p>
 
-</p>
+                        <p style="font-weight: bold; color: red">
+                          Note: Exhibitor slots may be limited and may require
+                          approval or sponsorship.
+                        </p>
+
                         <div class="quform-loading-wrap">
                           <span class="quform-loading"></span>
                         </div>
@@ -451,7 +337,11 @@ What you get: <br>
     <!-- form for exhibition -->
 
     <!-- footer -->
-   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
+    <div
+      id="footer"
+      class="ppb_wrapper"
+      style="background: #091e14; padding: 50px 20px"
+    >
       <ul class="sidebar_widget three">
         <li id="text-2" class="widget widget_text">
           <div class="textwidget">
@@ -463,38 +353,54 @@ What you get: <br>
                 alt=""
               />
             </p>
-            
           </div>
         </li>
-         <li id="text-2" class="widget widget_text">
+        <li id="text-2" class="widget widget_text">
           <div class="textwidget">
-            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
-             <br>
-              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
-              PHONE NUMBER: +2349045646031 <br>
-              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
-              KAURA DISTRICT FCT. ABUJA
-            </p>
-                     
+            <p></p>
+            <div style="font-size: large; font-weight: bold">CONTACT US</div>
+            <br />
+            EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br />
+            PHONE NUMBER: +2349045646031 <br />
+            ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br />
+            KAURA DISTRICT FCT. ABUJA
           </div>
         </li>
-         <li id="text-2" class="widget widget_text">
+        <li id="text-2" class="widget widget_text">
           <div class="textwidget">
-            <p style="font-size: large; font-weight: bold;">
-              NEWSLETTER SIGNUP
-            </p>
-            <p>Register to get our Newsletter </p>
+            <p style="font-size: large; font-weight: bold">NEWSLETTER SIGNUP</p>
+            <p>Register to get our Newsletter</p>
 
             <form
-            id="newsletter-form"
+              id="newsletter-form"
               class="mc4wp-form mc4wp-form-1234"
               method="post"
               data-id="1234"
               data-name="Newsletter Form"
-              action="{% url 'newsletter_signup' %}">
+              action="{% url 'newsletter_signup' %}"
+            >
               {% csrf_token %}
-            <input id="clear" type="email" name="email" required style="background-color: #123f38; border: none; color: wheat;">
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
+              <input
+                id="clear"
+                type="email"
+                name="email"
+                required
+                style="background-color: #123f38; border: none; color: wheat"
+              />
+              <button
+                style="
+                  display: flex;
+                  justify-content: center;
+                  margin-top: 10px;
+                  width: 200px;
+                  background-color: #93b144;
+                  border: 0;
+                "
+                class="button medium"
+              >
+                SUBMIT
+              </button>
+            </form>
             <div id="newsletter-message"></div>
           </div>
         </li>
@@ -505,73 +411,76 @@ What you get: <br>
       <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
     </div>
 
+    <script>
+      document
+        .getElementById("sponsorForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // stop normal form submit
 
+          const form = e.target;
+          const url = form.action;
+          const formData = new FormData(form);
+
+          fetch(url, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "X-Requested-With": "XMLHttpRequest", // tell Django this is AJAX
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              const msgDiv = document.getElementById("sponsorMessage");
+
+              if (data.type === "success") {
+                msgDiv.innerHTML = `<p style="color:green;">${data.message}</p>`;
+                form.reset(); // clear the form
+              } else if (data.type === "error") {
+                msgDiv.innerHTML = `<p style="color:red;">${data.error}</p>`;
+
+                // show field-specific errors
+                if (data.elementErrors) {
+                  for (const [field, info] of Object.entries(
+                    data.elementErrors
+                  )) {
+                    alert(`${field}: ${info.errors.join(", ")}`);
+                  }
+                }
+              }
+            })
+            .catch((err) => console.error("Error:", err));
+        });
+    </script>
 
     <script>
-document.getElementById("sponsorForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // stop normal form submit
+      document
+        .getElementById("newsletter-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-    const form = e.target;
-    const url = form.action;
-    const formData = new FormData(form);
+          let formData = new FormData(this);
 
-    fetch(url, {
-        method: "POST",
-        body: formData,
-        headers: {
-            "X-Requested-With": "XMLHttpRequest" // tell Django this is AJAX
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        const msgDiv = document.getElementById("sponsorMessage");
-
-        if (data.type === "success") {
-            msgDiv.innerHTML = `<p style="color:green;">${data.message}</p>`;
-            form.reset(); // clear the form
-        } else if (data.type === "error") {
-            msgDiv.innerHTML = `<p style="color:red;">${data.error}</p>`;
-            
-            // show field-specific errors
-            if (data.elementErrors) {
-                for (const [field, info] of Object.entries(data.elementErrors)) {
-                    alert(`${field}: ${info.errors.join(", ")}`);
-                }
-            }
-        }
-    })
-    .catch(err => console.error("Error:", err));
-});
-</script>
-
-
-
-<script>
-document.getElementById("newsletter-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let formData = new FormData(this);
-
-  fetch(this.action, {
-    method: "POST",
-    body: formData,
-    headers: {
-      "X-Requested-With": "XMLHttpRequest"
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    let msg = document.getElementById("newsletter-message");
-    if (data.type === "success") {
-      msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
-    } else {
-      msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
-    }
-  });
-  document.getElementById("clear").value = "";
-});
-</script>
-
+          fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "X-Requested-With": "XMLHttpRequest",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              let msg = document.getElementById("newsletter-message");
+              if (data.type === "success") {
+                msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
+              } else {
+                msg.innerHTML = `<p style="color:red;">${
+                  data.message || "Error occurred"
+                }</p>`;
+              }
+            });
+          document.getElementById("clear").value = "";
+        });
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
