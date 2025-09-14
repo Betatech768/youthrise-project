@@ -159,9 +159,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = config("STATIC_URL", default="/static/")
+STATIC_URL = '/static/'
 
+# Add this line:
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# (Optional) Tell Django where to look for extra static files in your apps
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
