@@ -29,4 +29,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Run gunicorn as the production server
-CMD ["gunicorn", "youthrise-project.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "youthrise.wsgi:application", "--bind", "0.0.0.0:8000"]
