@@ -274,8 +274,37 @@
 
 #clock1573568515278500141 div {
   background: #93b144;
+  min-width: auto;
+  margin-inline: 0;
 
 }
+/* Base styling (desktop first) */
+.clock {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+#clock1573568515278500141 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ✅ Responsive adjustment for small screens */
+@media (max-width: 600px) {
+  .clock {
+    padding: 10px;
+    font-size: 1.2rem; /* smaller text for mobile */
+  }
+
+  #clock1573568515278500141 {
+    font-size: 1.5rem; /* scale down the clock */
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+}
+
+
 </style>
     <meta
       name="msapplication-TileImage"
@@ -596,7 +625,7 @@ The We Are People Conference is more than just a conference, it's a movement, a 
                   COUNTDOWN
                 </h2>
                 
-                <div class="ppb_header_content">
+                <div class="ppb_header_content clock">
                   <div 
                     id="clock1573568515278500141"
                     data-date="2025-11-27 09:00:00"
