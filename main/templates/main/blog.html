@@ -163,6 +163,7 @@
       name="msapplication-TileImage"
       content="../../../themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
        <style>
       /* Center footer content on mobile */
 @media (max-width: 768px) {
@@ -212,6 +213,20 @@
           <div class="page_title_inner">
             <div class="page_title_content">
               <h1 style="color: #091e1b;">{{blog.title}} </h1>
+              <!-- Font Awesome (for icons) -->
+
+
+                <!-- Share Buttons -->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" onclick="this.href+=''+window.location.href">
+                  <i style="width: 24px;" class="fab fa-facebook fa-2x"></i>
+                </a>
+
+                <a href="https://twitter.com/intent/tweet?url=" target="_blank" onclick="this.href+=''+window.location.href">
+                  <i style="margin:10px " class="fab fa-twitter fa-2x"></i>
+                </a>
+
+             
+
             
             </div>
           </div>
@@ -406,7 +421,6 @@ document.getElementById("newsletter-form").addEventListener("submit", function(e
   document.getElementById("clear").value = "";
 });
 </script>
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
