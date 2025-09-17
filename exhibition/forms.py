@@ -51,3 +51,9 @@ class ExhibitionForm(forms.ModelForm):
                 'placeholder': 'What are you exhibiting?'
             }),
         }
+        
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["what_exhibiting"].label = (
+            "What are you exhibiting?"
+        )
