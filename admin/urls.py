@@ -39,6 +39,9 @@ urlpatterns = [
     path("streaming/delete-streaming/<int:pk>/", views.delete_stream, name="delete-streaming"),
     path("stories-list/", views.story_list, name="stories-list"),
     path("export-stories/", views.export_stories_excel, name="export_stories_excel"),
-
+    path("clear-sponsors/", views.clear_model, name="clear_sponsors"),
+    path("clear-registrations/", views.clear_registration_model, name="clear_registrations"),
+    path("clear-impactstories/", views.clear_impactstories_model, name="clear_impactstories"),
+    path("clear-exhibitions/", views.clear_exhibition_model, name="clear_exhibitions"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     

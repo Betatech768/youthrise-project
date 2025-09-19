@@ -546,3 +546,33 @@ def export_stories_excel(request):
     wb.save(response)
 
     return response
+
+@require_POST
+@csrf_exempt  # ⚠️ remove this if you add CSRF token in AJAX
+def clear_model(request):
+    Sponsors.objects.all().delete()
+    return JsonResponse({"message": "All records cleared successfully!"})
+
+
+
+@require_POST
+@csrf_exempt  # ⚠️ remove this if you add CSRF token in AJAX
+def clear_registration_model(request):
+    Registration.objects.all().delete()
+    return JsonResponse({"message": "All records cleared successfully!"})
+
+
+
+
+@require_POST
+@csrf_exempt  # ⚠️ remove this if you add CSRF token in AJAX
+def clear_exhibition_model(request):
+    Exhibition.objects.all().delete()
+    return JsonResponse({"message": "All records cleared successfully!"})
+
+
+@require_POST
+@csrf_exempt  # ⚠️ remove this if you add CSRF token in AJAX
+def clear_impactstories_model(request):
+    stories.objects.all().delete()
+    return JsonResponse({"message": "All records cleared successfully!"})
