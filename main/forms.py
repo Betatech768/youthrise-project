@@ -44,6 +44,7 @@ class StoriesForm(forms.ModelForm):
             "contact_person_phone": forms.TextInput(attrs={"class": "form-control", "placeholder": "Phone number"}),
             "work_impact": forms.Select(attrs={"class": "form-select"}),
             "specify_others": forms.TextInput(attrs={"class": "form-control", "placeholder": "If others, please specify"}),
+            "specify_works": forms.TextInput(attrs={"class": "form-control", "placeholder": "If others, please specify"}),
             "describe_story": forms.Textarea(attrs={"class": "form-control", "rows": 4, "placeholder": "Describe your story"}),
             "make_difference": forms.Textarea(attrs={"class": "form-control", "rows": 4, "placeholder": "How did it make a difference?"}),
             "speak_about": forms.Select(attrs={"class": "form-select"}),

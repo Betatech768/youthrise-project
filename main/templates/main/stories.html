@@ -453,6 +453,49 @@
         });
     </script>
 
+    <script>
+      const work = document.getElementById("id_content"); //dropdown
+      const workSector = document.getElementById("id_specify_others"); //dropdown
+      const workImpactSect = document.getElementById("id_specify_works"); // "Others" checkbox
+      const workImpact = document.getElementById("id_work_impact"); //dropdown
+
+      if (work && workSector) {
+        const workSectWrapper = workSector.closest("p"); // parent <p> with label + input
+
+        function toggleWorkSector() {
+          if (work.value === "Others") {
+            workSectWrapper.style.display = "block";
+          } else {
+            workSectWrapper.style.display = "none";
+          }
+        }
+
+        // Run once on page load
+        toggleWorkSector();
+
+        // Re-check when work dropdown changes
+        work.addEventListener("change", toggleWorkSector);
+      }
+
+      if (workImpact && workImpactSect) {
+        const workImpactWrapper = workImpactSect.closest("p"); // parent <p> with label + input
+
+        function specifyWorkImpactWrapperToggle() {
+          if (workImpact.value === "9" || workImpact.value === "9") {
+            workImpactWrapper.style.display = "block";
+          } else {
+            workImpactWrapper.style.display = "none";
+          }
+        }
+
+        // Run once on page load
+        specifyWorkImpactWrapperToggle();
+
+        // Re-check when workImpact dropdown changes
+        workImpact.addEventListener("change", specifyWorkImpactWrapperToggle);
+      }
+    </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
