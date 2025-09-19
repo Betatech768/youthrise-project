@@ -13,9 +13,13 @@ from .models import Sponsor
 from registration_app.models import RegistrationCategory
 from Newsletter.forms import NewsletterForm
 from Contact_Us.forms import ContactUsForm
-from . models import stream
+from . models import stream, stories 
 from django.views.decorators.http import require_POST
 from django.db.models import Q
+from . forms import  StoriesForm
+
+
+
 def about(request):
     return render(request, 'main/about.html')
 
@@ -270,3 +274,37 @@ def contact_us(request):
         form = ContactUsForm()
 
     return render(request, 'main/contact.html', {'form': form})
+def stories (request):
+    
+    if request.method == 'POST':
+        form = StoriesForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+
+            # If Quform AJAX
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                return JsonResponse({
+                    "type": "success",
+                    "message": "Story submitted successfully! Thank you."
+                })
+
+            # Normal POST (non-AJAX)
+            return redirect('stories')
+
+        else:
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                element_errors = {}
+                for field, errors in form.errors.items():
+                    element_errors[field] = {"errors": list(errors)}
+
+                return JsonResponse({
+                    "type": "error",
+                    "error": ["Validation failed. Please check the form."],
+                    "elementErrors": element_errors
+                })
+
+    else:
+        form = StoriesForm()
+
+    return render(request, 'main/stories.html', {'form': form})

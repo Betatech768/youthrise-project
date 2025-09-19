@@ -28,7 +28,7 @@ from sponsorship.models import SponsorshipPackage
 import openpyxl
 from Newsletter.models import Newsletter
 from Contact_Us.models import ContactUs as ContactMessage
-from main.models import stream
+from main.models import stream,stories
 from main.forms import StreamForm
 
 
@@ -478,3 +478,9 @@ def delete_stream(request, pk):
     streaming = get_object_or_404(stream, pk=pk)
     streaming.delete()
     return JsonResponse({"success": True})
+
+
+
+def story_list(request):
+    sponsors = stories.objects.all().order_by('-id')
+    return render(request, 'admin/adminsponsor.html', {'sponsors': sponsors})

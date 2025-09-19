@@ -1,0 +1,494 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" data-menu="leftalign">
+  <head>
+    <title>We Are People | Exhibitors</title>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Recommended additional Open Graph tags -->
+    <meta property="og:title" content="We Are People Conference" />
+    <meta
+      property="og:description"
+      content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future."
+    />
+    <meta property="og:url" content="{% static 'upload/wep2.jpg' %}" />
+    <meta property="og:type" content="website" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/revslider/public/assets/css/settings.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/reset.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/wordpress.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/animation.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/ilightbox/ilightbox.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/jqueryui/custom.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/mediaelement/mediaelementplayer-legacy.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'js/plugins/flexslider/flexslider.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/tooltipster.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/odometer-theme-minimal.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/menus/leftalignmenu.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/font-awesome.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/themify-icons.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grandconference_custom_css.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/kirki-styles.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/grid.css' %}"
+      type="text/css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Work+Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A300%2Cregular%2C500%2C600%2C700%2C900&amp;subset"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Poppins:600%2C700%2C400%2C500"
+      rel="stylesheet"
+      property="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
+    />
+
+    <meta
+      name="msapplication-TileImage"
+      content="../../../themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
+    />
+    <style>
+      /* Center footer content on mobile */
+      @media (max-width: 768px) {
+        #footer .sidebar_widget.three {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center horizontally */
+          text-align: center; /* Center text */
+          gap: 20px; /* Space between blocks */
+        }
+
+        #footer .sidebar_widget.three li {
+          width: 100%; /* Full width on mobile */
+          max-width: 400px; /* Optional: keeps it tidy */
+        }
+
+        #footer img {
+          margin: 0 auto; /* Center logo */
+          display: block;
+        }
+
+        #footer .social_wrapper ul {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          padding: 0;
+          list-style: none;
+        }
+
+        #footer button {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="background-color: #93b144"
+    class="page-template page-template-page_r page-template-page_r-php page page-id-118 page-child parent-pageid-95 woocommerce-no-js"
+  >
+    <!-- Input Bootstrap NavBar here -->
+    {% include 'main/nav.html' %}
+
+    <div
+      id="page_caption"
+      class="hasbg parallax"
+      style="
+        background-image: url('/static/upload/weps2.jpeg');
+        background-color: #93b144;
+      "
+      ;
+    >
+      <div class="page_title_wrapper">
+        <div class="standard_wrapper">
+          <div class="page_title_inner">
+            <div class="page_title_content">
+              <h1 style="padding-left: 10px">Impact Stories</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- form for exhibition -->
+    <div
+      class="one withsmallpadding ppb_contact_box"
+      style="text-align: center; margin-bottom: 100px"
+    >
+      <div class="standard_wrapper">
+        <div class="page_content_wrapper">
+          <div class="inner">
+            <div
+              class="inner_box parallax"
+              style="
+                width: 60%;
+                margin: auto;
+                background: #ffffff;
+                border: 2px solid #091e1b;
+                padding: 50px;
+              "
+              data-stellar-ratio="1.2"
+            >
+              <h2 class="ppb_title" style="color: #000000">
+                Call for Impact Stories - We Are People Conference 2025
+              </h2>
+
+              <div class="contact_form7_wrapper">
+                <div
+                  role="form"
+                  class="wpcf7"
+                  id="wpcf7-f5-o1"
+                  lang="en-US"
+                  dir="ltr"
+                >
+                  <div class="screen-reader-response"></div>
+                  <form
+                    class="quform"
+                    action=""
+                    method="post"
+                    enctype="multipart/form-data"
+                    onclick=""
+                    id="sponsorForm"
+                  >
+                    <!-- For messages -->
+                    <div id="sponsorMessage"></div>
+                    {% csrf_token %}
+                    <div class="quform-elements">
+                      <div class="quform-element">
+                        <br />
+                        <span class="wpcf7-form-control-wrap your-name">
+                          {{ form.as_p }}
+                        </span>
+                      </div>
+
+                      <!-- Begin Submit button -->
+                      <div class="quform-submit">
+                        <div class="quform-submit-inner">
+                          <button
+                            style="background-color: #091e1b"
+                            type="submit"
+                            class="submit-button"
+                          >
+                            <span>Send</span>
+                          </button>
+                        </div>
+
+                        <div class="quform-loading-wrap">
+                          <span class="quform-loading"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- form for exhibition -->
+
+    <!-- footer -->
+    <div
+      id="footer"
+      class="ppb_wrapper"
+      style="background: #091e14; padding: 50px 20px"
+    >
+      <ul class="sidebar_widget three">
+        <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p>
+              <img
+                src="{% static 'upload/Logo Icon.png' %}"
+                width="165"
+                height="20"
+                alt=""
+              />
+            </p>
+          </div>
+        </li>
+        <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p></p>
+            <div style="font-size: large; font-weight: bold">CONTACT US</div>
+            <br />
+            EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br />
+            PHONE NUMBER: +2349045646031 <br />
+            ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br />
+            KAURA DISTRICT FCT. ABUJA
+          </div>
+        </li>
+        <li id="text-2" class="widget widget_text">
+          <div class="textwidget">
+            <p style="font-size: large; font-weight: bold">NEWSLETTER SIGNUP</p>
+            <p>Register to get our Newsletter</p>
+
+            <form
+              id="newsletter-form"
+              class="mc4wp-form mc4wp-form-1234"
+              method="post"
+              data-id="1234"
+              data-name="Newsletter Form"
+              action="{% url 'newsletter_signup' %}"
+            >
+              {% csrf_token %}
+              <input
+                id="clear"
+                type="email"
+                name="email"
+                required
+                style="background-color: #123f38; border: none; color: wheat"
+              />
+              <button
+                style="
+                  display: flex;
+                  justify-content: center;
+                  margin-top: 10px;
+                  width: 200px;
+                  background-color: #93b144;
+                  border: 0;
+                "
+                class="button medium"
+              >
+                SUBMIT
+              </button>
+            </form>
+            <div id="newsletter-message"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="side_menu_wrapper" class="overlay_background">
+      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
+    </div>
+
+    <script>
+      document
+        .getElementById("sponsorForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // stop normal form submit
+
+          const form = e.target;
+          const url = form.action;
+          const formData = new FormData(form);
+
+          fetch(url, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "X-Requested-With": "XMLHttpRequest", // tell Django this is AJAX
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              const msgDiv = document.getElementById("sponsorMessage");
+
+              if (data.type === "success") {
+                msgDiv.innerHTML = `<p style="color:green;">${data.message}</p>`;
+                form.reset(); // clear the form
+              } else if (data.type === "error") {
+                msgDiv.innerHTML = `<p style="color:red;">${data.error}</p>`;
+
+                // show field-specific errors
+                if (data.elementErrors) {
+                  for (const [field, info] of Object.entries(
+                    data.elementErrors
+                  )) {
+                    alert(`${field}: ${info.errors.join(", ")}`);
+                  }
+                }
+              }
+            })
+            .catch((err) => console.error("Error:", err));
+        });
+    </script>
+
+    <script>
+      document
+        .getElementById("newsletter-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let formData = new FormData(this);
+
+          fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "X-Requested-With": "XMLHttpRequest",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              let msg = document.getElementById("newsletter-message");
+              if (data.type === "success") {
+                msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
+              } else {
+                msg.innerHTML = `<p style="color:red;">${
+                  data.message || "Error occurred"
+                }</p>`;
+              }
+            });
+          document.getElementById("clear").value = "";
+        });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate.min.js' %}"></script>
+    <script src="{% static 'js/plugins/ui/core.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.requestAnimationFrame.js' %}"></script>
+    <script src="{% static 'js/plugins/ilightbox.packed.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.easing.js' %}"></script>
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.isotope.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.masory.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.tooltipster.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.sticky-kit.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/custom.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_onepage.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.countdown.js' %}"></script>
+    <script src="{% static 'js/plugins/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'js/plugins/masonry.min.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_sidebar.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jarallax-video.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/plugins/custom_clock.js' %}"></script>
+    <script src="{% static 'js/plugins/ui/widget.min.js' %}"></script>
+    <script src="{% static 'js/plugins/ui/accordion.min.js' %}"></script>
+    <script src="{% static 'js/plugins/custom-accordion.js' %}"></script>
+  </body>
+</html>
