@@ -19,4 +19,5 @@ urlpatterns = [
     path("newsletter/", views.newsletter_signup, name="newsletter_signup"),
     path("contact/", views.contact_us, name="contact"),
     path("stories/", views.stories, name="stories"),
+    
 ]

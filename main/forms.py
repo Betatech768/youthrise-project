@@ -26,7 +26,7 @@ class StoriesForm(forms.ModelForm):
             "contact_person_email",
             "contact_person_phone",
             "work_impact",
-            "specify_others",
+            "specify_works",
             "describe_story",
             "make_difference",
             "speak_about",
@@ -106,5 +106,8 @@ class StoriesForm(forms.ModelForm):
             "Social Media Link (if any)"
         )
         self.fields["specify_others"].label = (
+            "Others (please specify)"
+        )
+        self.fields["specify_works"].label = (
             "Others (please specify)"
         )

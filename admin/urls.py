@@ -38,5 +38,7 @@ urlpatterns = [
     path("streaming/", views.streaming, name="streaming"),
     path("streaming/delete-streaming/<int:pk>/", views.delete_stream, name="delete-streaming"),
     path("stories-list/", views.story_list, name="stories-list"),
+    path("export-stories/", views.export_stories_excel, name="export_stories_excel"),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     

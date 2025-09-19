@@ -79,7 +79,7 @@ class stories(models.Model):
     contact_person_email = models.EmailField(max_length=255)
     contact_person_phone = models.CharField(max_length=20)
     work_impact = models.ForeignKey(Work, on_delete=models.CASCADE)
-    specify_others = models.CharField(max_length=100, blank=True)
+    specify_works = models.CharField(max_length=100, blank=True)
     describe_story = models.TextField()
     make_difference = models.TextField()
     CONSENT_CHOICES = [

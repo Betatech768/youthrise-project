@@ -483,4 +483,66 @@ def delete_stream(request, pk):
 
 def story_list(request):
     sponsors = stories.objects.all().order_by('-id')
-    return render(request, 'admin/adminsponsor.html', {'sponsors': sponsors})
+    return render(request, 'admin/story.html', {'sponsors': sponsors})
+
+
+
+def export_stories_excel(request):
+    # Create a new Excel workbook
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Stories"
+
+    # Define headers
+    headers = [
+        "Full Name",
+        "Organization",
+        "Specify Others",
+        "Location",
+        "Implementing",
+        "Contact Person",
+        "Contact Email",
+        "Contact Phone",
+        "Work Impact",
+        "Describe Story",
+        "Make Difference",
+        "Speak About",
+        "Organization Website",
+        "Portfolio Link",
+        "Social Media",
+        "Created At",
+    ]
+    ws.append(headers)
+
+    # Query all stories
+    for story in stories.objects.all():
+        ws.append([
+            story.fullname,
+            story.content,
+            story.specify_others,
+            story.Location,
+            story.implementing,
+            story.contact_person,
+            story.contact_person_email,
+            story.contact_person_phone,
+            str(story.work_impact),  # in case it's a FK
+            story.specify_works,
+            story.describe_story,
+            story.make_difference,
+            story.speak_about,
+            story.organization_website,
+            story.portfolio_link,
+            story.social_media,
+            story.created_at.strftime("%Y-%m-%d %H:%M"),
+        ])
+
+    # Set response headers
+    response = HttpResponse(
+        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    response["Content-Disposition"] = 'attachment; filename="stories.xlsx"'
+
+    # Save workbook to response
+    wb.save(response)
+
+    return response
