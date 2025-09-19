@@ -54,7 +54,7 @@
       <!-- Navbar Ends -->
       <main class="exhibition">
         <div class="textt">
-          <h1 class="textttt">SPONSORS REGISTRATION LIST</h1>
+          <h1 class="textttt">IMPACT STORIES</h1>
         </div>
 
         <!-- showcase bar -->
@@ -69,17 +69,18 @@
                 Email: {{ sponsor.email }}<br />
                 Organization: {{ sponsor.content }}<br />
                 Contact Person: {{ sponsor.contact_person }}<br />
-                Email: {{ sponsor.contact_person_email }}<br />Phone Number: {{
-                sponsor.contact_person_phone }}<br />Work Impact: {{
-                sponsor.work_impact }}<br />
+                Email: {{sponsor.contact_person_email}}<br />Phone Number:
+                {{sponsor.contact_person_phone}}<br />Work Impact:
+                {{sponsor.work_impact}}<br />
 
-                Package: {{ sponsor.implementing }} | Registration Date:
-                {{sponsor.created_at}}
+                How long have you been implementing?: {{sponsor.implementing}}
+                <br />
+                Registration Date: {{sponsor.created_at}}
               </li>
               {% endfor %}
             </ul>
             {% else %}
-            <p>No sponsors have registered yet.</p>
+            <p>No Impact story yet.</p>
             {% endif %}
           </div>
           <div class="blobd"></div>

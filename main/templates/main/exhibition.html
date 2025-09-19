@@ -434,6 +434,7 @@
 
               if (data.type === "success") {
                 msgDiv.innerHTML = `<p style="color:green;">${data.message}</p>`;
+                alert(data.message || "Form submitted successfully!");
                 form.reset(); // clear the form
               } else if (data.type === "error") {
                 msgDiv.innerHTML = `<p style="color:red;">${data.error}</p>`;
