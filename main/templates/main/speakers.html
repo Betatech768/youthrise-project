@@ -265,9 +265,9 @@
           <div id="1573807481774681297" data-columns="5">
             
             {% for speaker in speakers %}
-            <div class="element grid one_fifth_bg">
               <a class="#" href="{% url 'speaker_details' speaker.id %}"
-                > {% if speaker.images.all %}
+                ><div class="element grid one_fifth_bg">
+              {% if speaker.images.all %}
                 <img
                   src="{{ speaker.images.first.image.url }}" 
                   alt="{{speaker.Speaker_name}}"

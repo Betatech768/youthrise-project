@@ -1,0 +1,1742 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "blogpost",
+      "model": "blogpost"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "blogpost",
+      "model": "blogimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "exhibition",
+      "model": "exhibition"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "galleries",
+      "model": "gallery"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "galleries",
+      "model": "image"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "registration_app",
+      "model": "registration"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "speakers",
+      "model": "speakers"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "speakers",
+      "model": "speakerimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "sponsorship",
+      "model": "sponsors"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "Images",
+      "model": "galleryimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "registration_app",
+      "model": "registrationcategory"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "speakers",
+      "model": "programme"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "admin",
+      "model": "document"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "main",
+      "model": "sponsor"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "sponsorship",
+      "model": "sponsorshippackage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "registration_app",
+      "model": "reasonforattending"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "registration_app",
+      "model": "accessibilityoption"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "Newsletter",
+      "model": "newsletter"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "Contact_Us",
+      "model": "contactus"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "main",
+      "model": "stream"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "main",
+      "model": "stories"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "main",
+      "model": "work"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "5kx5349gsrnlw29fbiz1mivy8dhz6121",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uxXOo:FxyX225VnJGhMEHWXWfy3EqsHBcNPA6y6WhlYMMydx4",
+      "expire_date": "2025-09-13T22:03:10.675Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "5oakwuh1r0xj5fkbppnd4nvyknpb8758",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uyjPq:_XTaWsXO0Bwb5kpv_mMdGAu33xxHAeMaZbgODDWlpfI",
+      "expire_date": "2025-09-17T05:05:10.744Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "8np0bkjxwwhld35q1prc1tzkkoxq5vkt",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uzY9A:4z8cvDrN_XsAM0epbl7l1SRrPM6R89QsKierK3oZjpM",
+      "expire_date": "2025-09-19T11:15:20.727Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "a9yzash7wh0igwqhf2w0h349g7o81loc",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uwzh9:dJri72TzCrCbY983PY6-HOyvrrnJ3_MVYxP5UJnGd2o",
+      "expire_date": "2025-09-12T10:03:51.503Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "bhryev55w7wh92j1adjgvsxdhm1i237b",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1ux1ru:N8blOjU4JN_MPyPtrvhagzU7bgjuN9nOD6EGJoHVgDU",
+      "expire_date": "2025-09-12T12:23:06.504Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "cnjvhbqpou7nki0vah4w2ku4i68se3aa",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uxXbc:eVqwGUtFGYlr-mNs19nO_nglk1dneH_kJ6XzNWAy3zo",
+      "expire_date": "2025-09-13T22:16:24.111Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "cre73hmo9ppvuq3ck32e5hhb8deel61v",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uwVL1:FZRJA3UPTAs0gbdXBRWNE8HykVy-seGDRANLPlN3RmU",
+      "expire_date": "2025-09-11T01:38:59.770Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "dfh0hll8h1nlkbnidp3n1p7alyo8gjrk",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uwqsL:73utEWXdH01YndgbyJtV-fxw4kTY4jEoMkd5KLnMqBA",
+      "expire_date": "2025-09-12T00:38:49.709Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "egzmmjmtynu0tbn5mh1h7klbza4n2gul",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uywwO:Y51qx8vyHKP1rb81oyYsWymeP-o2PiCJMdPBw9U5jVA",
+      "expire_date": "2025-09-17T19:31:40.769Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fioj2gszjuo3nbxx646rmwb6fxeme61u",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uyvyp:OgsvFXgsOY-NhFvxJJQl2PbTw6x-UiLHts2-FPP1hjI",
+      "expire_date": "2025-09-17T18:30:07.369Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "inlzz9akslm8nme5bx529vxshfs0d3l5",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uxuhn:JGh91a2-CyRQUAcT2JCBXw8YrUdxh-LkJm-LHUcPeCQ",
+      "expire_date": "2025-09-14T22:56:19.372Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "jdt6m6bbf6fkbgbpcpxmuyz8m0f8gpgv",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1ux4I7:19o4pmoyHNzBUEwl3Fz7jctZHFCQf_2wv-YllzlSIvA",
+      "expire_date": "2025-09-12T14:58:19.956Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ld1yxk1oh36m6uddhda9yawmzqix24ck",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1ux0wI:xeQ0EMKkY8K6NEsZ_Lp-fkepoJW5QHVJ-zUpBzclvXk",
+      "expire_date": "2025-09-12T11:23:34.165Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "nnsehpvdarehq68wyu7inhch0c8po4ch",
+    "fields": {
+      "session_data": ".eJxVjEsOAiEQBe_C2hCgAcGl-zkDaaYbGTWQzGdlvLtOMgvdvqp6L5FwW2vaFp7TROIitDj9bhnHB7cd0B3brcuxt3WestwVedBFDp34eT3cv4OKS_3W1mjIhkshIF_QhKAjh-CVVoQGrOGQwY0OClLMPuKZNVublfOggFC8P-DhN8Y:1urdBQ:WafxNW_6zJQwxg484mFgPAPHm7cbUaYlmn4McTk1xQo",
+      "expire_date": "2025-09-11T14:00:56.707Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "okkp87l9kkefmt1wxueuup98vkev0jmj",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uxTQz:1NplnQfofzMK97yGKGXZTWsWv4kZKrsHWFLpAdMWK2M",
+      "expire_date": "2025-09-13T17:49:09.272Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "rfo36mg6mrr04j9ppl2u9ujqllqvlv01",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uzZck:Pzfb1CDOU0JUkWgGz4_2ovQVySLVrpYZIcRh3FF6PpU",
+      "expire_date": "2025-09-19T12:49:58.120Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "sfjzk9e7cli3cc5ri9nnta2m149om9hw",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uyiIF:hwiZpSJMCt2iTwya1GGgupBorHVBgofzKoxSVArgsBU",
+      "expire_date": "2025-09-17T03:53:15.980Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vfbldtllb2aoj5l9snr006ovl42rtugd",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uxY2f:2lrYUUMRosNibwPfSbYxIw9LNcrUlgLqrLBWDVLx_-8",
+      "expire_date": "2025-09-13T22:44:21.073Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "zp57aw85sgnslpg47th6suuewsxupo7h",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEs5VE8eu83kF0WbNXQpLQn478bkh70OjOZt4h47HM8Wt7iwuIqQFx-GWF65toFP7DeV5nWum8LyZ7I0zY5rZxft7P9G8zY5r7NHo0ZOFDCgSyPzBlAk9KsyABBTkoXID8Gx8WaYkfwoDRSCMU4Jz5f9kY37w:1uzaa1:1ovYZlZBkNbXbDC7xOh-8w0NfNkgkyEX4eK0WRO5JSY",
+      "expire_date": "2025-09-19T13:51:13.500Z"
+    }
+  },
+  {
+    "model": "blogpost.blogpost",
+    "pk": 3,
+    "fields": {
+      "title": "The Rise of Edge Computing: Why the Future of Tech IsnÆt Just in the Cloud",
+      "paragraph_1": "For years, cloud computing has been the foundation of modern technology, offering businesses scalability, flexibility, and cost savings. However, a new shift is happening in the tech world: Edge Computing. Unlike cloud computing, which depends on distant servers, edge computing brings computation and data storage closer to the source of data ù right at the \"edge\" of the network. This shift means faster, more reliable, and more secure processing of information.",
+      "paragraph_2": "Edge computing is important because it solves some of the biggest limitations of cloud computing. By reducing the time it takes for data to travel, it offers near-instant speed and reliability. Even in situations where internet connectivity drops, edge devices can still process data locally. It also improves security since sensitive information can be analyzed on-site, reducing exposure to potential breaches, while cutting down on bandwidth costs.",
+      "paragraph_3": "The real-world applications of edge computing are already impressive. In healthcare, wearable devices can monitor patientsÆ vitals and send instant alerts to doctors. In retail, smart shelves track inventory in real-time. Manufacturing machines can detect faults before they escalate, while smart cities are using edge technology to manage traffic lights dynamically. These innovations highlight how edge computing makes daily systems smarter and faster.",
+      "paragraph_4": "Looking ahead, edge computing isnÆt here to replace the cloud ù instead, they will work hand in hand. The cloud will continue to handle storage, large-scale analytics, and coordination, while edge computing will manage real-time tasks. Together, they create a powerful system that fuels the future of AI, IoT, 5G, and beyond. Businesses that embrace this combination early will gain a serious competitive advantage.",
+      "Keynote": "Edge computing is not the end of cloud computing, but the evolution of it ù bringing speed, reliability, and security to the forefront of the digital future.",
+      "created_at": "2025-09-12T14:02:34.281Z"
+    }
+  },
+  {
+    "model": "blogpost.blogpost",
+    "pk": 4,
+    "fields": {
+      "title": "The State of Todays Economy",
+      "paragraph_1": "The economy is the backbone of any nation, shaping how people live, work, and interact. In recent years, global economies have faced significant disruptions, from the aftermath of the pandemic to rising inflation and supply chain issues. These factors have pushed governments and businesses to adapt quickly, making resilience and innovation critical to survival.",
+      "paragraph_2": "A major challenge in the current economic landscape is inflation. Prices of goods and services continue to rise, putting pressure on households and reducing purchasing power. While central banks worldwide have responded with higher interest rates to stabilize inflation, the side effect has been a slowdown in business investments and consumer spending. This balancing act remains delicate, as policymakers try to ensure growth without triggering recession.",
+      "paragraph_3": "Technology and digital transformation, however, present new opportunities for growth. From fintech solutions that make banking easier to e-commerce platforms expanding global trade, innovation has become a key driver of economic resilience. Nations that invest in digital infrastructure, renewable energy, and education are positioning themselves for long-term competitiveness in the evolving global economy.",
+      "paragraph_4": "Looking ahead, collaboration will be essential. Governments, businesses, and individuals must work together to build sustainable growth. Focusing on skills development, inclusive policies, and sustainable practices will help economies thrive despite uncertainties. The key lies in adaptability and forward-thinking leadership.",
+      "Keynote": "The future of the economy depends on balancing stability with innovation ù nations that invest in people, technology, and sustainability will lead the next wave of global prosperity.",
+      "created_at": "2025-09-13T21:48:14.262Z"
+    }
+  },
+  {
+    "model": "blogpost.blogimage",
+    "pk": 10,
+    "fields": {
+      "blog": 3,
+      "image": "blog_images/whatYouDisc.jpeg"
+    }
+  },
+  {
+    "model": "blogpost.blogimage",
+    "pk": 11,
+    "fields": {
+      "blog": 3,
+      "image": "blog_images/exhibition.13.jpeg"
+    }
+  },
+  {
+    "model": "blogpost.blogimage",
+    "pk": 12,
+    "fields": {
+      "blog": 4,
+      "image": "blog_images/wep8.jpg"
+    }
+  },
+  {
+    "model": "blogpost.blogimage",
+    "pk": 13,
+    "fields": {
+      "blog": 4,
+      "image": "blog_images/wep4.jpg"
+    }
+  },
+  {
+    "model": "registration_app.registrationcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Participant",
+      "description": "This is the general registration for anyone who wants to attend the conference. Young people, Students, Civil society members, Policy advocates, Development partners, Professionals and other stakeholders interested.\n**What you get:**- Full access to the conference sessions (keynotes, panels, workshops)  \n- Networking opportunities  \n- Conference materials (agenda, digital kit, etc)  "
+    }
+  },
+  {
+    "model": "registration_app.registrationcategory",
+    "pk": 5,
+    "fields": {
+      "name": "Volunteer",
+      "description": "This is for individuals who want to support the organizing team by helping with various aspects of the event. \nYoung people, Students, Social changemakers, Media team, and People with interest in event planning or logistics.\n**What you do:**\n- Support logistics and coordination  \n- Assist with registration/check-in  \n- Guide attendees or manage sessions  \n- Handle media, tech, or content-related tasks  "
+    }
+  },
+  {
+    "model": "registration_app.registrationcategory",
+    "pk": 6,
+    "fields": {
+      "name": "Sponsor representative",
+      "description": null
+    }
+  },
+  {
+    "model": "registration_app.reasonforattending",
+    "pk": 1,
+    "fields": {
+      "name": "Professional development"
+    }
+  },
+  {
+    "model": "registration_app.reasonforattending",
+    "pk": 2,
+    "fields": {
+      "name": "Networking opportunities"
+    }
+  },
+  {
+    "model": "registration_app.reasonforattending",
+    "pk": 3,
+    "fields": {
+      "name": "Learning about specific topics"
+    }
+  },
+  {
+    "model": "registration_app.reasonforattending",
+    "pk": 4,
+    "fields": {
+      "name": "Representing my organization"
+    }
+  },
+  {
+    "model": "registration_app.reasonforattending",
+    "pk": 5,
+    "fields": {
+      "name": "Others"
+    }
+  },
+  {
+    "model": "registration_app.accessibilityoption",
+    "pk": 1,
+    "fields": {
+      "name": "wheelchair accessibility"
+    }
+  },
+  {
+    "model": "registration_app.accessibilityoption",
+    "pk": 2,
+    "fields": {
+      "name": "Sign language interpretation"
+    }
+  },
+  {
+    "model": "registration_app.accessibilityoption",
+    "pk": 3,
+    "fields": {
+      "name": "Large print media"
+    }
+  },
+  {
+    "model": "registration_app.accessibilityoption",
+    "pk": 4,
+    "fields": {
+      "name": "Audio assistance"
+    }
+  },
+  {
+    "model": "registration_app.accessibilityoption",
+    "pk": 7,
+    "fields": {
+      "name": "Others"
+    }
+  },
+  {
+    "model": "speakers.speakers",
+    "pk": 1,
+    "fields": {
+      "Speaker_name": "eqrwetrh",
+      "Speaker_position": "rwteryt",
+      "Speaking_topic": "To be announced",
+      "Speakin_Day": "Tuesday",
+      "Speaking_time": "14:42:00",
+      "Brief_description": "GHXTHTHFTR",
+      "created_at": "2025-08-25T15:25:35.072Z"
+    }
+  },
+  {
+    "model": "speakers.speakers",
+    "pk": 2,
+    "fields": {
+      "Speaker_name": "Isaac Goodness",
+      "Speaker_position": "Full-Stack Developer",
+      "Speaking_topic": "Empowering Youths for a Progressive Economy",
+      "Speakin_Day": "Monday 27TH of November | Day 1",
+      "Speaking_time": "11:53:00",
+      "Brief_description": "Onwuanaku Goodness is a multifaceted professional with expertise spanning technology, sound engineering, and entrepreneurship. He is a graduate of Metallurgical and Materials Engineering from the Federal University of Technology Akure and has worked across fields such as software development, digital marketing, and music production. As the founder of Goodzic Sounds, a record label and sound solutions brand, he combines creativity with technical skill to deliver impactful projects. Goodness is also passionate about learning, teaching, and building systemsùranging from Django-based applications to digital coursesùand is driven by a vision to influence lives positively through technology, music, and business.",
+      "created_at": "2025-09-13T21:53:20.103Z"
+    }
+  },
+  {
+    "model": "speakers.speakers",
+    "pk": 3,
+    "fields": {
+      "Speaker_name": "fewfewr",
+      "Speaker_position": "efwe",
+      "Speaking_topic": "To be announced",
+      "Speakin_Day": "Monday 27TH of November | Day 1",
+      "Speaking_time": "23:31:00",
+      "Brief_description": "wqe",
+      "created_at": "2025-09-17T18:29:49.299Z"
+    }
+  },
+  {
+    "model": "speakers.speakers",
+    "pk": 4,
+    "fields": {
+      "Speaker_name": "Goodness",
+      "Speaker_position": "CEO",
+      "Speaking_topic": "To be announced",
+      "Speakin_Day": "Tuesday 27TH of November | Day 1",
+      "Speaking_time": "09:31:00",
+      "Brief_description": "n engaging educator who blends knowledge with practical skills. Known for breaking down complex concepts into clear, relatable lessons that inspire both learning and action.",
+      "created_at": "2025-09-17T18:31:47.461Z"
+    }
+  },
+  {
+    "model": "speakers.speakerimage",
+    "pk": 5,
+    "fields": {
+      "blog": 1,
+      "image": "speaker_images/Layer_5_vXUM6gO.png"
+    }
+  },
+  {
+    "model": "speakers.speakerimage",
+    "pk": 6,
+    "fields": {
+      "blog": 2,
+      "image": "speaker_images/wep8.jpg"
+    }
+  },
+  {
+    "model": "speakers.speakerimage",
+    "pk": 7,
+    "fields": {
+      "blog": 3,
+      "image": "speaker_images/wep8_xqe7pZn.jpg"
+    }
+  },
+  {
+    "model": "speakers.speakerimage",
+    "pk": 8,
+    "fields": {
+      "blog": 4,
+      "image": "speaker_images/wep9.jpg"
+    }
+  },
+  {
+    "model": "sponsorship.sponsorshippackage",
+    "pk": 7,
+    "fields": {
+      "name": "Premium",
+      "price": "10000000.00"
+    }
+  },
+  {
+    "model": "sponsorship.sponsorshippackage",
+    "pk": 8,
+    "fields": {
+      "name": "Basic",
+      "price": "2000000.00"
+    }
+  },
+  {
+    "model": "sponsorship.sponsorshippackage",
+    "pk": 9,
+    "fields": {
+      "name": "Expert",
+      "price": "15000000.00"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 5,
+    "fields": {
+      "name": "AIDSFOND",
+      "logo": "uploads/sponsors/AIDSFOND.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 8,
+    "fields": {
+      "name": "FRONT-LINE-AIDS",
+      "logo": "uploads/sponsors/FRONT-LINE-AIDS_Guh51lI.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 9,
+    "fields": {
+      "name": "HEARTLAND-ALLIANCE",
+      "logo": "uploads/sponsors/HEARTLAND-ALLIANCE.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 14,
+    "fields": {
+      "name": "OPEN-SOCIETY-FOUNDATION",
+      "logo": "uploads/sponsors/OPEN-SOCIETY-FOUNDATION.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 15,
+    "fields": {
+      "name": "PARADIGMA",
+      "logo": "uploads/sponsors/PARADIGMA.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 16,
+    "fields": {
+      "name": "UNAIDS",
+      "logo": "uploads/sponsors/unaids.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 17,
+    "fields": {
+      "name": "UNODC",
+      "logo": "uploads/sponsors/UNODC.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 19,
+    "fields": {
+      "name": "YOUTHRISE-INTERNATIONAL",
+      "logo": "uploads/sponsors/YOUTHRISE-INTERNATIONAL.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 21,
+    "fields": {
+      "name": "WHRIN",
+      "logo": "uploads/sponsors/whrin-logo-new-removebg-preview.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 22,
+    "fields": {
+      "name": "IHVN",
+      "logo": "uploads/sponsors/IHVN-LOGO-removebg-preview.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 24,
+    "fields": {
+      "name": "AMPLIFY-CHANGE",
+      "logo": "uploads/sponsors/AMPLIFY-CHANGE-removebg-preview.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 26,
+    "fields": {
+      "name": "NCPWD",
+      "logo": "uploads/sponsors/NCPWD.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 29,
+    "fields": {
+      "name": "NHRC-",
+      "logo": "uploads/sponsors/NHRC-removebg-preview_1.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 31,
+    "fields": {
+      "name": "A New Thing",
+      "logo": "uploads/sponsors/A_new_thing_foundation__2_-removebg-preview.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 32,
+    "fields": {
+      "name": "FIDA",
+      "logo": "uploads/sponsors/FIDA-removebg-preview.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 33,
+    "fields": {
+      "name": "IDPC",
+      "logo": "uploads/sponsors/IDPC-logo-new-removebg-preview_cclCQgq.png"
+    }
+  },
+  {
+    "model": "main.sponsor",
+    "pk": 34,
+    "fields": {
+      "name": "VIIV",
+      "logo": "uploads/sponsors/viiv_logo-removebg-preview.png"
+    }
+  },
+  {
+    "model": "main.work",
+    "pk": 1,
+    "fields": {
+      "name": "Out - of - School Youth"
+    }
+  },
+  {
+    "model": "main.work",
+    "pk": 2,
+    "fields": {
+      "name": "Youths"
+    }
+  },
+  {
+    "model": "main.work",
+    "pk": 3,
+    "fields": {
+      "name": "People With Disability"
+    }
+  },
+  {
+    "model": "main.work",
+    "pk": 4,
+    "fields": {
+      "name": "People Who Use Drugs"
+    }
+  },
+  {
+    "model": "main.work",
+    "pk": 5,
+    "fields": {
+      "name": "People Living with HIV"
+    }
+  },
+  {
+    "model": "main.work",
+    "pk": 6,
+    "fields": {
+      "name": "Women"
+    }
+  },
+  {
+    "model": "main.work",
+    "pk": 7,
+    "fields": {
+      "name": "Internally Displaced Persons (IDPs)"
+    }
+  },
+  {
+    "model": "main.work",
+    "pk": 8,
+    "fields": {
+      "name": "People with Albinism"
+    }
+  },
+  {
+    "model": "main.work",
+    "pk": 9,
+    "fields": {
+      "name": "Others"
+    }
+  },
+  {
+    "model": "Images.galleryimage",
+    "pk": 1,
+    "fields": {
+      "image": "gallery_images/xbanner_2.png",
+      "uploaded_at": "2025-08-25T11:48:47.957Z",
+      "title": "aaaa"
+    }
+  },
+  {
+    "model": "Images.galleryimage",
+    "pk": 2,
+    "fields": {
+      "image": "gallery_images/Layer_5.png",
+      "uploaded_at": "2025-08-25T11:48:58.077Z",
+      "title": "tests"
+    }
+  },
+  {
+    "model": "Images.galleryimage",
+    "pk": 3,
+    "fields": {
+      "image": "gallery_images/wep9.jpg",
+      "uploaded_at": "2025-09-13T21:56:40.246Z",
+      "title": "Sleeping Boy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add permission",
+      "content_type": ["auth", "permission"],
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change permission",
+      "content_type": ["auth", "permission"],
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": ["auth", "permission"],
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view permission",
+      "content_type": ["auth", "permission"],
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add group",
+      "content_type": ["auth", "group"],
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change group",
+      "content_type": ["auth", "group"],
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete group",
+      "content_type": ["auth", "group"],
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view group",
+      "content_type": ["auth", "group"],
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add user",
+      "content_type": ["auth", "user"],
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change user",
+      "content_type": ["auth", "user"],
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete user",
+      "content_type": ["auth", "user"],
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view user",
+      "content_type": ["auth", "user"],
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add content type",
+      "content_type": ["contenttypes", "contenttype"],
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change content type",
+      "content_type": ["contenttypes", "contenttype"],
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": ["contenttypes", "contenttype"],
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view content type",
+      "content_type": ["contenttypes", "contenttype"],
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add session",
+      "content_type": ["sessions", "session"],
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change session",
+      "content_type": ["sessions", "session"],
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete session",
+      "content_type": ["sessions", "session"],
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view session",
+      "content_type": ["sessions", "session"],
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add blog post",
+      "content_type": ["blogpost", "blogpost"],
+      "codename": "add_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change blog post",
+      "content_type": ["blogpost", "blogpost"],
+      "codename": "change_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete blog post",
+      "content_type": ["blogpost", "blogpost"],
+      "codename": "delete_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view blog post",
+      "content_type": ["blogpost", "blogpost"],
+      "codename": "view_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add blog image",
+      "content_type": ["blogpost", "blogimage"],
+      "codename": "add_blogimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change blog image",
+      "content_type": ["blogpost", "blogimage"],
+      "codename": "change_blogimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete blog image",
+      "content_type": ["blogpost", "blogimage"],
+      "codename": "delete_blogimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view blog image",
+      "content_type": ["blogpost", "blogimage"],
+      "codename": "view_blogimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add exhibition",
+      "content_type": ["exhibition", "exhibition"],
+      "codename": "add_exhibition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change exhibition",
+      "content_type": ["exhibition", "exhibition"],
+      "codename": "change_exhibition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete exhibition",
+      "content_type": ["exhibition", "exhibition"],
+      "codename": "delete_exhibition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view exhibition",
+      "content_type": ["exhibition", "exhibition"],
+      "codename": "view_exhibition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add gallery",
+      "content_type": ["galleries", "gallery"],
+      "codename": "add_gallery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change gallery",
+      "content_type": ["galleries", "gallery"],
+      "codename": "change_gallery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete gallery",
+      "content_type": ["galleries", "gallery"],
+      "codename": "delete_gallery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view gallery",
+      "content_type": ["galleries", "gallery"],
+      "codename": "view_gallery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add image",
+      "content_type": ["galleries", "image"],
+      "codename": "add_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change image",
+      "content_type": ["galleries", "image"],
+      "codename": "change_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete image",
+      "content_type": ["galleries", "image"],
+      "codename": "delete_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view image",
+      "content_type": ["galleries", "image"],
+      "codename": "view_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add registration",
+      "content_type": ["registration_app", "registration"],
+      "codename": "add_registration"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change registration",
+      "content_type": ["registration_app", "registration"],
+      "codename": "change_registration"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete registration",
+      "content_type": ["registration_app", "registration"],
+      "codename": "delete_registration"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view registration",
+      "content_type": ["registration_app", "registration"],
+      "codename": "view_registration"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add speakers",
+      "content_type": ["speakers", "speakers"],
+      "codename": "add_speakers"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change speakers",
+      "content_type": ["speakers", "speakers"],
+      "codename": "change_speakers"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete speakers",
+      "content_type": ["speakers", "speakers"],
+      "codename": "delete_speakers"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view speakers",
+      "content_type": ["speakers", "speakers"],
+      "codename": "view_speakers"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add speaker image",
+      "content_type": ["speakers", "speakerimage"],
+      "codename": "add_speakerimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change speaker image",
+      "content_type": ["speakers", "speakerimage"],
+      "codename": "change_speakerimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete speaker image",
+      "content_type": ["speakers", "speakerimage"],
+      "codename": "delete_speakerimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view speaker image",
+      "content_type": ["speakers", "speakerimage"],
+      "codename": "view_speakerimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add sponsors",
+      "content_type": ["sponsorship", "sponsors"],
+      "codename": "add_sponsors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change sponsors",
+      "content_type": ["sponsorship", "sponsors"],
+      "codename": "change_sponsors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete sponsors",
+      "content_type": ["sponsorship", "sponsors"],
+      "codename": "delete_sponsors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view sponsors",
+      "content_type": ["sponsorship", "sponsors"],
+      "codename": "view_sponsors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add gallery image",
+      "content_type": ["Images", "galleryimage"],
+      "codename": "add_galleryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change gallery image",
+      "content_type": ["Images", "galleryimage"],
+      "codename": "change_galleryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete gallery image",
+      "content_type": ["Images", "galleryimage"],
+      "codename": "delete_galleryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view gallery image",
+      "content_type": ["Images", "galleryimage"],
+      "codename": "view_galleryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add registration category",
+      "content_type": ["registration_app", "registrationcategory"],
+      "codename": "add_registrationcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change registration category",
+      "content_type": ["registration_app", "registrationcategory"],
+      "codename": "change_registrationcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete registration category",
+      "content_type": ["registration_app", "registrationcategory"],
+      "codename": "delete_registrationcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view registration category",
+      "content_type": ["registration_app", "registrationcategory"],
+      "codename": "view_registrationcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add programme",
+      "content_type": ["speakers", "programme"],
+      "codename": "add_programme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change programme",
+      "content_type": ["speakers", "programme"],
+      "codename": "change_programme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete programme",
+      "content_type": ["speakers", "programme"],
+      "codename": "delete_programme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view programme",
+      "content_type": ["speakers", "programme"],
+      "codename": "view_programme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add document",
+      "content_type": ["admin", "document"],
+      "codename": "add_document"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change document",
+      "content_type": ["admin", "document"],
+      "codename": "change_document"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete document",
+      "content_type": ["admin", "document"],
+      "codename": "delete_document"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view document",
+      "content_type": ["admin", "document"],
+      "codename": "view_document"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add sponsor",
+      "content_type": ["main", "sponsor"],
+      "codename": "add_sponsor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change sponsor",
+      "content_type": ["main", "sponsor"],
+      "codename": "change_sponsor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete sponsor",
+      "content_type": ["main", "sponsor"],
+      "codename": "delete_sponsor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view sponsor",
+      "content_type": ["main", "sponsor"],
+      "codename": "view_sponsor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add sponsorship package",
+      "content_type": ["sponsorship", "sponsorshippackage"],
+      "codename": "add_sponsorshippackage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change sponsorship package",
+      "content_type": ["sponsorship", "sponsorshippackage"],
+      "codename": "change_sponsorshippackage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete sponsorship package",
+      "content_type": ["sponsorship", "sponsorshippackage"],
+      "codename": "delete_sponsorshippackage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view sponsorship package",
+      "content_type": ["sponsorship", "sponsorshippackage"],
+      "codename": "view_sponsorshippackage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add reason_for_ attending",
+      "content_type": ["registration_app", "reasonforattending"],
+      "codename": "add_reason_for_attending"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change reason_for_ attending",
+      "content_type": ["registration_app", "reasonforattending"],
+      "codename": "change_reason_for_attending"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete reason_for_ attending",
+      "content_type": ["registration_app", "reasonforattending"],
+      "codename": "delete_reason_for_attending"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view reason_for_ attending",
+      "content_type": ["registration_app", "reasonforattending"],
+      "codename": "view_reason_for_attending"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add reason for attending",
+      "content_type": ["registration_app", "reasonforattending"],
+      "codename": "add_reasonforattending"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change reason for attending",
+      "content_type": ["registration_app", "reasonforattending"],
+      "codename": "change_reasonforattending"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete reason for attending",
+      "content_type": ["registration_app", "reasonforattending"],
+      "codename": "delete_reasonforattending"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view reason for attending",
+      "content_type": ["registration_app", "reasonforattending"],
+      "codename": "view_reasonforattending"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add accessibility option",
+      "content_type": ["registration_app", "accessibilityoption"],
+      "codename": "add_accessibilityoption"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change accessibility option",
+      "content_type": ["registration_app", "accessibilityoption"],
+      "codename": "change_accessibilityoption"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete accessibility option",
+      "content_type": ["registration_app", "accessibilityoption"],
+      "codename": "delete_accessibilityoption"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view accessibility option",
+      "content_type": ["registration_app", "accessibilityoption"],
+      "codename": "view_accessibilityoption"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add newsletter",
+      "content_type": ["Newsletter", "newsletter"],
+      "codename": "add_newsletter"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change newsletter",
+      "content_type": ["Newsletter", "newsletter"],
+      "codename": "change_newsletter"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete newsletter",
+      "content_type": ["Newsletter", "newsletter"],
+      "codename": "delete_newsletter"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view newsletter",
+      "content_type": ["Newsletter", "newsletter"],
+      "codename": "view_newsletter"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add contact us",
+      "content_type": ["Contact_Us", "contactus"],
+      "codename": "add_contactus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change contact us",
+      "content_type": ["Contact_Us", "contactus"],
+      "codename": "change_contactus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete contact us",
+      "content_type": ["Contact_Us", "contactus"],
+      "codename": "delete_contactus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view contact us",
+      "content_type": ["Contact_Us", "contactus"],
+      "codename": "view_contactus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add stream",
+      "content_type": ["main", "stream"],
+      "codename": "add_stream"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change stream",
+      "content_type": ["main", "stream"],
+      "codename": "change_stream"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete stream",
+      "content_type": ["main", "stream"],
+      "codename": "delete_stream"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view stream",
+      "content_type": ["main", "stream"],
+      "codename": "view_stream"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add stories",
+      "content_type": ["main", "stories"],
+      "codename": "add_stories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change stories",
+      "content_type": ["main", "stories"],
+      "codename": "change_stories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete stories",
+      "content_type": ["main", "stories"],
+      "codename": "delete_stories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view stories",
+      "content_type": ["main", "stories"],
+      "codename": "view_stories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add work",
+      "content_type": ["main", "work"],
+      "codename": "add_work"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change work",
+      "content_type": ["main", "work"],
+      "codename": "change_work"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete work",
+      "content_type": ["main", "work"],
+      "codename": "delete_work"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view work",
+      "content_type": ["main", "work"],
+      "codename": "view_work"
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$VLvavRfW49JafHWSS8hytP$M0WCCMLaLzcHTf/8eO8gCqdv9CsgQcFR9nd4LMo59f8=",
+      "last_login": "2025-09-19T12:51:13.492Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "gudzy86@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-08-25T11:36:19.214Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
