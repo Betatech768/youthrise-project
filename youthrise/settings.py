@@ -107,25 +107,25 @@ WSGI_APPLICATION = 'youthrise.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'youthrise_project',
-        'USER': 'goodness',
-        'PASSWORD': 'chinexy',
-        'HOST': 'localhost',   # or the database server IP
-        'PORT': '3306',        # default MySQL port
-    }
-}
-
-
 # DATABASES = {
-#     'default': dj_database_url.parse(
-#         config("DATABASE_URL"),
-#         conn_max_age=600,  # keep connection alive
-#         ssl_require=False
-#     )
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'youthrise_project',
+#         'USER': 'goodness',
+#         'PASSWORD': 'chinexy',
+#         'HOST': 'localhost',   # or the database server IP
+#         'PORT': '3306',        # default MySQL port
+#     }
 # }
+
+
+DATABASES = {
+    'default': dj_database_url.parse(
+        config("DATABASE_URL"),
+        conn_max_age=600,  # keep connection alive
+        ssl_require=False
+    )
+}
 
 
 # Password validation
