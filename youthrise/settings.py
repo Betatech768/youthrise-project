@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-24^19k2gqhu+-n3kfsub73zk7z88l3r2ue)fh^4zv(6x7@^8-e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="").split(",")
@@ -119,13 +119,29 @@ WSGI_APPLICATION = 'youthrise.wsgi.application'
 # }
 
 
+# DATABASES = {
+#     'default': dj_database_url.parse(
+#         config("DATABASE_URL"),
+#         conn_max_age=600,  # keep connection alive
+#         ssl_require=False
+#     )
+# }
+
+
+
 DATABASES = {
-    'default': dj_database_url.parse(
-        config("DATABASE_URL"),
-        conn_max_age=600,  # keep connection alive
-        ssl_require=False
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'wearepeopleconference',
+        'USER': 'wearepeopleconference_user',
+        'PASSWORD': '2zCWMAPsAVBltTOE2geXYXkVg8lBaH6Y',
+        'HOST': 'dpg-d3afjf24d50c73d8ajs0-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }
 }
+
+
+
 
 
 # Password validation

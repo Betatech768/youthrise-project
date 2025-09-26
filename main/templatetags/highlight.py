@@ -17,3 +17,15 @@ def highlight(text, query):
     )
     return highlighted
 highlight.is_safe = True
+
+
+# myapp/templatetags/date_extras.py
+
+@register.filter
+def ordinal_day(value):
+    day = value.day
+    if 4 <= day <= 20 or 24 <= day <= 30:
+        suffix = "TH"
+    else:
+        suffix = ["ST", "ND", "RD"][day % 10 - 1]
+    return f"{day}{suffix} {value.strftime('%B')}"

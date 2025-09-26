@@ -136,7 +136,7 @@
       media="all"
     />
 
-     <link
+    <link
       rel="icon"
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="32x32"
@@ -151,67 +151,73 @@
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
     />
 
-    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-  <!-- Recommended additional Open Graph tags -->
-  <meta property="og:title" content="We Are People Conference">
-  <meta property="og:description" content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.">
-  <meta property="og:url" content="{% static 'upload/wep2.jpg' %}">
-  <meta property="og:type" content="website">
+    <!-- Recommended additional Open Graph tags -->
+    <meta property="og:title" content="We Are People Conference" />
+    <meta
+      property="og:description"
+      content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future."
+    />
+    <meta property="og:url" content="{% static 'upload/wep2.jpg' %}" />
+    <meta property="og:type" content="website" />
 
-     <style>
+    <style>
       /* Center footer content on mobile */
-@media (max-width: 768px) {
-  #footer .sidebar_widget.three {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Center horizontally */
-    text-align: center;   /* Center text */
-    gap: 20px;            /* Space between blocks */
-  }
+      @media (max-width: 768px) {
+        #footer .sidebar_widget.three {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center horizontally */
+          text-align: center; /* Center text */
+          gap: 20px; /* Space between blocks */
+        }
 
-  #footer .sidebar_widget.three li {
-    width: 100%;          /* Full width on mobile */
-    max-width: 400px;     /* Optional: keeps it tidy */
-  }
+        #footer .sidebar_widget.three li {
+          width: 100%; /* Full width on mobile */
+          max-width: 400px; /* Optional: keeps it tidy */
+        }
 
-  #footer img {
-    margin: 0 auto;       /* Center logo */
-    display: block;
-  }
+        #footer img {
+          margin: 0 auto; /* Center logo */
+          display: block;
+        }
 
-  #footer .social_wrapper ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-  }
+        #footer .social_wrapper ul {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          padding: 0;
+          list-style: none;
+        }
 
-  #footer button {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
-    </style> 
+        #footer button {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      }
+    </style>
   </head>
   <body
-   style="background-color: #93b144;" class="page-template-default page page-id-185 page-child parent-pageid-95 woocommerce-no-js ppb_enable"
+    style="background-color: #93b144"
+    class="page-template-default page page-id-185 page-child parent-pageid-95 woocommerce-no-js ppb_enable"
   >
-{% include 'main/nav.html' %}
+    {% include 'main/nav.html' %}
     <!-- Delete the above  -->
 
-    <div style="background-color: aliceblue; margin-bottom: 30px; margin-top: 80px;" id="page_caption" class="   ">
+    <div
+      style="background-color: aliceblue; margin-bottom: 30px; margin-top: 80px"
+      id="page_caption"
+      class="   "
+    >
       <div class="page_title_wrapper">
         <div class="standard_wrapper">
           <div class="page_title_inner">
             <div class="page_title_content">
-              <h1 style="color: #091e1b;">Contact Us</h1>
-             
+              <h1 style="color: #091e1b">Contact Us</h1>
             </div>
           </div>
         </div>
@@ -240,9 +246,9 @@
                 <h2 class="ppb_title" style="color: #000000">
                   Get In Touch With Us
                 </h2>
-                <div id="contactMessage"></div> 
-              
-                <div  class="contact_form7_wrapper">
+                <div id="contactMessage"></div>
+
+                <div class="contact_form7_wrapper">
                   <div
                     role="form"
                     class="wpcf7"
@@ -250,27 +256,29 @@
                     lang="en-US"
                     dir="ltr"
                   >
-                    
                     <form
                       class="quform"
                       action="{% url 'contact' %}"
                       method="post"
                       id="contactForm"
                     >
-                    {% csrf_token %}
+                      {% csrf_token %}
                       <div class="quform-elements">
                         <div class="quform-element">
                           <br />
                           <span class="wpcf7-form-control-wrap your-name">
-                           {{form.as_p}}
+                            {{form.as_p}}
                           </span>
                         </div>
-                     
 
                         <!-- Begin Submit button -->
                         <div class="quform-submit">
                           <div class="quform-submit-inner">
-                            <button style="background-color: #091e1b;" type="submit" class="submit-button">
+                            <button
+                              style="background-color: #091e1b"
+                              type="submit"
+                              class="submit-button"
+                            >
                               <span>Send</span>
                             </button>
                           </div>
@@ -288,137 +296,95 @@
         </div>
       </div>
     </div>
-<!-- footer -->
-   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
-      <ul class="sidebar_widget three">
-        <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p>
-              <img
-                src="{% static 'upload/Logo Icon.png' %}"
-                width="165"
-                height="20"
-                alt=""
-              />
-            </p>
-            
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
-             <br>
-              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
-              PHONE NUMBER: +2349045646031 <br>
-              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
-              KAURA DISTRICT FCT. ABUJA
-            </p>
-                     
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p style="font-size: large; font-weight: bold;">
-              NEWSLETTER SIGNUP
-            </p>
-            <p>Register to get our Newsletter </p>
+    <!-- footer -->
+    {% include 'main/footer.html' %}
 
-            <form
-            id="newsletter-form"
-              class="mc4wp-form mc4wp-form-1234"
-              method="post"
-              data-id="1234"
-              data-name="Newsletter Form"
-              action="{% url 'newsletter_signup' %}">
-              {% csrf_token %}
-            <input id="clear" type="email" name="email" required style="background-color: #123f38; border: none; color: wheat;">
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
-            <div id="newsletter-message"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <script>
+      document
+        .getElementById("newsletter-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-    <div id="side_menu_wrapper" class="overlay_background">
-      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
-    </div>
+          let formData = new FormData(this);
 
-
-
-
-<script>
-document.getElementById("newsletter-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let formData = new FormData(this);
-
-  fetch(this.action, {
-    method: "POST",
-    body: formData,
-    headers: {
-      "X-Requested-With": "XMLHttpRequest"
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    let msg = document.getElementById("newsletter-message");
-    if (data.type === "success") {
-      msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
-    } else {
-      msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
-    }
-  });
-  document.getElementById("clear").value = "";
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const contactForm = document.getElementById("contactForm");
-    const messageDiv = document.getElementById("contactMessage");
-
-    contactForm.addEventListener("submit", function (e) {
-        e.preventDefault(); // prevent normal form submit
-
-        const formData = new FormData(contactForm);
-
-        fetch(contactForm.action, {
+          fetch(this.action, {
             method: "POST",
             body: formData,
             headers: {
-                "X-Requested-With": "XMLHttpRequest" // let Django know it's AJAX
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            messageDiv.innerHTML = ""; // clear old messages
+              "X-Requested-With": "XMLHttpRequest",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              let msg = document.getElementById("newsletter-message");
+              if (data.type === "success") {
+                msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
+              } else {
+                let errorText = "";
 
-            if (data.type === "success") {
+                // If it's a dict of errors from Django
+                if (data.errors) {
+                  errorText = Object.values(data.errors).flat().join("<br>");
+                } else if (data.message) {
+                  // fallback if you later return a single error message
+                  errorText = data.message;
+                } else {
+                  errorText = "An unexpected error occurred.";
+                }
+
+                msg.innerHTML = `<p style="color:red;">${errorText}</p>`;
+              }
+            });
+          document.getElementById("clear").value = "";
+        });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+        const messageDiv = document.getElementById("contactMessage");
+
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault(); // prevent normal form submit
+
+          const formData = new FormData(contactForm);
+
+          fetch(contactForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "X-Requested-With": "XMLHttpRequest", // let Django know it's AJAX
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              messageDiv.innerHTML = ""; // clear old messages
+
+              if (data.type === "success") {
                 messageDiv.innerHTML = `<p style="color:green;">${data.message}</p>`;
                 contactForm.reset();
-            } else if (data.type === "error") {
+              } else if (data.type === "error") {
                 messageDiv.innerHTML = `<p style="color:red;">${data.error[0]}</p>`;
 
                 // Show field-specific errors
                 for (let field in data.elementErrors) {
-                    let input = document.querySelector(`[name=${field}]`);
-                    if (input) {
-                        let errorText = data.elementErrors[field].errors.join(", ");
-                        let errorElement = document.createElement("div");
-                        errorElement.style.color = "red";
-                        errorElement.innerText = errorText;
-                        input.insertAdjacentElement("afterend", errorElement);
-                    }
+                  let input = document.querySelector(`[name=${field}]`);
+                  if (input) {
+                    let errorText = data.elementErrors[field].errors.join(", ");
+                    let errorElement = document.createElement("div");
+                    errorElement.style.color = "red";
+                    errorElement.innerText = errorText;
+                    input.insertAdjacentElement("afterend", errorElement);
+                  }
                 }
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            messageDiv.innerHTML = `<p style="color:red;">Something went wrong. Try again later.</p>`;
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              messageDiv.innerHTML = `<p style="color:red;">Something went wrong. Try again later.</p>`;
+            });
         });
-    });
-});
-</script>
-
+      });
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -268,14 +268,14 @@
 }
 </style>
      <style>
-    .video-container {
+    .video-containerr {
       position: relative;
       width: 100%;
       max-width: 800px;
       margin: auto;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 4 / 3;
     }
-    .video-container iframe {
+    .video-containerr iframe {
       width: 100%;
       height: 100%;
       border: none;
@@ -303,7 +303,7 @@
     <div
       id="page_caption"
       class="hasbg parallax"
-      style="background-image: url('{% static "upload/wep5.jpg" %}');"
+      style="background-image: url('{% static "upload/programs.jpg" %}');"
     >
       <div class="page_title_wrapper">
         <div class="standard_wrapper">
@@ -327,7 +327,15 @@
       <div >
            <!-- Actions -->
       <div style="margin-top:10px; display: grid; justify-content: center;">
-        <a href="{{ doc.pdf.url }}" download class="btn-download" style="background-color: #123f38;padding: 10px; border-radius: 10px; color: wheat;"> Download Programme</a>
+        <a href="{{ doc.pdf.url }}" 
+   download 
+   class="btn-download" 
+   style="background-color: #123f38; padding: 10px; border-radius: 10px; color: wheat; text-decoration:none;"
+   onmouseover="this.style.backgroundColor='#0f2e2a'; this.style.color='white';"
+   onmouseout="this.style.backgroundColor='#123f38'; this.style.color='wheat';">
+   Download Programme
+</a>
+
         
       </div>
     </div>
@@ -340,106 +348,69 @@
 
 
       <!-- Zoom Embedded  -->
-<div style="margin: 10px ; display: grid; justify-content: center; font-weight: 600; font-size: large;" class="page_title_content"> WATCH LIVE EVENT</div>
+      <div style="margin: 10px ; display: grid; justify-content: center; font-weight: 600; font-size: large;" class="page_title_content"> WATCH LIVE EVENT</div>
         {% if video %}
-      <div class="video-container">
+      <div class="video-containerr">
         <iframe src="{{ video }}" allowfullscreen></iframe>
       </div>
         {% else %}
       <div class="no-stream">
        No live stream available right now. Please check back later.
       </div>
-        {% endif %}
-      
+      {% endif %}
+     <!-- Zoom Embedded End -->
 
-      <!-- Zoom Embedded End -->
+    {% if days  %}
+        <!-- Day 1 Embedded  -->
+      {% for d in days %}
+      <div style="margin: 10px ; display: grid; justify-content: center; font-weight: 600; font-size: large; text-transform: uppercase;" class="page_title_content"> WATCH {{d.category.name}} EVENT</div>
+        
+      <div class="video-containerr">
+        <iframe src="{{ d.video_link }}" allowfullscreen></iframe>
+      </div>
+      {% endfor %}
+    {% endif %}
+     <!-- Day 1 Embedded End -->
 
      <!-- footer -->
-   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
-      <ul class="sidebar_widget three">
-        <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p>
-              <img
-                src="{% static 'upload/Logo Icon.png' %}"
-                width="165"
-                height="20"
-                alt=""
-              />
-            </p>
-            
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
-             <br>
-              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
-              PHONE NUMBER: +2349045646031 <br>
-              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
-              KAURA DISTRICT FCT. ABUJA
-            </p>
-                     
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p style="font-size: large; font-weight: bold;">
-              NEWSLETTER SIGNUP
-            </p>
-            <p>Register to get our Newsletter </p>
+  {% include 'main/footer.html' %}
+<script>
+document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-            <form
-            id="newsletter-form"
-              class="mc4wp-form mc4wp-form-1234"
-              method="post"
-              data-id="1234"
-              data-name="Newsletter Form"
-              action="{% url 'newsletter_signup' %}">
-              {% csrf_token %}
-            <input id="clear" type="email" name="email" required style="background-color: #123f38; border: none; color: wheat;">
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
-            <div id="newsletter-message"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
+  let formData = new FormData(this);
 
-    <div id="side_menu_wrapper" class="overlay_background">
-      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
-    </div>
+  fetch(this.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      "X-Requested-With": "XMLHttpRequest"
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    let msg = document.getElementById("newsletter-message");
+    if (data.type === "success") {
+      msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
+    } else {
+  let errorText = "";
 
+  // If it's a dict of errors from Django
+  if (data.errors) {
+    errorText = Object.values(data.errors).flat().join("<br>");
+  } else if (data.message) {
+    // fallback if you later return a single error message
+    errorText = data.message;
+  } else {
+    errorText = "An unexpected error occurred.";
+  }
 
-
-
-
-    
-
-    <script>
-    document.getElementById("newsletter-form").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      let formData = new FormData(this);
-
-      fetch(this.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          "X-Requested-With": "XMLHttpRequest"
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        let msg = document.getElementById("newsletter-message");
-        if (data.type === "success") {
-          msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
-        } else {
-          msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
-        }
-      });
-      document.getElementById("clear").value = "";
-    });
-    </script>
+  msg.innerHTML = `<p style="color:red;">${errorText}</p>`;
+}
+  });
+  document.getElementById("clear").value = "";
+});
+</script>
     <script>
       window.addEventListener("scroll", function () {
         const navbar = document.querySelector(".navbar");

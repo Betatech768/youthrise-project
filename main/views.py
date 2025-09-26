@@ -8,7 +8,7 @@ from registration_app.forms import RegistrationForm
 from Images.models import GalleryImage
 from speakers.models import Speakers, SpeakerImage
 from django.http import JsonResponse
-from admin.models import Document
+from admin.models import Document, ConferenceVenue, ConferenceDate, ViewingDays
 from .models import Sponsor
 from registration_app.models import RegistrationCategory
 from Newsletter.forms import NewsletterForm
@@ -30,7 +30,7 @@ def faqs(request):
 
 def blog(request, blog_id):
     blog = get_object_or_404(BlogPost, id= blog_id)
-    blogs = BlogPost.objects.all().order_by('created_at')
+    blogs = BlogPost.objects.all().order_by('-created_at')
 
     context = {
         'blog': blog,
@@ -40,12 +40,16 @@ def blog(request, blog_id):
 
 
 def index(request):
+    date= ConferenceDate.objects.all()
+    venue = ConferenceVenue.objects.all()
     speakers = Speakers.objects.prefetch_related('images').all()
     sponsors = Sponsor.objects.all() 
     gallery_items = Gallery.objects.prefetch_related('images').all()
     context = {'items': gallery_items,
                'speakers': speakers,
-               'sponsors': sponsors
+               'sponsors': sponsors,
+               'date':date,
+               'venue':venue
                }
     return render(request, 'main/index.html', context)
 
@@ -195,6 +199,7 @@ def speaker_details(request, speaker_id):
 
 
 def programme(request):
+    days = ViewingDays.objects.all()
     streamId = stream.objects.all()
     # If Url Exist load the iframe else don't load it
     if streamId:
@@ -207,7 +212,9 @@ def programme(request):
     context = {
         "video": video,
         'documents': documents,
-        "streamId": streamId                   # None if no stream
+        "streamId": streamId,
+        "days": days,
+        # None if no stream
     }
     
     return render(request, 'main/programs.html', context)

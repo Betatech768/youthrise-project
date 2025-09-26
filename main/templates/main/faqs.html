@@ -292,61 +292,7 @@
     </div>
 
     <!-- footer -->
-   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
-      <ul class="sidebar_widget three">
-        <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p>
-              <img
-                src="{% static 'upload/Logo Icon.png' %}"
-                width="165"
-                height="20"
-                alt=""
-              />
-            </p>
-            
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
-             <br>
-              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
-              PHONE NUMBER: +2349045646031 <br>
-              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
-              KAURA DISTRICT FCT. ABUJA
-            </p>
-                     
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p style="font-size: large; font-weight: bold;">
-              NEWSLETTER SIGNUP
-            </p>
-            <p>Register to get our Newsletter </p>
-
-            <form
-            id="newsletter-form"
-              class="mc4wp-form mc4wp-form-1234"
-              method="post"
-              data-id="1234"
-              data-name="Newsletter Form"
-              action="{% url 'newsletter_signup' %}">
-              {% csrf_token %}
-            <input id="clear" type="email" name="email" required style="background-color: #123f38; border: none; color: wheat;">
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
-            <div id="newsletter-message"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div id="side_menu_wrapper" class="overlay_background">
-      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
-    </div>
-
-
+  {% include 'main/footer.html' %}
 
 
 <script>
@@ -368,13 +314,24 @@ document.getElementById("newsletter-form").addEventListener("submit", function(e
     if (data.type === "success") {
       msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
     } else {
-      msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
-    }
+  let errorText = "";
+
+  // If it's a dict of errors from Django
+  if (data.errors) {
+    errorText = Object.values(data.errors).flat().join("<br>");
+  } else if (data.message) {
+    // fallback if you later return a single error message
+    errorText = data.message;
+  } else {
+    errorText = "An unexpected error occurred.";
+  }
+
+  msg.innerHTML = `<p style="color:red;">${errorText}</p>`;
+}
   });
   document.getElementById("clear").value = "";
 });
 </script>
-
 
     <script>
       window.addEventListener("scroll", function () {

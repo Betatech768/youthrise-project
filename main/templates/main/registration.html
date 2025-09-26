@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<html  lang="en-US" data-menu="leftalign">
-   <head>
+<html lang="en-US" data-menu="leftalign">
+  <head>
     <title>We Are People | Registration</title>
 
     <meta charset="UTF-8" />
@@ -140,15 +140,18 @@
       sizes="32x32"
     />
 
-    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-  <!-- Recommended additional Open Graph tags -->
-  <meta property="og:title" content="We Are People Conference">
-  <meta property="og:description" content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.">
-  <meta property="og:url" content="{% static 'upload/wep2.jpg' %}">
-  <meta property="og:type" content="website">
+    <!-- Recommended additional Open Graph tags -->
+    <meta property="og:title" content="We Are People Conference" />
+    <meta
+      property="og:description"
+      content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future."
+    />
+    <meta property="og:url" content="{% static 'upload/wep2.jpg' %}" />
+    <meta property="og:type" content="website" />
     <link
       rel="icon"
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
@@ -159,51 +162,56 @@
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
     />
 
-
-       <style>
+    <style>
       /* Center footer content on mobile */
-@media (max-width: 768px) {
-  #footer .sidebar_widget.three {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Center horizontally */
-    text-align: center;   /* Center text */
-    gap: 20px;            /* Space between blocks */
-  }
+      @media (max-width: 768px) {
+        #footer .sidebar_widget.three {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center horizontally */
+          text-align: center; /* Center text */
+          gap: 20px; /* Space between blocks */
+        }
 
-  #footer .sidebar_widget.three li {
-    width: 100%;          /* Full width on mobile */
-    max-width: 400px;     /* Optional: keeps it tidy */
-  }
+        #footer .sidebar_widget.three li {
+          width: 100%; /* Full width on mobile */
+          max-width: 400px; /* Optional: keeps it tidy */
+        }
 
-  #footer img {
-    margin: 0 auto;       /* Center logo */
-    display: block;
-  }
+        #footer img {
+          margin: 0 auto; /* Center logo */
+          display: block;
+        }
 
-  #footer .social_wrapper ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-  }
+        #footer .social_wrapper ul {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          padding: 0;
+          list-style: none;
+        }
 
-  #footer button {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
+        #footer button {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body
-   style="background-color: #93b144;" class="home page-template-default page page-id-350 woocommerce-no-js ppb_enable"
+    style="background-color: #93b144"
+    class="home page-template-default page page-id-350 woocommerce-no-js ppb_enable"
   >
     <!-- We are people Hero Image  -->
-   {% include 'main/nav.html' %}
+    {% include 'main/nav.html' %}
     <div class="ppb_wrapper">
       <div class="one fullwidth">
         <div
@@ -273,7 +281,7 @@
                   data-x="center"
                   data-hoffset=""
                   data-y="center"
-                  data-voffset="-15"
+                  data-voffset="-10"
                   data-width="['auto']"
                   data-height="['auto']"
                   data-type="text"
@@ -291,7 +299,8 @@
                     line-height: 22px;
                     font-weight: 600;
                     color: rgba(255, 255, 255, 1);
-                    font-family: Poppins;
+                    font-family: 'Roboto Slab', serif;
+                    letter-spacing: 0.7ch;
                     text-transform: uppercase;
                   "
                 >
@@ -321,10 +330,11 @@
                     white-space: nowrap;
                     font-size: 70px;
                     line-height: 22px;
-                    font-weight: 700;
-                    color: rgba(255, 255, 255, 1);
-                    font-family: Poppins;
+                    font-weight: 1000;
+                    color: #ffffff;
+                    font-family: Mulish;
                     text-transform: uppercase;
+                    letter-spacing: 0.9ch;
                   "
                 >
                   We are People
@@ -357,9 +367,10 @@
                     font-weight: 400;
                     color: rgba(201, 201, 201, 1);
                     font-family: Poppins;
+                    letter-spacing: 1ch;
                   "
                 >
-                 Registration Form 
+                  Registration Form
                 </div>
               </li>
             </ul>
@@ -396,7 +407,7 @@
                   Register to attend
                 </h2>
                 <div class="page_tagline" style="">
-                  We are People Conference 
+                  We are People Conference
                 </div>
                 <div class="contact_form7_wrapper">
                   <div
@@ -406,22 +417,20 @@
                     lang="en-US"
                     dir="ltr"
                   >
-                  <div class="screen-reader-response"></div>
+                    <div class="screen-reader-response"></div>
                     <form
                       class="quform"
                       method="post"
                       enctype="multipart/form-data"
                       id="sponsorForm"
-                      
                     >
-                    <!-- For messages -->
+                      <!-- For messages -->
 
                       {% csrf_token %}
                       <div class="quform-elements">
                         <div class="quform-element">
                           <br />
                           <span class="wpcf7-form-control-wrap your-name">
-                            
                             {{ form.as_p }}
                           </span>
                         </div>
@@ -429,20 +438,31 @@
                         <!-- Begin Submit button -->
                         <div class="quform-submit">
                           <div class="quform-submit-inner">
-                            <button style="background-color: #091e1b;" type="submit" class="submit-button">
+                            <button
+                              style="background-color: #091e1b"
+                              type="submit"
+                              class="submit-button"
+                            >
                               <span>Send</span>
                             </button>
                           </div>
-                                <p id="category-description" 
-   style="font-style: italic; max-width: 600px; width: 100%;  color: red; margin: 50px auto; text-align: center;">
-</p>
+                          <p
+                            id="category-description"
+                            style="
+                              font-style: italic;
+                              max-width: 600px;
+                              width: 100%;
+                              color: red;
+                              margin: 50px auto;
+                              text-align: center;
+                            "
+                          ></p>
                           <div class="quform-loading-wrap">
                             <span class="quform-loading"></span>
                           </div>
                         </div>
                       </div>
                     </form>
-                    
                   </div>
                 </div>
               </div>
@@ -450,9 +470,6 @@
           </div>
         </div>
       </div>
-
-
-
 
       <div
         class="one withsmallpadding ppb_header"
@@ -464,94 +481,51 @@
           </div>
         </div>
       </div>
-     
-    </div>
-   
-  
-   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
-      <ul class="sidebar_widget three">
-        <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p>
-              <img
-                src="{% static 'upload/Logo Icon.png' %}"
-                width="165"
-                height="20"
-                alt=""
-              />
-            </p>
-            
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
-             <br>
-              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
-              PHONE NUMBER: +2349045646031 <br>
-              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
-              KAURA DISTRICT FCT. ABUJA
-            </p>
-                     
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p style="font-size: large; font-weight: bold;">
-              NEWSLETTER SIGNUP
-            </p>
-            <p>Register to get our Newsletter </p>
-
-            <form
-            id="newsletter-form"
-              class="mc4wp-form mc4wp-form-1234"
-              method="post"
-              data-id="1234"
-              data-name="Newsletter Form"
-              action="{% url 'newsletter_signup' %}">
-              {% csrf_token %}
-            <input id="clear" type="email" name="email" required style="background-color: #123f38; border: none; color: wheat;">
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
-            <div id="newsletter-message"></div>
-          </div>
-        </li>
-      </ul>
     </div>
 
-    <div id="side_menu_wrapper" class="overlay_background">
-      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
-    </div>
+    {% include 'main/footer.html' %}
 
+    <script>
+      document
+        .getElementById("newsletter-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
+          let formData = new FormData(this);
 
+          fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "X-Requested-With": "XMLHttpRequest",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              let msg = document.getElementById("newsletter-message");
+              if (data.type === "success") {
+                msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
+              } else {
+                let errorText = "";
 
-<script>
-document.getElementById("newsletter-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+                // If it's a dict of errors from Django
+                if (data.errors) {
+                  errorText = Object.values(data.errors).flat().join("<br>");
+                } else if (data.message) {
+                  // fallback if you later return a single error message
+                  errorText = data.message;
+                } else {
+                  errorText = "An unexpected error occurred.";
+                }
 
-  let formData = new FormData(this);
+                msg.innerHTML = `<p style="color:red;">${errorText}</p>`;
+              }
+            });
+          document.getElementById("clear").value = "";
+        });
+    </script>
 
-  fetch(this.action, {
-    method: "POST",
-    body: formData,
-    headers: {
-      "X-Requested-With": "XMLHttpRequest"
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    let msg = document.getElementById("newsletter-message");
-    if (data.type === "success") {
-      msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
-    } else {
-      msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
-    }
-  });
-  document.getElementById("clear").value = "";
-});
-</script>
-
-<!-- <script>
+    <!-- <script>
 const RegCat = document.getElementById("id_registration_category");
 const VolCat = document.getElementById("id_volunteer_option");
 
@@ -577,272 +551,269 @@ if (RegCat && VolCat) {
 }
 </script> -->
 
+    <script>
+      const sect = document.getElementById("id_sector"); //dropdown
+      const part = document.getElementById("id_participation_source"); //dropdown
+      const reasonOthers = document.getElementById("id_reason_for_attending_4"); // "Others" checkbox
+      const leader = document.getElementById("id_leadership_position"); //dropdown
+      const specifySect = document.getElementById("id_specify_sector");
+      const specifyOther = document.getElementById("id_specify_other");
+      const specifySource = document.getElementById("id_specify_source");
+      const specifyReason = document.getElementById("id_specify_reason");
+      const regCategory = document.getElementById("id_registration_category"); // registration category dropdown
+      const volunteerOption = document.getElementById("id_volunteer_option"); // volunteer dropdown
+      const specifyVolunteer = document.getElementById("id_specify_volunteer"); // specify input
 
+      if (regCategory && volunteerOption) {
+        const regCategoryWrapper = volunteerOption.closest("p"); // parent <p> with label + input
 
-<script>
-const sect = document.getElementById("id_sector"); //dropdown
-const part = document.getElementById("id_participation_source"); //dropdown
-const reasonOthers = document.getElementById("id_reason_for_attending_4"); // "Others" checkbox
-const leader = document.getElementById("id_leadership_position"); //dropdown
-const specifySect = document.getElementById("id_specify_sector");
-const specifyOther = document.getElementById("id_specify_other");
-const specifySource = document.getElementById("id_specify_source");
-const specifyReason = document.getElementById("id_specify_reason");
-const regCategory = document.getElementById("id_registration_category"); // registration category dropdown
-const volunteerOption = document.getElementById("id_volunteer_option"); // volunteer dropdown
-const specifyVolunteer = document.getElementById("id_specify_volunteer"); // specify input
+        function toggleRegCategory() {
+          if (regCategory.value === "5") {
+            // ✅ check the 'regCategory' dropdown
+            regCategoryWrapper.style.display = "block";
+          } else {
+            regCategoryWrapper.style.display = "none";
+          }
+        }
 
+        // Run once on page load
+        toggleRegCategory();
 
+        // Re-check when participation_source dropdown changes
+        regCategory.addEventListener("change", toggleRegCategory);
+      }
 
+      if (volunteerOption && specifyVolunteer) {
+        const specifyVolunteerWrapper = specifyVolunteer.closest("p"); // parent <p> with label + input
 
-if (regCategory && volunteerOption) {
-  const regCategoryWrapper = volunteerOption.closest("p"); // parent <p> with label + input
+        function specifyVolunteerWrapperToggle() {
+          if (volunteerOption.value === "Other") {
+            // ✅ check the 'volunteerOption' dropdown
+            specifyVolunteerWrapper.style.display = "block";
+          } else {
+            specifyVolunteerWrapper.style.display = "none";
+          }
+        }
 
-  function toggleRegCategory() {
-    if (regCategory.value === "5") {   // ✅ check the 'regCategory' dropdown
-      regCategoryWrapper.style.display = "block";
-    } else {
-      regCategoryWrapper.style.display = "none";
-    }
-  }
+        // Run once on page load
+        specifyVolunteerWrapperToggle();
 
-  // Run once on page load
-  toggleRegCategory();
+        // Re-check when participation_source dropdown changes
+        volunteerOption.addEventListener(
+          "change",
+          specifyVolunteerWrapperToggle
+        );
+      }
 
-  // Re-check when participation_source dropdown changes
-  regCategory.addEventListener("change", toggleRegCategory);
-}
+      if (sect && specifySect) {
+        const specifySectWrapper = specifySect.closest("p"); // parent <p> with label + input
 
+        function toggleSpecifySect() {
+          if (sect.value === "Others") {
+            specifySectWrapper.style.display = "block";
+          } else {
+            specifySectWrapper.style.display = "none";
+          }
+        }
 
-if (volunteerOption && specifyVolunteer) {
-  const specifyVolunteerWrapper = specifyVolunteer.closest("p"); // parent <p> with label + input
+        // Run once on page load
+        toggleSpecifySect();
 
-  function specifyVolunteerWrapperToggle() {
-    if (volunteerOption.value === "Other") {   // ✅ check the 'volunteerOption' dropdown
-      specifyVolunteerWrapper.style.display = "block";
-    } else {
-      specifyVolunteerWrapper.style.display = "none";
-    }
-  }
+        // Re-check when dropdown changes
+        sect.addEventListener("change", toggleSpecifySect);
+      }
 
-  // Run once on page load
-  specifyVolunteerWrapperToggle();
+      if (leader && specifyOther) {
+        const specifyOtherWrapper = specifyOther.closest("p");
 
-  // Re-check when participation_source dropdown changes
-  volunteerOption.addEventListener("change", specifyVolunteerWrapperToggle);
-}
+        function toggleSpecifyOther() {
+          if (leader.value === "Others") {
+            // ✅ check leader instead
+            specifyOtherWrapper.style.display = "block";
+          } else {
+            specifyOtherWrapper.style.display = "none";
+          }
+        }
 
+        // Run once on page load
+        toggleSpecifyOther();
 
+        // Re-check when leader dropdown changes
+        leader.addEventListener("change", toggleSpecifyOther); // ✅ listen on leader
+      }
 
+      if (part && specifySource) {
+        const specifySourceWrapper = specifySource.closest("p"); // parent <p> with label + input
 
-if (sect && specifySect) {
-  const specifySectWrapper = specifySect.closest("p"); // parent <p> with label + input
+        function toggleSpecifySource() {
+          if (part.value === "Others") {
+            // ✅ check the 'part' dropdown
+            specifySourceWrapper.style.display = "block";
+          } else {
+            specifySourceWrapper.style.display = "none";
+          }
+        }
 
-  function toggleSpecifySect() {
-    if (sect.value === "Others") {
-      specifySectWrapper.style.display = "block";
-    } else {
-      specifySectWrapper.style.display = "none";
-      
-    }
-  }
+        // Run once on page load
+        toggleSpecifySource();
 
-  // Run once on page load
-  toggleSpecifySect();
+        // Re-check when participation_source dropdown changes
+        part.addEventListener("change", toggleSpecifySource);
+      }
 
-  // Re-check when dropdown changes
-  sect.addEventListener("change", toggleSpecifySect);
-}
+      if (reasonOthers && specifyReason) {
+        const specifyReasonWrapper = specifyReason.closest("p"); // parent <p> with label + input
 
-if (leader && specifyOther) {
-  const specifyOtherWrapper = specifyOther.closest("p");
+        function toggleSpecifyReason() {
+          if (reasonOthers.checked) {
+            // ✅ check if checkbox is ticked
+            specifyReasonWrapper.style.display = "block";
+          } else {
+            specifyReasonWrapper.style.display = "none";
+          }
+        }
 
-  function toggleSpecifyOther() {
-    if (leader.value === "Others") {   // ✅ check leader instead
-      specifyOtherWrapper.style.display = "block";
-    } else {
-      specifyOtherWrapper.style.display = "none";
-    }
-  }
+        // Run once on page load
+        toggleSpecifyReason();
 
-  // Run once on page load
-  toggleSpecifyOther();
+        // Re-check when "Others" is clicked
+        reasonOthers.addEventListener("change", toggleSpecifyReason);
+      }
 
-  // Re-check when leader dropdown changes
-  leader.addEventListener("change", toggleSpecifyOther);  // ✅ listen on leader
-}
+      const accessOthers = document.getElementById(
+        "id_accessibility_accommodations_4"
+      ); // "Others" checkbox
+      const specifyAccessibility = document.getElementById(
+        "id_specify_accessiblity"
+      ); // your specify input
 
+      if (accessOthers && specifyAccessibility) {
+        const specifyAccessibilityWrapper = specifyAccessibility.closest("p"); // parent <p> with label + input
 
-if (part && specifySource) {
-  const specifySourceWrapper = specifySource.closest("p"); // parent <p> with label + input
+        function toggleSpecifyAccessibility() {
+          if (accessOthers.checked) {
+            // ✅ show if checked
+            specifyAccessibilityWrapper.style.display = "block";
+          } else {
+            specifyAccessibilityWrapper.style.display = "none";
+          }
+        }
 
-  function toggleSpecifySource() {
-    if (part.value === "Others") {   // ✅ check the 'part' dropdown
-      specifySourceWrapper.style.display = "block";
-    } else {
-      specifySourceWrapper.style.display = "none";
-    }
-  }
+        // Run once on page load
+        toggleSpecifyAccessibility();
 
-  // Run once on page load
-  toggleSpecifySource();
+        // Re-check when "Others" is clicked
+        accessOthers.addEventListener("change", toggleSpecifyAccessibility);
+      }
 
-  // Re-check when participation_source dropdown changes
-  part.addEventListener("change", toggleSpecifySource);
-}
+      const photoConsent = document.getElementById("id_photography_consent");
+      const submitBtn = document.querySelector("button[type='submit']"); // adjust if input[type=submit]
 
+      if (photoConsent && submitBtn) {
+        function toggleSubmit() {
+          if (photoConsent.value === "Agree") {
+            submitBtn.disabled = false;
+            submitBtn.style.backgroundColor = "#091e1b"; // restore default color
+            submitBtn.style.cursor = "pointer";
+            submitBtn.style.opacity = "1";
+          } else {
+            submitBtn.disabled = true;
+            submitBtn.style.backgroundColor = "grey"; // 🔹 greyed out
+            submitBtn.style.cursor = "not-allowed";
+            submitBtn.style.opacity = "0.7";
+          }
+        }
 
-if (reasonOthers && specifyReason) {
-  const specifyReasonWrapper = specifyReason.closest("p"); // parent <p> with label + input
+        // Run once on page load
+        toggleSubmit();
 
-  function toggleSpecifyReason() {
-    if (reasonOthers.checked) {   // ✅ check if checkbox is ticked
-      specifyReasonWrapper.style.display = "block";
-    } else {
-      specifyReasonWrapper.style.display = "none";
-    }
-  }
-
-  // Run once on page load
-  toggleSpecifyReason();
-
-  // Re-check when "Others" is clicked
-  reasonOthers.addEventListener("change", toggleSpecifyReason);
-}
-
-
-
-const accessOthers = document.getElementById("id_accessibility_accommodations_4"); // "Others" checkbox
-const specifyAccessibility = document.getElementById("id_specify_accessiblity");   // your specify input
-
-if (accessOthers && specifyAccessibility) {
-  const specifyAccessibilityWrapper = specifyAccessibility.closest("p"); // parent <p> with label + input
-
-  function toggleSpecifyAccessibility() {
-    if (accessOthers.checked) {   // ✅ show if checked
-      specifyAccessibilityWrapper.style.display = "block";
-    } else {
-      specifyAccessibilityWrapper.style.display = "none";
-    }
-  }
-
-  // Run once on page load
-  toggleSpecifyAccessibility();
-
-  // Re-check when "Others" is clicked
-  accessOthers.addEventListener("change", toggleSpecifyAccessibility);
-}
-
-
-const photoConsent = document.getElementById("id_photography_consent");
-const submitBtn = document.querySelector("button[type='submit']"); // adjust if input[type=submit]
-
-if (photoConsent && submitBtn) {
-  function toggleSubmit() {
-    if (photoConsent.value === "Agree") {
-      submitBtn.disabled = false;
-      submitBtn.style.backgroundColor = "#091e1b";   // restore default color
-      submitBtn.style.cursor = "pointer";
-      submitBtn.style.opacity = "1";
-    } else {
-      submitBtn.disabled = true;
-      submitBtn.style.backgroundColor = "grey"; // 🔹 greyed out
-      submitBtn.style.cursor = "not-allowed";
-      submitBtn.style.opacity = "0.7";
-    }
-  }
-
-  // Run once on page load
-  toggleSubmit();
-
-  // Re-check when consent changes
-  photoConsent.addEventListener("change", toggleSubmit);
-}
-
-
-
-</script>
-
-
+        // Re-check when consent changes
+        photoConsent.addEventListener("change", toggleSubmit);
+      }
+    </script>
 
     <script>
-function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
+      function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+          const cookies = document.cookie.split(";");
+          for (let i = 0; i < cookies.length; i++) {
             const cookie = cookies[i].trim();
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
+            if (cookie.substring(0, name.length + 1) === name + "=") {
+              cookieValue = decodeURIComponent(
+                cookie.substring(name.length + 1)
+              );
+              break;
             }
+          }
         }
-    }
-    return cookieValue;
-}
+        return cookieValue;
+      }
 
-const csrftoken = getCookie('csrftoken');
+      const csrftoken = getCookie("csrftoken");
 
-$.ajaxSetup({
-    headers: { "X-CSRFToken": csrftoken }
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".quform");
+      $.ajaxSetup({
+        headers: { "X-CSRFToken": csrftoken },
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".quform");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault(); // ✅ Stop page reload
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // ✅ Stop page reload
 
-        const formData = new FormData(form);
+          const formData = new FormData(form);
 
-        fetch(form.action || window.location.href, {
+          fetch(form.action || window.location.href, {
             method: "POST",
             body: formData,
             headers: {
-                "X-Requested-With": "XMLHttpRequest"  // So Django knows it's AJAX
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.type === "success") {
+              "X-Requested-With": "XMLHttpRequest", // So Django knows it's AJAX
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.type === "success") {
                 alert(data.message || "Form submitted successfully!");
-                
 
                 // ✅ Clear form inputs
                 form.reset();
-            } else {
-                alert("Error: " + (data.error ? data.error.join(", ") : "Something went wrong."));
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            alert("An Ajax error occurred.");
+              } else {
+                alert(
+                  "Error: " +
+                    (data.error
+                      ? data.error.join(", ")
+                      : "Something went wrong.")
+                );
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert("An Ajax error occurred.");
+            });
         });
-    });
-});
-</script>
+      });
+    </script>
 
-<script>
-    // Grab the select and description display
-    const selectField = document.getElementById("id_registration_category");
-    const descField = document.getElementById("category-description");
+    <script>
+      // Grab the select and description display
+      const selectField = document.getElementById("id_registration_category");
+      const descField = document.getElementById("category-description");
 
-    // Store descriptions in JS (Django sends data to template)
-    const descriptions = {
-        {% for cat in categories %}
-            "{{ cat.id }}": "{{ cat.description|escapejs }}",
-        {% endfor %}
-    };
+      // Store descriptions in JS (Django sends data to template)
+      const descriptions = {
+          {% for cat in categories %}
+              "{{ cat.id }}": "{{ cat.description|escapejs }}",
+          {% endfor %}
+      };
 
-    // Event listener: when user changes category
-    selectField.addEventListener("change", function() {
-        const selected = this.value;
-        descField.textContent = descriptions[selected] || "";
-    });
-</script>
-
-
+      // Event listener: when user changes category
+      selectField.addEventListener("change", function() {
+          const selected = this.value;
+          descField.textContent = descriptions[selected] || "";
+      });
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -894,7 +865,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="{% static 'js/plugins/jarallax-video.js' %}"></script>
     <script src="{% static 'js/plugins/jquery.cookie.js' %}"></script>
     <script src="{% static 'js/plugins/custom_clock.js' %}"></script>
-     <script>
+    <script>
       /* <![CDATA[ */
       var mc4wp_forms_config = [];
       /* ]]> */

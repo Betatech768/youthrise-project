@@ -43,5 +43,11 @@ urlpatterns = [
     path("clear-registrations/", views.clear_registration_model, name="clear_registrations"),
     path("clear-impactstories/", views.clear_impactstories_model, name="clear_impactstories"),
     path("clear-exhibitions/", views.clear_exhibition_model, name="clear_exhibitions"),
+    path("conferencedate/", views.conferencedate, name="conferencedate"),
+    path("conferencevenue/", views.conferencevenue, name="conferencevenue"),
+    path("viewingday/", views.viewingday, name="viewingday"),
+    path("viewingday/delete-viewingday/<int:pk>/", views.delete_viewingday, name="delete_viewingday"),
+    path("conferencedate/delete-conferenceday/<int:pk>/", views.delete_conferenceday, name="delete_conferenceday"),
+    path("conferencevenue/delete-conferencevenue/<int:pk>/", views.delete_conferencevenue, name="delete_conferencevenue"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     

@@ -19,8 +19,8 @@ from django.contrib import messages
 from django.views.decorators.http import require_POST
 from Images.forms import ImageUploadForm
 from Images.models import GalleryImage
-from .models import Document
-from .forms import DocumentForm
+from .models import Document, ViewingDays, ConferenceDate, ConferenceVenue
+from .forms import DocumentForm, ViewingDaysForm, ConferenceVenueForm, ConferenceDateForm
 import os
 from django.http import FileResponse
 from main.models import Sponsor
@@ -576,3 +576,78 @@ def clear_exhibition_model(request):
 def clear_impactstories_model(request):
     stories.objects.all().delete()
     return JsonResponse({"message": "All records cleared successfully!"})
+
+
+def conferencedate (request):
+    streamId = ConferenceDate.objects.all()
+    message = ""
+    form = ConferenceDateForm()
+    if request.method == "POST":
+        form = ConferenceDateForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect ("conferencedate")
+        else:
+            message= "Error submitting form"
+    else: 
+        form = ConferenceDateForm()
+
+    return render( request, 'admin/conferncedate.html', {"form": form, "message": message, "streamId":streamId})
+
+
+def conferencevenue(request):
+    streamId = ConferenceVenue.objects.all()
+    message = ""
+    venue_form = ConferenceVenueForm()
+    if request.method == "POST":
+        venue_form = ConferenceVenueForm(request.POST)
+        if venue_form.is_valid():
+            venue_form.save()
+            return redirect ("conferencevenue")
+        else:
+            message= "error submitting form"
+    else: 
+        venue_form = ConferenceVenueForm()
+
+    return render( request, 'admin/conferncevenue.html', {"venue_form": venue_form, "message": message, "streamId": streamId})
+
+
+
+
+def viewingday(request):
+    streamId = ViewingDays.objects.all()
+    message = ""
+    form = ViewingDaysForm()
+    if request.method == "POST":
+        form = ViewingDaysForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect ("viewingday")
+        else:
+            message= "error submitting form"
+    else: 
+        form = ViewingDaysForm()
+
+    return render( request, 'admin/viewingday.html', {"form": form, "message": message, "streamId": streamId})
+
+
+def delete_viewingday(request, pk):
+    """Delete a ViewingDay via AJAX"""
+    viewingday = get_object_or_404(ViewingDays, pk=pk)
+    viewingday.delete()
+    return JsonResponse({"success": True})
+
+
+def delete_conferenceday(request, pk):
+    """Delete a ViewingDay via AJAX"""
+    viewingday = get_object_or_404(ConferenceDate, pk=pk)
+    viewingday.delete()
+    return JsonResponse({"success": True})
+
+
+
+def delete_conferencevenue(request, pk):
+    """Delete a ViewingDay via AJAX"""
+    viewingday = get_object_or_404(ConferenceVenue, pk=pk)
+    viewingday.delete()
+    return JsonResponse({"success": True})

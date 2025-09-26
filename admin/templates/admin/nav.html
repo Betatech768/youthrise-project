@@ -1,0 +1,21 @@
+{% load static %}
+<div class="contain">
+  <div class="col navvv">
+    <div class="logo">
+      <a href="{% url 'admin_page' %}" class="Logo"
+        ><img
+          style="height: 40px; width: 40px"
+          class="logoimg"
+          src="{% static 'upload/Logo Icon.png' %}"
+          alt=""
+      /></a>
+    </div>
+
+    <div class="col d-none d-sm-inline">
+      <h1 class="admiindashh">ADMIN DASHBOARD</h1>
+    </div>
+    <div class="login">
+      <a href="{% url 'logout' %}"><button class="butttn">Logout</button></a>
+    </div>
+  </div>
+</div>

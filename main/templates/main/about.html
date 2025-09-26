@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign">
   <head>
-    <title>We Are People | About </title>
+    <title>We Are People | About</title>
 
     <meta charset="UTF-8" />
     <meta
@@ -135,22 +135,22 @@
     />
 
     <head>
-  <!-- Open Graph image -->
-  <meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+      <!-- Open Graph image -->
+      <meta property="og:image" content="{% static 'upload/wep2.jpg' %}" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
-  <!-- Recommended additional Open Graph tags -->
-  <meta property="og:title" content="We Are People Conference">
-  <meta property="og:description" content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.">
-  <meta property="og:url" content="{% static 'upload/wep2.jpg' %}">
-  <meta property="og:type" content="website">
-</head>
+      <!-- Recommended additional Open Graph tags -->
+      <meta property="og:title" content="We Are People Conference" />
+      <meta
+        property="og:description"
+        content="A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future."
+      />
+      <meta property="og:url" content="{% static 'upload/wep2.jpg' %}" />
+      <meta property="og:type" content="website" />
+    </head>
 
-
-
-
-     <link
+    <link
       rel="icon"
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
       sizes="32x32"
@@ -167,125 +167,129 @@
 
     <style>
       /* Center footer content on mobile */
-@media (max-width: 768px) {
-  #footer .sidebar_widget.three {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Center horizontally */
-    text-align: center;   /* Center text */
-    gap: 20px;            /* Space between blocks */
-  }
+      @media (max-width: 768px) {
+        #footer .sidebar_widget.three {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center horizontally */
+          text-align: center; /* Center text */
+          gap: 20px; /* Space between blocks */
+        }
 
-  #footer .sidebar_widget.three li {
-    width: 100%;          /* Full width on mobile */
-    max-width: 400px;     /* Optional: keeps it tidy */
-  }
+        #footer .sidebar_widget.three li {
+          width: 100%; /* Full width on mobile */
+          max-width: 400px; /* Optional: keeps it tidy */
+        }
 
-  #footer img {
-    margin: 0 auto;       /* Center logo */
-    display: block;
-  }
+        #footer img {
+          margin: 0 auto; /* Center logo */
+          display: block;
+        }
 
-  #footer .social_wrapper ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-  }
+        #footer .social_wrapper ul {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          padding: 0;
+          list-style: none;
+        }
 
-  #footer button {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
+        #footer button {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      }
     </style>
-<style>
-.sponsor-slider {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+    <style>
+      .sponsor-slider {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
 
-  padding: 20px 0;
-}
+        padding: 20px 0;
+      }
 
-.sponsor-track {
-  display: flex;
-  width: calc(200%); /* duplicated logos for seamless loop */
-  animation: scroll-left 20s linear infinite;
-}
+      .sponsor-track {
+        display: flex;
+        width: calc(200%); /* duplicated logos for seamless loop */
+        animation: scroll-left 20s linear infinite;
+      }
 
-.sponsor-slide {
-  flex: 0 0 auto;
-  padding: 0 30px;
-}
+      .sponsor-slide {
+        flex: 0 0 auto;
+        padding: 0 30px;
+      }
 
-.sponsor-slide img {
-  height: 120px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(1.1) contrast(1.2);
-  mix-blend-mode: darken;
-  transition: transform 0.3s ease;
-}
+      .sponsor-slide img {
+        height: 120px;
+        width: auto;
+        object-fit: contain;
+        filter: brightness(1.1) contrast(1.2);
+        mix-blend-mode: darken;
+        transition: transform 0.3s ease;
+      }
 
-.sponsor-slide img:hover {
-  transform: scale(1.1);
-}
+      .sponsor-slide img:hover {
+        transform: scale(1.1);
+      }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
 
-/* 📱 Small screens */
-@media (max-width: 768px) {
-  .sponsor-slide {
-    padding: 0 15px;
-  }
+      /* 📱 Small screens */
+      @media (max-width: 768px) {
+        .sponsor-slide {
+          padding: 0 15px;
+        }
 
-  .sponsor-slide img {
-    height: 80px;
-  }
+        .sponsor-slide img {
+          height: 80px;
+        }
 
-  .sponsor-track {
-    animation: scroll-left 30s linear infinite; /* slower on small screens */
-  }
-}
+        .sponsor-track {
+          animation: scroll-left 30s linear infinite; /* slower on small screens */
+        }
+      }
 
-/* 🖥 Large screens */
-@media (min-width: 1200px) {
-  .sponsor-slide img {
-    height: 100px;
-   
-  }
+      /* 🖥 Large screens */
+      @media (min-width: 1200px) {
+        .sponsor-slide img {
+          height: 100px;
+        }
 
-  .sponsor-track {
-    animation: scroll-left 15s linear infinite; /* faster on big screens */
-  }
-}</style>
-<style>
-#clock1573568515278500141 {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  font-family: "Courier New", monospace;
-}
+        .sponsor-track {
+          animation: scroll-left 15s linear infinite; /* faster on big screens */
+        }
+      }
+    </style>
+    <style>
+      #clock1573568515278500141 {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        font-family: "Courier New", monospace;
+      }
 
-#clock1573568515278500141 div {
-  background: #93b144;
-
-}
-</style>
+      #clock1573568515278500141 div {
+        background: #93b144;
+      }
+    </style>
     <meta
       name="msapplication-TileImage"
       content="../../../themegoods-cdn-pzbycso8wng.stackpathdns.com/grandconference/demo/upload/cropped-TG-Thumb-270x270.html"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
     />
   </head>
 
@@ -293,15 +297,15 @@
     class="home page-template-default page page-id-350 woocommerce-no-js ppb_enable"
   >
     <!-- Input Bootstrap NavBar here -->
-      {% include 'main/nav.html' %}
-  
+    {% include 'main/nav.html' %}
+
     <!-- Bootstrap NavBar End -->
-    <div class="ppb_wrapper">
+    <div class="ppb_wrapper" style="margin-top: 50px">
       <div class="one ppb_image_fullwidth" style="padding: 0px 0 0px 0">
         <div
           class="one withbg"
           style="
-            background-image: url('/static/upload/wep9.jpg');
+            background-image: url('/static/upload/Aboupage.jpg');
             background-size: cover;
             background-position: center center;
             height: 600px;
@@ -327,17 +331,57 @@
                   ABOUT THE CONFERENCE
                 </h2>
                 <div class="ppb_header_content">
-                  <p>
-                   We Are People Conference is a national youth-focused event hosted by YouthRISE Nigeria, celebrating the role of young Nigerians in nation-building while tackling the barriers that limit their full participation.
-The conference convenes young leaders, policymakers, civil society, development partners, and the private sector to highlight youth excellence, promote unity, and drive inclusive national development.
-The We Are People Conference is more than just a conference, it's a movement, a platform to uplift and empower every young Nigerians, embracing diversity, resilience, and collaboration to unlock the full potential of Nigerians youth.
+                  <p style="font-family: 'Roboto Slab'">
+                    We Are People Conference is a national youth-focused event
+                    hosted by YouthRISE Nigeria, celebrating the role of young
+                    Nigerians in nation-building while tackling the barriers
+                    that limit their full participation. The conference convenes
+                    young leaders, policymakers, civil society, development
+                    partners, and the private sector to highlight youth
+                    excellence, promote unity, and drive inclusive national
+                    development. The We Are People Conference is more than just
+                    a conference, it's a movement, a platform to uplift and
+                    empower every young Nigerians, embracing diversity,
+                    resilience, and collaboration to unlock the full potential
+                    of Nigerians youth.
+                  </p>
 
-<div class="ppb_header_content">CONFERENCE STRUCTURE</div>
-<div style="font-weight: bold; margin: 5px 0;"> Keynote Address:</div> Distinguished speakers with expertise in youth engagement, entrepreneurship and leadership will deliver an address to set the thematic tone for the conference. The keynote speaker will provide insights into the role of young people in nation-building, leadership ethics, and the responsibilities of active citizenship.
-<br> <div style="font-weight: bold; margin: 5px 0;"> Plenary Sessions: </div> Involving expert-led discussions on critical issues affecting Nigerian youths, such as political participation, digital transformation, education reform, and socio-economic development.
-Breakout & Skill Building Sessions: Thematic deep dives into specific areas of entrepreneurship, drug use, human rights, youth development and empowerment, education, and governance. Here, participants will engage leading experts in meaningful discussions, share insights, and proffer solutions to identified challenges.
-Networking Sessions: Dedicated sessions to foster collaborations and mentorship opportunities between young changemakers, mentors, and key stakeholders. 
-Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorship opportunities between young changemakers, mentors, and key stakeholders.
+                  <div
+                    class="ppb_header_content"
+                    style="
+                      font-family: 'Roboto Slab';
+                      font-weight: 600;
+                      font-size: large;
+                    "
+                  >
+                    CONFERENCE STRUCTURE
+                  </div>
+                  <div style="font-weight: bold; margin: 5px 0">
+                    Keynote Address:
+                  </div>
+                  Distinguished speakers with expertise in youth engagement,
+                  entrepreneurship and leadership will deliver an address to set
+                  the thematic tone for the conference. The keynote speaker will
+                  provide insights into the role of young people in
+                  nation-building, leadership ethics, and the responsibilities
+                  of active citizenship. <br />
+                  <div style="font-weight: bold; margin: 5px 0">
+                    Plenary Sessions:
+                  </div>
+                  Involving expert-led discussions on critical issues affecting
+                  Nigerian youths, such as political participation, digital
+                  transformation, education reform, and socio-economic
+                  development. Breakout & Skill Building Sessions: Thematic deep
+                  dives into specific areas of entrepreneurship, drug use, human
+                  rights, youth development and empowerment, education, and
+                  governance. Here, participants will engage leading experts in
+                  meaningful discussions, share insights, and proffer solutions
+                  to identified challenges. Networking Sessions: Dedicated
+                  sessions to foster collaborations and mentorship opportunities
+                  between young changemakers, mentors, and key stakeholders.
+                  Youth-Led Exhibitions: Dedicated sessions to foster
+                  collaborations and mentorship opportunities between young
+                  changemakers, mentors, and key stakeholders.
                 </div>
               </div>
             </div>
@@ -353,9 +397,7 @@ Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorshi
           background-color: #091e1b;
           color: #ffffff !important;
         "
-      >
-       
-      </div>
+      ></div>
     </div>
     <div
       class="one withsmallpadding ppb_header"
@@ -377,9 +419,7 @@ Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorshi
               <div
                 class="page_tagline"
                 style="color: #ffffff; text-align: center"
-              >
-                
-              </div>
+              ></div>
             </div>
           </div>
         </div>
@@ -398,49 +438,74 @@ Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorshi
       <div class="standard_wrapper">
         <div class="page_content_wrapper">
           <div class="inner">
-            <div class="one_half" style="">
+            <div class="one_half" style="font-family: 'Roboto Slab'">
               <img
-                style="border-radius: 5px; width: 768px; height: 512px; object-fit: cover;"
+                style="
+                  border-radius: 5px;
+                  width: 768px;
+                  height: 512px;
+                  object-fit: cover;
+                "
                 src="{% static 'upload/wep8.jpg' %}"
                 alt=""
               />
               <br />
-              How young Nigerians play a pivotal role in shaping the future of the nation, and understand the ethics and responsibilities of active citizenship.
+              How young Nigerians play a pivotal role in shaping the future of
+              the nation, and understand the ethics and responsibilities of
+              active citizenship.
             </div>
-            <div class="one_half last" style="">
+            <div class="one_half last" style="font-family: 'Roboto Slab'">
               <img
-                style="border-radius: 5px; width: 768px; height: 512px; object-fit: cover;"
+                style="
+                  border-radius: 5px;
+                  width: 768px;
+                  height: 512px;
+                  object-fit: cover;
+                "
                 src="{% static 'upload/wep2.jpg' %}"
                 alt=""
               />
               <br />
-             Strategies for impactful leadership, entrepreneurial growth, and how to harness innovation for personal and national development.
+              Strategies for impactful leadership, entrepreneurial growth, and
+              how to harness innovation for personal and national development.
             </div>
             <p>
               <br class="clear" />
             </p>
-            <div class="one_half" style="">
+            <div class="one_half" style="font-family: 'Roboto Slab'">
               <img
-                style="border-radius: 5px; width: 768px; height: 512px; object-fit: cover;"
+                style="
+                  border-radius: 5px;
+                  width: 768px;
+                  height: 512px;
+                  object-fit: cover;
+                "
                 src="{% static 'upload/wep3.jpg' %}"
                 alt=""
               />
               <br />
-              Sessions covering critical issues such as political participation, education reform, digital transformation, and socio-economic development.
+              Sessions covering critical issues such as political participation,
+              education reform, digital transformation, and socio-economic
+              development.
             </div>
-            <div class="one_half last" style="">
+            <div class="one_half last" style="font-family: 'Roboto Slab'">
               <img
-              style="border-radius: 5px; width: 768px; height: 512px; object-fit: cover;"  
+                style="
+                  border-radius: 5px;
+                  width: 768px;
+                  height: 512px;
+                  object-fit: cover;
+                "
                 src="{% static 'upload/wep4.jpg' %}"
                 alt=""
               />
               <br />
-              Youth-led exhibitions that showcase creativity, resilience, and innovative solutions from young Nigerians across diverse fields.
+              Youth-led exhibitions that showcase creativity, resilience, and
+              innovative solutions from young Nigerians across diverse fields.
             </div>
             <p>
               <br class="clear" />
             </p>
-          
           </div>
         </div>
       </div>
@@ -451,89 +516,50 @@ Youth-Led Exhibitions: Dedicated sessions to foster collaborations and mentorshi
     </div>
 
     <!-- footer -->
-   <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
-      <ul class="sidebar_widget three">
-        <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p>
-              <img
-                src="{% static 'upload/Logo Icon.png' %}"
-                width="165"
-                height="20"
-                alt=""
-              />
-            </p>
-            
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
-             <br>
-              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
-              PHONE NUMBER: +2349045646031 <br>
-              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
-              KAURA DISTRICT FCT. ABUJA
-            </p>
-                     
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p style="font-size: large; font-weight: bold;">
-              NEWSLETTER SIGNUP
-            </p>
-            <p>Register to get our Newsletter </p>
+    {% include 'main/footer.html' %}
+    <!-- footer end -->
 
-            <form
-            id="newsletter-form"
-              class="mc4wp-form mc4wp-form-1234"
-              method="post"
-              data-id="1234"
-              data-name="Newsletter Form"
-              action="{% url 'newsletter_signup' %}">
-              {% csrf_token %}
-            <input id="clear" type="email" name="email" required style="background-color: #123f38; border: none; color: wheat;">
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
-            <div id="newsletter-message"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <!-- JavaScript Bundle with Popper -->
 
-    <div id="side_menu_wrapper" class="overlay_background">
-      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
-    </div>
+    <script>
+      document
+        .getElementById("newsletter-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
+          let formData = new FormData(this);
 
+          fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "X-Requested-With": "XMLHttpRequest",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              let msg = document.getElementById("newsletter-message");
+              if (data.type === "success") {
+                msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
+              } else {
+                let errorText = "";
 
+                // If it's a dict of errors from Django
+                if (data.errors) {
+                  errorText = Object.values(data.errors).flat().join("<br>");
+                } else if (data.message) {
+                  // fallback if you later return a single error message
+                  errorText = data.message;
+                } else {
+                  errorText = "An unexpected error occurred.";
+                }
 
-<script>
-document.getElementById("newsletter-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let formData = new FormData(this);
-
-  fetch(this.action, {
-    method: "POST",
-    body: formData,
-    headers: {
-      "X-Requested-With": "XMLHttpRequest"
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    let msg = document.getElementById("newsletter-message");
-    if (data.type === "success") {
-      msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
-    } else {
-      msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
-    }
-  });
-  document.getElementById("clear").value = "";
-});
-</script>
-
+                msg.innerHTML = `<p style="color:red;">${errorText}</p>`;
+              }
+            });
+          document.getElementById("clear").value = "";
+        });
+    </script>
 
     <script>
       window.addEventListener("scroll", function () {

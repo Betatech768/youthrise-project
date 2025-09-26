@@ -134,7 +134,7 @@
       media="all"
     />
 
-    <meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
+  <meta property="og:image" content="{% static 'upload/wep2.jpg' %}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
@@ -158,7 +158,9 @@
       rel="apple-touch-icon-precomposed"
       href="{% static 'upload/YOUTHRISE-INTERNATIONAL.png' %}"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <style>
       /* Center footer content on mobile */
 @media (max-width: 768px) {
@@ -316,7 +318,7 @@
     style="background: #091e1b"
   >
     <!-- Input Bootstrap NavBar here -->
- {% include 'main/nav.html' %}
+  {% include 'main/nav.html' %}
     <!-- Bootstrap NavBar End -->
     <!-- Image Background -->
 
@@ -328,184 +330,263 @@
           class="rev_slider_wrapper fullwidthbanner-container"
           data-source="gallery"
           style="
-            margin: 0px auto;
-            background: #000000;
-            padding: 0px;
-            margin-top: 0px;
-            margin-bottom: 0px;
+        margin: 0px auto;
+        background: #000000;
+        padding: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
           "
         >
           <!-- START REVOLUTION SLIDER 5.4.5.1 fullwidth mode -->
           <div
-            id="rev_slider_1_1"
-            class="rev_slider fullwidthabanner"
-            style="display: none"
-            data-version="5.4.5.1"
+        id="rev_slider_1_1"
+        class="rev_slider fullwidthabanner"
+        style="display: none"
+        data-version="5.4.5.1"
           >
-            <ul>
-              <!-- SLIDE  -->
-              <li
-                data-index="rs-1"
-                data-transition="fade"
-                data-slotamount="default"
-                data-hideafterloop="0"
-                data-hideslideonmobile="off"
-                data-easein="default"
-                data-easeout="default"
-                data-masterspeed="300"
-                data-rotate="0"
-                data-saveperformance="off"
-                data-title="Slide"
-                data-param1=""
-                data-param2=""
-                data-param3=""
-                data-param4=""
-                data-param5=""
-                data-param6=""
-                data-param7=""
-                data-param8=""
-                data-param9=""
-                data-param10=""
-                data-description=""
-              >
-                <!-- MAIN IMAGE -->
-                <img
+        <ul>
+          <!-- SLIDE  -->
+          <li
+            data-index="rs-1"
+            data-transition="fade"
+            data-slotamount="default"
+            data-hideafterloop="0"
+            data-hideslideonmobile="off"
+            data-easein="default"
+            data-easeout="default"
+            data-masterspeed="300"
+            data-rotate="0"
+            data-saveperformance="off"
+            data-title="Slide"
+            data-param1=""
+            data-param2=""
+            data-param3=""
+            data-param4=""
+            data-param5=""
+            data-param6=""
+            data-param7=""
+            data-param8=""
+            data-param9=""
+            data-param10=""
+            data-description=""
+          >
+            <!-- MAIN IMAGE -->
+            <img
+          src="{% static 'upload/regbg.png' %}"
+          alt=""
+          title="27972070586_73eb8ef975_o"
+          width="1440"
+          height="960"
+          data-bgposition="center center"
+          data-bgfit="cover"
+          data-bgrepeat="no-repeat"
+          class="rev-slidebg"
+          data-no-retina=""
+            />
+            <!-- LAYERS -->
 
-                  src="{% static 'upload/wep13.jpg' %}"
-                  alt=""
-                  title="27972070586_73eb8ef975_o"
-                  width="1440"
-                  height="960"
-                  data-bgposition="center center"
-                  data-bgfit="cover"
-                  data-bgrepeat="no-repeat"
-                  class="rev-slidebg"
-                  data-no-retina=""
-                />
-                <!-- LAYERS -->
-
-                <!-- LAYER NR. 1 -->
-                <div
-                  class="tp-caption tp-resizeme"
-                  id="slide-1-layer-1"
-                  data-x="center"
-                  data-hoffset=""
-                  data-y="center"
-                  data-voffset="-15"
-                  data-width="['auto']"
-                  data-height="['auto']"
-                  data-type="text"
-                  data-responsive_offset="on"
-                  data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                  data-textalign="['inherit','inherit','inherit','inherit']"
-                  data-paddingtop="[0,0,0,0]"
-                  data-paddingright="[0,0,0,0]"
-                  data-paddingbottom="[0,0,0,0]"
-                  data-paddingleft="[0,0,0,0]"
-                  style="
-                    z-index: 5;
-                    white-space: nowrap;
-                    font-size: 70px;
-                    line-height: 22px;
-                    font-weight: 800;
-                    color: #eaf3ff ;
-                    border: none;
-                    font-family: Poppins;
-                    text-transform: uppercase;
-                    letter-spacing: 1ch;
-                    margin-top: 40px;
-                  "
-                >
-                  Conference
-                </div>
-
-                <!-- LAYER NR. 2 -->
-                <div
-                  class="tp-caption tp-resizeme"
-                  id="slide-1-layer-2"
-                  data-x="center"
-                  data-hoffset=""
-                  data-y="center"
-                  data-voffset="-80"
-                  data-width="['auto']"
-                  data-height="['auto']"
-                  data-type="text"
-                  data-responsive_offset="on"
-                  data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                  data-textalign="['inherit','inherit','inherit','inherit']"
-                  data-paddingtop="[0,0,0,0]"
-                  data-paddingright="[0,0,0,0]"
-                  data-paddingbottom="[0,0,0,0]"
-                  data-paddingleft="[0,0,0,0]"
-                  style="
-                    z-index: 6;
-                    white-space: nowrap;
-                    font-size: 70px;
-                    line-height: 22px;
-                    font-weight: 1000;
-                    color: #ffffff ;
-                    font-family: Poppins;
-                    text-transform: uppercase;
-                  "
-                >
-                  We are People
-                </div>
-
-                <!-- LAYER NR. 3 -->
-             <a 
-  class="tp-caption rev-btn rev-withicon"
-  href="{% url 'registration' %}"
-  target="_self"
-  id="slide-1-layer-5"
-  data-x="center"
-  data-hoffset=""
-  data-y="center"
-  data-voffset="140"
-  data-width="['auto']"
-  data-height="['auto']"
-  data-type="button"
-  data-actions=""
-  data-responsive_offset="on"
-  data-responsive="off"
-  data-frames='[
-    {"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},
-    {"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},
-    {"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:#091e1b;bc:transparent;bs:none;bw:0;"}
-  ]'
-  data-textalign="['inherit','inherit','inherit','inherit']"
-  data-paddingtop="[12,12,12,12]"
-  data-paddingright="[35,35,35,35]"
-  data-paddingbottom="[12,12,12,12]"
-  data-paddingleft="[35,35,35,35]"
-  style="
-    z-index: 8;
-    white-space: nowrap;
-    font-size: 17px;
-    line-height: 17px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    font-family: Poppins;
-    background-color: #93b144;
-    border: none;
-    border-radius: 30px 30px 30px 30px;
-    outline: none;
-    box-shadow: none;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    cursor: pointer;
-    text-decoration: none;
-  "
->
-  Register
-</a>
-
-              </li>
-            </ul>
+            <!-- LAYER NR. 1 -->
             <div
-              class="tp-bannertimer tp-bottom"
-              style="visibility: hidden !important"
-            ></div>
+          class="tp-caption tp-resizeme"
+          id="slide-1-layer-1"
+          data-x="center"
+          data-hoffset=""
+          data-y="center"
+          data-voffset="-15"
+          data-width="['auto']"
+          data-height="['auto']"
+          data-type="text"
+          data-responsive_offset="on"
+          data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+          data-textalign="['inherit','inherit','inherit','inherit']"
+          data-paddingtop="[0,0,0,0]"
+          data-paddingright="[0,0,0,0]"
+          data-paddingbottom="[0,0,0,0]"
+          data-paddingleft="[0,0,0,0]"
+          style="
+            z-index: 5;
+            white-space: nowrap;
+            font-size: 70px;
+            line-height: 22px;
+            font-weight: 800;
+            color: #eaf3ff ;
+            border: none;
+            font-family:'Roboto Slab', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.7ch;
+            margin-top: 40px;
+          "
+            >
+          Conference
+            </div>
+
+            <!-- LAYER NR. 2 -->
+          <div
+          class="tp-caption tp-resizeme"
+          id="slide-1-layer-2"
+          data-x="center"
+          data-hoffset=""
+          data-y="center"
+          data-voffset="-80"
+          data-width="['auto']"
+          data-height="['auto']"
+          data-type="text"
+          data-responsive_offset="on"
+          data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+          data-textalign="['inherit','inherit','inherit','inherit']"
+          data-paddingtop="[0,0,0,0]"
+          data-paddingright="[0,0,0,0]"
+          data-paddingbottom="[0,0,0,0]"
+          data-paddingleft="[0,0,0,0]"
+          style="
+            z-index: 6;
+            white-space: nowrap;
+            font-size: 70px;
+            line-height: 22px;
+            font-weight: 1000;
+            color: #ffffff ;
+            font-family: Mulish;
+            text-transform: uppercase;
+            letter-spacing: 0.9ch ;
+          "
+            >
+          We are People
+            </div>
+
+          <!-- LAYER NR. 3 -->
+        {% if date %}
+        <div
+          class="tp-caption tp-resizeme"
+          id="slide-1-layer-1"
+          data-x="center"
+          data-hoffset=""
+          data-y="center"
+          data-voffset="50"
+          data-width="['auto']"
+          data-height="['auto']"
+          data-type="text"
+          data-responsive_offset="on"
+          data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+          data-textalign="['inherit','inherit','inherit','inherit']"
+          data-paddingtop="[0,0,0,0]"
+          data-paddingright="[0,0,0,0]"
+          data-paddingbottom="[0,0,0,0]"
+          data-paddingleft="[0,0,0,0]"
+          style="
+            z-index: 5;
+            white-space: nowrap;
+            font-size: 20px;
+            line-height: 7px;
+            font-weight: 200;
+            color: #eaf3ff ;
+            border: none;
+            font-family: Poppins;
+            text-transform: uppercase;
+            letter-spacing: 1ch;
+            margin-top: 20px;
+          "
+            >
+        {% for s in date %}
+        {% load highlight %}
+          {{ s.start_date|ordinal_day }} - {{ s.end_date|ordinal_day }}, {{s.end_date|date:"Y"}}.
+        </div>
+        {% endfor %}
+        {% endif %}
+
+
+        {% if venue %}
+        <!-- LAYER NR. 5 -->
+        
+        <div
+          class="tp-caption tp-resizeme"
+          id="slide-1-layer-venue"
+          data-x="center"
+          data-hoffset=""
+          data-y="center"
+          data-voffset="90"
+          data-width="['auto']"
+          data-height="['auto']"
+          data-type="text"
+          data-responsive_offset="on"
+          data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+          data-textalign="['inherit','inherit','inherit','inherit']"
+          data-paddingtop="[0,0,0,0]"
+          data-paddingright="[0,0,0,0]"
+          data-paddingbottom="[0,0,0,0]"
+          data-paddingleft="[0,0,0,0]"
+          style="
+            z-index: 5;
+            white-space: nowrap;
+            font-size: 15px;
+            line-height: 5px;
+            font-weight: 200;
+            color: #eaf3ff ;
+            border: none;
+            font-family: Poppins;
+            text-transform: uppercase;
+            letter-spacing: 1ch;
+            margin-top: 20px;
+          "
+        >
+        {% for d in venue %}
+          {{ d.venue }}
+        </div>
+        {% endfor %}
+        {% endif %}
+            <!-- LAYER NR. 4 -->
+          <a 
+          class="tp-caption rev-btn rev-withicon"
+          href="{% url 'registration' %}"
+          target="_self"
+          id="slide-1-layer-5"
+          data-x="center"
+          data-hoffset=""
+          data-y="center"
+          data-voffset="185"
+          data-width="['auto']"
+          data-height="['auto']"
+          data-type="button"
+          data-actions=""
+          data-responsive_offset="on"
+          data-responsive="off"
+          data-frames='[
+            {"delay":1000,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},
+            {"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},
+            {"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:#091e1b;bc:transparent;bs:none;bw:0;"}
+          ]'
+          data-textalign="['inherit','inherit','inherit','inherit']"
+          data-paddingtop="[12,12,12,12]"
+          data-paddingright="[35,35,35,35]"
+          data-paddingbottom="[12,12,12,12]"
+          data-paddingleft="[35,35,35,35]"
+          style="
+            z-index: 8;
+            white-space: nowrap;
+            font-size: 17px;
+            line-height: 17px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 1);
+            font-family: Poppins;
+            background-color: #93b144;
+            border: none;
+            border-radius: 30px 30px 30px 30px;
+            outline: none;
+            box-shadow: none;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            cursor: pointer;
+            text-decoration: none;
+          "
+            >
+          Register
+            </a>
+          </li>
+        </ul>
+        <div
+          class="tp-bannertimer tp-bottom"
+          style="visibility: hidden !important"
+        ></div>
           </div>
         </div>
         <!-- END REVOLUTION SLIDER -->
@@ -526,15 +607,17 @@
           <div class="page_content_wrapper">
             <div class="inner">
               <div style="margin: auto; width: 70%">
-                <h2 class="ppb_title" style="color: #ffffff; text-align: left">
+                <h2 class="ppb_title"  style="color: #ffffff; font-family: 'Poppins'; text-align: left">
                   ABOUT THE CONFERENCE
                 </h2>
-                <div class="ppb_header_content">
-                  <p>
+                <div  class="ppb_header_content">
+                  <p style="font-family:  'Roboto Slab';  text-align: justify;">
                    We Are People Conference is a national youth-focused event hosted by YouthRISE Nigeria, celebrating the role of young Nigerians in nation-building while tackling the barriers that limit their full participation.
-The conference convenes young leaders, policymakers, civil society, development partners, and the private sector to highlight youth excellence, promote unity, and drive inclusive national development.
-The We Are People Conference is more than just a conference, it's a movement, a platform to uplift and empower every young Nigerians, embracing diversity, resilience, and collaboration to unlock the full potential of Nigerians youth.
-                  <div class="post_button_wrapper">
+                    The conference convenes young leaders, policymakers, civil society, development partners, and the private sector to highlight youth excellence, promote unity, and drive inclusive national development.
+                    The We Are People Conference is more than just a conference, it's a movement, a platform to uplift and empower every young Nigerians, embracing diversity, resilience, and collaboration to unlock the full potential of Nigerians youth.
+                  </p>
+                </div>
+                    <div class="post_button_wrapper">
                   <a class="readmore" style="color: white;" href="{% url 'about' %}">
                     Read More <span class="ti-angle-right"></span>
                   </a>
@@ -557,14 +640,14 @@ The We Are People Conference is more than just a conference, it's a movement, a 
         ></div>
         
         <div  class="one_half_bg" style="padding: 85px">
-          <h2 class="ppb_title" style="color: #091e1b  ">
+          <h2 class="ppb_title" style="color: #091e1b; font-family: 'Roboto Slab', serif; font-weight: 700;" >
             Uniting Voices, Igniting Change
           </h2>
           <div class="page_tagline" style="">
           A Platform where young leaders, policymakers, and changemakers gathers to shape Nigeria’s future.
           </div>
           <div class="ppb_header_content">
-            <p>
+            <p style="font-family:  'Roboto Slab'; ">
              The We Are People Conference is more than a gathering — it’s a movement of vibrant youth voices, dynamic conversations, and powerful collaborations. From thought-provoking keynotes to hands-on skill-building sessions, the conference creates space for innovation, unity, and action. With a diverse mix of perspectives across governance, entrepreneurship, digital transformation, and social development, participants will leave equipped, inspired, and connected to drive real impact in their communities and beyond.
             </p>
           </div>
@@ -573,16 +656,16 @@ The We Are People Conference is more than just a conference, it's a movement, a 
       </div>
       <div style="background-color: #93b144;" class="one">
         <div class="one_half_bg textright" style="padding: 85px">
-          <h2 class="ppb_title" style="color: #091e1b ">
+          <h2 class="ppb_title" style="color: #091e1b; font-family: 'Roboto Slab', serif; font-weight: 700;">
             Celebrating the Power of Youth in Nation-Building
           </h2>
           <div class="page_tagline" style="">
            Uniting young Nigerians with leaders and innovators to inspire action, spark collaboration, and shape a stronger future
           </div>
           <div class="ppb_header_content">
-            <p>
+            <p style="font-family:  'Roboto Slab';" >
            The We Are People Conference is a vibrant platform that recognizes the creativity, resilience, and leadership of young Nigerians. It goes beyond dialogue, creating opportunities for collaboration, mentorship, and innovation that break down barriers to youth participation. By bringing together diverse stakeholders — from government and civil society to private sector leaders and young changemakers — the conference fosters unity and drives collective solutions that will shape a more inclusive and prosperous Nigeria.
-            </p>
+          </p>
           </div>
         </div>
         <div
@@ -594,14 +677,18 @@ The We Are People Conference is more than just a conference, it's a movement, a 
         ></div>
         <br class="clear" />
       </div>
+
+
+      <!-- Countdown Timer -->
       <div
         class="one withsmallpadding ppb_countdown_image parallax withbg"
         style="
-          background-image: url('static/upload/wep6.jpg');
+          background-image: url('static/upload/countdownd.jpg');
           background-position: center top;
           text-align: center;
           padding: 100px 0 100px 0;
           color: #ffffff;
+          border-top: 5px solid #091e1b;
         "
       >
         <!-- Date countdown -->
@@ -611,6 +698,7 @@ The We Are People Conference is more than just a conference, it's a movement, a 
             background: #000000;
             background: rgb(0, 0, 0, 0.5);
             background: rgba(0, 0, 0, 0.5);
+            
           "
         ></div>
 
@@ -620,7 +708,7 @@ The We Are People Conference is more than just a conference, it's a movement, a 
               <div style="margin: auto; width: 100%">
                 <h2
                   class="ppb_title"
-                  style="color: #93b144; text-align: center; font-weight: 800; letter-spacing: 0.5ch; font-size: 35px;"
+                  style="color: #93b144; text-align: center; font-weight: 800; letter-spacing: 0.5ch; font-size: 35px; font-size: 60px;"
                 >
                   COUNTDOWN
                 </h2>
@@ -652,7 +740,7 @@ The We Are People Conference is more than just a conference, it's a movement, a 
           <div class="page_content_wrapper">
             <div class="inner">
               <div style="margin: auto; width: 100%">
-                <h2 class="ppb_title" style="text-align: center; color: #93b144;">
+                <h2 class="ppb_title" style="text-align: center; font-family: 'Poppins'; color: #93b144;">
                   Our Speakers
                 </h2>
                 
@@ -706,8 +794,8 @@ The We Are People Conference is more than just a conference, it's a movement, a 
           <div class="page_content_wrapper">
             <div class="inner">
               <div style="margin: auto; width: 100%">
-                <h2 class="ppb_title" style="text-align: center; color: #93b144;">
-                  Our Sponsors
+                <h2 class="ppb_title" style="text-align: center; font-family: 'Poppins'; color: #93b144;">
+                  Our Partners
                 </h2>
                 
               </div>
@@ -740,7 +828,7 @@ The We Are People Conference is more than just a conference, it's a movement, a 
     <!-- Get tickets  -->
     <div
       class="one withsmallpadding ppb_header_youtube withbg parallax"
-      style="background-image: url('/static/upload/regbg.png'); 
+      style="background-image: url('/static/upload/Registerfoot.jpg'); 
       text-align: center; padding: 100px 0 100px 0; color: #ffffff"
     >
       <div
@@ -769,61 +857,7 @@ The We Are People Conference is more than just a conference, it's a movement, a 
     </div>
 
     <!-- footer -->
-    <div id="footer" class="ppb_wrapper" style="background: #091e14; padding: 50px 20px">
-      <ul class="sidebar_widget three">
-        <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p>
-              <img
-                src="{% static 'upload/Logo Icon.png' %}"
-                width="165"
-                height="20"
-                alt=""
-              />
-            </p>
-            
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p> <div style="font-size: large; font-weight: bold;">CONTACT US</div>
-             <br>
-              EMAIL: <a href="mailto:">conference@wearepeople.org</a> <br>
-              PHONE NUMBER: +2349045646031 <br>
-              ADDRESS: PLOT NO.1716 CADASTRAL ZONE B11 <br>
-              KAURA DISTRICT FCT. ABUJA
-            </p>
-                     
-          </div>
-        </li>
-         <li id="text-2" class="widget widget_text">
-          <div class="textwidget">
-            <p style="font-size: large; font-weight: bold;">
-              NEWSLETTER SIGNUP
-            </p>
-            <p>Register to get our Newsletter </p>
-
-            <form
-            id="newsletter-form"
-              class="mc4wp-form mc4wp-form-1234"
-              method="post"
-              data-id="1234"
-              data-name="Newsletter Form"
-              action="{% url 'newsletter_signup' %}">
-              {% csrf_token %}
-            <input id="clear" type="email" name="email"  required style="background-color: #123f38; border: none; color: wheat;">
-            <button style=" display: flex; justify-content: center; margin-top: 10px; width: 200px; background-color: #93b144; border: 0; " class="button medium">SUBMIT</button></form>
-            <div id="newsletter-message"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div id="side_menu_wrapper" class="overlay_background">
-      <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
-    </div>
-
-
+   {% include 'main/footer.html' %}
 
 
 <script>
@@ -845,8 +879,20 @@ document.getElementById("newsletter-form").addEventListener("submit", function(e
     if (data.type === "success") {
       msg.innerHTML = `<p style="color:green;">${data.message}</p>`;
     } else {
-      msg.innerHTML = `<p style="color:red;">${data.message || "Error occurred"}</p>`;
-    }
+  let errorText = "";
+
+  // If it's a dict of errors from Django
+  if (data.errors) {
+    errorText = Object.values(data.errors).flat().join("<br>");
+  } else if (data.message) {
+    // fallback if you later return a single error message
+    errorText = data.message;
+  } else {
+    errorText = "An unexpected error occurred.";
+  }
+
+  msg.innerHTML = `<p style="color:red;">${errorText}</p>`;
+}
   });
   document.getElementById("clear").value = "";
 });

@@ -1,69 +1,67 @@
 {% load static %}
-<!-- Input Bootstrap NavBar here -->
 <nav
-  class="navbar navbar-expand-lg fixed-top"
-  style="background-color: #091e1b"
+  class="navbar navbar-expand-lg fixed-top py-lg-2 py-1"
+  style="background-color: rgba(9, 30, 27, 0.7)"
   data-bs-theme="dark"
 >
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}"
-      ><img
-        class=""
-        style="width: 180px; height: 30px"
-        src="{% static 'upload/Logo Icon.png' %}"
-        alt=""
-    /></a>
+  <div
+    class="container-fluid d-flex justify-content-between align-items-center"
+  >
+    <!-- Mobile logo centered -->
+    <a class="navbar-brand mx-auto d-lg-none" href="{% url 'home' %}">
+      <img
+        src="{% static 'upload/logo.png' %}"
+        alt="Logo"
+        style="height: 50px; width: 60px"
+      />
+    </a>
+
+    <!-- Desktop logo -->
+    <a class="navbar-brand d-none d-lg-block" href="{% url 'home' %}">
+      <img
+        src="{% static 'upload/logo.png' %}"
+        alt="Logo"
+        width="68"
+        height="60"
+      />
+    </a>
+
+    <!-- Mobile toggler -->
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
+      data-bs-target="#navbarContent"
+      aria-controls="navbarContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+
+    <!-- Navbar links -->
+    <div
+      class="collapse navbar-collapse justify-content-lg-end"
+      id="navbarContent"
+    >
+      <ul class="navbar-nav align-items-lg-center ms-auto">
         <li class="nav-item">
-          <a
-            class="nav-link"
-            aria-current="page"
-            href="{% url 'home' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+          <a class="nav-link" href="{% url 'home' %}" style="color: white"
             >Home</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="{% url 'about' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+          <a class="nav-link" href="{% url 'about' %}" style="color: white"
             >About</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="{% url 'sponsor' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+          <a class="nav-link" href="{% url 'sponsor' %}" style="color: white"
             >Become a Sponsor</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="{% url 'programme' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+          <a class="nav-link" href="{% url 'programme' %}" style="color: white"
             >Get Programme</a
           >
         </li>
@@ -71,29 +69,17 @@
           <a
             class="nav-link"
             href="{% url 'exhibitions' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+            style="color: white"
             >Become an Exhibitor</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="{% url 'blog' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+          <a class="nav-link" href="{% url 'blog' %}" style="color: white"
             >Blog</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="{% url 'speakers' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+          <a class="nav-link" href="{% url 'speakers' %}" style="color: white"
             >Speakers</a
           >
         </li>
@@ -101,9 +87,7 @@
           <a
             class="nav-link"
             href="{% url 'gallery_list_main' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+            style="color: white"
             >Gallery</a
           >
         </li>
@@ -111,39 +95,22 @@
           <a
             class="nav-link"
             href="{% url 'registration' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+            style="color: white"
             >Register</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="{% url 'stories' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+          <a class="nav-link" href="{% url 'stories' %}" style="color: white"
             >Share your impact Story</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="{% url 'contact' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+          <a class="nav-link" href="{% url 'contact' %}" style="color: white"
             >Contact Us</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="{% url 'FAQs' %}"
-            style="color: white; transition: 0.3s"
-            onmouseover="this.style.color='#ffcc00'"
-            onmouseout="this.style.color='white'"
+          <a class="nav-link" href="{% url 'FAQs' %}" style="color: white"
             >FAQs</a
           >
         </li>
@@ -151,4 +118,3 @@
     </div>
   </div>
 </nav>
-<!-- Bootstrap NavBar End -->
