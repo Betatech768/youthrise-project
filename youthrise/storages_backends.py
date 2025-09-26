@@ -1,6 +1,12 @@
 from storages.backends.s3boto3 import S3Boto3Storage
 
 class MediaRootS3BotoStorage(S3Boto3Storage):
-    location = "media"            # ensures "media/" prefix is added inside bucket
-    file_overwrite = False        # optional: don’t overwrite files with same name
+    location = "media"
+    default_acl = "public-read"
+    file_overwrite = False
+    
+    
+    
+class StaticFileStorage(S3Boto3Storage):
+    location = "static"
     default_acl = "public-read"
