@@ -173,10 +173,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-# Static files
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # only if you have a /static folder
+ # only if you have a /static folder
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -185,8 +182,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Let WhiteNoise handle compressed static files
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
 
 CLOUDFLARE_R2_BUCKET = config("CLOUDFLARE_R2_BUCKET")
 CLOUDFLARE_R2_ACCESS = config("CLOUDFLARE_R2_ACCESS")
@@ -211,3 +206,4 @@ STORAGES = {
         "OPTIONS": CLOUDFLARE_R2_CONFIG_OPTIONS,
     },
 }
+
