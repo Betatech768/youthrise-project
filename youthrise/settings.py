@@ -62,6 +62,7 @@ INSTALLED_APPS = [
    'django.contrib.humanize',
    'Newsletter',
    'Contact_Us',
+   "storages",
 
     ]
 
@@ -83,8 +84,8 @@ XS_SHARING_ALLOWED_METHODS = ['POST','GET','OPTIONS', 'PUT', 'DELETE']
 
 ROOT_URLCONF = 'youthrise.urls'
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 TEMPLATES = [
     {
@@ -102,6 +103,22 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'youthrise.wsgi.application'
+
+
+
+# Cloudflare R2 credentials
+AWS_ACCESS_KEY_ID = os.getenv("R2_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("R2_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = "youthriseproject"
+AWS_S3_ENDPOINT_URL = "https://9022445bf338957ee8b8fc6ef691d81f.r2.cloudflarestorage.com"
+AWS_S3_REGION_NAME = "auto"  # R2 doesn’t really use regions
+
+if not DEBUG:
+    DEFAULT_FILE_STORAGE = "youthrise.storages_backends.MediaRootS3BotoStorage"
+    MEDIA_URL = "https://pub-87d96f653a244c928208c7b19cdf6713.r2.dev/media/"
+else:
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 # Database

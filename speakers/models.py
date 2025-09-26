@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class Speakers(models.Model):
     Speaker_name = models.CharField (max_length=50)
     Speaker_position = models.CharField(max_length=100)
@@ -16,3 +17,7 @@ class Speakers(models.Model):
 class SpeakerImage(models.Model):
     blog = models.ForeignKey(Speakers, on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(upload_to='speaker_images/')
+    
+    
+    
+    
