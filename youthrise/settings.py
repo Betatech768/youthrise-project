@@ -2,6 +2,7 @@ from decouple import config
 import dj_database_url
 from pathlib import Path
 import os
+import helpers.cloudflare.settings
 
 # ---------------------------------------------
 # BASE CONFIG
@@ -115,42 +116,25 @@ USE_TZ = True
 # ---------------------------------------------
 # CLOUD FLARE R2 CONFIG
 # ---------------------------------------------
-CLOUDFLARE_R2_BUCKET = config("CLOUDFLARE_R2_BUCKET")
-CLOUDFLARE_R2_ACCESS = config("CLOUDFLARE_R2_ACCESS")
-CLOUDFLARE_R2_SECRET = config("CLOUDFLARE_R2_SECRET")
-CLOUDFLARE_R2_BUCKET_ENDPOINT = config("CLOUDFLARE_R2_BUCKET_ENDPOINT")
-CLOUDFLARE_R2_PUBLIC_URL = config("CLOUDFLARE_R2_PUBLIC_URL")
 
-CLOUDFLARE_R2_CONFIG_OPTIONS = {
-    "bucket_name": CLOUDFLARE_R2_BUCKET,
-    "access_key": CLOUDFLARE_R2_ACCESS,
-    "secret_key": CLOUDFLARE_R2_SECRET,
-    "endpoint_url": CLOUDFLARE_R2_BUCKET_ENDPOINT,
-    "default_acl": "public-read",
+STATIC_URL = "static/"
+
+
+
+STORAGES = {
+    "default": {
+        "BACKEND": "helpers.cloudflare.storages.MediaFileStorage",
+        "OPTIONS": helpers.cloudflare.settings.CLOUDFLARE_R2_CONFIG_OPTIONS,
+    },
+    "staticfiles": {
+        "BACKEND": "helpers.cloudflare.storages.StaticFileStorage",
+        "OPTIONS": helpers.cloudflare.settings.CLOUDFLARE_R2_CONFIG_OPTIONS,
+    },
 }
 
-# ---------------------------------------------
-# STATIC & MEDIA FILES
-# ---------------------------------------------
-if DEBUG:
-    STATIC_URL = "/static/"
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-    MEDIA_URL = "/media/"
-    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-    DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
-    STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
-else:
-    # Use R2 for uploads
-    DEFAULT_FILE_STORAGE = "youthrise.storages_backends.MediaRootS3BotoStorage"
-    STATICFILES_STORAGE = "youthrise.storages_backends.StaticFileStorage"
-
-    # Public URL for reading
-    MEDIA_URL = f"{CLOUDFLARE_R2_PUBLIC_URL}media/"
-    STATIC_URL = f"{CLOUDFLARE_R2_PUBLIC_URL}static/"
 
 # ---------------------------------------------
 # DEFAULT AUTO FIELD
