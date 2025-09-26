@@ -1,43 +1,35 @@
-
 from decouple import config
 import dj_database_url
 from pathlib import Path
 import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# ---------------------------------------------
+# BASE CONFIG
+# ---------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY =config("SECRET_KEY")
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+SECRET_KEY = config("SECRET_KEY")
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="").split(",")
 
-
-
-
 # Expire session when browser is closed
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True  
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 3600  # 1 hour
 
-# Or set lifetime in seconds (e.g., 1 hour)
-SESSION_COOKIE_AGE = 3600  
-
-
-# Application definition
-
+# ---------------------------------------------
+# APPLICATIONS
+# ---------------------------------------------
 INSTALLED_APPS = [
-    # 'django.contrib.admin',
+    # Django apps
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+
+    # Your apps
     'blogpost',
     'exhibition',
     'galleries',
@@ -48,16 +40,16 @@ INSTALLED_APPS = [
     'main',
     'admin',
     'Images',
-   'django.contrib.humanize',
-   'Newsletter',
-   'Contact_Us',
-   "storages",
+    'Newsletter',
+    'Contact_Us',
 
-    ]
+    # Third-party apps
+    "storages",
+]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # ✅ add this line
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # for local compression
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -66,15 +58,10 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-
 X_FRAME_OPTIONS = 'SAMEORIGIN'
-
-XS_SHARING_ALLOWED_METHODS = ['POST','GET','OPTIONS', 'PUT', 'DELETE']
+XS_SHARING_ALLOWED_METHODS = ['POST', 'GET', 'OPTIONS', 'PUT', 'DELETE']
 
 ROOT_URLCONF = 'youthrise.urls'
-
-# MEDIA_URL = "/media/"
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 TEMPLATES = [
     {
@@ -93,37 +80,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'youthrise.wsgi.application'
 
-
-
-# Cloudflare R2 credentials
-
-
-
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'youthrise_project',
-#         'USER': 'goodness',
-#         'PASSWORD': 'chinexy',
-#         'HOST': 'localhost',   # or the database server IP
-#         'PORT': '3306',        # default MySQL port
-#     }
-# }
-
-
-# DATABASES = {
-#     'default': dj_database_url.parse(
-#         config("DATABASE_URL"),
-#         conn_max_age=600,  # keep connection alive
-#         ssl_require=False
-#     )
-# }
-
-
-
+# ---------------------------------------------
+# DATABASE
+# ---------------------------------------------
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -135,54 +94,27 @@ DATABASES = {
     }
 }
 
-
-
-
-
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
-
+# ---------------------------------------------
+# PASSWORD VALIDATION
+# ---------------------------------------------
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
-
+# ---------------------------------------------
+# INTERNATIONALIZATION
+# ---------------------------------------------
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
- # only if you have a /static folder
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-# Let WhiteNoise handle compressed static files
-
+# ---------------------------------------------
+# CLOUD FLARE R2 CONFIG
+# ---------------------------------------------
 CLOUDFLARE_R2_BUCKET = config("CLOUDFLARE_R2_BUCKET")
 CLOUDFLARE_R2_ACCESS = config("CLOUDFLARE_R2_ACCESS")
 CLOUDFLARE_R2_SECRET = config("CLOUDFLARE_R2_SECRET")
@@ -196,14 +128,30 @@ CLOUDFLARE_R2_CONFIG_OPTIONS = {
     "default_acl": "public-read",
 }
 
-STORAGES = {
-    "default": {
-        "BACKEND": "youthrise.storages_backends.MediaRootS3BotoStorage",
-        "OPTIONS": CLOUDFLARE_R2_CONFIG_OPTIONS,
-    },
-    "staticfiles": {
-        "BACKEND": "youthrise.storages_backends.StaticFileStorage",
-        "OPTIONS": CLOUDFLARE_R2_CONFIG_OPTIONS,
-    },
-}
+# ---------------------------------------------
+# STATIC & MEDIA FILES
+# ---------------------------------------------
+if DEBUG:
+    # Local development
+    STATIC_URL = "/static/"
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+    DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
+    STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+
+else:
+    # Production - use Cloudflare R2
+    DEFAULT_FILE_STORAGE = "youthrise.storages_backends.MediaRootS3BotoStorage"
+    MEDIA_URL = f"{CLOUDFLARE_R2_BUCKET_ENDPOINT}media/"
+
+    STATICFILES_STORAGE = "youthrise.storages_backends.StaticFileStorage"
+    STATIC_URL = f"{CLOUDFLARE_R2_BUCKET_ENDPOINT}static/"
+
+# ---------------------------------------------
+# DEFAULT AUTO FIELD
+# ---------------------------------------------
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
