@@ -119,6 +119,7 @@ CLOUDFLARE_R2_BUCKET = config("CLOUDFLARE_R2_BUCKET")
 CLOUDFLARE_R2_ACCESS = config("CLOUDFLARE_R2_ACCESS")
 CLOUDFLARE_R2_SECRET = config("CLOUDFLARE_R2_SECRET")
 CLOUDFLARE_R2_BUCKET_ENDPOINT = config("CLOUDFLARE_R2_BUCKET_ENDPOINT")
+CLOUDFLARE_R2_PUBLIC_URL = config("CLOUDFLARE_R2_PUBLIC_URL")
 
 CLOUDFLARE_R2_CONFIG_OPTIONS = {
     "bucket_name": CLOUDFLARE_R2_BUCKET,
@@ -132,7 +133,6 @@ CLOUDFLARE_R2_CONFIG_OPTIONS = {
 # STATIC & MEDIA FILES
 # ---------------------------------------------
 if DEBUG:
-    # Local development
     STATIC_URL = "/static/"
     STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
     STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
@@ -144,12 +144,13 @@ if DEBUG:
     STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 else:
-    # Production - use Cloudflare R2
+    # Use R2 for uploads
     DEFAULT_FILE_STORAGE = "youthrise.storages_backends.MediaRootS3BotoStorage"
-    MEDIA_URL = f"{CLOUDFLARE_R2_BUCKET_ENDPOINT}media/"
-
     STATICFILES_STORAGE = "youthrise.storages_backends.StaticFileStorage"
-    STATIC_URL = f"{CLOUDFLARE_R2_BUCKET_ENDPOINT}static/"
+
+    # Public URL for reading
+    MEDIA_URL = f"{CLOUDFLARE_R2_PUBLIC_URL}media/"
+    STATIC_URL = f"{CLOUDFLARE_R2_PUBLIC_URL}static/"
 
 # ---------------------------------------------
 # DEFAULT AUTO FIELD
