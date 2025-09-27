@@ -117,8 +117,24 @@ USE_TZ = True
 # CLOUD FLARE R2 CONFIG
 # ---------------------------------------------
 
-STATIC_URL = "static/"
 
+# -------------------------
+# STATIC FILES
+# -------------------------
+STATIC_URL = "https://pub-4022504114e347b0985a8c9078df1fe3.r2.dev/static/"
+STATICFILES_STORAGE = "helpers.cloudflare.storages.StaticFileStorage"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+
+
+WHITENOISE_USE_FINDERS = True
+
+# -------------------------
+# MEDIA FILES
+# -------------------------
+DEFAULT_FILE_STORAGE = "helpers.cloudflare.storages.MediaFileStorage"
+MEDIA_URL = "https://pub-4022504114e347b0985a8c9078df1fe3.r2.dev/media/"
 
 
 STORAGES = {
