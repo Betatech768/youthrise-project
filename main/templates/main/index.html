@@ -507,7 +507,7 @@
           style="
             z-index: 5;
             white-space: nowrap;
-            font-size: 15px;
+            font-size: 20px;
             line-height: 5px;
             font-weight: 200;
             color: #eaf3ff ;
@@ -670,6 +670,7 @@
 
 
       <!-- Countdown Timer -->
+       {% if date %}
       <div
         class="one withsmallpadding ppb_countdown_image parallax withbg"
         style="
@@ -702,20 +703,22 @@
                   class="ppb_title"
                   style="color: #93b144; text-align: center; font-weight: 800; letter-spacing: 0.5ch; font-size: 35px; font-size: 60px;"
                 >
-                  COUNTDOWN
+                  COUNTDOWN 
                 </h2>
                 
                 <div class="ppb_header_content clock">
                   <div 
                     id="clock1573568515278500141"
-                    data-date="2025-11-27 09:00:00"
+                    data-date="{{s.start_date|date:"Y-m-d"}} 09:00:00"
                   ></div>
+                  {% endfor %}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {% endif %}
 
       <!-- Speaker Tagline -->
       <div
