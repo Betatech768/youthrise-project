@@ -227,6 +227,7 @@ def blog_success(request):
     return render(request, 'admin/blog_success.html')
 
 
+@login_required
 def gallery_view(request):
     if request.method == 'POST':
         if 'upload' in request.POST:
@@ -249,7 +250,7 @@ def gallery_view(request):
         'form': form,
         'images': images
     })
-
+@login_required
 def upload_document(request):
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
@@ -264,7 +265,7 @@ def upload_document(request):
         'form': form,
         'documents': documents
     })
-
+@login_required
 def delete_document(request, pk):
     doc = get_object_or_404(Document, pk=pk)
     if request.method == "POST":
@@ -272,7 +273,7 @@ def delete_document(request, pk):
         return redirect('document_list')
     return render(request, 'admin/delete_programme.html', {'doc': doc})
 
-
+@login_required
 def sponsors_manage(request):
     """Upload and list sponsors"""
     if request.method == "POST":
@@ -285,7 +286,7 @@ def sponsors_manage(request):
 
     sponsors = Sponsor.objects.all()
     return render(request, "admin/sponsors_list.html", {"form": form, "sponsors": sponsors})
-
+@login_required
 @require_POST
 def delete_sponsor(request, pk):
     """Delete sponsor via AJAX"""
@@ -296,6 +297,7 @@ def delete_sponsor(request, pk):
 
 
 # Update sponsorship package (for admin/staff)
+@login_required
 def update_package(request):
     # package = get_object_or_404(SponsorshipPackage, pk=pk)
     if request.method == 'POST':
@@ -308,7 +310,7 @@ def update_package(request):
 
     sponsors = SponsorshipPackage.objects.all()
     return render(request, 'admin/update_package.html', {'form': form, 'sponsors': sponsors})
-
+@login_required
 @require_POST
 def delete_sponsor_package(request, pk):
     """Delete sponsor via AJAX"""
@@ -317,7 +319,7 @@ def delete_sponsor_package(request, pk):
     return JsonResponse({"success": True})
 
 
-
+@login_required
 def export_registrations_excel(request):
     # Create workbook and worksheet
     wb = openpyxl.Workbook()
@@ -354,11 +356,11 @@ def export_registrations_excel(request):
 
     return response
 
-
+@login_required
 def contact_messages(request):
     contact = ContactMessage.objects.all().order_by('-created_at')
     return render(request, 'admin/contact_messages.html', {'contact': contact})
-
+@login_required
 def newsletter_registrations(request):
     newsletter = Newsletter.objects.all().order_by('-created_at')
     return render(request, 'admin/newsletter_registrations.html', {'newsletter': newsletter})
@@ -455,7 +457,7 @@ def export_sponsors_excel(request):
     wb.save(response)
     return response
 
-
+@login_required
 def streaming(request):
     streamId  = stream.objects.all()
     if request.method == "POST":
@@ -471,7 +473,7 @@ def streaming(request):
     return render(request, 'admin/stream.html', context)
 
 
-
+@login_required
 @require_POST
 def delete_stream(request, pk):
     """Delete stream via AJAX"""
@@ -480,7 +482,7 @@ def delete_stream(request, pk):
     return JsonResponse({"success": True})
 
 
-
+@login_required
 def story_list(request):
     sponsors = stories.objects.all().order_by('-id')
     return render(request, 'admin/story.html', {'sponsors': sponsors})
@@ -577,7 +579,7 @@ def clear_impactstories_model(request):
     stories.objects.all().delete()
     return JsonResponse({"message": "All records cleared successfully!"})
 
-
+@login_required
 def conferencedate (request):
     streamId = ConferenceDate.objects.all()
     message = ""
@@ -594,7 +596,7 @@ def conferencedate (request):
 
     return render( request, 'admin/conferncedate.html', {"form": form, "message": message, "streamId":streamId})
 
-
+@login_required
 def conferencevenue(request):
     streamId = ConferenceVenue.objects.all()
     message = ""
@@ -613,7 +615,7 @@ def conferencevenue(request):
 
 
 
-
+@login_required
 def viewingday(request):
     streamId = ViewingDays.objects.all()
     message = ""
