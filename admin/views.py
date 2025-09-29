@@ -368,7 +368,7 @@ def newsletter_registrations(request):
 
 
 
-
+@login_required
 def export_newsletters_excel(request):
     wb = openpyxl.Workbook()
     ws = wb.active
@@ -391,7 +391,7 @@ def export_newsletters_excel(request):
 
 
 
-
+@login_required
 def export_exhibitions_excel(request):
     wb = openpyxl.Workbook()
     ws = wb.active
@@ -428,6 +428,7 @@ def export_exhibitions_excel(request):
 
 
 
+@login_required
 def export_sponsors_excel(request):
     wb = openpyxl.Workbook()
     ws = wb.active
@@ -489,6 +490,7 @@ def story_list(request):
 
 
 
+@login_required
 def export_stories_excel(request):
     # Create a new Excel workbook
     wb = openpyxl.Workbook()
@@ -549,6 +551,7 @@ def export_stories_excel(request):
 
     return response
 
+@login_required
 @require_POST
 @csrf_exempt  # ⚠️ remove this if you add CSRF token in AJAX
 def clear_model(request):
@@ -557,6 +560,7 @@ def clear_model(request):
 
 
 
+@login_required
 @require_POST
 @csrf_exempt  # ⚠️ remove this if you add CSRF token in AJAX
 def clear_registration_model(request):
@@ -566,6 +570,7 @@ def clear_registration_model(request):
 
 
 
+@login_required
 @require_POST
 @csrf_exempt  # ⚠️ remove this if you add CSRF token in AJAX
 def clear_exhibition_model(request):
@@ -573,6 +578,7 @@ def clear_exhibition_model(request):
     return JsonResponse({"message": "All records cleared successfully!"})
 
 
+@login_required
 @require_POST
 @csrf_exempt  # ⚠️ remove this if you add CSRF token in AJAX
 def clear_impactstories_model(request):
@@ -632,14 +638,14 @@ def viewingday(request):
 
     return render( request, 'admin/viewingday.html', {"form": form, "message": message, "streamId": streamId})
 
-
+@login_required
 def delete_viewingday(request, pk):
     """Delete a ViewingDay via AJAX"""
     viewingday = get_object_or_404(ViewingDays, pk=pk)
     viewingday.delete()
     return JsonResponse({"success": True})
 
-
+@login_required
 def delete_conferenceday(request, pk):
     """Delete a ViewingDay via AJAX"""
     viewingday = get_object_or_404(ConferenceDate, pk=pk)
@@ -647,7 +653,7 @@ def delete_conferenceday(request, pk):
     return JsonResponse({"success": True})
 
 
-
+@login_required
 def delete_conferencevenue(request, pk):
     """Delete a ViewingDay via AJAX"""
     viewingday = get_object_or_404(ConferenceVenue, pk=pk)
