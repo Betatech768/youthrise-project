@@ -206,6 +206,10 @@
         }
       }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
   </head>
   <body
     style="background-color: #93b144"
@@ -244,9 +248,25 @@
               <div class="element grid classic4_cols">
                 <div
                   class="one_fourth gallery4 static filterable gallery_type animated1"
-                  data-id="post-1"
+                  data-id="post-{{ image.id }}"
                 >
-                  <img src="{{ image.image.url }}" alt="Image {{ image.id }}" />
+                  <a
+                    href="{{ image.image.url }}"
+                    data-fancybox="gallery"
+                    {%
+                    if
+                    image.title
+                    %}
+                    data-caption="{{ image.title }}"
+                    {%
+                    endif
+                    %}
+                  >
+                    <img
+                      src="{{ image.image.url }}"
+                      alt="Image {{ image.id }}"
+                    />
+                  </a>
                 </div>
               </div>
               {% endfor %}
@@ -259,6 +279,7 @@
     <!-- footer -->
     {% include 'main/footer.html' %}
 
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script>
       document
         .getElementById("newsletter-form")
