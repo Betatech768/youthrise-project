@@ -121,7 +121,7 @@ USE_TZ = True
 # -------------------------
 # STATIC FILES
 # -------------------------
-STATIC_URL = "https://pub-4022504114e347b0985a8c9078df1fe3.r2.dev/static/"
+STATIC_URL = "https://media.wearepeopleconference.org/static/"
 STATICFILES_STORAGE = "helpers.cloudflare.storages.StaticFileStorage"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
@@ -134,7 +134,7 @@ WHITENOISE_USE_FINDERS = True
 # MEDIA FILES
 # -------------------------
 DEFAULT_FILE_STORAGE = "helpers.cloudflare.storages.MediaFileStorage"
-MEDIA_URL = "https://pub-4022504114e347b0985a8c9078df1fe3.r2.dev/media/"
+MEDIA_URL = "https://media.wearepeopleconference.org/media/"
 
 
 STORAGES = {
