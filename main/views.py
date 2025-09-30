@@ -181,12 +181,9 @@ def speakers (request):
             'speakers': speakers
     })
 
-def gallery (request):
-    return render (request, 'main/gallery.html')
-
 
 def gallery_list(request):
-    images = GalleryImage.objects.exclude(image='')  # Only images with files
+    images = GalleryImage.objects.exclude(image='').order_by("-uploaded_at") # Only images with files
     return render(request, 'main/gallery.html', {
             'images': images
     })
