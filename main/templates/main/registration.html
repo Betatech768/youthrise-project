@@ -212,6 +212,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css"
     />
+    <style>
+      /* Blinking effect */
+      .blinking {
+        animation: blinker 1s linear infinite;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
 
   <body
@@ -450,8 +462,9 @@
                               style="background-color: #091e1b"
                               type="submit"
                               class="submit-button"
+                              id="submitBtn"
                             >
-                              <span>Send</span>
+                              <span id="btnText">Send</span>
                             </button>
                           </div>
                           <p
@@ -533,31 +546,28 @@
         });
     </script>
 
-    <!-- <script>
-const RegCat = document.getElementById("id_registration_category");
-const VolCat = document.getElementById("id_volunteer_option");
+    <script>
+      const form = document.getElementById("sponsorForm");
+      const button = document.getElementById("submitBtn");
+      const btnText = document.getElementById("btnText");
 
-if (RegCat && VolCat) {
-  // adjust depending on your HTML wrapper (div or p)
-  const VolCatWrapper = document.getElementById("id_volunteer_option");
-  const VolCatWrapperLabel = VolCat.closest("label")
-  function toggleVolunteer() {
-    if (RegCat.value === "5") {   // Volunteer selected
-      VolCatWrapper.style.display = "block";
-      VolCatWrapperLabel.style.display = "block";
-    } else {
-      VolCatWrapper.style.display = "block";
-      VolCatWrapperLabel.style.display = "block";
-    }
-  }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // stop normal submit for demo (remove if you want reload)
 
-  // Run once on page load
-  toggleVolunteer();
+        // Change text + start blinking + disable
+        btnText.textContent = "Submitting...";
+        btnText.classList.add("blinking");
+        button.disabled = true;
 
-  // Run whenever registration category changes
-  RegCat.addEventListener("change", toggleVolunteer);
-}
-</script> -->
+        // Simulate AJAX (replace with your fetch/axios call)
+        setTimeout(() => {
+          // stop blinking
+          btnText.classList.remove("blinking");
+          btnText.textContent = "Send";
+          button.disabled = false; // re-enable if you want
+        }, 3000);
+      });
+    </script>
 
     <script>
       const sect = document.getElementById("id_sector"); //dropdown

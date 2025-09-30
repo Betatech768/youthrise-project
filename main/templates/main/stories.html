@@ -211,6 +211,18 @@
         }
       }
     </style>
+    <style>
+      /* Blinking effect */
+      .blinking {
+        animation: blinker 1s linear infinite;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body
     style="background-color: #93b144"
@@ -296,8 +308,9 @@
                             style="background-color: #091e1b"
                             type="submit"
                             class="submit-button"
+                            id="submitBtn"
                           >
-                            <span>Send</span>
+                            <span id="btnText">Send</span>
                           </button>
                         </div>
 
@@ -358,7 +371,28 @@
             .catch((err) => console.error("Error:", err));
         });
     </script>
+    <script>
+      const form = document.getElementById("sponsorForm");
+      const button = document.getElementById("submitBtn");
+      const btnText = document.getElementById("btnText");
 
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // stop normal submit for demo (remove if you want reload)
+
+        // Change text + start blinking + disable
+        btnText.textContent = "Submitting...";
+        btnText.classList.add("blinking");
+        button.disabled = true;
+
+        // Simulate AJAX (replace with your fetch/axios call)
+        setTimeout(() => {
+          // stop blinking
+          btnText.classList.remove("blinking");
+          btnText.textContent = "Send";
+          button.disabled = false; // re-enable if you want
+        }, 3000);
+      });
+    </script>
     <script>
       document
         .getElementById("newsletter-form")

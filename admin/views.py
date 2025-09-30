@@ -321,20 +321,23 @@ def delete_sponsor_package(request, pk):
 
 @login_required
 def export_registrations_excel(request):
-    # Create workbook and worksheet
+    import openpyxl
+    from django.http import HttpResponse
+
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Registrations"
 
-    # Get model fields
+    # Headers
     fields = [field.verbose_name for field in Registration._meta.fields if field.name != "id"]
-
-    # Write header row
     ws.append(fields)
 
-    # Write data rows
+    seen = set()  # to track duplicates
+
     for reg in Registration.objects.all():
         row = []
+        duplicate_key = None  # will hold the fields we check for duplicates
+
         for field in Registration._meta.fields:
             if field.name == "id":
                 continue
@@ -344,16 +347,31 @@ def export_registrations_excel(request):
             if field.many_to_one and value is not None:
                 value = str(value)
 
-            row.append(value)
-        ws.append(row)
+            # Handle choices properly
+            if field.choices:
+                value = dict(field.flatchoices).get(value, value) if value else ""
 
-    # Response as Excel file
+            row.append(value)
+
+            # Build duplicate key
+            if field.name in ["email", "phone_number", "first_name", "last_name"]:
+                if duplicate_key is None:
+                    duplicate_key = []
+                duplicate_key.append(str(value).strip().lower())  # normalize
+
+        # Only write if not duplicate
+        if duplicate_key:
+            duplicate_key = tuple(duplicate_key)
+            if duplicate_key not in seen:
+                ws.append(row)
+                seen.add(duplicate_key)
+
+    # Return response
     response = HttpResponse(
         content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     )
     response["Content-Disposition"] = 'attachment; filename="registrations.xlsx"'
     wb.save(response)
-
     return response
 
 @login_required

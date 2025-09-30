@@ -195,18 +195,29 @@ class Registration(models.Model):
     registered_on = models.DateField(auto_now_add=True)
     
     def get_fields(self):
-        """Return (verbose_name, value) for all fields, including M2M and FK as string."""
+        """Return (verbose_name, value) for all fields, including M2M, FK, and choices as string."""
         fields = []
         for field in self._meta.fields:
             value = field.value_from_object(self)
-            # Show string for ForeignKey
+
+            # Handle ForeignKey
             if field.many_to_one and value is not None:
                 related_obj = getattr(self, field.name)
                 value = str(related_obj) if related_obj else None
+
+            # Handle choices (convert DB value to human-readable label)
+            elif field.choices:
+                if not value:  # None or ""
+                    value = ""
+                else:
+                    value = dict(field.flatchoices).get(value, value)
+
             fields.append((field.verbose_name, value))
-        # Add ManyToMany fields
+
+        # Handle ManyToMany
         for field in self._meta.many_to_many:
             value = getattr(self, field.name).all()
             value = ", ".join(str(obj) for obj in value)
             fields.append((field.verbose_name, value))
+
         return fields

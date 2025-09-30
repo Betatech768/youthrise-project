@@ -69,8 +69,7 @@ class RegistrationForm(forms.ModelForm):
             "gender",
             "photography_consent",
             "email_communication",
-            "registration_category",
-            "volunteer_option",
+           
         ]
 
         for field_name in choice_fields:
