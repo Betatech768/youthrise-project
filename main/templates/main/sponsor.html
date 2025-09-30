@@ -196,6 +196,18 @@
 }
 
     </style>
+     <style>
+      /* Blinking effect */
+      .blinking {
+        animation: blinker 1s linear infinite;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body
    style="background-color: #93b144;" class="speaker-template-default single single-speaker postid-138 woocommerce-no-js"
@@ -264,8 +276,8 @@
                         <!-- Begin Submit button -->
                         <div class="quform-submit">
                           <div class="quform-submit-inner">
-                            <button style="background-color: #091e1b;" type="submit" class="submit-button">
-                              <span>Send</span>
+                            <button id="submitBtn" style="background-color: #091e1b;" type="submit" class="submit-button">
+                              <span id="btnText">Send</span>
                             </button>
                           </div>
                           <div class="quform-loading-wrap">
@@ -290,6 +302,28 @@
 
 
 
+    <script>
+      const form = document.getElementById("sponsorForm");
+      const button = document.getElementById("submitBtn");
+      const btnText = document.getElementById("btnText");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // stop normal submit for demo (remove if you want reload)
+
+        // Change text + start blinking + disable
+        btnText.textContent = "Submitting...";
+        btnText.classList.add("blinking");
+        button.disabled = true;
+
+        // Simulate AJAX (replace with your fetch/axios call)
+        setTimeout(() => {
+          // stop blinking
+          btnText.classList.remove("blinking");
+          btnText.textContent = "Send";
+          button.disabled = false; // re-enable if you want
+        }, 3000);
+      });
+    </script>
 
     <script>
 document.getElementById("sponsorForm").addEventListener("submit", function(e) {

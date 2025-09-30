@@ -411,6 +411,9 @@ def export_newsletters_excel(request):
 
 @login_required
 def export_exhibitions_excel(request):
+    import openpyxl
+    from django.http import HttpResponse
+
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Exhibitions"
@@ -422,9 +425,11 @@ def export_exhibitions_excel(request):
         "Primary Contact", "What Exhibiting", "Registration Date"
     ])
 
+    seen = set()  # Track duplicates
+
     # Data
     for obj in Exhibition.objects.all():
-        ws.append([
+        row = [
             obj.firstname,
             obj.lastname,
             obj.email,
@@ -433,8 +438,20 @@ def export_exhibitions_excel(request):
             obj.organization_description,
             obj.primary_contact,
             obj.what_exhibiting,
-            obj.created_at
-        ])
+            obj.created_at.strftime("%Y-%m-%d %H:%M") if obj.created_at else "",
+        ]
+
+        # Build duplicate key
+        duplicate_key = (
+            str(obj.firstname).strip().lower(),
+            str(obj.lastname).strip().lower(),
+            str(obj.email).strip().lower() if obj.email else "",
+        )
+
+        # Only write if not duplicate
+        if duplicate_key not in seen:
+            ws.append(row)
+            seen.add(duplicate_key)
 
     # Response
     response = HttpResponse(
@@ -448,6 +465,9 @@ def export_exhibitions_excel(request):
 
 @login_required
 def export_sponsors_excel(request):
+    import openpyxl
+    from django.http import HttpResponse
+
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Sponsors"
@@ -457,16 +477,31 @@ def export_sponsors_excel(request):
         "First Name", "Last Name", "Email", "Contact", "Package", "Registration Date" 
     ])
 
+    seen = set()  # Track duplicates
+
     # Data
     for obj in Sponsors.objects.all():
-        ws.append([
+        row = [
             obj.firstname,
             obj.lastname,
             obj.email,
             obj.contact,
             str(obj.package),  # package name
-            obj.created_at,
-        ])
+            obj.created_at.strftime("%Y-%m-%d %H:%M") if obj.created_at else "",
+        ]
+
+        # Build duplicate key
+        duplicate_key = (
+            str(obj.firstname).strip().lower(),
+            str(obj.lastname).strip().lower(),
+            str(obj.email).strip().lower() if obj.email else "",
+            str(obj.contact).strip().lower() if obj.contact else "",
+        )
+
+        # Only write if not duplicate
+        if duplicate_key not in seen:
+            ws.append(row)
+            seen.add(duplicate_key)
 
     # Response
     response = HttpResponse(
@@ -475,6 +510,7 @@ def export_sponsors_excel(request):
     response["Content-Disposition"] = "attachment; filename=sponsors.xlsx"
     wb.save(response)
     return response
+
 
 @login_required
 def streaming(request):
@@ -510,7 +546,9 @@ def story_list(request):
 
 @login_required
 def export_stories_excel(request):
-    # Create a new Excel workbook
+    import openpyxl
+    from django.http import HttpResponse
+
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Stories"
@@ -536,9 +574,10 @@ def export_stories_excel(request):
     ]
     ws.append(headers)
 
-    # Query all stories
+    seen = set()  # track duplicates
+
     for story in stories.objects.all():
-        ws.append([
+        row = [
             story.fullname,
             story.content,
             story.specify_others,
@@ -556,17 +595,27 @@ def export_stories_excel(request):
             story.portfolio_link,
             story.social_media,
             story.created_at.strftime("%Y-%m-%d %H:%M"),
-        ])
+        ]
 
-    # Set response headers
+        # Build duplicate key (adjust fields if needed)
+        duplicate_key = (
+            str(story.fullname).strip().lower(),
+            str(story.contact_person_email).strip().lower() if story.contact_person_email else "",
+            str(story.contact_person_phone).strip().lower() if story.contact_person_phone else "",
+        )
+
+        # Only write if not duplicate
+        if duplicate_key not in seen:
+            ws.append(row)
+            seen.add(duplicate_key)
+
+    # Response
     response = HttpResponse(
         content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
     response["Content-Disposition"] = 'attachment; filename="stories.xlsx"'
 
-    # Save workbook to response
     wb.save(response)
-
     return response
 
 @login_required
